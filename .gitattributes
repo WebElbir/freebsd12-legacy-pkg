@@ -1,0 +1,4 @@
+*.pkg binary -delta
+*.a binary -delta
+*.so binary -delta
+*.so.* binary -delta

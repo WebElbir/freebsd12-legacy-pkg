@@ -1,0 +1,4 @@
+target_abi=FreeBSD:12:amd64
+target_osversion=1204000
+package_file_count=231
+verified=yes

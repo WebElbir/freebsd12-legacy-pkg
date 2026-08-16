@@ -1,0 +1,84 @@
+# FreeBSD 12 amd64 legacy repo root package set
+# Görsellerde görünen paketler exact name-version olarak pinlenmiştir.
+# Komutlarda olup görsellerde sürümü görünmeyenler name-only bırakılmıştır.
+# pkg fetch -d bunların tüm transitif bağımlılıklarını da çeker.
+
+# --- MySQL / araçlar ---
+mysql-connector-c++-1.1.13_1
+mysql-connector-c-6.1.11_1
+mysql-connector-java-8.0.28
+mysql-connector-java51-5.1.49
+mysql-connector-odbc-unixodbc-mysql57-5.3.13_1
+mysql-snmp-1.2.17
+mysql-udf-0.3_3
+mysql2pgsql-1.2,1
+mysql55-client-5.5.62_3
+mysql55-server-5.5.62_3
+mysql56-client-5.6.51
+mysql56-server-5.6.51
+mysql57-client-5.7.38
+mysql57-server-5.7.38
+mysql80-client-8.0.29
+mysql80-server-8.0.29
+mysqlbackup-2.8
+mysqld_exporter-0.12.1_1
+mysqldump-secure-0.16.3
+mysqlphp2postgres-0.95
+mysqlreport-3.5_3
+mysqlsla-2.03_3
+mysqltcl-3.052
+mysqltuner-1.8.3
+mysqlviz-0.3_1
+mysqlwsrep56-server-5.6.51
+mysqlwsrep57-server-5.7.35
+
+# --- MariaDB ---
+mariadb-connector-c-3.2.6
+mariadb-connector-odbc-3.1.15
+mariadb103-client-10.3.35
+mariadb103-server-10.3.35
+mariadb104-client-10.4.25
+mariadb104-server-10.4.25
+mariadb105-client-10.5.16
+mariadb105-server-10.5.16
+mariadb106-client-10.6.8
+mariadb106-server-10.6.8
+
+# --- GCC / build toolchain ---
+gcc-10_4
+gcc-arm-embedded-10.2.20201211_1
+gcc-ecj-4.5
+gcc-msp430-ti-toolchain-9.2.0.0.20200612_2
+gcc6-aux-20180516_2,1
+gcc8-8.5.0_1
+gcc9-9.4.0_1
+gcc9-devel-9.4.1.s20211007_1
+gcc10-10.3.0
+gcc10-devel-10.3.1.s20211008_1
+gcc11-11.2.0
+gcc11-devel-11.2.1.s20211009_1
+gcc12-devel-12.0.1.s20220306_2
+gcc48-4.8.5_14
+gccmakedep-1.0.3
+gmake-4.3_2
+cmake-3.22.2
+makedepend-1.0.6,1
+gdb-11.2
+
+# --- Kurulum komutlarında geçen ek paketler ---
+boost-all
+subversion
+devil
+python
+cryptopp
+nano
+screen
+freecolor
+
+# --- FreeBSD 12 amd64 legacy compat paketleri ---
+# compat12x burada bilerek yok: FreeBSD 12'nin kendi ABI reposuna ait değildir.
+# i386 varyantları ayrı FreeBSD:12:i386 reposunda arşivlenmelidir.
+compat7x-amd64
+compat8x-amd64
+compat9x-amd64
+compat11x-amd64

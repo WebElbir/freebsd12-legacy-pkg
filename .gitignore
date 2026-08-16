@@ -1,0 +1,6 @@
+fetch.log
+verify.log
+MISSING_ROOTS.txt
+VERIFY_FAILED.txt
+CLOSURE_FAILED.txt
+DIRECT_FALLBACK_ROOTS.txt
