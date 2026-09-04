@@ -36,10 +36,10 @@
       "note": "All binary MariaDB client/server series from 10.3 upward that actually exist for the target ABI."
     },
     "gcc": {
-      "regex": "^gcc(48|49|[5-9]|[1-9][0-9])$",
+      "regex": "^(?:gcc48|gcc49|gcc[5-9]|gcc1[0-9]|gcc2[0-9])$",
       "include_generic": true,
       "generic_name": "gcc",
-      "note": "All stable numbered GCC package names from gcc48 upward plus the generic gcc package. *-devel and cross-toolchain packages are not roots unless pulled as dependencies."
+      "note": "All stable numbered GCC package names from gcc48 upward plus the generic gcc package. gcc34/gcc44/gcc46/gcc47 are intentionally excluded. *-devel and cross-toolchain packages are not roots unless pulled as dependencies."
     }
   },
   "dependency_policy": {
