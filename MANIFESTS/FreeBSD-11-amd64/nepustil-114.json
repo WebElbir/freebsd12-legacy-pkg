@@ -1,0 +1,71 @@
+{
+  "dependency_version_notes": [],
+  "id": "nepustil-114",
+  "package_count": 7,
+  "packages": {
+    "binutils": {
+      "filename": "binutils-2.33.1_4,1.txz",
+      "role": "dependency",
+      "sha256": "335ae42d14afad27eb94b0c7f884fda9ddc9f1aa1b0785f846089cebbcd8200c",
+      "size": 19052776,
+      "source": "nepustil-114",
+      "version": "2.33.1_4,1"
+    },
+    "gcc10": {
+      "filename": "gcc10-10.3.0.txz",
+      "role": "root",
+      "sha256": "13d32c9fc6ceafa29361dddef6f018a184ce85aa5c34eb8c5ee8a1d9e469d684",
+      "size": 56775748,
+      "source": "nepustil-114",
+      "version": "10.3.0"
+    },
+    "gettext-runtime": {
+      "filename": "gettext-runtime-0.21.txz",
+      "role": "dependency",
+      "sha256": "49304dfb25d22023d8beaea6baff863890504a95e84a6aca3acfad8831e07378",
+      "size": 169608,
+      "source": "nepustil-114",
+      "version": "0.21"
+    },
+    "gmp": {
+      "filename": "gmp-6.2.1.txz",
+      "role": "dependency",
+      "sha256": "f6368de914705d7fee7fbffbefc3976a4433d743b983b56b1852f393f3e68183",
+      "size": 490544,
+      "source": "nepustil-114",
+      "version": "6.2.1"
+    },
+    "indexinfo": {
+      "filename": "indexinfo-0.3.1.txz",
+      "role": "dependency",
+      "sha256": "899671b81f133c031bb77cb01ffa54e6f9b69819e37a2244dd5753a5d82ed7b6",
+      "size": 5860,
+      "source": "nepustil-114",
+      "version": "0.3.1"
+    },
+    "mpc": {
+      "filename": "mpc-1.2.0.txz",
+      "role": "dependency",
+      "sha256": "092aef628ff84f36c11a81d6c175df4e4bcf7b1f3847dae941319c181f3b6f8d",
+      "size": 91592,
+      "source": "nepustil-114",
+      "version": "1.2.0"
+    },
+    "mpfr": {
+      "filename": "mpfr-4.1.0.txz",
+      "role": "dependency",
+      "sha256": "4146d7d80e47cc1ae710d878c2c8fa7725863b4b2130bcaa4b0326a6a99ce65a",
+      "size": 460256,
+      "source": "nepustil-114",
+      "version": "4.1.0"
+    }
+  },
+  "path": "FreeBSD:11:amd64/repos/nepustil-114",
+  "priority": 2,
+  "root_count": 1,
+  "roots": [
+    "gcc10"
+  ],
+  "source_id": "nepustil-114",
+  "source_url": "https://repo.nepustil.net/114/FreeBSD:11:amd64/"
+}

@@ -1,0 +1,669 @@
+{
+  "dependency_version_notes": [],
+  "id": "sggs-11-latest",
+  "package_count": 80,
+  "packages": {
+    "Imath": {
+      "filename": "Imath-3.1.3.pkg",
+      "role": "dependency",
+      "sha256": "4dea84209810a6d75d0b55943e6658471b4dac916615e95b08f8d4464c6fe518",
+      "size": 105212,
+      "source": "sggs-11-latest",
+      "version": "3.1.3"
+    },
+    "aalib": {
+      "filename": "aalib-1.4.r5_13.pkg",
+      "role": "dependency",
+      "sha256": "e7f43a6d48ec6c9adc838939e3d78d1155e3e8f4417693a9dd79be5407167350",
+      "size": 141808,
+      "source": "sggs-11-latest",
+      "version": "1.4.r5_13"
+    },
+    "bash": {
+      "filename": "bash-5.1.8.pkg",
+      "role": "dependency",
+      "sha256": "37d06cbd17c50c8a5bf87f42eeb183f20392730b46476cb0900707a94c2e6126",
+      "size": 1525228,
+      "source": "sggs-11-latest",
+      "version": "5.1.8"
+    },
+    "binutils": {
+      "filename": "binutils-2.37_1,1.pkg",
+      "role": "dependency",
+      "sha256": "d3741d292d43323b0088b7a99c6a0ea9fdb6644f532049e973be796ed44d9cd8",
+      "size": 18182096,
+      "source": "sggs-11-latest",
+      "version": "2.37_1,1"
+    },
+    "boost-all": {
+      "filename": "boost-all-1.72.0.pkg",
+      "role": "root",
+      "sha256": "d5cf04dd205256f00ec7e7ba07aecc04f91065f945545ccd4984197269c6cb67",
+      "size": 928,
+      "source": "sggs-11-latest",
+      "version": "1.72.0"
+    },
+    "boost-docs": {
+      "filename": "boost-docs-1.72.0.pkg",
+      "role": "dependency",
+      "sha256": "1aaaba04330cea1df35fd1e2bc471b4077724ed9cb7fa4a3f4e6dbc7869ad7a5",
+      "size": 40963452,
+      "source": "sggs-11-latest",
+      "version": "1.72.0"
+    },
+    "boost-jam": {
+      "filename": "boost-jam-1.72.0.pkg",
+      "role": "dependency",
+      "sha256": "e5b9ea4586a04e188f29156c102dec83345e631bed190c4129548c4c7da1ab2f",
+      "size": 96440,
+      "source": "sggs-11-latest",
+      "version": "1.72.0"
+    },
+    "boost-libs": {
+      "filename": "boost-libs-1.72.0_5.pkg",
+      "role": "dependency",
+      "sha256": "8f67c7983b1084651e48bc5d0ab0497c0dc808345771137af2c76c1df1f09151",
+      "size": 13129720,
+      "source": "sggs-11-latest",
+      "version": "1.72.0_5"
+    },
+    "ca_root_nss": {
+      "filename": "ca_root_nss-3.69_1.pkg",
+      "role": "dependency",
+      "sha256": "2f2749515b32d20461745f21f25854163aa00e56b64278eaa19f2abbffc03e69",
+      "size": 256384,
+      "source": "sggs-11-latest",
+      "version": "3.69_1"
+    },
+    "compat10x-amd64": {
+      "filename": "compat10x-amd64-10.4.1004000.20181014.pkg",
+      "role": "dependency",
+      "sha256": "9040e7b62031f3addb8bb87ab26a97043cccb02cb398b03e2e41b58d5cc324ac",
+      "size": 2432548,
+      "source": "sggs-11-latest",
+      "version": "10.4.1004000.20181014"
+    },
+    "compat11x-amd64": {
+      "filename": "compat11x-amd64-11.2.1102000.20181014.pkg",
+      "role": "root",
+      "sha256": "fbce90d02b26435f482efe30ed71651e5367835e42d9365163fe512d8832871a",
+      "size": 2391460,
+      "source": "sggs-11-latest",
+      "version": "11.2.1102000.20181014"
+    },
+    "compat7x-amd64": {
+      "filename": "compat7x-amd64-7.4.704000.201310.1.pkg",
+      "role": "root",
+      "sha256": "df47a91f13a8e065d5f7a5b8495f98c04a6896a7d67cff0e24ee60a56b7f77fb",
+      "size": 5170564,
+      "source": "sggs-11-latest",
+      "version": "7.4.704000.201310.1"
+    },
+    "compat8x-amd64": {
+      "filename": "compat8x-amd64-8.4.804000.20151116.pkg",
+      "role": "root",
+      "sha256": "0b33926f1f4af12e145b2db6a55dffd17ecdeab00b972e7f64c252962086adf8",
+      "size": 428100,
+      "source": "sggs-11-latest",
+      "version": "8.4.804000.20151116"
+    },
+    "compat9x-amd64": {
+      "filename": "compat9x-amd64-9.3.903000.20170608.pkg",
+      "role": "dependency",
+      "sha256": "7121c181d3c63f38882a035a220725ccd9e52106d8b134a8904966cb75dd3216",
+      "size": 2913524,
+      "source": "sggs-11-latest",
+      "version": "9.3.903000.20170608"
+    },
+    "cryptopp": {
+      "filename": "cryptopp-8.5.0_1.pkg",
+      "role": "root",
+      "sha256": "68297b94728a7b90d3edc5db34613471483a28d82f4c56bfa76248338d3e4bb7",
+      "size": 4009264,
+      "source": "sggs-11-latest",
+      "version": "8.5.0_1"
+    },
+    "curl": {
+      "filename": "curl-7.79.1.pkg",
+      "role": "dependency",
+      "sha256": "a2a012fc86729c6387a022291eb32717ab7a9b59fdc759431ee257cb303429e8",
+      "size": 1460928,
+      "source": "sggs-11-latest",
+      "version": "7.79.1"
+    },
+    "cyrus-sasl": {
+      "filename": "cyrus-sasl-2.1.27_2.pkg",
+      "role": "dependency",
+      "sha256": "fec212d4aa4c61c417541ecf15a3a52f9561bc4077e14f9a64b22c902495bdd9",
+      "size": 986500,
+      "source": "sggs-11-latest",
+      "version": "2.1.27_2"
+    },
+    "devil": {
+      "filename": "devil-1.7.8_29,1.pkg",
+      "role": "root",
+      "sha256": "ca033f64fa0e4daba76c3e99859e433057c919dd86e98d8c541a3ea166c9f14b",
+      "size": 438716,
+      "source": "sggs-11-latest",
+      "version": "1.7.8_29,1"
+    },
+    "freecolor": {
+      "filename": "freecolor-0.9.3.pkg",
+      "role": "root",
+      "sha256": "f42a8dfb0543ddcdea1465f0fe5644fa3d3efcbf1d65b071c4a527673127ca87",
+      "size": 6576,
+      "source": "sggs-11-latest",
+      "version": "0.9.3"
+    },
+    "freeglut": {
+      "filename": "freeglut-3.2.1.pkg",
+      "role": "dependency",
+      "sha256": "a4a6db2b3133a6d70c54ed5c03860a28bbb94845bc961dc08b0a6b9fe7d73ab7",
+      "size": 246856,
+      "source": "sggs-11-latest",
+      "version": "3.2.1"
+    },
+    "galera": {
+      "filename": "galera-25.3.34.pkg",
+      "role": "dependency",
+      "sha256": "df507bad4f93aa165a730e04ea2a16b2f78bd251571f5f1da2161c0d29848d86",
+      "size": 774908,
+      "source": "sggs-11-latest",
+      "version": "25.3.34"
+    },
+    "gcc11": {
+      "filename": "gcc11-11.2.0.pkg",
+      "role": "root",
+      "sha256": "a3334ca7742e8c6ddb35e41fc043b210b30cdf30abe7a55bccb12b3af2887d7a",
+      "size": 71278788,
+      "source": "sggs-11-latest",
+      "version": "11.2.0"
+    },
+    "gcc48": {
+      "filename": "gcc48-4.8.5_14.pkg",
+      "role": "root",
+      "sha256": "7727b52e7801b90b95a5a07cb9f38ca0723b3ca605c4290e276769e75b638270",
+      "size": 16654908,
+      "source": "sggs-11-latest",
+      "version": "4.8.5_14"
+    },
+    "gettext-runtime": {
+      "filename": "gettext-runtime-0.21.pkg",
+      "role": "dependency",
+      "sha256": "c89d8d5b84ec751b98e1525da9e9793a2b34a1d08259431dd87054c3d40fa424",
+      "size": 169572,
+      "source": "sggs-11-latest",
+      "version": "0.21"
+    },
+    "gmp": {
+      "filename": "gmp-6.2.1.pkg",
+      "role": "dependency",
+      "sha256": "cf77df4644fff42360e70dbbe29ab645ce0443808f30702917de90923f3606e6",
+      "size": 491044,
+      "source": "sggs-11-latest",
+      "version": "6.2.1"
+    },
+    "icu": {
+      "filename": "icu-69.1,1.pkg",
+      "role": "dependency",
+      "sha256": "b42eb43d3a579a16dd2f31c26235108dcb3f4a72b47a3ee2260f9bdd6f761833",
+      "size": 10885416,
+      "source": "sggs-11-latest",
+      "version": "69.1,1"
+    },
+    "indexinfo": {
+      "filename": "indexinfo-0.3.1.pkg",
+      "role": "dependency",
+      "sha256": "744a8b953cb236ac353537b378b60ae25a05c675981e3bfc25031fa6ec21a6d5",
+      "size": 5852,
+      "source": "sggs-11-latest",
+      "version": "0.3.1"
+    },
+    "jasper": {
+      "filename": "jasper-2.0.33.pkg",
+      "role": "dependency",
+      "sha256": "6cc60c87ce023bda62cc905b54040e30aba4d6de78fea2e602655d5b29476434",
+      "size": 533516,
+      "source": "sggs-11-latest",
+      "version": "2.0.33"
+    },
+    "jbigkit": {
+      "filename": "jbigkit-2.1_1.pkg",
+      "role": "dependency",
+      "sha256": "bf9d7f6152f6ad50d2404af10c669f57c08d091b155da99c509660d688b6cc68",
+      "size": 74784,
+      "source": "sggs-11-latest",
+      "version": "2.1_1"
+    },
+    "jpeg-turbo": {
+      "filename": "jpeg-turbo-2.1.1.pkg",
+      "role": "dependency",
+      "sha256": "4f6ec5e098aa830525021ea9d058cadf6c88af4caa46cf459d8f29118b345b38",
+      "size": 374744,
+      "source": "sggs-11-latest",
+      "version": "2.1.1"
+    },
+    "lcms": {
+      "filename": "lcms-1.19_6,1.pkg",
+      "role": "dependency",
+      "sha256": "837f39f864cf3af7aca356985ea67fcf6517ff39e83579ca12fc98442fdceba9",
+      "size": 239044,
+      "source": "sggs-11-latest",
+      "version": "1.19_6,1"
+    },
+    "libGLU": {
+      "filename": "libGLU-9.0.2_1.pkg",
+      "role": "dependency",
+      "sha256": "b0992bf1741a0b581a7a6d0d172f6e2fd853835cd3fbb5d20c5d929079e12ceb",
+      "size": 213432,
+      "source": "sggs-11-latest",
+      "version": "9.0.2_1"
+    },
+    "libICE": {
+      "filename": "libICE-1.0.10,1.pkg",
+      "role": "dependency",
+      "sha256": "dc6266cd5a2108865c1c5122de75d1967afb610b98f581957b825e46f624a6e0",
+      "size": 94692,
+      "source": "sggs-11-latest",
+      "version": "1.0.10,1"
+    },
+    "libSM": {
+      "filename": "libSM-1.2.3,1.pkg",
+      "role": "dependency",
+      "sha256": "f053fac5175fb3d8b98e17ddac42c9e6cf355308df5422f71eb3f81ddb4cecb6",
+      "size": 23920,
+      "source": "sggs-11-latest",
+      "version": "1.2.3,1"
+    },
+    "libX11": {
+      "filename": "libX11-1.7.2,1.pkg",
+      "role": "dependency",
+      "sha256": "d250ece58101b496e984e2b4a86af05e86bcc4fc2f328a692fe3a5b2b70f2b48",
+      "size": 1674116,
+      "source": "sggs-11-latest",
+      "version": "1.7.2,1"
+    },
+    "libXau": {
+      "filename": "libXau-1.0.9.pkg",
+      "role": "dependency",
+      "sha256": "cb5a22630ee56e742b38a173cebf7056b1874b8147d8fecba30fa7599d6a49b4",
+      "size": 11488,
+      "source": "sggs-11-latest",
+      "version": "1.0.9"
+    },
+    "libXdmcp": {
+      "filename": "libXdmcp-1.1.3.pkg",
+      "role": "dependency",
+      "sha256": "b6c5edce86d39d875e7dee284642ded7b922057acabcc9a8c082ac748a2424f8",
+      "size": 14572,
+      "source": "sggs-11-latest",
+      "version": "1.1.3"
+    },
+    "libXext": {
+      "filename": "libXext-1.3.4,1.pkg",
+      "role": "dependency",
+      "sha256": "e0280065a5f4094c7cbf46658a1db5eec961bbb441f950ab049215154823421b",
+      "size": 97524,
+      "source": "sggs-11-latest",
+      "version": "1.3.4,1"
+    },
+    "libXfixes": {
+      "filename": "libXfixes-5.0.3_2.pkg",
+      "role": "dependency",
+      "sha256": "eba374d6fc023bbb778833d7f428bc5acf11380714206f4498368c4870b9acbe",
+      "size": 15452,
+      "source": "sggs-11-latest",
+      "version": "5.0.3_2"
+    },
+    "libXi": {
+      "filename": "libXi-1.7.10,1.pkg",
+      "role": "dependency",
+      "sha256": "8b973488be5d2c5b85459ec0e925c2d5b79e039e9576d785e4e1e0591eca1f6d",
+      "size": 124804,
+      "source": "sggs-11-latest",
+      "version": "1.7.10,1"
+    },
+    "libXmu": {
+      "filename": "libXmu-1.1.3,1.pkg",
+      "role": "dependency",
+      "sha256": "890efa189bb1e7b97b830188ef538851f556ae7bfd1ef1c1320c07ecb1d63eea",
+      "size": 98380,
+      "source": "sggs-11-latest",
+      "version": "1.1.3,1"
+    },
+    "libXrandr": {
+      "filename": "libXrandr-1.5.2.pkg",
+      "role": "dependency",
+      "sha256": "4621c0716334ba1e38f5fca8b8865df01e7179f0f22583df4a552ab4379db399",
+      "size": 31328,
+      "source": "sggs-11-latest",
+      "version": "1.5.2"
+    },
+    "libXrender": {
+      "filename": "libXrender-0.9.10_2.pkg",
+      "role": "dependency",
+      "sha256": "d2074eb4ff581e9cf0a15874b64c6403c0076f2cc1fd7c515f800964b020c790",
+      "size": 30276,
+      "source": "sggs-11-latest",
+      "version": "0.9.10_2"
+    },
+    "libXt": {
+      "filename": "libXt-1.2.1,1.pkg",
+      "role": "dependency",
+      "sha256": "0aa3d966f218ad24cffd83306095bb7aca9e09872967a3f0aa6877fd7d3aa0a5",
+      "size": 460764,
+      "source": "sggs-11-latest",
+      "version": "1.2.1,1"
+    },
+    "libXxf86vm": {
+      "filename": "libXxf86vm-1.1.4_3.pkg",
+      "role": "dependency",
+      "sha256": "3400d7af5ece76e42f6a43124272deaacd91f73243b58cc0eb3d0df532aa11c0",
+      "size": 17868,
+      "source": "sggs-11-latest",
+      "version": "1.1.4_3"
+    },
+    "libedit": {
+      "filename": "libedit-3.1.20210216,1.pkg",
+      "role": "dependency",
+      "sha256": "14556bb46f927df91642bdf4b09852bcf338977c6a6f6b2e1a2733c2402281d4",
+      "size": 141072,
+      "source": "sggs-11-latest",
+      "version": "3.1.20210216,1"
+    },
+    "libevent": {
+      "filename": "libevent-2.1.12.pkg",
+      "role": "dependency",
+      "sha256": "776478f66b446fdad4ce5c8a445ad6c19819a6343d41eb0e783be48037319d56",
+      "size": 327924,
+      "source": "sggs-11-latest",
+      "version": "2.1.12"
+    },
+    "libglvnd": {
+      "filename": "libglvnd-1.3.4.pkg",
+      "role": "dependency",
+      "sha256": "2c3dafdcf3fcb80baeeaa02152325064e4b4514ebf0061e3a6115e403b0d5a03",
+      "size": 338000,
+      "source": "sggs-11-latest",
+      "version": "1.3.4"
+    },
+    "libiconv": {
+      "filename": "libiconv-1.16.pkg",
+      "role": "dependency",
+      "sha256": "627dd18c695f208d031e50671f5ab2d5bbb6d9a8b32e1343d5a69e936ae75417",
+      "size": 620752,
+      "source": "sggs-11-latest",
+      "version": "1.16"
+    },
+    "liblz4": {
+      "filename": "liblz4-1.9.3,1.pkg",
+      "role": "dependency",
+      "sha256": "49adf1a78640e6039ed1ef6461f632548b680212ea3f8a3581c144e482e690f4",
+      "size": 134164,
+      "source": "sggs-11-latest",
+      "version": "1.9.3,1"
+    },
+    "libmng": {
+      "filename": "libmng-1.0.10_3.pkg",
+      "role": "dependency",
+      "sha256": "1b3a8f2cff51e428d714fa0bec641cee0c113c924624c30721fd46fa4bd3480c",
+      "size": 221608,
+      "source": "sggs-11-latest",
+      "version": "1.0.10_3"
+    },
+    "libnghttp2": {
+      "filename": "libnghttp2-1.44.0.pkg",
+      "role": "dependency",
+      "sha256": "b912deaad0f257195e6162b49afbd38d3e5a2761d9167717d445c2953e8c106d",
+      "size": 120404,
+      "source": "sggs-11-latest",
+      "version": "1.44.0"
+    },
+    "libpthread-stubs": {
+      "filename": "libpthread-stubs-0.4.pkg",
+      "role": "dependency",
+      "sha256": "1f67f36025715fb77d4b96e0e515376d9dcdec661e2689228d43e71d2d217924",
+      "size": 2028,
+      "source": "sggs-11-latest",
+      "version": "0.4"
+    },
+    "libssh2": {
+      "filename": "libssh2-1.9.0_3,3.pkg",
+      "role": "dependency",
+      "sha256": "b43720abf4a6da88a8f6e658e9514a6c2d05f82cf641f447f65dbf133d8ec0a6",
+      "size": 244964,
+      "source": "sggs-11-latest",
+      "version": "1.9.0_3,3"
+    },
+    "libstatgrab": {
+      "filename": "libstatgrab-0.92.1.pkg",
+      "role": "dependency",
+      "sha256": "23c5495029bf348c090acea476b61f536084dd126d7f5804505317e2eff94319",
+      "size": 121432,
+      "source": "sggs-11-latest",
+      "version": "0.92.1"
+    },
+    "libunwind": {
+      "filename": "libunwind-20201110.pkg",
+      "role": "dependency",
+      "sha256": "ab9aa73ce1ffadbc3a754d742b0094d3fed1e985e8385e7655e2bff53b3f9d93",
+      "size": 131656,
+      "source": "sggs-11-latest",
+      "version": "20201110"
+    },
+    "libxcb": {
+      "filename": "libxcb-1.14_1.pkg",
+      "role": "dependency",
+      "sha256": "087dc1c2016daf2ee3a4cf048255bc304879ed64b3f71819768aba7a8b4ca55f",
+      "size": 1057944,
+      "source": "sggs-11-latest",
+      "version": "1.14_1"
+    },
+    "libxml2": {
+      "filename": "libxml2-2.9.12.pkg",
+      "role": "dependency",
+      "sha256": "02ecf1aac86865fb6151fa5d36594461de465c18513d5c3feeb21afe56bc967b",
+      "size": 843184,
+      "source": "sggs-11-latest",
+      "version": "2.9.12"
+    },
+    "mariadb103-client": {
+      "filename": "mariadb103-client-10.3.31_1.pkg",
+      "role": "root",
+      "sha256": "94cad6d81946844bd3587adefae0320de552cfaaba1324b17f1293575ece78b0",
+      "size": 1774748,
+      "source": "sggs-11-latest",
+      "version": "10.3.31_1"
+    },
+    "mariadb103-server": {
+      "filename": "mariadb103-server-10.3.31_1.pkg",
+      "role": "root",
+      "sha256": "cb0ca84741ed4fa0d20a50ad239e53de08e6805c214755138cc15c176a858ff8",
+      "size": 31283388,
+      "source": "sggs-11-latest",
+      "version": "10.3.31_1"
+    },
+    "mpc": {
+      "filename": "mpc-1.2.1.pkg",
+      "role": "dependency",
+      "sha256": "9097cfd0d85757c1f8bcbef0643f1dac5783c3fbbb0282dbd4a038cc28af0b05",
+      "size": 91412,
+      "source": "sggs-11-latest",
+      "version": "1.2.1"
+    },
+    "mpfr": {
+      "filename": "mpfr-4.1.0_1.pkg",
+      "role": "dependency",
+      "sha256": "ff477deadbee3eeda06e79f64535d0d3e9f591022098b2302d551811ce1eca78",
+      "size": 460856,
+      "source": "sggs-11-latest",
+      "version": "4.1.0_1"
+    },
+    "mysql55-client": {
+      "filename": "mysql55-client-5.5.62_3.pkg",
+      "role": "root",
+      "sha256": "b3ea238e206c49ce55dddc4aa90b86d1ec32720ef6f03057b6563c6475801b96",
+      "size": 1817536,
+      "source": "sggs-11-latest",
+      "version": "5.5.62_3"
+    },
+    "mysql55-server": {
+      "filename": "mysql55-server-5.5.62_3.pkg",
+      "role": "root",
+      "sha256": "58536cb884012dc28552b0551882f99d1bf132107f8fbcadb2593097862595e0",
+      "size": 6987044,
+      "source": "sggs-11-latest",
+      "version": "5.5.62_3"
+    },
+    "mysql80-client": {
+      "filename": "mysql80-client-8.0.26.pkg",
+      "role": "root",
+      "sha256": "e4e34ea293effd804ed334eb91f62d4883768d5e1950e9aa1e709bceeabdb078",
+      "size": 4070540,
+      "source": "sggs-11-latest",
+      "version": "8.0.26"
+    },
+    "mysql80-server": {
+      "filename": "mysql80-server-8.0.26.pkg",
+      "role": "root",
+      "sha256": "b7ef96833d8cca67979ae18c5a4845b1451904a66438c5a472d7da6caab73b11",
+      "size": 18940852,
+      "source": "sggs-11-latest",
+      "version": "8.0.26"
+    },
+    "nvidia-texture-tools": {
+      "filename": "nvidia-texture-tools-2.0.8.1_25.pkg",
+      "role": "dependency",
+      "sha256": "94d6b66bfdda9fbe3c1c355c8694d4706a16f66c75f57c519dd7fbd7644848fd",
+      "size": 130040,
+      "source": "sggs-11-latest",
+      "version": "2.0.8.1_25"
+    },
+    "openexr": {
+      "filename": "openexr-3.1.1.pkg",
+      "role": "dependency",
+      "sha256": "f5d2126ca2decf6fde9a4828c4e726cf29395cb4c07509b12e12ff17621fc7e9",
+      "size": 5119728,
+      "source": "sggs-11-latest",
+      "version": "3.1.1"
+    },
+    "openldap24-client": {
+      "filename": "openldap24-client-2.4.59_2.pkg",
+      "role": "dependency",
+      "sha256": "b0e8b9ef4585f6d60a93a3b8c44dd5a3fee22a2645f78b5a05f8de7f39f34f67",
+      "size": 1095240,
+      "source": "sggs-11-latest",
+      "version": "2.4.59_2"
+    },
+    "perl5": {
+      "filename": "perl5-5.32.1_1.pkg",
+      "role": "dependency",
+      "sha256": "670fa9c495d6b11848f43fa9f0ad1b12e3809c8967142652877d1ab664816671",
+      "size": 15221460,
+      "source": "sggs-11-latest",
+      "version": "5.32.1_1"
+    },
+    "png": {
+      "filename": "png-1.6.37_1.pkg",
+      "role": "dependency",
+      "sha256": "9f54c077a4b2794f9d2c6d948d3e1d94067493373d071bbd9d5a1609fff3f04f",
+      "size": 296204,
+      "source": "sggs-11-latest",
+      "version": "1.6.37_1"
+    },
+    "protobuf": {
+      "filename": "protobuf-3.17.3,1.pkg",
+      "role": "dependency",
+      "sha256": "27ce3a38032ecda06ada0bb61d3277f4d95d32fc6c5fd0d1fa04316eb7827835",
+      "size": 2909392,
+      "source": "sggs-11-latest",
+      "version": "3.17.3,1"
+    },
+    "readline": {
+      "filename": "readline-8.1.1.pkg",
+      "role": "dependency",
+      "sha256": "47e1302b9f10dc9e15a9edaeb960be1e22a1ce9bb9b7883350947977ad66b9f2",
+      "size": 371832,
+      "source": "sggs-11-latest",
+      "version": "8.1.1"
+    },
+    "rsync": {
+      "filename": "rsync-3.2.3_1.pkg",
+      "role": "dependency",
+      "sha256": "4dc9a8fc4db822f79c83129139b1ea4f12b5aa80f70c7f8c4d2bda2f4087d239",
+      "size": 362924,
+      "source": "sggs-11-latest",
+      "version": "3.2.3_1"
+    },
+    "sdl": {
+      "filename": "sdl-1.2.15_15,2.pkg",
+      "role": "dependency",
+      "sha256": "7f1672986e836a3193d1e6ded5fb23bbc010b868ec2d0f45fd8837e61845a1e2",
+      "size": 708288,
+      "source": "sggs-11-latest",
+      "version": "1.2.15_15,2"
+    },
+    "tiff": {
+      "filename": "tiff-4.3.0.pkg",
+      "role": "dependency",
+      "sha256": "93c8b3793709bbc10981e05810ed0e615720b2cb2cfc4ef55fb7b5b522c25bc0",
+      "size": 863008,
+      "source": "sggs-11-latest",
+      "version": "4.3.0"
+    },
+    "unixODBC": {
+      "filename": "unixODBC-2.3.9.pkg",
+      "role": "dependency",
+      "sha256": "7c175d8b8621d8aced32d68bb87a2e7c224c201b5dea806ad21e2eb1df1f7f42",
+      "size": 474664,
+      "source": "sggs-11-latest",
+      "version": "2.3.9"
+    },
+    "xorgproto": {
+      "filename": "xorgproto-2021.4.pkg",
+      "role": "dependency",
+      "sha256": "d598204e33ec53e4d153f98e035334f383648659b1d415133be4372b2d826947",
+      "size": 226764,
+      "source": "sggs-11-latest",
+      "version": "2021.4"
+    },
+    "xxhash": {
+      "filename": "xxhash-0.8.0.pkg",
+      "role": "dependency",
+      "sha256": "d5c7b5f3974505dfded3ff03b007eec69635eaf9f647365fa76a65c8d3708ad6",
+      "size": 74388,
+      "source": "sggs-11-latest",
+      "version": "0.8.0"
+    },
+    "zstd": {
+      "filename": "zstd-1.5.0.pkg",
+      "role": "dependency",
+      "sha256": "e80118fbff9f52cf1ee483d580764cc07fe3cbca5bf3e6eb0572623a8aeb97d1",
+      "size": 592948,
+      "source": "sggs-11-latest",
+      "version": "1.5.0"
+    }
+  },
+  "path": "FreeBSD:11:amd64/repos/sggs-11-latest",
+  "priority": 4,
+  "root_count": 15,
+  "roots": [
+    "boost-all",
+    "compat11x-amd64",
+    "compat7x-amd64",
+    "compat8x-amd64",
+    "cryptopp",
+    "devil",
+    "freecolor",
+    "gcc11",
+    "gcc48",
+    "mariadb103-client",
+    "mariadb103-server",
+    "mysql55-client",
+    "mysql55-server",
+    "mysql80-client",
+    "mysql80-server"
+  ],
+  "source_id": "sggs-11-latest",
+  "source_url": "https://mirror.sg.gs/freebsd-pkg/FreeBSD:11:amd64/latest/"
+}

@@ -1,0 +1,227 @@
+{
+  "cohort_count": 4,
+  "cohorts": [
+    {
+      "dependency_version_notes": [
+        {
+          "fallback": "3.1.20190324,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20170329_2,1",
+          "required_by": "mysql56-client"
+        },
+        {
+          "fallback": "2.1.11",
+          "package": "libevent",
+          "reason": "exact version unavailable",
+          "required": "2.1.8_2",
+          "required_by": "mysql56-client"
+        },
+        {
+          "fallback": "1.9.2,1",
+          "package": "liblz4",
+          "reason": "exact version unavailable",
+          "required": "1.8.3,1",
+          "required_by": "mysql56-client"
+        },
+        {
+          "fallback": "5.28.2",
+          "package": "perl5",
+          "reason": "exact version unavailable",
+          "required": "5.28.1",
+          "required_by": "mysql56-client"
+        },
+        {
+          "fallback": "3.1.20190324,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20170329_2,1",
+          "required_by": "mysql56-server"
+        },
+        {
+          "fallback": "2.1.11",
+          "package": "libevent",
+          "reason": "exact version unavailable",
+          "required": "2.1.8_2",
+          "required_by": "mysql56-server"
+        },
+        {
+          "fallback": "1.9.2,1",
+          "package": "liblz4",
+          "reason": "exact version unavailable",
+          "required": "1.8.3,1",
+          "required_by": "mysql56-server"
+        },
+        {
+          "fallback": "3.1.20190324,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20170329_2,1",
+          "required_by": "mysql56-client"
+        },
+        {
+          "fallback": "2.1.11",
+          "package": "libevent",
+          "reason": "exact version unavailable",
+          "required": "2.1.8_2",
+          "required_by": "mysql56-client"
+        },
+        {
+          "fallback": "1.9.2,1",
+          "package": "liblz4",
+          "reason": "exact version unavailable",
+          "required": "1.8.3,1",
+          "required_by": "mysql56-client"
+        },
+        {
+          "fallback": "5.28.2",
+          "package": "perl5",
+          "reason": "exact version unavailable",
+          "required": "5.28.1",
+          "required_by": "mysql56-client"
+        },
+        {
+          "fallback": "5.28.2",
+          "package": "perl5",
+          "reason": "exact version unavailable",
+          "required": "5.28.1",
+          "required_by": "mysql56-server"
+        }
+      ],
+      "id": "nepustil-112",
+      "package_count": 54,
+      "path": "FreeBSD:11:amd64/repos/nepustil-112",
+      "priority": 0,
+      "root_count": 16,
+      "roots": [
+        "compat9x-amd64",
+        "gcc",
+        "gcc7",
+        "gdb",
+        "gmake",
+        "makedepend",
+        "mariadb104-client",
+        "mariadb104-server",
+        "mysql56-client",
+        "mysql56-server",
+        "mysql57-client",
+        "mysql57-server",
+        "nano",
+        "python",
+        "screen",
+        "subversion"
+      ],
+      "source_id": "nepustil-112",
+      "source_url": "https://repo.nepustil.net/112/FreeBSD:11:amd64/"
+    },
+    {
+      "dependency_version_notes": [],
+      "id": "nepustil-113",
+      "package_count": 25,
+      "path": "FreeBSD:11:amd64/repos/nepustil-113",
+      "priority": 1,
+      "root_count": 4,
+      "roots": [
+        "gcc8",
+        "gcc9",
+        "mariadb105-client",
+        "mariadb105-server"
+      ],
+      "source_id": "nepustil-113",
+      "source_url": "https://repo.nepustil.net/113/FreeBSD:11:amd64/"
+    },
+    {
+      "dependency_version_notes": [],
+      "id": "nepustil-114",
+      "package_count": 7,
+      "path": "FreeBSD:11:amd64/repos/nepustil-114",
+      "priority": 2,
+      "root_count": 1,
+      "roots": [
+        "gcc10"
+      ],
+      "source_id": "nepustil-114",
+      "source_url": "https://repo.nepustil.net/114/FreeBSD:11:amd64/"
+    },
+    {
+      "dependency_version_notes": [],
+      "id": "sggs-11-latest",
+      "package_count": 80,
+      "path": "FreeBSD:11:amd64/repos/sggs-11-latest",
+      "priority": 4,
+      "root_count": 15,
+      "roots": [
+        "boost-all",
+        "compat11x-amd64",
+        "compat7x-amd64",
+        "compat8x-amd64",
+        "cryptopp",
+        "devil",
+        "freecolor",
+        "gcc11",
+        "gcc48",
+        "mariadb103-client",
+        "mariadb103-server",
+        "mysql55-client",
+        "mysql55-server",
+        "mysql80-client",
+        "mysql80-server"
+      ],
+      "source_id": "sggs-11-latest",
+      "source_url": "https://mirror.sg.gs/freebsd-pkg/FreeBSD:11:amd64/latest/"
+    }
+  ],
+  "coverage": {
+    "boost-all": "sggs-11-latest",
+    "compat11x-amd64": "sggs-11-latest",
+    "compat7x-amd64": "sggs-11-latest",
+    "compat8x-amd64": "sggs-11-latest",
+    "compat9x-amd64": "nepustil-112",
+    "cryptopp": "sggs-11-latest",
+    "devil": "sggs-11-latest",
+    "freecolor": "sggs-11-latest",
+    "gcc": "nepustil-112",
+    "gcc10": "nepustil-114",
+    "gcc11": "sggs-11-latest",
+    "gcc48": "sggs-11-latest",
+    "gcc7": "nepustil-112",
+    "gcc8": "nepustil-113",
+    "gcc9": "nepustil-113",
+    "gdb": "nepustil-112",
+    "gmake": "nepustil-112",
+    "makedepend": "nepustil-112",
+    "mariadb103-client": "sggs-11-latest",
+    "mariadb103-server": "sggs-11-latest",
+    "mariadb104-client": "nepustil-112",
+    "mariadb104-server": "nepustil-112",
+    "mariadb105-client": "nepustil-113",
+    "mariadb105-server": "nepustil-113",
+    "mysql55-client": "sggs-11-latest",
+    "mysql55-server": "sggs-11-latest",
+    "mysql56-client": "nepustil-112",
+    "mysql56-server": "nepustil-112",
+    "mysql57-client": "nepustil-112",
+    "mysql57-server": "nepustil-112",
+    "mysql80-client": "sggs-11-latest",
+    "mysql80-server": "sggs-11-latest",
+    "nano": "nepustil-112",
+    "python": "nepustil-112",
+    "screen": "nepustil-112",
+    "subversion": "nepustil-112"
+  },
+  "covered_root_count": 36,
+  "discovered_root_count": 36,
+  "exact_names_not_seen_in_any_source": [
+    "compat11x-i386",
+    "compat12x-amd64",
+    "compat12x-i386",
+    "compat7x-i386",
+    "compat8x-i386",
+    "compat9x-i386"
+  ],
+  "latest_cohort": "nepustil-112",
+  "status": "ok",
+  "target": "FreeBSD:11:amd64",
+  "unresolved": {},
+  "unresolved_root_names": []
+}

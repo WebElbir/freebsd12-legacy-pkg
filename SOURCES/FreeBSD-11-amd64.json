@@ -1,0 +1,35 @@
+{
+  "sources": [
+    {
+      "id": "nepustil-112",
+      "records": 4124,
+      "url": "https://repo.nepustil.net/112/FreeBSD:11:amd64/"
+    },
+    {
+      "id": "nepustil-113",
+      "records": 3832,
+      "url": "https://repo.nepustil.net/113/FreeBSD:11:amd64/"
+    },
+    {
+      "id": "nepustil-114",
+      "records": 3337,
+      "url": "https://repo.nepustil.net/114/FreeBSD:11:amd64/"
+    },
+    {
+      "id": "nepustil-11",
+      "records": 3832,
+      "url": "https://repo.nepustil.net/FreeBSD:11:amd64/"
+    },
+    {
+      "id": "sggs-11-latest",
+      "records": 29629,
+      "url": "https://mirror.sg.gs/freebsd-pkg/FreeBSD:11:amd64/latest/"
+    },
+    {
+      "id": "sggs-11-quarterly",
+      "records": 29302,
+      "url": "https://mirror.sg.gs/freebsd-pkg/FreeBSD:11:amd64/quarterly/"
+    }
+  ],
+  "target": "FreeBSD:11:amd64"
+}
