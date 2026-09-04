@@ -1,0 +1,159 @@
+name: Repair canonical raw latest repositories
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".raw-latest-repair-trigger"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: freebsd-selected-pkg-sync-main
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install importer dependencies
+        run: python -m pip install --disable-pip-version-check requests zstandard
+
+      - name: Validate tooling
+        run: |
+          python -m py_compile scripts/build_repo.py scripts/build_repo_v2.py scripts/build_repo_cohorts.py scripts/preflight_repo.py scripts/render_config_guide.py
+          python -m json.tool config/roots.json >/dev/null
+          python -m json.tool config/sources.json >/dev/null
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Repair missing canonical endpoints
+        shell: bash
+        run: |
+          set -euo pipefail
+          targets=(
+            "FreeBSD:9:i386"
+            "FreeBSD:11:i386"
+            "FreeBSD:14:amd64"
+            "FreeBSD:14:i386"
+          )
+
+          for target in "${targets[@]}"; do
+            echo "===== ${target} ====="
+            key="${target//:/-}"
+
+            args=(--target "${target}")
+            python scripts/build_repo_cohorts.py "${args[@]}"
+            python scripts/render_config_guide.py --target "${target}"
+
+            test -f "${target}/latest/meta.conf"
+            test -f "${target}/latest/meta.txz"
+            test -f "${target}/latest/packagesite.txz"
+            test -f "${target}/latest/SHA256SUMS"
+
+            TARGET="${target}" python - <<'PY'
+          import os, tarfile
+          from pathlib import Path
+          target = os.environ['TARGET']
+          p = Path(target) / 'latest' / 'packagesite.txz'
+          with tarfile.open(p, 'r:xz') as tf:
+              names = {Path(x.name).name for x in tf.getmembers() if x.isfile()}
+          if 'packagesite.yaml' not in names:
+              raise SystemExit(f'{target}: invalid packagesite.txz')
+          for p in (Path(target) / 'latest').rglob('*'):
+              if p.is_file() and p.stat().st_size > 99 * 1024 * 1024:
+                  raise SystemExit(f'{target}: file exceeds 99 MiB raw Git safety ceiling: {p} ({p.stat().st_size})')
+          print(target, 'local canonical latest validation OK')
+          PY
+
+            # Cohort build directories are internal build products. The public
+            # user endpoint is always <ABI>/latest.
+            rm -rf "${target}/repos"
+
+            git add -A -- \
+              "${target}/latest" \
+              "MANIFESTS/${key}.json" \
+              "MANIFESTS/${key}" \
+              "SOURCES/${key}.json" \
+              "CONFIGS/${key}.md"
+
+            TARGET="${target}" python - <<'PY'
+          import os, subprocess
+          from pathlib import Path
+          target = os.environ['TARGET']
+          raw = subprocess.check_output(['git', 'diff', '--cached', '--name-only', '-z'])
+          names = [x.decode() for x in raw.split(b'\0') if x]
+          total = 0
+          for name in names:
+              p = Path(name)
+              if p.is_file():
+                  size = p.stat().st_size
+                  total += size
+                  if size > 99 * 1024 * 1024:
+                      raise SystemExit(f'{target}: staged file exceeds 99 MiB: {name}')
+          if total > 1536 * 1024 * 1024:
+              raise SystemExit(f'{target}: staged update exceeds 1.5 GiB')
+          print(target, f'staged {total / 1024 / 1024:.1f} MiB')
+          PY
+
+            if ! git diff --cached --quiet; then
+              git commit -m "Publish ${target} canonical raw latest repository"
+              git push origin HEAD:main
+            else
+              echo "No canonical changes for ${target}"
+            fi
+
+            base="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/${target}/latest"
+            curl -fL --retry 12 --retry-delay 3 --retry-all-errors "${base}/meta.conf" -o /tmp/meta.conf
+            curl -fL --retry 12 --retry-delay 3 --retry-all-errors "${base}/packagesite.txz" -o /tmp/packagesite.txz
+            python - <<'PY'
+          import tarfile
+          from pathlib import Path
+          with tarfile.open('/tmp/packagesite.txz', 'r:xz') as tf:
+              names = {Path(x.name).name for x in tf.getmembers() if x.isfile()}
+          if 'packagesite.yaml' not in names:
+              raise SystemExit('remote canonical packagesite.txz invalid')
+          PY
+
+            first_pkg="$(awk 'NF >= 2 {print $2; exit}' "${target}/latest/SHA256SUMS" || true)"
+            if [[ -n "${first_pkg}" ]]; then
+              curl -fIL --retry 12 --retry-delay 3 --retry-all-errors "${base}/${first_pkg}" >/dev/null
+            fi
+            echo "${target}: raw canonical endpoint OK"
+          done
+
+      - name: Verify all twelve canonical URL shapes exist
+        shell: bash
+        run: |
+          set -euo pipefail
+          targets=(
+            "FreeBSD:9:amd64" "FreeBSD:9:i386"
+            "FreeBSD:10:amd64" "FreeBSD:10:i386"
+            "FreeBSD:11:amd64" "FreeBSD:11:i386"
+            "FreeBSD:12:amd64" "FreeBSD:12:i386"
+            "FreeBSD:13:amd64" "FreeBSD:13:i386"
+            "FreeBSD:14:amd64" "FreeBSD:14:i386"
+          )
+          for target in "${targets[@]}"; do
+            base="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/${target}/latest"
+            curl -fL --retry 12 --retry-delay 3 --retry-all-errors "${base}/meta.conf" -o /dev/null
+            curl -fL --retry 12 --retry-delay 3 --retry-all-errors "${base}/packagesite.txz" -o /dev/null
+            echo "OK ${base}"
+          done
