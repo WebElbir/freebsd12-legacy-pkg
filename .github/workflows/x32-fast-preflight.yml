@@ -1,0 +1,112 @@
+name: X32 fast metadata preflight
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".x32-fast-preflight-trigger"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: freebsd-x32-fast-preflight
+  cancel-in-progress: false
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Sparse checkout tooling only
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            scripts
+            config
+          sparse-checkout-cone-mode: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install importer dependencies
+        run: python -m pip install --disable-pip-version-check requests zstandard
+
+      - name: Validate tooling
+        run: |
+          python -m py_compile scripts/build_repo.py scripts/build_repo_cohorts.py scripts/preflight_repo.py
+          python -m json.tool config/roots.json >/dev/null
+          python -m json.tool config/sources.json >/dev/null
+
+      - name: Probe fast i386 sources and Subversion closure
+        shell: bash
+        run: |
+          set -euo pipefail
+          PYTHONPATH=scripts python - <<'PY'
+          import json
+          import build_repo as core
+          import build_repo_cohorts as cohorts
+
+          candidates = {
+              "FreeBSD:12:i386": [
+                  ("sggs-12i386-latest", "https://mirror.sg.gs/freebsd-pkg/FreeBSD:12:i386/latest/"),
+                  ("sggs-12i386-quarterly", "https://mirror.sg.gs/freebsd-pkg/FreeBSD:12:i386/quarterly/"),
+              ],
+              "FreeBSD:13:i386": [
+                  ("freebsd-13i386-latest", "https://pkg.freebsd.org/FreeBSD:13:i386/latest/"),
+                  ("freebsd-13i386-quarterly", "https://pkg.freebsd.org/FreeBSD:13:i386/quarterly/"),
+                  ("freebsd-13i386-release5", "https://pkg.freebsd.org/FreeBSD:13:i386/release_5/"),
+              ],
+              "FreeBSD:14:i386": [
+                  ("freebsd-14i386-latest", "https://pkg.freebsd.org/FreeBSD:14:i386/latest/"),
+                  ("freebsd-14i386-quarterly", "https://pkg.freebsd.org/FreeBSD:14:i386/quarterly/"),
+                  ("freebsd-14i386-release5", "https://pkg.freebsd.org/FreeBSD:14:i386/release_5/"),
+              ],
+          }
+
+          cfg = core.jload(core.ROOT / "config/roots.json")
+          s = core.session()
+          result = {}
+          for target, sources in candidates.items():
+              target_rows = []
+              for priority, (sid, url) in enumerate(sources):
+                  src = {"id": sid, "url": url}
+                  rows = core.remote_catalog(s, src, target, priority)
+                  for c in rows:
+                      c["target"] = target
+                  byname, roots = cohorts.root_candidates(rows, cfg) if rows else ({}, [])
+                  root_c, closure, notes = cohorts.closure_for_root("subversion", byname) if rows else (None, None, [])
+                  entry = {
+                      "source": sid,
+                      "url": url,
+                      "records": len(rows),
+                      "root_count_seen": len(roots),
+                      "subversion_present": bool(byname.get("subversion")),
+                      "subversion_closure_ok": closure is not None,
+                      "subversion_version": None if root_c is None else root_c["version"],
+                      "subversion_closure_package_count": 0 if closure is None else len(closure),
+                      "notes": notes[:10] if closure is None else [],
+                  }
+                  target_rows.append(entry)
+                  print(json.dumps({"target": target, **entry}, sort_keys=True))
+              result[target] = target_rows
+
+          print("=== X32_FAST_PREFLIGHT_JSON ===")
+          print(json.dumps(result, indent=2, sort_keys=True))
+          PY
+
+      - name: Current target metadata summary
+        shell: bash
+        run: |
+          set +e
+          for target in "FreeBSD:12:i386" "FreeBSD:13:i386" "FreeBSD:14:i386"; do
+            echo "===== ${target} current configured preflight ====="
+            python scripts/preflight_repo.py --target "${target}"
+            echo "preflight exit=$?"
+          done
+          exit 0
