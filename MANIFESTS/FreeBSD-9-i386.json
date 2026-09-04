@@ -1,0 +1,8 @@
+{
+  "cohorts": [],
+  "coverage": {},
+  "discovered_roots": [],
+  "status": "no-requested-packages-resolved",
+  "target": "FreeBSD:9:i386",
+  "unresolved": {}
+}

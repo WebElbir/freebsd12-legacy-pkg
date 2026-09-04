@@ -1,0 +1,15 @@
+{
+  "sources": [
+    {
+      "id": "pcbsd-91-allbsd",
+      "records": 0,
+      "url": "http://pub.allbsd.org/pub/pcbsd/packages/9.1-RELEASE/i386/"
+    },
+    {
+      "id": "pcbsd-91-jaist",
+      "records": 0,
+      "url": "http://ftp.jaist.ac.jp/pub/PC-BSD/packages/9.1-RELEASE/i386/"
+    }
+  ],
+  "target": "FreeBSD:9:i386"
+}
