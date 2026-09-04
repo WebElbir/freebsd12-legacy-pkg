@@ -4,7 +4,8 @@
     "Then use SGGS/Neonet EOL mirrors.",
     "Then use official pkg.FreeBSD.org repositories where still available.",
     "Use PC-BSD pkgng archives for FreeBSD 9.",
-    "Never invent a source URL and never use a package from another ABI to fill a gap."
+    "Never invent a source URL and never use a package from another ABI to fill a gap.",
+    "The previous FreeBSD 12 union repository is not used as a dependency source; only verified upstream snapshots are authoritative."
   ],
   "targets": {
     "FreeBSD:9:amd64": [
@@ -33,7 +34,6 @@
     ],
     "FreeBSD:11:i386": [],
     "FreeBSD:12:amd64": [
-      {"id":"local-existing-12","type":"local-existing"},
       {"id":"nepustil-121","url":"https://repo.nepustil.net/121/FreeBSD:12:amd64/"},
       {"id":"nepustil-123","url":"https://repo.nepustil.net/123/FreeBSD:12:amd64/"},
       {"id":"nepustil-12","url":"https://repo.nepustil.net/FreeBSD:12:amd64/"},
