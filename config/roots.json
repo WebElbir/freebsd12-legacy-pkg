@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "description": "Only these requested root package families plus their transitive runtime dependencies are mirrored.",
   "exact": [
     "gmake",
