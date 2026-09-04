@@ -26,7 +26,7 @@ permissions:
 
 concurrency:
   group: freebsd-selected-pkg-sync-${{ github.head_ref || github.ref_name }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   sync:
@@ -49,7 +49,7 @@ jobs:
 
       - name: Validate importer
         run: |
-          python -m py_compile scripts/build_repo.py scripts/build_repo_v2.py
+          python -m py_compile scripts/build_repo.py scripts/build_repo_v2.py scripts/build_repo_cohorts.py
           python -m json.tool config/roots.json >/dev/null
           python -m json.tool config/sources.json >/dev/null
 
@@ -94,22 +94,21 @@ jobs:
               args+=(--migrate-existing-12)
             fi
             set +e
-            python scripts/build_repo_v2.py "${args[@]}"
+            python scripts/build_repo_cohorts.py "${args[@]}"
             rc=$?
             set -e
             if [[ ${rc} -ne 0 ]]; then
-              echo "::error::${target} importer failed; reverting partial repository files"
-              git restore --staged --worktree -- "${target}" 2>/dev/null || true
-              git clean -fd -- "${target}" || true
+              echo "::error::${target} cohort importer failed"
               failures+=("${target}")
             fi
+
             find scripts -type d -name __pycache__ -prune -exec rm -rf {} + 2>/dev/null || true
             git add -A
             if ! git diff --cached --quiet; then
               if [[ ${rc} -eq 0 ]]; then
-                git commit -m "Build ${target} selected package repository"
+                git commit -m "Build ${target} coherent package cohorts"
               else
-                git commit -m "Record ${target} package sync failure"
+                git commit -m "Record ${target} cohort sync failure"
               fi
               git fetch origin "${PUSH_BRANCH}"
               if ! git rebase "origin/${PUSH_BRANCH}"; then
