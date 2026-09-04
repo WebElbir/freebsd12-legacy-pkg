@@ -5,11 +5,12 @@
     {
       "dependency_version_notes": [],
       "id": "freebsd-14i386-release5",
-      "package_count": 83,
+      "package_count": 107,
       "path": "FreeBSD:14:i386/repos/freebsd-14i386-release5",
       "priority": 0,
-      "root_count": 28,
+      "root_count": 32,
       "roots": [
+        "boost-all",
         "compat11x-i386",
         "compat12x-i386",
         "compat7x-i386",
@@ -18,6 +19,7 @@
         "cryptopp",
         "devil",
         "freecolor",
+        "gcc",
         "gcc12",
         "gcc13",
         "gcc14",
@@ -37,13 +39,16 @@
         "mysql80-client",
         "mysql80-server",
         "nano",
-        "screen"
+        "python",
+        "screen",
+        "subversion"
       ],
       "source_id": "freebsd-14i386-release5",
       "source_url": "https://pkg.freebsd.org/FreeBSD:14:i386/release_5/"
     }
   ],
   "coverage": {
+    "boost-all": "freebsd-14i386-release5",
     "compat11x-i386": "freebsd-14i386-release5",
     "compat12x-i386": "freebsd-14i386-release5",
     "compat7x-i386": "freebsd-14i386-release5",
@@ -52,6 +57,7 @@
     "cryptopp": "freebsd-14i386-release5",
     "devil": "freebsd-14i386-release5",
     "freecolor": "freebsd-14i386-release5",
+    "gcc": "freebsd-14i386-release5",
     "gcc12": "freebsd-14i386-release5",
     "gcc13": "freebsd-14i386-release5",
     "gcc14": "freebsd-14i386-release5",
@@ -71,38 +77,22 @@
     "mysql80-client": "freebsd-14i386-release5",
     "mysql80-server": "freebsd-14i386-release5",
     "nano": "freebsd-14i386-release5",
-    "screen": "freebsd-14i386-release5"
+    "python": "freebsd-14i386-release5",
+    "screen": "freebsd-14i386-release5",
+    "subversion": "freebsd-14i386-release5"
   },
-  "covered_root_count": 28,
-  "discovered_root_count": 29,
+  "covered_root_count": 32,
+  "discovered_root_count": 32,
   "exact_names_not_seen_in_any_source": [
-    "boost-all",
     "compat11x-amd64",
     "compat12x-amd64",
     "compat7x-amd64",
     "compat8x-amd64",
-    "compat9x-amd64",
-    "python"
+    "compat9x-amd64"
   ],
   "latest_cohort": "freebsd-14i386-release5",
-  "status": "partial",
+  "status": "ok",
   "target": "FreeBSD:14:i386",
-  "unresolved": {
-    "subversion": [
-      {
-        "attempts": [
-          {
-            "issues": [],
-            "source": "freebsd-14i386-release5",
-            "version": "1.14.5_1"
-          }
-        ],
-        "reason": "incomplete runtime closure in this source",
-        "source": "freebsd-14i386-release5"
-      }
-    ]
-  },
-  "unresolved_root_names": [
-    "subversion"
-  ]
+  "unresolved": {},
+  "unresolved_root_names": []
 }

@@ -1,6 +1,6 @@
 # FreeBSD:14:i386 pkg conf rehberi
 
-Durum: **partial**
+Durum: **ok**
 
 ## Canonical repository
 
@@ -29,6 +29,7 @@ Aynı package adı için tarihsel sürümleri tek pkg kataloğunda zorla birleş
 
 | Root paket | Kaynak cohort |
 |---|---|
+| `boost-all` | `freebsd-14i386-release5` |
 | `compat11x-i386` | `freebsd-14i386-release5` |
 | `compat12x-i386` | `freebsd-14i386-release5` |
 | `compat7x-i386` | `freebsd-14i386-release5` |
@@ -37,6 +38,7 @@ Aynı package adı için tarihsel sürümleri tek pkg kataloğunda zorla birleş
 | `cryptopp` | `freebsd-14i386-release5` |
 | `devil` | `freebsd-14i386-release5` |
 | `freecolor` | `freebsd-14i386-release5` |
+| `gcc` | `freebsd-14i386-release5` |
 | `gcc12` | `freebsd-14i386-release5` |
 | `gcc13` | `freebsd-14i386-release5` |
 | `gcc14` | `freebsd-14i386-release5` |
@@ -56,4 +58,6 @@ Aynı package adı için tarihsel sürümleri tek pkg kataloğunda zorla birleş
 | `mysql80-client` | `freebsd-14i386-release5` |
 | `mysql80-server` | `freebsd-14i386-release5` |
 | `nano` | `freebsd-14i386-release5` |
+| `python` | `freebsd-14i386-release5` |
 | `screen` | `freebsd-14i386-release5` |
+| `subversion` | `freebsd-14i386-release5` |
