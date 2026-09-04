@@ -1,0 +1,82 @@
+name: X32 FreeBSD 10 alternate source probe
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/x32-10-alt-source-probe.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: x32-freebsd10-alt-source-probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            scripts
+            config
+          sparse-checkout-cone-mode: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: python -m pip install --disable-pip-version-check requests zstandard
+
+      - name: Probe candidate FreeBSD 10 i386 catalogs for exact blockers
+        shell: bash
+        run: |
+          set -euo pipefail
+          PYTHONPATH=scripts python - <<'PY'
+          import json
+          import build_repo as core
+
+          target = 'FreeBSD:10:i386'
+          # Candidate URLs are probed only. They are NOT trusted/configured unless
+          # a valid FreeBSD:10:i386 catalog is actually returned and inspected.
+          sources = [
+              ('sggs-10i386-latest-candidate', 'https://mirror.sg.gs/freebsd-pkg/FreeBSD:10:i386/latest/'),
+              ('sggs-10i386-quarterly-candidate', 'https://mirror.sg.gs/freebsd-pkg/FreeBSD:10:i386/quarterly/'),
+              ('official-10i386-latest-candidate', 'https://pkg.freebsd.org/FreeBSD:10:i386/latest/'),
+              ('official-10i386-quarterly-candidate', 'https://pkg.freebsd.org/FreeBSD:10:i386/quarterly/'),
+          ]
+          wanted = {
+              'libpthread-stubs': {'0.4'},
+              'pciids': {'20180921', '20181027'},
+              'gcc-ecj': {'4.5'},
+              'ca_root_nss': {'3.40'},
+          }
+
+          s = core.session()
+          results = []
+          for priority, (sid, url) in enumerate(sources):
+              src = {'id': sid, 'url': url}
+              rows = core.remote_catalog(s, src, target, priority)
+              for c in rows:
+                  c['target'] = target
+              found = {}
+              for c in rows:
+                  if c['name'] in wanted:
+                      found.setdefault(c['name'], []).append(c['version'])
+              item = {
+                  'source': sid,
+                  'url': url,
+                  'records': len(rows),
+                  'found': {k: sorted(set(v)) for k, v in sorted(found.items())},
+              }
+              print(json.dumps(item, sort_keys=True))
+              results.append(item)
+
+          print('=== X32_10_ALT_SOURCE_PROBE_JSON ===')
+          print(json.dumps(results, indent=2, sort_keys=True))
+          PY
