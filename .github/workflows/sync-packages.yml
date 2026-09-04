@@ -54,7 +54,7 @@ jobs:
 
       - name: Validate importer
         run: |
-          python -m py_compile scripts/build_repo.py scripts/build_repo_v2.py scripts/build_repo_cohorts.py scripts/render_config_guide.py
+          python -m py_compile scripts/build_repo.py scripts/build_repo_v2.py scripts/build_repo_cohorts.py scripts/preflight_repo.py scripts/render_config_guide.py
           python -m json.tool config/roots.json >/dev/null
           python -m json.tool config/sources.json >/dev/null
 
@@ -63,8 +63,23 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+      - name: Metadata-only safety preflight
+        shell: bash
+        env:
+          TARGET: ${{ inputs.target }}
+        run: |
+          set -euo pipefail
+          echo "Preflight reads repository catalogs only; package payloads are not downloaded."
+          python scripts/preflight_repo.py --target "${TARGET}"
+
+      - name: Dry-run result
+        if: ${{ !inputs.allow_binary_push }}
+        shell: bash
+        run: |
+          echo "Metadata preflight passed. Binary download, staging, commit and push were NOT requested."
+
       - name: Build one ABI repository
-        id: build
+        if: ${{ inputs.allow_binary_push }}
         shell: bash
         env:
           TARGET: ${{ inputs.target }}
@@ -78,6 +93,7 @@ jobs:
           python scripts/render_config_guide.py --target "${TARGET}"
 
       - name: Stage only the selected target
+        if: ${{ inputs.allow_binary_push }}
         shell: bash
         env:
           TARGET: ${{ inputs.target }}
@@ -87,6 +103,7 @@ jobs:
           git add -- "${TARGET}" "MANIFESTS/${KEY}.json" "MANIFESTS/${KEY}" "SOURCES/${KEY}.json" "CONFIGS/${KEY}.md"
 
       - name: Binary and push safety gate
+        if: ${{ inputs.allow_binary_push }}
         shell: bash
         env:
           TARGET: ${{ inputs.target }}
@@ -125,13 +142,6 @@ jobs:
               print("Refusing to create or push a bulk binary commit.")
               raise SystemExit(21)
           PY
-
-      - name: Dry-run result
-        if: ${{ !inputs.allow_binary_push }}
-        shell: bash
-        run: |
-          echo "Safety checks passed. Binary push was NOT requested; repository was not modified."
-          git status --short
 
       - name: Commit and push once
         if: ${{ inputs.allow_binary_push }}
