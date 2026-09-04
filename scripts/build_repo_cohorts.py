@@ -3,13 +3,17 @@
 
 Historical FreeBSD snapshots cannot safely be flattened into one active pkg
 catalog when old and new root packages need different versions of ICU, Boost,
-OpenSSL, etc.  This builder therefore keeps each verified upstream snapshot as
-an independent installable cohort and assigns every requested root package name
-to the first cohort that contains its complete *exact* runtime dependency
-closure.
+OpenSSL, etc. This builder keeps each verified upstream snapshot/mirror as an
+independent installable cohort. Every requested root package name is assigned
+to the first cohort that contains a complete runtime dependency closure.
+
+Dependency version strings in pkg manifests are provenance, not hard solver
+constraints. Inside one original source snapshot we therefore trust the version
+of a dependency actually published by that same snapshot. We never use a
+package from another snapshot or ABI to fill that closure.
 
 `${ABI}/latest` is copied from the cohort with the broadest requested-root
-coverage.  Historical package families stay available under
+coverage. Historical package families stay available under
 `${ABI}/repos/<cohort>` and are indexed in MANIFESTS/ plus CONFIGS/ guides.
 """
 from __future__ import annotations
@@ -18,7 +22,6 @@ import argparse
 import json
 import shutil
 import sys
-from pathlib import Path
 
 import build_repo as core
 
@@ -32,57 +35,16 @@ def root_candidates(rows, cfg):
     return byname, sorted(n for n in byname if core.is_root(n, cfg))
 
 
-def strict_resolve(c, byname, selected, stack, notes):
-    """Resolve one root using only exact dependencies from one source catalog."""
-    name = c["name"]
-    if name in stack:
-        return True
-    if name in selected:
-        if selected[name]["version"] != c["version"]:
-            notes.append({
-                "package": name,
-                "selected": selected[name]["version"],
-                "also_required": c["version"],
-                "reason": "dependency version collision inside one cohort",
-            })
-            return False
-        return True
-
-    stack.add(name)
-    for dep_name, wanted_version in core.deps(c):
-        opts = byname.get(dep_name, [])
-        if wanted_version:
-            choices = [x for x in opts if x["version"] == wanted_version]
-        else:
-            choices = list(opts)
-        if not choices:
-            notes.append({
-                "package": dep_name,
-                "required_by": name,
-                "required_version": wanted_version,
-                "reason": "exact runtime dependency unavailable in this source",
-            })
-            stack.remove(name)
-            return False
-        chosen = core.ordered(choices)[0]
-        if not strict_resolve(chosen, byname, selected, stack, notes):
-            stack.remove(name)
-            return False
-
-    selected[name] = c
-    stack.remove(name)
-    return True
-
-
 def closure_for_root(name, byname):
+    """Resolve one root strictly inside the current source snapshot."""
     attempts = []
-    for c in core.ordered(byname.get(name, [])):
+    for candidate in core.ordered(byname.get(name, [])):
         selected, notes = {}, []
-        if strict_resolve(c, byname, selected, set(), notes):
-            return c, selected, notes
+        if core.resolve(candidate, byname, selected, notes, set()):
+            return candidate, selected, notes
         attempts.append({
-            "version": c["version"],
-            "source": c["source"],
+            "version": candidate["version"],
+            "source": candidate["source"],
             "issues": notes[:20],
         })
     return None, None, attempts
@@ -96,7 +58,7 @@ def compatible(a, b):
 
 
 def group_closures(items):
-    """Merge roots only when every overlapping dependency version agrees."""
+    """Merge roots only when every overlapping selected dependency agrees."""
     groups = []
     for root_name, root_c, closure, notes in items:
         for group in groups:
@@ -168,7 +130,7 @@ def build_group(session, target, cohort_id, group):
         "root_count": len(root_set),
         "package_count": len(info),
         "packages": info,
-        "dependency_notes": group["notes"],
+        "dependency_version_notes": group["notes"],
     }, []
 
 
@@ -176,8 +138,8 @@ def publish_latest(target, cohort_report):
     latest = ROOT / target / "latest"
     if latest.exists():
         shutil.rmtree(latest)
-    src = ROOT / cohort_report["path"]
-    shutil.copytree(src, latest)
+    source_repo = ROOT / cohort_report["path"]
+    shutil.copytree(source_repo, latest)
     return cohort_report["id"]
 
 
@@ -268,7 +230,7 @@ def build(target: str, migrate: bool):
             if closure is None:
                 unresolved.setdefault(name, []).append({
                     "source": src["id"],
-                    "reason": "incomplete exact runtime closure",
+                    "reason": "incomplete runtime closure in this source",
                     "attempts": notes,
                 })
                 continue
@@ -319,15 +281,17 @@ def build(target: str, migrate: bool):
             if p.is_dir() and p.name not in keep:
                 shutil.rmtree(p)
 
+    unresolved_names = sorted(discovered - covered)
     report = {
         "target": target,
-        "status": "ok",
+        "status": "ok" if not unresolved_names else "partial",
         "latest_cohort": latest_id,
         "cohort_count": len(cohorts),
         "covered_root_count": len(covered),
         "discovered_root_count": len(discovered),
         "coverage": dict(sorted(coverage.items())),
         "cohorts": [{k: v for k, v in c.items() if k != "packages"} for c in cohorts],
+        "unresolved_root_names": unresolved_names,
         "unresolved": unresolved,
         "exact_names_not_seen_in_any_source": sorted(
             name for name in cfg.get("exact", []) if name not in discovered
@@ -339,13 +303,13 @@ def build(target: str, migrate: bool):
     if detail_dir.exists():
         shutil.rmtree(detail_dir)
     detail_dir.mkdir(parents=True, exist_ok=True)
-    for c in cohorts:
-        write_json(detail_dir / f"{c['id']}.json", c)
+    for cohort in cohorts:
+        write_json(detail_dir / f"{cohort['id']}.json", cohort)
 
     if migrate and target == "FreeBSD:12:amd64":
         clean_legacy_root12()
 
-    print(target, "DONE", len(cohorts), "cohorts", len(covered), "requested root names covered", "latest=", latest_id)
+    print(target, report["status"].upper(), len(cohorts), "cohorts", len(covered), "/", len(discovered), "requested root names covered", "latest=", latest_id)
 
 
 def main():
