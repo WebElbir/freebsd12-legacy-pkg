@@ -1,0 +1,153 @@
+name: Publish FreeBSD 14 amd64 release repositories
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".publish-freebsd14-amd64-trigger"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-freebsd14-amd64-releases
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Sparse checkout metadata tooling only
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            scripts
+            config
+          sparse-checkout-cone-mode: true
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install importer dependencies
+        run: python -m pip install --disable-pip-version-check requests zstandard
+
+      - name: Validate publisher scripts
+        run: |
+          python -m py_compile scripts/build_repo.py scripts/build_repo_cohorts.py scripts/flatten_release_repo.py
+          python -m json.tool config/roots.json >/dev/null
+          python -m json.tool config/sources.json >/dev/null
+
+      - name: Build FreeBSD 14 amd64 coherent cohorts in runner only
+        run: python scripts/build_repo_cohorts.py --target "FreeBSD:14:amd64"
+
+      - name: Validate complete amd64 root coverage
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('MANIFESTS/FreeBSD-14-amd64.json')
+          r = json.loads(p.read_text())
+          if r.get('status') != 'ok':
+              raise SystemExit('FreeBSD 14 amd64 manifest is not complete: ' + str(r.get('status')))
+          if r.get('covered_root_count') != r.get('discovered_root_count'):
+              raise SystemExit('root coverage is incomplete')
+          if r.get('unresolved_root_names'):
+              raise SystemExit('unresolved roots: ' + ', '.join(r['unresolved_root_names']))
+          if not r.get('cohorts'):
+              raise SystemExit('no release cohorts were built')
+          print('coverage OK:', r['covered_root_count'], 'roots across', len(r['cohorts']), 'cohorts')
+          PY
+
+      - name: Flatten cohorts for GitHub Release assets
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/fbsd14-release
+          mkdir -p /tmp/fbsd14-release
+          python - <<'PY' > /tmp/cohorts.txt
+          import json
+          r=json.load(open('MANIFESTS/FreeBSD-14-amd64.json'))
+          for c in r['cohorts']:
+              print(c['id'])
+          PY
+          while IFS= read -r cohort; do
+            python scripts/flatten_release_repo.py \
+              --repo "FreeBSD:14:amd64/repos/${cohort}" \
+              --output "/tmp/fbsd14-release/${cohort}"
+          done < /tmp/cohorts.txt
+
+      - name: Validate GitHub Release asset limits
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          LIMIT=2*1024*1024*1024
+          for d in sorted(Path('/tmp/fbsd14-release').iterdir()):
+              files=[p for p in d.iterdir() if p.is_file()]
+              if len(files) > 1000:
+                  raise SystemExit(f'{d.name}: more than 1000 release assets')
+              too_big=[(p.name,p.stat().st_size) for p in files if p.stat().st_size >= LIMIT]
+              if too_big:
+                  raise SystemExit(f'{d.name}: assets at/over 2 GiB: {too_big}')
+              total=sum(p.stat().st_size for p in files)
+              largest=max(files,key=lambda p:p.stat().st_size)
+              print(d.name, 'assets=',len(files),'bytes=',total,'largest=',largest.name,largest.stat().st_size)
+          PY
+
+      - name: Publish immutable-by-policy cohort releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          latest_cohort="$(python - <<'PY'
+          import json
+          print(json.load(open('MANIFESTS/FreeBSD-14-amd64.json'))['latest_cohort'])
+          PY
+          )"
+          while IFS= read -r cohort; do
+            if [[ "$cohort" == "$latest_cohort" ]]; then
+              tag="freebsd14-amd64-default"
+              title="FreeBSD 14 amd64 default pkg repository"
+            else
+              tag="freebsd14-amd64-${cohort}"
+              title="FreeBSD 14 amd64 pkg repository - ${cohort}"
+            fi
+
+            if gh release view "$tag" >/dev/null 2>&1; then
+              echo "::error::Release $tag already exists. Refusing to overwrite or delete existing binary assets."
+              exit 12
+            fi
+
+            stage="/tmp/fbsd14-release/${cohort}"
+            gh release create "$tag" \
+              --target "$GITHUB_SHA" \
+              --title "$title" \
+              --notes "Selective FreeBSD 14 amd64 pkg repository cohort ${cohort}. Assets are hosted as GitHub Release binaries so they do not inflate Git history. Repository metadata and package archives are at this release download root." \
+              --draft
+
+            gh release upload "$tag" "$stage"/*
+            gh release edit "$tag" --draft=false --latest=false
+            echo "Published $tag"
+          done < /tmp/cohorts.txt
+
+      - name: Print repository endpoints
+        run: |
+          latest_cohort="$(python - <<'PY'
+          import json
+          print(json.load(open('MANIFESTS/FreeBSD-14-amd64.json'))['latest_cohort'])
+          PY
+          )"
+          echo "Default cohort: ${latest_cohort}"
+          echo "Default URL: https://github.com/${GITHUB_REPOSITORY}/releases/download/freebsd14-amd64-default"
+          while IFS= read -r cohort; do
+            if [[ "$cohort" != "$latest_cohort" ]]; then
+              echo "Cohort ${cohort}: https://github.com/${GITHUB_REPOSITORY}/releases/download/freebsd14-amd64-${cohort}"
+            fi
+          done < /tmp/cohorts.txt
