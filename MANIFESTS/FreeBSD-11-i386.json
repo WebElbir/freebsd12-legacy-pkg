@@ -1,4 +1,6 @@
 {
-  "target": "FreeBSD:11:i386",
-  "status": "no-verified-source"
+  "cohorts": [],
+  "coverage": {},
+  "status": "no-verified-source",
+  "target": "FreeBSD:11:i386"
 }
