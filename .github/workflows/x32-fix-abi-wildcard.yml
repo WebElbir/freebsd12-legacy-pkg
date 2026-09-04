@@ -1,0 +1,72 @@
+name: Fix i386 wildcard ABI package filtering
+
+on:
+  push:
+    paths:
+      - '.github/workflows/x32-fix-abi-wildcard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: x32-abi-filter-fix
+  cancel-in-progress: false
+
+jobs:
+  fix:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            scripts
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply exact importer fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('scripts/build_repo.py')
+          s=p.read_text()
+          old='    return "i386" in s or "x86:32" in s\n'
+          new='    return "i386" in s or "x86:32" in s or "*" in s\n'
+          if old not in s:
+              raise SystemExit('expected abi_ok line not found; refusing broad edit')
+          if s.count(old) != 1:
+              raise SystemExit('abi_ok line is not unique; refusing broad edit')
+          p.write_text(s.replace(old,new,1))
+          PY
+      - name: Validate wildcard ABI behavior
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/build_repo.py
+          PYTHONPATH=scripts python - <<'PY'
+          import build_repo as b
+          assert b.abi_ok('FreeBSD:10:i386','FreeBSD:10:*','freebsd:10:*')
+          assert b.abi_ok('FreeBSD:12:i386','FreeBSD:12:*','freebsd:12:*')
+          assert b.abi_ok('FreeBSD:13:i386','FreeBSD:13:i386','freebsd:13:x86:32')
+          assert not b.abi_ok('FreeBSD:13:i386','FreeBSD:14:*','freebsd:14:*')
+          assert not b.abi_ok('FreeBSD:13:i386','FreeBSD:13:amd64','freebsd:13:x86:64')
+          print('wildcard ABI filter validation OK')
+          PY
+      - name: Commit only importer fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- scripts/build_repo.py
+          git diff --cached --check
+          git diff --cached --name-only
+          test "$(git diff --cached --name-only | wc -l)" -eq 1
+          git commit -m 'Accept architecture-independent packages for i386 repos'
+          git push origin HEAD:main
