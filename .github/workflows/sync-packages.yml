@@ -103,6 +103,7 @@ jobs:
               git clean -fd -- "${target}" || true
               failures+=("${target}")
             fi
+            find scripts -type d -name __pycache__ -prune -exec rm -rf {} + 2>/dev/null || true
             git add -A
             if ! git diff --cached --quiet; then
               if [[ ${rc} -eq 0 ]]; then
@@ -110,7 +111,29 @@ jobs:
               else
                 git commit -m "Record ${target} package sync failure"
               fi
-              git push origin HEAD:"${PUSH_BRANCH}"
+              git fetch origin "${PUSH_BRANCH}"
+              if ! git rebase "origin/${PUSH_BRANCH}"; then
+                git rebase --abort || true
+                echo "::error::Could not rebase generated ${target} commit onto origin/${PUSH_BRANCH}"
+                exit 1
+              fi
+              pushed=0
+              for attempt in 1 2 3; do
+                if git push origin HEAD:"${PUSH_BRANCH}"; then
+                  pushed=1
+                  break
+                fi
+                echo "Push race on attempt ${attempt}; refreshing branch before retry"
+                git fetch origin "${PUSH_BRANCH}"
+                if ! git rebase "origin/${PUSH_BRANCH}"; then
+                  git rebase --abort || true
+                  break
+                fi
+              done
+              if [[ ${pushed} -ne 1 ]]; then
+                echo "::error::Unable to push ${target} after three attempts"
+                exit 1
+              fi
             else
               echo "No repository changes for ${target}"
             fi
