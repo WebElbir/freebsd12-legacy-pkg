@@ -1,0 +1,446 @@
+{
+  "dependency_version_notes": [],
+  "id": "neonet-10i386-quarterly",
+  "package_count": 51,
+  "packages": {
+    "apr": {
+      "filename": "apr-1.6.3.1.6.1_1.txz",
+      "role": "dependency",
+      "sha256": "f5f38e68232ed4e7f9a0f8668fd3e61e800a6aeeadf66f0998aab03de398871d",
+      "size": 453996,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.6.3.1.6.1_1"
+    },
+    "binutils": {
+      "filename": "binutils-2.30_5,1.txz",
+      "role": "dependency",
+      "sha256": "ddc4cdeb429ff3862f0f347cab3d1614668d00afe4c42b1b2fa2e80a20c561a4",
+      "size": 11183840,
+      "source": "neonet-10i386-quarterly",
+      "version": "2.30_5,1"
+    },
+    "compat7x-i386": {
+      "filename": "compat7x-i386-7.4.704000.201310.1.txz",
+      "role": "root",
+      "sha256": "576eeb3abe724bf9b42e64323655fea21d1c319f57ed98a2874e4b8fbf25a760",
+      "size": 2607180,
+      "source": "neonet-10i386-quarterly",
+      "version": "7.4.704000.201310.1"
+    },
+    "compat8x-i386": {
+      "filename": "compat8x-i386-8.4.804000.20151116.txz",
+      "role": "root",
+      "sha256": "af7417f7bdfda9cb6a00881ca69788598ca08e2886ab8c17e9db55eedafb7a53",
+      "size": 235460,
+      "source": "neonet-10i386-quarterly",
+      "version": "8.4.804000.20151116"
+    },
+    "compat9x-i386": {
+      "filename": "compat9x-i386-9.3.903000.20170608.txz",
+      "role": "root",
+      "sha256": "6a779323cb6d65a136ee0aec087075ccb6fca930f167fbbdb01d181384921c21",
+      "size": 1525356,
+      "source": "neonet-10i386-quarterly",
+      "version": "9.3.903000.20170608"
+    },
+    "cryptopp": {
+      "filename": "cryptopp-7.0.0.txz",
+      "role": "root",
+      "sha256": "3e509b884da2597cc20a7706cc12b202c4ddf5316206edac2d6bf0eeb4a72726",
+      "size": 3194384,
+      "source": "neonet-10i386-quarterly",
+      "version": "7.0.0"
+    },
+    "db5": {
+      "filename": "db5-5.3.28_7.txz",
+      "role": "dependency",
+      "sha256": "7164236c817b4a8052987fa9ff84837dc9924797a069bf5e5ab426706fc7a8e7",
+      "size": 12895952,
+      "source": "neonet-10i386-quarterly",
+      "version": "5.3.28_7"
+    },
+    "expat": {
+      "filename": "expat-2.2.6_1.txz",
+      "role": "dependency",
+      "sha256": "459edf1146c92db4411d505de308d6b757d02835c79f755519eb1fb3c19e83d2",
+      "size": 123660,
+      "source": "neonet-10i386-quarterly",
+      "version": "2.2.6_1"
+    },
+    "freecolor": {
+      "filename": "freecolor-0.9.2_1.txz",
+      "role": "root",
+      "sha256": "978d93ae27aa74f62a1edeaba8ce25e71b5a8a9bf77281cf584c8e65dfb79eb4",
+      "size": 5336,
+      "source": "neonet-10i386-quarterly",
+      "version": "0.9.2_1"
+    },
+    "gcc48": {
+      "filename": "gcc48-4.8.5_9.txz",
+      "role": "root",
+      "sha256": "fbd6d5a918c93969273231fa5a885b1290084c9487e75885362c306740f34cbe",
+      "size": 24176820,
+      "source": "neonet-10i386-quarterly",
+      "version": "4.8.5_9"
+    },
+    "gcc49": {
+      "filename": "gcc49-4.9.4_8.txz",
+      "role": "root",
+      "sha256": "f7e2a7d23a450a3353cc1097a4f34fcbe43e2bd567a39913cbd80cb8aaee832c",
+      "size": 28862668,
+      "source": "neonet-10i386-quarterly",
+      "version": "4.9.4_8"
+    },
+    "gcc5": {
+      "filename": "gcc5-5.5.0_5.txz",
+      "role": "root",
+      "sha256": "f7ab3f2f91b1c9546090a7fa916009767886ae2cd8430dcefe972b934cd91d49",
+      "size": 34526792,
+      "source": "neonet-10i386-quarterly",
+      "version": "5.5.0_5"
+    },
+    "gcc7": {
+      "filename": "gcc7-7.3.0_5.txz",
+      "role": "root",
+      "sha256": "9afc01a9b064e6dd3e2c8fc81d0e5e19de8ff5a1b98116efcd1b564671fe1597",
+      "size": 39772288,
+      "source": "neonet-10i386-quarterly",
+      "version": "7.3.0_5"
+    },
+    "gcc8": {
+      "filename": "gcc8-8.2.0_1.txz",
+      "role": "root",
+      "sha256": "32eb15889a2533a6fa7bc45cd285b48b314a36eab16b0a2e5b22d075f2bc4820",
+      "size": 42951776,
+      "source": "neonet-10i386-quarterly",
+      "version": "8.2.0_1"
+    },
+    "gdb": {
+      "filename": "gdb-8.2.txz",
+      "role": "root",
+      "sha256": "c728e261053faf74faf9f1c76aeb52dba55501e6da99b86aaf8a0d092983f1ee",
+      "size": 9171236,
+      "source": "neonet-10i386-quarterly",
+      "version": "8.2"
+    },
+    "gdbm": {
+      "filename": "gdbm-1.13_1.txz",
+      "role": "dependency",
+      "sha256": "2822c8ef2d8ac7a415508af39e54120f965b5d58032d6e303192917df7fb7c2d",
+      "size": 150380,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.13_1"
+    },
+    "gettext-runtime": {
+      "filename": "gettext-runtime-0.19.8.1_1.txz",
+      "role": "dependency",
+      "sha256": "e5919a5128e1a850e71809860d00ca99235ac062d25a53d22106651afb0bc99c",
+      "size": 148184,
+      "source": "neonet-10i386-quarterly",
+      "version": "0.19.8.1_1"
+    },
+    "gmake": {
+      "filename": "gmake-4.2.1_2.txz",
+      "role": "root",
+      "sha256": "2591f9f713817e523ff9508aa6435679783d77f64a522cf4b180e9ce28800749",
+      "size": 379108,
+      "source": "neonet-10i386-quarterly",
+      "version": "4.2.1_2"
+    },
+    "gmp": {
+      "filename": "gmp-6.1.2.txz",
+      "role": "dependency",
+      "sha256": "6938e78764b72dc47c839f31cbac15c32b0377fc6d20a99a6070f23c9c327dfb",
+      "size": 471664,
+      "source": "neonet-10i386-quarterly",
+      "version": "6.1.2"
+    },
+    "icu": {
+      "filename": "icu-62.1_2,1.txz",
+      "role": "dependency",
+      "sha256": "141a92b29092286fc50ffdb80d12855c96a29476941a17bbababaccd86cb04a8",
+      "size": 10049244,
+      "source": "neonet-10i386-quarterly",
+      "version": "62.1_2,1"
+    },
+    "indexinfo": {
+      "filename": "indexinfo-0.3.1.txz",
+      "role": "dependency",
+      "sha256": "1cc4a36c6e0a9ee48c663bb6bca619bbad05b33bd3509c55c89c1c1e353fdc14",
+      "size": 5496,
+      "source": "neonet-10i386-quarterly",
+      "version": "0.3.1"
+    },
+    "libedit": {
+      "filename": "libedit-3.1.20170329_2,1.txz",
+      "role": "dependency",
+      "sha256": "9b2547ec0aa51c0d21736004356d552b8907d6f32ff89a1647659abd27c85fe2",
+      "size": 124732,
+      "source": "neonet-10i386-quarterly",
+      "version": "3.1.20170329_2,1"
+    },
+    "libevent": {
+      "filename": "libevent-2.1.8_2.txz",
+      "role": "dependency",
+      "sha256": "5a1978cec415a3efa6e54cc63c8aca83ef3767426fcfd9240f458f38cdf5cab1",
+      "size": 296948,
+      "source": "neonet-10i386-quarterly",
+      "version": "2.1.8_2"
+    },
+    "libffi": {
+      "filename": "libffi-3.2.1_2.txz",
+      "role": "dependency",
+      "sha256": "351d72b4c25b9186da19e309e5ac42e0f905395d5f6ee5d1a346eff1425262a5",
+      "size": 35324,
+      "source": "neonet-10i386-quarterly",
+      "version": "3.2.1_2"
+    },
+    "libiconv": {
+      "filename": "libiconv-1.14_11.txz",
+      "role": "dependency",
+      "sha256": "0fcbc68efd85dbd73562d659773d55d00c670d84c3e40a19bd0e7c72e8df1c17",
+      "size": 616744,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.14_11"
+    },
+    "liblz4": {
+      "filename": "liblz4-1.8.3,1.txz",
+      "role": "dependency",
+      "sha256": "0a4b91056b9b91f0a9943e046f5ef6b76d2b9a4431b8c09dee0371ee87e13ab3",
+      "size": 145488,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.8.3,1"
+    },
+    "libstatgrab": {
+      "filename": "libstatgrab-0.91.txz",
+      "role": "dependency",
+      "sha256": "b0e46156466aaddd9e082cc12a8ee02b8d0d8fec6a13ad379aefaecd31d484b4",
+      "size": 115528,
+      "source": "neonet-10i386-quarterly",
+      "version": "0.91"
+    },
+    "libxml2": {
+      "filename": "libxml2-2.9.7.txz",
+      "role": "dependency",
+      "sha256": "4fda4407180d6449acfc9c835418ccab62375c12b619df12c6d793ab214b447d",
+      "size": 787956,
+      "source": "neonet-10i386-quarterly",
+      "version": "2.9.7"
+    },
+    "makedepend": {
+      "filename": "makedepend-1.0.5_2,1.txz",
+      "role": "root",
+      "sha256": "81016fb93f69d7fe852c0f82f7fe767a002528fb9f5716ab0a9b75a664d6154c",
+      "size": 18076,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.0.5_2,1"
+    },
+    "mariadb103-client": {
+      "filename": "mariadb103-client-10.3.10_1.txz",
+      "role": "root",
+      "sha256": "899c3e86cfbcf01b760f0eb5d2f7848ae180f13f966f1dd750020e36e7b55dd5",
+      "size": 1483380,
+      "source": "neonet-10i386-quarterly",
+      "version": "10.3.10_1"
+    },
+    "mariadb103-server": {
+      "filename": "mariadb103-server-10.3.10_1.txz",
+      "role": "root",
+      "sha256": "4ad65354602de9f4c1d5247c919e0743711eff47bb0f08947c397ecb59de918c",
+      "size": 28348408,
+      "source": "neonet-10i386-quarterly",
+      "version": "10.3.10_1"
+    },
+    "mpc": {
+      "filename": "mpc-1.1.0_1.txz",
+      "role": "dependency",
+      "sha256": "d1a221037084a6e9fc6a139b6d0545dccef95f0cc729ac50ba070aba9a61be3d",
+      "size": 85456,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.1.0_1"
+    },
+    "mpfr": {
+      "filename": "mpfr-4.0.1.txz",
+      "role": "dependency",
+      "sha256": "5f0d247c0cd8d90b48dd243350f6f3fde5db20742f0449ac643f20a6400984fd",
+      "size": 418164,
+      "source": "neonet-10i386-quarterly",
+      "version": "4.0.1"
+    },
+    "mysql55-client": {
+      "filename": "mysql55-client-5.5.61.txz",
+      "role": "root",
+      "sha256": "408d3b743db5cc24132cf60811c781ed95fbd6db2ac8cff8a34d1f474d8fe4b9",
+      "size": 1571196,
+      "source": "neonet-10i386-quarterly",
+      "version": "5.5.61"
+    },
+    "mysql55-server": {
+      "filename": "mysql55-server-5.5.61.txz",
+      "role": "root",
+      "sha256": "2e2ca3b2a64ae7690b3ac11aa59fb8cd73d0eec97a591cfd49f837e3b2fd0c6f",
+      "size": 6442100,
+      "source": "neonet-10i386-quarterly",
+      "version": "5.5.61"
+    },
+    "mysql56-client": {
+      "filename": "mysql56-client-5.6.41_1.txz",
+      "role": "root",
+      "sha256": "fb3123c4af266e3a0a6d2e22d5a46ec7e706177dad6ce1f584aed4061a706f3a",
+      "size": 1336912,
+      "source": "neonet-10i386-quarterly",
+      "version": "5.6.41_1"
+    },
+    "mysql56-server": {
+      "filename": "mysql56-server-5.6.41_2.txz",
+      "role": "root",
+      "sha256": "b51272f716c19b1780ee38109fa39d46b37a8be0a9319cb373ee1e203698a348",
+      "size": 7775468,
+      "source": "neonet-10i386-quarterly",
+      "version": "5.6.41_2"
+    },
+    "mysql80-client": {
+      "filename": "mysql80-client-8.0.12.txz",
+      "role": "root",
+      "sha256": "a72bee4b8895c36179f8821ce3fb54698860e3d2f49769ab62073290411e5bbc",
+      "size": 2255992,
+      "source": "neonet-10i386-quarterly",
+      "version": "8.0.12"
+    },
+    "mysql80-server": {
+      "filename": "mysql80-server-8.0.12.txz",
+      "role": "root",
+      "sha256": "7cdddfdaacdce5186aac0ef6c0ad4e997ed167da510ae266001953104c17cc37",
+      "size": 13481412,
+      "source": "neonet-10i386-quarterly",
+      "version": "8.0.12"
+    },
+    "nano": {
+      "filename": "nano-3.1.txz",
+      "role": "root",
+      "sha256": "9d8ffc4d117a78f90430be3a2030ae3dac33c3857fcc1be3b74d5dd4c161406a",
+      "size": 474944,
+      "source": "neonet-10i386-quarterly",
+      "version": "3.1"
+    },
+    "perl5": {
+      "filename": "perl5-5.26.2.txz",
+      "role": "dependency",
+      "sha256": "4488bd01fb29ded16cdd7316e4bcf01874308b5a51bd9b36f772470e9faf265e",
+      "size": 13899792,
+      "source": "neonet-10i386-quarterly",
+      "version": "5.26.2"
+    },
+    "protobuf": {
+      "filename": "protobuf-3.5.2_1,1.txz",
+      "role": "dependency",
+      "sha256": "7229eeec015dda95f06ae8bf478d96b3642f2c50b88dc025f3c61f965b6024d1",
+      "size": 2560980,
+      "source": "neonet-10i386-quarterly",
+      "version": "3.5.2_1,1"
+    },
+    "python27": {
+      "filename": "python27-2.7.15.txz",
+      "role": "dependency",
+      "sha256": "edb1265e725ec34815cfb5b5142367781f226205c2cb327fb92535d40305a40d",
+      "size": 10876000,
+      "source": "neonet-10i386-quarterly",
+      "version": "2.7.15"
+    },
+    "re2": {
+      "filename": "re2-20180901.txz",
+      "role": "dependency",
+      "sha256": "080d136542cb55e91e10dbf295a0f46a26bf7f37c01404d6d6ebee660a51eb1a",
+      "size": 240348,
+      "source": "neonet-10i386-quarterly",
+      "version": "20180901"
+    },
+    "readline": {
+      "filename": "readline-7.0.3_1.txz",
+      "role": "dependency",
+      "sha256": "a40e05f50628b0e62fe6c4e4b083c943c8d82866ee80d1f15d38bdcb51cfec14",
+      "size": 321444,
+      "source": "neonet-10i386-quarterly",
+      "version": "7.0.3_1"
+    },
+    "screen": {
+      "filename": "screen-4.6.2.txz",
+      "role": "root",
+      "sha256": "d8ff2af6dc10361299db4a265b022e32cdb2bf70fd4f61b3cfca45313ae6a0a1",
+      "size": 465464,
+      "source": "neonet-10i386-quarterly",
+      "version": "4.6.2"
+    },
+    "serf": {
+      "filename": "serf-1.3.9_3.txz",
+      "role": "dependency",
+      "sha256": "d6d5b4acfe3ea7a60752ea3ba6be0f380d66507ff1c9a8a1279e21772f033d6c",
+      "size": 75912,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.3.9_3"
+    },
+    "sqlite3": {
+      "filename": "sqlite3-3.25.1.txz",
+      "role": "dependency",
+      "sha256": "bde4d2fc526b963874f365efa93602071d458e9b9cf54999fbd9077e36b0e796",
+      "size": 1348856,
+      "source": "neonet-10i386-quarterly",
+      "version": "3.25.1"
+    },
+    "subversion": {
+      "filename": "subversion-1.10.2_1.txz",
+      "role": "root",
+      "sha256": "ff783f19b1673cd5ebe2d05968a70e6f26b4f40f915bd87aaa54e20dd3aa13cc",
+      "size": 3387068,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.10.2_1"
+    },
+    "unixODBC": {
+      "filename": "unixODBC-2.3.7.txz",
+      "role": "dependency",
+      "sha256": "53b35f9b76e3e75451496c2a305f8284f09bad0d1b7e37f326094f5887e8e7f0",
+      "size": 447080,
+      "source": "neonet-10i386-quarterly",
+      "version": "2.3.7"
+    },
+    "utf8proc": {
+      "filename": "utf8proc-2.1.0.txz",
+      "role": "dependency",
+      "sha256": "9f9c2c9813f4f52c1a1ec349dcc3195fa5c9c5a0baea6cdcd078e1aaf60ac15c",
+      "size": 58272,
+      "source": "neonet-10i386-quarterly",
+      "version": "2.1.0"
+    }
+  },
+  "path": "FreeBSD:10:i386/repos/neonet-10i386-quarterly",
+  "priority": 0,
+  "root_count": 24,
+  "roots": [
+    "compat7x-i386",
+    "compat8x-i386",
+    "compat9x-i386",
+    "cryptopp",
+    "freecolor",
+    "gcc48",
+    "gcc49",
+    "gcc5",
+    "gcc7",
+    "gcc8",
+    "gdb",
+    "gmake",
+    "makedepend",
+    "mariadb103-client",
+    "mariadb103-server",
+    "mysql55-client",
+    "mysql55-server",
+    "mysql56-client",
+    "mysql56-server",
+    "mysql80-client",
+    "mysql80-server",
+    "nano",
+    "screen",
+    "subversion"
+  ],
+  "source_id": "neonet-10i386-quarterly",
+  "source_url": "https://ftp.neonet.bc.ca/freebsd-pkg/FreeBSD:10:i386/quarterly/"
+}
