@@ -12,9 +12,11 @@ constraints. Inside one original source snapshot we therefore trust the version
 of a dependency actually published by that same snapshot. We never use a
 package from another snapshot or ABI to fill that closure.
 
-`${ABI}/latest` is copied from the cohort with the broadest requested-root
-coverage. Historical package families stay available under
-`${ABI}/repos/<cohort>` and are indexed in MANIFESTS/ plus CONFIGS/ guides.
+`${ABI}/latest` is the canonical public pkg endpoint. It is copied from the
+cohort with the broadest requested-root coverage. If an ABI has no verified
+binary source, a valid empty repository is still emitted at `${ABI}/latest` so
+that the canonical raw.githubusercontent.com URL never becomes a 404. The
+manifest remains explicit that the ABI has no verified package source.
 """
 from __future__ import annotations
 
@@ -143,12 +145,26 @@ def publish_latest(target, cohort_report):
     return cohort_report["id"]
 
 
-def remove_stale_target(target):
-    target_dir = ROOT / target
-    for name in ("latest", "repos"):
-        p = target_dir / name
-        if p.exists():
-            shutil.rmtree(p)
+def publish_empty_latest(target, status, note):
+    """Create a valid zero-package pkg repository instead of leaving a 404."""
+    latest = ROOT / target / "latest"
+    if latest.exists():
+        shutil.rmtree(latest)
+    latest.mkdir(parents=True, exist_ok=True)
+    core.metadata(latest, {}, {})
+    (latest / "SHA256SUMS").write_text("", encoding="utf-8")
+    write_json(latest / "STATUS.json", {
+        "target": target,
+        "status": status,
+        "note": note,
+        "package_count": 0,
+    })
+
+
+def remove_stale_repos(target):
+    repos = ROOT / target / "repos"
+    if repos.exists():
+        shutil.rmtree(repos)
 
 
 def clean_legacy_root12():
@@ -183,14 +199,22 @@ def build(target: str, migrate: bool):
     key = target.replace(":", "-")
 
     if not sources:
-        remove_stale_target(target)
+        remove_stale_repos(target)
+        publish_empty_latest(
+            target,
+            "no-verified-source",
+            "No verified binary source is configured for this ABI. The canonical repository endpoint is intentionally valid but empty.",
+        )
         write_json(manifest_dir / f"{key}.json", {
             "target": target,
             "status": "no-verified-source",
+            "latest_cohort": None,
             "cohorts": [],
             "coverage": {},
+            "canonical_repo": f"{target}/latest",
         })
-        print(target, "no verified source; no fake URL used")
+        write_json(sources_dir / f"{key}.json", {"target": target, "sources": []})
+        print(target, "no verified source; emitted valid empty canonical latest repo")
         return
 
     session = core.session()
@@ -261,16 +285,26 @@ def build(target: str, migrate: bool):
     write_json(sources_dir / f"{key}.json", {"target": target, "sources": source_stats})
 
     if not cohorts:
-        remove_stale_target(target)
+        existing_latest = ROOT / target / "latest"
+        if existing_latest.is_dir() and (existing_latest / "packagesite.txz").is_file():
+            status = "sync-failed-preserved-latest"
+            note = "No source cohort could be rebuilt during this run; the previously published canonical latest repository was preserved."
+        else:
+            status = "no-requested-packages-resolved"
+            note = "No requested package cohort could be resolved. The canonical repository endpoint is valid but empty."
+            publish_empty_latest(target, status, note)
+        remove_stale_repos(target)
         write_json(manifest_dir / f"{key}.json", {
             "target": target,
-            "status": "no-requested-packages-resolved",
+            "status": status,
             "cohorts": [],
             "coverage": {},
             "discovered_roots": sorted(discovered),
             "unresolved": unresolved,
+            "canonical_repo": f"{target}/latest",
         })
-        raise RuntimeError(target + ": no complete requested package cohort could be built")
+        print(target, status, "canonical latest endpoint retained")
+        return
 
     best = max(cohorts, key=lambda c: (c["root_count"], c["package_count"], -c["priority"]))
     latest_id = publish_latest(target, best)
@@ -286,6 +320,7 @@ def build(target: str, migrate: bool):
         "target": target,
         "status": "ok" if not unresolved_names else "partial",
         "latest_cohort": latest_id,
+        "canonical_repo": f"{target}/latest",
         "cohort_count": len(cohorts),
         "covered_root_count": len(covered),
         "discovered_root_count": len(discovered),
