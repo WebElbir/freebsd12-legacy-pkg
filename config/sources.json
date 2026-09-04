@@ -1,0 +1,71 @@
+{
+  "policy": [
+    "Prefer archived Nepustil snapshots for historical MySQL/MariaDB/GCC coverage.",
+    "Then use SGGS/Neonet EOL mirrors.",
+    "Then use official pkg.FreeBSD.org repositories where still available.",
+    "Use PC-BSD pkgng archives for FreeBSD 9.",
+    "Never invent a source URL and never use a package from another ABI to fill a gap."
+  ],
+  "targets": {
+    "FreeBSD:9:amd64": [
+      {"id":"pcbsd-92-gr","url":"http://ftp.gr.freebsd.org/pub/pcbsd/pkg/9.2-RELEASE/amd64/"},
+      {"id":"pcbsd-92-ncnu","url":"http://ftp.ncnu.edu.tw/BSD/PCBSD/pkg/9.2-RELEASE/amd64/"}
+    ],
+    "FreeBSD:9:i386": [
+      {"id":"pcbsd-91-allbsd","url":"http://pub.allbsd.org/pub/pcbsd/packages/9.1-RELEASE/i386/"},
+      {"id":"pcbsd-91-jaist","url":"http://ftp.jaist.ac.jp/pub/PC-BSD/packages/9.1-RELEASE/i386/"}
+    ],
+    "FreeBSD:10:amd64": [
+      {"id":"sggs-10-latest","url":"https://mirror.sg.gs/freebsd-pkg/FreeBSD:10:amd64/latest/"},
+      {"id":"sggs-10-quarterly","url":"https://mirror.sg.gs/freebsd-pkg/FreeBSD:10:amd64/quarterly/"}
+    ],
+    "FreeBSD:10:i386": [
+      {"id":"neonet-10i386-quarterly","url":"https://ftp.neonet.bc.ca/freebsd-pkg/FreeBSD:10:i386/quarterly/"},
+      {"id":"neonet-10i386-latest","url":"https://ftp.neonet.bc.ca/freebsd-pkg/FreeBSD:10:i386/latest/"}
+    ],
+    "FreeBSD:11:amd64": [
+      {"id":"nepustil-112","url":"https://repo.nepustil.net/112/FreeBSD:11:amd64/"},
+      {"id":"nepustil-113","url":"https://repo.nepustil.net/113/FreeBSD:11:amd64/"},
+      {"id":"nepustil-114","url":"https://repo.nepustil.net/114/FreeBSD:11:amd64/"},
+      {"id":"nepustil-11","url":"https://repo.nepustil.net/FreeBSD:11:amd64/"},
+      {"id":"sggs-11-latest","url":"https://mirror.sg.gs/freebsd-pkg/FreeBSD:11:amd64/latest/"},
+      {"id":"sggs-11-quarterly","url":"https://mirror.sg.gs/freebsd-pkg/FreeBSD:11:amd64/quarterly/"}
+    ],
+    "FreeBSD:11:i386": [],
+    "FreeBSD:12:amd64": [
+      {"id":"local-existing-12","type":"local-existing"},
+      {"id":"nepustil-121","url":"https://repo.nepustil.net/121/FreeBSD:12:amd64/"},
+      {"id":"nepustil-123","url":"https://repo.nepustil.net/123/FreeBSD:12:amd64/"},
+      {"id":"nepustil-12","url":"https://repo.nepustil.net/FreeBSD:12:amd64/"},
+      {"id":"sggs-12-latest","url":"https://mirror.sg.gs/freebsd-pkg/FreeBSD:12:amd64/latest/"},
+      {"id":"sggs-12-quarterly","url":"https://mirror.sg.gs/freebsd-pkg/FreeBSD:12:amd64/quarterly/"}
+    ],
+    "FreeBSD:12:i386": [
+      {"id":"sggs-12i386-latest","url":"https://mirror.sg.gs/freebsd-pkg/FreeBSD:12:i386/latest/"}
+    ],
+    "FreeBSD:13:amd64": [
+      {"id":"nepustil-130","url":"https://repo.nepustil.net/130/FreeBSD:13:amd64/"},
+      {"id":"nepustil-131","url":"https://repo.nepustil.net/131/FreeBSD:13:amd64/"},
+      {"id":"nepustil-132","url":"https://repo.nepustil.net/132/FreeBSD:13:amd64/"},
+      {"id":"nepustil-13","url":"https://repo.nepustil.net/FreeBSD:13:amd64/"},
+      {"id":"freebsd-13-latest","url":"https://pkg.freebsd.org/FreeBSD:13:amd64/latest/"},
+      {"id":"freebsd-13-quarterly","url":"https://pkg.freebsd.org/FreeBSD:13:amd64/quarterly/"}
+    ],
+    "FreeBSD:13:i386": [
+      {"id":"freebsd-13i386-release5","url":"https://pkg.freebsd.org/FreeBSD:13:i386/release_5/"}
+    ],
+    "FreeBSD:14:amd64": [
+      {"id":"nepustil-140","url":"https://repo.nepustil.net/140/FreeBSD:14:amd64/"},
+      {"id":"nepustil-141","url":"https://repo.nepustil.net/141/FreeBSD:14:amd64/"},
+      {"id":"nepustil-142","url":"https://repo.nepustil.net/142/FreeBSD:14:amd64/"},
+      {"id":"nepustil-143","url":"https://repo.nepustil.net/143/FreeBSD:14:amd64/"},
+      {"id":"nepustil-144","url":"https://repo.nepustil.net/144/FreeBSD:14:amd64/"},
+      {"id":"nepustil-14","url":"https://repo.nepustil.net/FreeBSD:14:amd64/"},
+      {"id":"freebsd-14-latest","url":"https://pkg.freebsd.org/FreeBSD:14:amd64/latest/"},
+      {"id":"freebsd-14-quarterly","url":"https://pkg.freebsd.org/FreeBSD:14:amd64/quarterly/"}
+    ],
+    "FreeBSD:14:i386": [
+      {"id":"freebsd-14i386-release5","url":"https://pkg.freebsd.org/FreeBSD:14:i386/release_5/"}
+    ]
+  }
+}
