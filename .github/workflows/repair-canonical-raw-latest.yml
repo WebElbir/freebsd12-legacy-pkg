@@ -89,9 +89,10 @@ jobs:
             git add -A -- \
               "${target}/latest" \
               "MANIFESTS/${key}.json" \
-              "MANIFESTS/${key}" \
               "SOURCES/${key}.json" \
               "CONFIGS/${key}.md"
+            # Detail manifests exist only when at least one cohort was built.
+            git add -A -- "MANIFESTS/${key}" 2>/dev/null || true
 
             TARGET="${target}" python - <<'PY'
           import os, subprocess
