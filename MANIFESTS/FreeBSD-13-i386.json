@@ -1,14 +1,16 @@
 {
+  "canonical_repo": "FreeBSD:13:i386/latest",
   "cohort_count": 1,
   "cohorts": [
     {
       "dependency_version_notes": [],
       "id": "freebsd-13i386-release5",
-      "package_count": 82,
+      "package_count": 106,
       "path": "FreeBSD:13:i386/repos/freebsd-13i386-release5",
       "priority": 0,
-      "root_count": 27,
+      "root_count": 31,
       "roots": [
+        "boost-all",
         "compat11x-i386",
         "compat12x-i386",
         "compat7x-i386",
@@ -17,6 +19,7 @@
         "cryptopp",
         "devil",
         "freecolor",
+        "gcc",
         "gcc11",
         "gcc12",
         "gcc13",
@@ -35,13 +38,16 @@
         "mysql80-client",
         "mysql80-server",
         "nano",
-        "screen"
+        "python",
+        "screen",
+        "subversion"
       ],
       "source_id": "freebsd-13i386-release5",
       "source_url": "https://pkg.freebsd.org/FreeBSD:13:i386/release_5/"
     }
   ],
   "coverage": {
+    "boost-all": "freebsd-13i386-release5",
     "compat11x-i386": "freebsd-13i386-release5",
     "compat12x-i386": "freebsd-13i386-release5",
     "compat7x-i386": "freebsd-13i386-release5",
@@ -50,6 +56,7 @@
     "cryptopp": "freebsd-13i386-release5",
     "devil": "freebsd-13i386-release5",
     "freecolor": "freebsd-13i386-release5",
+    "gcc": "freebsd-13i386-release5",
     "gcc11": "freebsd-13i386-release5",
     "gcc12": "freebsd-13i386-release5",
     "gcc13": "freebsd-13i386-release5",
@@ -68,38 +75,22 @@
     "mysql80-client": "freebsd-13i386-release5",
     "mysql80-server": "freebsd-13i386-release5",
     "nano": "freebsd-13i386-release5",
-    "screen": "freebsd-13i386-release5"
+    "python": "freebsd-13i386-release5",
+    "screen": "freebsd-13i386-release5",
+    "subversion": "freebsd-13i386-release5"
   },
-  "covered_root_count": 27,
-  "discovered_root_count": 28,
+  "covered_root_count": 31,
+  "discovered_root_count": 31,
   "exact_names_not_seen_in_any_source": [
-    "boost-all",
     "compat11x-amd64",
     "compat12x-amd64",
     "compat7x-amd64",
     "compat8x-amd64",
-    "compat9x-amd64",
-    "python"
+    "compat9x-amd64"
   ],
   "latest_cohort": "freebsd-13i386-release5",
-  "status": "partial",
+  "status": "ok",
   "target": "FreeBSD:13:i386",
-  "unresolved": {
-    "subversion": [
-      {
-        "attempts": [
-          {
-            "issues": [],
-            "source": "freebsd-13i386-release5",
-            "version": "1.14.5"
-          }
-        ],
-        "reason": "incomplete runtime closure in this source",
-        "source": "freebsd-13i386-release5"
-      }
-    ]
-  },
-  "unresolved_root_names": [
-    "subversion"
-  ]
+  "unresolved": {},
+  "unresolved_root_names": []
 }

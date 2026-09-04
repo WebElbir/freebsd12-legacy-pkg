@@ -1,8 +1,16 @@
 {
   "dependency_version_notes": [],
   "id": "freebsd-13i386-release5",
-  "package_count": 82,
+  "package_count": 106,
   "packages": {
+    "apr": {
+      "filename": "apr-1.7.5.1.6.3_3.pkg",
+      "role": "dependency",
+      "sha256": "239680106e665e51525fe09a989607fd33ed616390ce005d0c3216a90c378a19",
+      "size": 505480,
+      "source": "freebsd-13i386-release5",
+      "version": "1.7.5.1.6.3_3"
+    },
     "binutils": {
       "filename": "binutils-2.43.1,1.pkg",
       "role": "dependency",
@@ -10,6 +18,30 @@
       "size": 7895392,
       "source": "freebsd-13i386-release5",
       "version": "2.43.1,1"
+    },
+    "boost-all": {
+      "filename": "boost-all-1.86.0.pkg",
+      "role": "root",
+      "sha256": "e237fb037306b85ed85a81e0629290a56ce40927b343ab6d01fe6414594449e6",
+      "size": 1436,
+      "source": "freebsd-13i386-release5",
+      "version": "1.86.0"
+    },
+    "boost-docs": {
+      "filename": "boost-docs-1.86.0.pkg",
+      "role": "dependency",
+      "sha256": "316a4473e385b2fc8186a8d11ca1c448d282367f2bd2b647692864c4df5c40b9",
+      "size": 58660400,
+      "source": "freebsd-13i386-release5",
+      "version": "1.86.0"
+    },
+    "boost-jam": {
+      "filename": "boost-jam-1.86.0.pkg",
+      "role": "dependency",
+      "sha256": "2c188f4ab025291e345f8679c6cdd5ec283eb1e16615c144dd77a7bc05b19e4f",
+      "size": 237920,
+      "source": "freebsd-13i386-release5",
+      "version": "1.86.0"
     },
     "boost-libs": {
       "filename": "boost-libs-1.86.0_1.pkg",
@@ -123,6 +155,14 @@
       "source": "freebsd-13i386-release5",
       "version": "0.9.3_1"
     },
+    "gcc": {
+      "filename": "gcc-13_5.pkg",
+      "role": "root",
+      "sha256": "29d7761c47ab65a0c92823850741866e5dea06984b12862aab3d3c515451d883",
+      "size": 928,
+      "source": "freebsd-13i386-release5",
+      "version": "13_5"
+    },
     "gcc11": {
       "filename": "gcc11-11.5.0.pkg",
       "role": "root",
@@ -163,6 +203,14 @@
       "source": "freebsd-13i386-release5",
       "version": "15.1_1"
     },
+    "gdbm": {
+      "filename": "gdbm-1.24.pkg",
+      "role": "dependency",
+      "sha256": "60459e1cf9d08373d7eec66736c6a62f12d16ae3f29a5fb54ee1453bd31f114c",
+      "size": 233748,
+      "source": "freebsd-13i386-release5",
+      "version": "1.24"
+    },
     "gettext-runtime": {
       "filename": "gettext-runtime-0.23.pkg",
       "role": "dependency",
@@ -186,6 +234,22 @@
       "size": 512344,
       "source": "freebsd-13i386-release5",
       "version": "6.3.0"
+    },
+    "gnupg": {
+      "filename": "gnupg-2.4.7.pkg",
+      "role": "dependency",
+      "sha256": "57a145455988b1335f4ebcb43a81cb81379a337609538ccc3181de3ddf7b1496",
+      "size": 2556988,
+      "source": "freebsd-13i386-release5",
+      "version": "2.4.7"
+    },
+    "gnutls": {
+      "filename": "gnutls-3.8.8.pkg",
+      "role": "dependency",
+      "sha256": "e5c5bc54418feb53e5f6c6a4907e9ae5b68aaa801044def38d8c998859f23a29",
+      "size": 2589472,
+      "source": "freebsd-13i386-release5",
+      "version": "3.8.8"
     },
     "groff": {
       "filename": "groff-1.23.0_4.pkg",
@@ -259,6 +323,14 @@
       "source": "freebsd-13i386-release5",
       "version": "4.0.0"
     },
+    "libassuan": {
+      "filename": "libassuan-3.0.1.pkg",
+      "role": "dependency",
+      "sha256": "acb05e3b789b1c3014519d9f3c9fa3b8515b3327f6af03978d31dfbc0e22dc95",
+      "size": 80252,
+      "source": "freebsd-13i386-release5",
+      "version": "3.0.1"
+    },
     "libcbor": {
       "filename": "libcbor-0.11.0.pkg",
       "role": "dependency",
@@ -323,6 +395,22 @@
       "source": "freebsd-13i386-release5",
       "version": "10.2.1"
     },
+    "libgcrypt": {
+      "filename": "libgcrypt-1.11.0.pkg",
+      "role": "dependency",
+      "sha256": "63ebc5d67f8dc70a519aa9e4345a5e14eea7a3ec4be683e32381175edb98210a",
+      "size": 962136,
+      "source": "freebsd-13i386-release5",
+      "version": "1.11.0"
+    },
+    "libgpg-error": {
+      "filename": "libgpg-error-1.51.pkg",
+      "role": "dependency",
+      "sha256": "329af1f8e7fa720a03dadb423c907e7b596d59070112eefd94654cf425c55451",
+      "size": 344560,
+      "source": "freebsd-13i386-release5",
+      "version": "1.51"
+    },
     "libiconv": {
       "filename": "libiconv-1.17_1.pkg",
       "role": "dependency",
@@ -338,6 +426,14 @@
       "size": 136316,
       "source": "freebsd-13i386-release5",
       "version": "2.3.7"
+    },
+    "libksba": {
+      "filename": "libksba-1.6.7.pkg",
+      "role": "dependency",
+      "sha256": "dd9cddd4c7ba59ef636ffa5fea38559824fc3db1fed7ea071bd0cc0398ca5eea",
+      "size": 194324,
+      "source": "freebsd-13i386-release5",
+      "version": "1.6.7"
     },
     "liblz4": {
       "filename": "liblz4-1.10.0,1.pkg",
@@ -394,6 +490,14 @@
       "size": 124464,
       "source": "freebsd-13i386-release5",
       "version": "0.92.1_1"
+    },
+    "libtasn1": {
+      "filename": "libtasn1-4.20.0_1.pkg",
+      "role": "dependency",
+      "sha256": "cdfe7927d37f880b3daaf6578fc0b244a4ad5958af19dc09d8ac5ce66f6c799a",
+      "size": 176784,
+      "source": "freebsd-13i386-release5",
+      "version": "4.20.0_1"
     },
     "libunistring": {
       "filename": "libunistring-1.2.pkg",
@@ -539,6 +643,22 @@
       "source": "freebsd-13i386-release5",
       "version": "8.2"
     },
+    "nettle": {
+      "filename": "nettle-3.10.1.pkg",
+      "role": "dependency",
+      "sha256": "5bccbd345f6b23137b53a073af1476f7e0a14a3cfdb8a97278324867aa0c9f60",
+      "size": 1556920,
+      "source": "freebsd-13i386-release5",
+      "version": "3.10.1"
+    },
+    "npth": {
+      "filename": "npth-1.8.pkg",
+      "role": "dependency",
+      "sha256": "55dd9e9c9c4ecc1395be6ae1e67604255ed3e152db1a8cad978616cc8d0f7475",
+      "size": 20364,
+      "source": "freebsd-13i386-release5",
+      "version": "1.8"
+    },
     "openldap26-client": {
       "filename": "openldap26-client-2.6.9.pkg",
       "role": "dependency",
@@ -546,6 +666,14 @@
       "size": 1064532,
       "source": "freebsd-13i386-release5",
       "version": "2.6.9"
+    },
+    "p11-kit": {
+      "filename": "p11-kit-0.25.5.pkg",
+      "role": "dependency",
+      "sha256": "abea6563a4993b6d788c88f9c4becd59511a152877f92d614e6b188f094a1564",
+      "size": 491432,
+      "source": "freebsd-13i386-release5",
+      "version": "0.25.5"
     },
     "pcre2": {
       "filename": "pcre2-10.43.pkg",
@@ -563,6 +691,22 @@
       "source": "freebsd-13i386-release5",
       "version": "5.36.3_2"
     },
+    "pinentry": {
+      "filename": "pinentry-1.3.1_1.pkg",
+      "role": "dependency",
+      "sha256": "c71004a487bdd860ecda68b360d6ab5a79cd45e63f5bdfce9666b664bc29ffbd",
+      "size": 17780,
+      "source": "freebsd-13i386-release5",
+      "version": "1.3.1_1"
+    },
+    "pinentry-curses": {
+      "filename": "pinentry-curses-1.3.1.pkg",
+      "role": "dependency",
+      "sha256": "daed5feb7b4434b0b8f661de8df74db01297c6dfcf311f0bdc4d2070cb28cf76",
+      "size": 34864,
+      "source": "freebsd-13i386-release5",
+      "version": "1.3.1"
+    },
     "png": {
       "filename": "png-1.6.44.pkg",
       "role": "dependency",
@@ -578,6 +722,22 @@
       "size": 60800,
       "source": "freebsd-13i386-release5",
       "version": "1.17_6"
+    },
+    "python": {
+      "filename": "python-3.11_3,2.pkg",
+      "role": "root",
+      "sha256": "fa983fcbccd0aa53988421ebe5a1cb0a1a23aebbf1cded539be65ec88e009d25",
+      "size": 1100,
+      "source": "freebsd-13i386-release5",
+      "version": "3.11_3,2"
+    },
+    "python3": {
+      "filename": "python3-3_4.pkg",
+      "role": "dependency",
+      "sha256": "745e0297e6947bd748738764c0a347ca56146695754fcc7a784924e5b97568cf",
+      "size": 1216,
+      "source": "freebsd-13i386-release5",
+      "version": "3_4"
     },
     "python311": {
       "filename": "python311-3.11.11.pkg",
@@ -603,6 +763,14 @@
       "source": "freebsd-13i386-release5",
       "version": "4.9.1_5"
     },
+    "serf": {
+      "filename": "serf-1.3.10_1.pkg",
+      "role": "dependency",
+      "sha256": "1b0cceeb1428c6fc6507c0f20fe712a85189b28bd48186d8bbdfb836c8a43a59",
+      "size": 85480,
+      "source": "freebsd-13i386-release5",
+      "version": "1.3.10_1"
+    },
     "source-highlight": {
       "filename": "source-highlight-3.1.9_11.pkg",
       "role": "dependency",
@@ -611,6 +779,14 @@
       "source": "freebsd-13i386-release5",
       "version": "3.1.9_11"
     },
+    "sqlite3": {
+      "filename": "sqlite3-3.46.1,1.pkg",
+      "role": "dependency",
+      "sha256": "9b727d32d63144e2d77aa10969b9953f8b3d5dc44b2c45aa0cd9a29a2e9e1c9e",
+      "size": 1553904,
+      "source": "freebsd-13i386-release5",
+      "version": "3.46.1,1"
+    },
     "squish": {
       "filename": "squish-1.15_1.pkg",
       "role": "dependency",
@@ -618,6 +794,14 @@
       "size": 22016,
       "source": "freebsd-13i386-release5",
       "version": "1.15_1"
+    },
+    "subversion": {
+      "filename": "subversion-1.14.5.pkg",
+      "role": "root",
+      "sha256": "f6a51f88a1f3a9c19b8e8cc7fddb7e14328931985e1081fcb2de6e3a8530a052",
+      "size": 3649356,
+      "source": "freebsd-13i386-release5",
+      "version": "1.14.5"
     },
     "tiff": {
       "filename": "tiff-4.7.0.pkg",
@@ -643,6 +827,14 @@
       "source": "freebsd-13i386-release5",
       "version": "2.3.12_1"
     },
+    "utf8proc": {
+      "filename": "utf8proc-2.9.0.pkg",
+      "role": "dependency",
+      "sha256": "c30d82a5aca4c0e991f7249c2f04368dcb327ea83faa5e3d097f56e9b1a861ce",
+      "size": 65044,
+      "source": "freebsd-13i386-release5",
+      "version": "2.9.0"
+    },
     "xxhash": {
       "filename": "xxhash-0.8.2_1.pkg",
       "role": "dependency",
@@ -662,8 +854,9 @@
   },
   "path": "FreeBSD:13:i386/repos/freebsd-13i386-release5",
   "priority": 0,
-  "root_count": 27,
+  "root_count": 31,
   "roots": [
+    "boost-all",
     "compat11x-i386",
     "compat12x-i386",
     "compat7x-i386",
@@ -672,6 +865,7 @@
     "cryptopp",
     "devil",
     "freecolor",
+    "gcc",
     "gcc11",
     "gcc12",
     "gcc13",
@@ -690,7 +884,9 @@
     "mysql80-client",
     "mysql80-server",
     "nano",
-    "screen"
+    "python",
+    "screen",
+    "subversion"
   ],
   "source_id": "freebsd-13i386-release5",
   "source_url": "https://pkg.freebsd.org/FreeBSD:13:i386/release_5/"
