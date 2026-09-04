@@ -1,0 +1,6 @@
+{
+  "note": "No verified binary source is configured for this ABI. The canonical repository endpoint is intentionally valid but empty.",
+  "package_count": 0,
+  "status": "no-verified-source",
+  "target": "FreeBSD:11:i386"
+}

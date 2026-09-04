@@ -1,6 +1,8 @@
 {
+  "canonical_repo": "FreeBSD:11:i386/latest",
   "cohorts": [],
   "coverage": {},
+  "latest_cohort": null,
   "status": "no-verified-source",
   "target": "FreeBSD:11:i386"
 }
