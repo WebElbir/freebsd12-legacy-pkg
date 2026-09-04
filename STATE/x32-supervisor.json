@@ -20,6 +20,14 @@
   },
   "package_failures": {},
   "skip_after_failures": 3,
+  "last_action": {
+    "at": "2026-09-04T05:58:00+03:00",
+    "type": "metadata-diagnostic",
+    "run_id": 33831503331,
+    "target_scope": ["FreeBSD:12:i386", "FreeBSD:13:i386", "FreeBSD:14:i386"],
+    "purpose": "Identify exact missing dependency names blocking Subversion closure without downloading package payloads.",
+    "status": "in_progress"
+  },
   "rules": [
     "Never mix FreeBSD major versions or ABIs.",
     "Never invent an upstream source.",
