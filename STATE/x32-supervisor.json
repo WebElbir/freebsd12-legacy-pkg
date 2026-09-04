@@ -11,22 +11,33 @@
     "FreeBSD:9:i386"
   ],
   "targets": {
-    "FreeBSD:12:i386": {"status": "partial", "unresolved": ["subversion"]},
-    "FreeBSD:13:i386": {"status": "partial", "unresolved": ["subversion"]},
-    "FreeBSD:14:i386": {"status": "partial", "unresolved": ["subversion"]},
-    "FreeBSD:10:i386": {"status": "partial", "unresolved": ["devil", "gcc6", "mysql57-client", "mysql57-server"]},
+    "FreeBSD:12:i386": {
+      "status": "source-exhausted-partial",
+      "unresolved": ["subversion"],
+      "blocker": "All configured/verified FreeBSD 12 i386 metadata sources were checked. subversion is present, but its gnupg dependency requires pinentry 1.2.1 and pinentry is absent from the source catalog. This is a dependency-closure blocker, not a payload download failure."
+    },
+    "FreeBSD:13:i386": {
+      "status": "source-exhausted-partial",
+      "unresolved": ["subversion"],
+      "blocker": "Official latest, quarterly, and release_5 i386 catalogs were checked. subversion is present, but gnupg requires pinentry (1.3.2_1 or 1.3.1_1) and pinentry is absent from each checked catalog. This is a dependency-closure blocker, not a payload download failure."
+    },
+    "FreeBSD:14:i386": {
+      "status": "source-exhausted-partial",
+      "unresolved": ["subversion"],
+      "blocker": "Official latest, quarterly, and release_5 i386 catalogs were checked. subversion is present, but gnupg requires pinentry 1.3.3 and pinentry is absent from each checked catalog. This is a dependency-closure blocker, not a payload download failure."
+    },
+    "FreeBSD:10:i386": {"status": "diagnosing", "unresolved": ["devil", "gcc6", "mysql57-client", "mysql57-server"]},
     "FreeBSD:11:i386": {"status": "no-verified-source", "unresolved": []},
     "FreeBSD:9:i386": {"status": "no-requested-packages-resolved", "unresolved": []}
   },
   "package_failures": {},
   "skip_after_failures": 3,
   "last_action": {
-    "at": "2026-09-04T05:58:00+03:00",
+    "at": "2026-09-04T06:00:00+03:00",
     "type": "metadata-diagnostic",
-    "run_id": 33831503331,
-    "target_scope": ["FreeBSD:12:i386", "FreeBSD:13:i386", "FreeBSD:14:i386"],
-    "purpose": "Identify exact missing dependency names blocking Subversion closure without downloading package payloads.",
-    "status": "in_progress"
+    "target_scope": ["FreeBSD:10:i386"],
+    "purpose": "Identify exact missing dependency names blocking devil, gcc6, mysql57-client, and mysql57-server across the two verified Neonet streams.",
+    "status": "triggered"
   },
   "rules": [
     "Never mix FreeBSD major versions or ABIs.",
@@ -34,6 +45,7 @@
     "Do not rewrite Git history or force-push.",
     "Keep the canonical pkg endpoint under ${ABI}/latest.",
     "After the same package payload fails three times, record it as skipped and continue with the remaining packages.",
+    "Dependency-closure absence does not increment package payload failure counts.",
     "Prefer small, single-target, reversible commits and avoid unnecessary bulk pushes."
   ]
 }
