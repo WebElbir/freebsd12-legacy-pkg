@@ -1,0 +1,15 @@
+{
+  "target": "FreeBSD:9:amd64",
+  "sources": [
+    {
+      "id": "pcbsd-92-gr",
+      "url": "http://ftp.gr.freebsd.org/pub/pcbsd/pkg/9.2-RELEASE/amd64/",
+      "records": 23149
+    },
+    {
+      "id": "pcbsd-92-ncnu",
+      "url": "http://ftp.ncnu.edu.tw/BSD/PCBSD/pkg/9.2-RELEASE/amd64/",
+      "records": 23149
+    }
+  ]
+}

@@ -1,0 +1,907 @@
+{
+  "dependency_version_conflicts": [],
+  "package_count": 89,
+  "packages": {
+    "OpenEXR": {
+      "filename": "OpenEXR-2.1.0_1.txz",
+      "role": "dependency",
+      "sha256": "2be546ec152626198a66d42468ac63cffc6d8728c471b4def04398c701ae2f7f",
+      "size": 3038764,
+      "source": "pcbsd-92-gr",
+      "version": "2.1.0_1"
+    },
+    "aalib": {
+      "filename": "aalib-1.4.r5_6.txz",
+      "role": "dependency",
+      "sha256": "8a3cdfdcfe4afd7614c48acce81bc3864556a1b70127540f3dc6bde8c84ffd49",
+      "size": 133356,
+      "source": "pcbsd-92-gr",
+      "version": "1.4.r5_6"
+    },
+    "apr": {
+      "filename": "apr-1.4.8.1.5.3.txz",
+      "role": "dependency",
+      "sha256": "16a28cce43ea0ee8cc952daf50e8b289afa7da347213cec49008514709d656d5",
+      "size": 400764,
+      "source": "pcbsd-92-gr",
+      "version": "1.4.8.1.5.3"
+    },
+    "binutils": {
+      "filename": "binutils-2.24.txz",
+      "role": "dependency",
+      "sha256": "b51b3b533f9b1dd4ed5699b80b89f03d4fa69429361208475215d603f9b7796f",
+      "size": 4515272,
+      "source": "pcbsd-92-gr",
+      "version": "2.24"
+    },
+    "boost-all": {
+      "filename": "boost-all-1.52.0.txz",
+      "role": "root",
+      "sha256": "8bc51591bd43f6842a433822273282cd5d95cc0af30dd25b241b1575836cea13",
+      "size": 2396,
+      "source": "pcbsd-92-gr",
+      "version": "1.52.0"
+    },
+    "boost-docs": {
+      "filename": "boost-docs-1.52.0.txz",
+      "role": "dependency",
+      "sha256": "08a9b5923f3ba0e3614945bc1fbbb90009edc136f9b923be3b2a60eb3680bdb4",
+      "size": 23534632,
+      "source": "pcbsd-92-gr",
+      "version": "1.52.0"
+    },
+    "boost-jam": {
+      "filename": "boost-jam-1.52.0_1.txz",
+      "role": "dependency",
+      "sha256": "a5f52f2b336c65438221cce6f82d89c7300f29f1e9d78b052110de1344740324",
+      "size": 69272,
+      "source": "pcbsd-92-gr",
+      "version": "1.52.0_1"
+    },
+    "boost-libs": {
+      "filename": "boost-libs-1.52.0_2.txz",
+      "role": "dependency",
+      "sha256": "92f8177d2c65ed98a6b2ebd065495aec2f24b8f63650d2dbb5ece205d0502058",
+      "size": 9089932,
+      "source": "pcbsd-92-gr",
+      "version": "1.52.0_2"
+    },
+    "compat7x-amd64": {
+      "filename": "compat7x-amd64-7.4.704000.201310.1.txz",
+      "role": "root",
+      "sha256": "1c1c4a9f2cb9e0334cedc108bbf08dbf4734f0d0cc956a1521e12bbd0de2682b",
+      "size": 5172452,
+      "source": "pcbsd-92-gr",
+      "version": "7.4.704000.201310.1"
+    },
+    "compat8x-amd64": {
+      "filename": "compat8x-amd64-8.4.804000.201310_2.txz",
+      "role": "root",
+      "sha256": "020a515392a67c48407d1cd00fe2d9bde6076dcef9dd1869358b63de6825e83e",
+      "size": 430340,
+      "source": "pcbsd-92-gr",
+      "version": "8.4.804000.201310_2"
+    },
+    "compat9x-amd64": {
+      "filename": "compat9x-amd64-9.2.902000.201310.txz",
+      "role": "root",
+      "sha256": "0d8cc15148d70359267ff9b6565fd19175b16ce0a7253afda835170e901f5649",
+      "size": 2931036,
+      "source": "pcbsd-92-gr",
+      "version": "9.2.902000.201310"
+    },
+    "cryptopp": {
+      "filename": "cryptopp-5.6.2.txz",
+      "role": "root",
+      "sha256": "a33c4ff1b9733e0e3909b5a28c1e92db5688b9594216a58699798b2754b9b53d",
+      "size": 2328552,
+      "source": "pcbsd-92-gr",
+      "version": "5.6.2"
+    },
+    "damageproto": {
+      "filename": "damageproto-1.2.1.txz",
+      "role": "dependency",
+      "sha256": "73559bb68d75a9abf49566ca5a7cd419be5ed5e0027d1de78e4b7626194ab10d",
+      "size": 6672,
+      "source": "pcbsd-92-gr",
+      "version": "1.2.1"
+    },
+    "db42": {
+      "filename": "db42-4.2.52_5.txz",
+      "role": "dependency",
+      "sha256": "fb2aac6bf8d8895ac0173a1f99a0b6a1345063cb3c6334fd417d12fd3a24187f",
+      "size": 1541284,
+      "source": "pcbsd-92-gr",
+      "version": "4.2.52_5"
+    },
+    "devil": {
+      "filename": "devil-1.7.8_14,1.txz",
+      "role": "root",
+      "sha256": "a7a3336f26d74c25515fd0e99cb4b211c91416370d9cfe7de184d35d3158bb8a",
+      "size": 404052,
+      "source": "pcbsd-92-gr",
+      "version": "1.7.8_14,1"
+    },
+    "dri2proto": {
+      "filename": "dri2proto-2.8.txz",
+      "role": "dependency",
+      "sha256": "c9ddee69ce325dd896eb40ead1b5447686f27e42778472ac469a65d73e1bb17d",
+      "size": 10496,
+      "source": "pcbsd-92-gr",
+      "version": "2.8"
+    },
+    "expat": {
+      "filename": "expat-2.1.0.txz",
+      "role": "dependency",
+      "sha256": "e3f1c32d5fe8a826cb9a86ede62e17c9a07015d4c5cfee2279b39e8353912a7b",
+      "size": 104208,
+      "source": "pcbsd-92-gr",
+      "version": "2.1.0"
+    },
+    "fixesproto": {
+      "filename": "fixesproto-5.0.txz",
+      "role": "dependency",
+      "sha256": "6602556348426548c3ca5585ef5ebcaea7980bcf397e5fe4c6784b33fc5f3426",
+      "size": 11720,
+      "source": "pcbsd-92-gr",
+      "version": "5.0"
+    },
+    "freeglut": {
+      "filename": "freeglut-2.8.1.txz",
+      "role": "dependency",
+      "sha256": "b9b3ffc6fc040319d60f25d2d03a3c936c7613152e66c85bbab0ba91d5b1a32a",
+      "size": 196416,
+      "source": "pcbsd-92-gr",
+      "version": "2.8.1"
+    },
+    "gcc": {
+      "filename": "gcc-4.6.4.txz",
+      "role": "root",
+      "sha256": "6cbf7161a1b31c800a037d27bf531eee1099aed135cb4a3a6801a3025e1379ac",
+      "size": 26199380,
+      "source": "pcbsd-92-gr",
+      "version": "4.6.4"
+    },
+    "gcc34": {
+      "filename": "gcc34-3.4.6_3,1.txz",
+      "role": "root",
+      "sha256": "a775bb4c5b10409109c89d82fbc59a6d531cd674ed030d22dba0c2ca90f7ec32",
+      "size": 9959976,
+      "source": "pcbsd-92-gr",
+      "version": "3.4.6_3,1"
+    },
+    "gcc44": {
+      "filename": "gcc44-4.4.7,1.txz",
+      "role": "root",
+      "sha256": "90126166b15095fa2b4f3edddd3877d5c51f5ec942801299956ec49f7b81d31e",
+      "size": 15081976,
+      "source": "pcbsd-92-gr",
+      "version": "4.4.7,1"
+    },
+    "gcc46": {
+      "filename": "gcc46-4.6.4_1,1.txz",
+      "role": "root",
+      "sha256": "e78e4f9f68103544cd0462f8ea4a42f407ecb1fe0fb06b370e06bc89b78e7774",
+      "size": 26195244,
+      "source": "pcbsd-92-gr",
+      "version": "4.6.4_1,1"
+    },
+    "gcc47": {
+      "filename": "gcc47-4.7.4.20131214.txz",
+      "role": "root",
+      "sha256": "7bdfc6d1756dea522f5a8c09cbe5a169991a68b63777e3a0271990cdad68f1b0",
+      "size": 29783316,
+      "source": "pcbsd-92-gr",
+      "version": "4.7.4.20131214"
+    },
+    "gcc48": {
+      "filename": "gcc48-4.8.3.s20131212.txz",
+      "role": "root",
+      "sha256": "ade741d3c517e33391ed9d3d1c9bfbb58ba82e2a5a88a5a9fda37909b10af795",
+      "size": 31252128,
+      "source": "pcbsd-92-gr",
+      "version": "4.8.3.s20131212"
+    },
+    "gcc49": {
+      "filename": "gcc49-4.9.0.20131215.txz",
+      "role": "root",
+      "sha256": "b1162276eab98a154b0a3c0db292933afee1274ab826e03bbe10cd4713ef8e0c",
+      "size": 37104000,
+      "source": "pcbsd-92-gr",
+      "version": "4.9.0.20131215"
+    },
+    "gdb": {
+      "filename": "gdb-7.6.1_1.txz",
+      "role": "root",
+      "sha256": "91693507c6da63eafc7bf0a5b83b575be4bcb13291dae4055e152a400f8d2655",
+      "size": 3707084,
+      "source": "pcbsd-92-gr",
+      "version": "7.6.1_1"
+    },
+    "gdbm": {
+      "filename": "gdbm-1.11.txz",
+      "role": "dependency",
+      "sha256": "1f7817028ef59a4a450bb24c7dce2c85484fe31d47c9be70c2e92e9d0413863f",
+      "size": 147572,
+      "source": "pcbsd-92-gr",
+      "version": "1.11"
+    },
+    "gettext": {
+      "filename": "gettext-0.18.3.1.txz",
+      "role": "dependency",
+      "sha256": "8d2c8ed083056820592fdb6942546ae5c36534ca19c6e424b96764513c9aa44c",
+      "size": 2138320,
+      "source": "pcbsd-92-gr",
+      "version": "0.18.3.1"
+    },
+    "gmake": {
+      "filename": "gmake-3.82_1.txz",
+      "role": "root",
+      "sha256": "8efb36230ecff83b43784aea73e30a7ec14563b0a204ff1f3b9ffd4dde2cd5d4",
+      "size": 332256,
+      "source": "pcbsd-92-gr",
+      "version": "3.82_1"
+    },
+    "gmp": {
+      "filename": "gmp-5.1.3.txz",
+      "role": "dependency",
+      "sha256": "bcb470d1133ae398a6dbdd8a8bd831a6b5c9709996b35cef4bb6ccda2e834af1",
+      "size": 447168,
+      "source": "pcbsd-92-gr",
+      "version": "5.1.3"
+    },
+    "icu": {
+      "filename": "icu-50.1.2.txz",
+      "role": "dependency",
+      "sha256": "177124c0863ae8daded40193933a25ed202fdfb2210bbd4ceb60e1205bc9584a",
+      "size": 13163768,
+      "source": "pcbsd-92-gr",
+      "version": "50.1.2"
+    },
+    "ilmbase": {
+      "filename": "ilmbase-2.1.0.txz",
+      "role": "dependency",
+      "sha256": "c452beeb50ccc1110f944c955087bfc47a3d12578ecdb7067d86a805c780e00f",
+      "size": 180576,
+      "source": "pcbsd-92-gr",
+      "version": "2.1.0"
+    },
+    "inputproto": {
+      "filename": "inputproto-2.3.txz",
+      "role": "dependency",
+      "sha256": "ef19583ae3bb3961944494906e2866e6e23935069a8d03f68831266c0e115db7",
+      "size": 16276,
+      "source": "pcbsd-92-gr",
+      "version": "2.3"
+    },
+    "jasper": {
+      "filename": "jasper-1.900.1_12.txz",
+      "role": "dependency",
+      "sha256": "bf102c6e1177577e7b842671c8bf52d7f2e20c5017719c717fa0eeea301dd3cf",
+      "size": 547768,
+      "source": "pcbsd-92-gr",
+      "version": "1.900.1_12"
+    },
+    "jbigkit": {
+      "filename": "jbigkit-1.6.txz",
+      "role": "dependency",
+      "sha256": "c89372f97d9871c11b58c590bbd6d9ce4da625b8a157ca4df8a5b4901fc39f53",
+      "size": 57592,
+      "source": "pcbsd-92-gr",
+      "version": "1.6"
+    },
+    "jpeg": {
+      "filename": "jpeg-8_4.txz",
+      "role": "dependency",
+      "sha256": "e125671d658aaa042a350fc2ad4b0dca42b75e8dfd69b2be80c383b39797bfa7",
+      "size": 290768,
+      "source": "pcbsd-92-gr",
+      "version": "8_4"
+    },
+    "kbproto": {
+      "filename": "kbproto-1.0.6.txz",
+      "role": "dependency",
+      "sha256": "c7d578be70914f72b93014cd9bd08f4eed88ae9b6ab0b17a10d66ef3017a050b",
+      "size": 126084,
+      "source": "pcbsd-92-gr",
+      "version": "1.0.6"
+    },
+    "lcms": {
+      "filename": "lcms-1.19_1,1.txz",
+      "role": "dependency",
+      "sha256": "759b6c7fe8e09671980811b76d75b4dd30e550ec6e26415d00b6cf117c842ad2",
+      "size": 161928,
+      "source": "pcbsd-92-gr",
+      "version": "1.19_1,1"
+    },
+    "libGL": {
+      "filename": "libGL-9.1.7.txz",
+      "role": "dependency",
+      "sha256": "48cda7a1c152a524625149c61c4f0bdc132e19a4171ecf7bea480912715aa269",
+      "size": 278716,
+      "source": "pcbsd-92-gr",
+      "version": "9.1.7"
+    },
+    "libGLU": {
+      "filename": "libGLU-9.0.0.txz",
+      "role": "dependency",
+      "sha256": "2820659d400f64e12e466875afa96f2f0b28c251ffa586e62e312ff33572285f",
+      "size": 182328,
+      "source": "pcbsd-92-gr",
+      "version": "9.0.0"
+    },
+    "libICE": {
+      "filename": "libICE-1.0.8,1.txz",
+      "role": "dependency",
+      "sha256": "77fb4d76cb81eb5e3c393ddb642b59af0a2ad6efa8fa3356ff6fb1acb443a796",
+      "size": 97312,
+      "source": "pcbsd-92-gr",
+      "version": "1.0.8,1"
+    },
+    "libSM": {
+      "filename": "libSM-1.2.2,1.txz",
+      "role": "dependency",
+      "sha256": "06f11bd53a6ddb159f26ff0ccde666747e391e13fc347ace86612092ffe112de",
+      "size": 25084,
+      "source": "pcbsd-92-gr",
+      "version": "1.2.2,1"
+    },
+    "libX11": {
+      "filename": "libX11-1.6.2,1.txz",
+      "role": "dependency",
+      "sha256": "15f73f091b42b959a3ed6f4d3f0fd2e5af162866658e37b9398fa7d14eaeebce",
+      "size": 1694556,
+      "source": "pcbsd-92-gr",
+      "version": "1.6.2,1"
+    },
+    "libXau": {
+      "filename": "libXau-1.0.8.txz",
+      "role": "dependency",
+      "sha256": "32406e431c0a8d78eb4dcd9a300aa02abaa53a7cfc3dbbbb8afa8d0d6bed994d",
+      "size": 13320,
+      "source": "pcbsd-92-gr",
+      "version": "1.0.8"
+    },
+    "libXdamage": {
+      "filename": "libXdamage-1.1.4.txz",
+      "role": "dependency",
+      "sha256": "14535451b4bed5399f4fd4c8bc444a003db4210a230e600ce880af137416bb59",
+      "size": 8552,
+      "source": "pcbsd-92-gr",
+      "version": "1.1.4"
+    },
+    "libXdmcp": {
+      "filename": "libXdmcp-1.1.1.txz",
+      "role": "dependency",
+      "sha256": "ad5ca16c5e9098ffa9e1bf2cfa9eab833a292352b2bdc2cc2cc155a6435b9aa8",
+      "size": 15512,
+      "source": "pcbsd-92-gr",
+      "version": "1.1.1"
+    },
+    "libXext": {
+      "filename": "libXext-1.3.2,1.txz",
+      "role": "dependency",
+      "sha256": "7eed511b3e5fcb692e03dd2f7f31d38fdd01e6b2837833fc27f322991938ea55",
+      "size": 95060,
+      "source": "pcbsd-92-gr",
+      "version": "1.3.2,1"
+    },
+    "libXfixes": {
+      "filename": "libXfixes-5.0.1.txz",
+      "role": "dependency",
+      "sha256": "2099a56970b8678ee0da484cf8d7a2b372b14868d1bfee13ca3f45f26618327f",
+      "size": 16420,
+      "source": "pcbsd-92-gr",
+      "version": "5.0.1"
+    },
+    "libXi": {
+      "filename": "libXi-1.7.2,1.txz",
+      "role": "dependency",
+      "sha256": "fc399b60baaa596535a47461c2c13008ffe845ba1755d817ea73205f23d1fef0",
+      "size": 124540,
+      "source": "pcbsd-92-gr",
+      "version": "1.7.2,1"
+    },
+    "libXmu": {
+      "filename": "libXmu-1.1.2,1.txz",
+      "role": "dependency",
+      "sha256": "adb6d696ae39d0fd6d6da518139c4b62702aca5d4f15b632b0aac2f4d47e2bc3",
+      "size": 97676,
+      "source": "pcbsd-92-gr",
+      "version": "1.1.2,1"
+    },
+    "libXrandr": {
+      "filename": "libXrandr-1.4.2.txz",
+      "role": "dependency",
+      "sha256": "e706783e12e34430de6463494aa3f96a7b41c3b77c2ddacdf04e40176ccacf41",
+      "size": 30428,
+      "source": "pcbsd-92-gr",
+      "version": "1.4.2"
+    },
+    "libXrender": {
+      "filename": "libXrender-0.9.8.txz",
+      "role": "dependency",
+      "sha256": "b7bf0b0fc4c72086906b8be38ee6745a0fc5988f5ee3cef0b496f3a87b652797",
+      "size": 29568,
+      "source": "pcbsd-92-gr",
+      "version": "0.9.8"
+    },
+    "libXt": {
+      "filename": "libXt-1.1.4,1.txz",
+      "role": "dependency",
+      "sha256": "e256a5b2542f93d01d3acdfd84e8db73037f1d64ed43bc2546b6df6746ad5f06",
+      "size": 470028,
+      "source": "pcbsd-92-gr",
+      "version": "1.1.4,1"
+    },
+    "libXxf86vm": {
+      "filename": "libXxf86vm-1.1.3.txz",
+      "role": "dependency",
+      "sha256": "34c3067c803d2f30ff8ac79e10a1f6f4cebcbd6ca7b9987ee6273ad8d3ef4b62",
+      "size": 18040,
+      "source": "pcbsd-92-gr",
+      "version": "1.1.3"
+    },
+    "libdrm": {
+      "filename": "libdrm-2.4.50.txz",
+      "role": "dependency",
+      "sha256": "336d24cd5f8679286f946643d2f4ea2a4d1f94fc889be91cc1bbad8bbeba1127",
+      "size": 165160,
+      "source": "pcbsd-92-gr",
+      "version": "2.4.50"
+    },
+    "libiconv": {
+      "filename": "libiconv-1.14_1.txz",
+      "role": "dependency",
+      "sha256": "5b8651b44f9553f316b1e552eb6fa92cb62c118d8b6d8a3364032d5c1ee94381",
+      "size": 604704,
+      "source": "pcbsd-92-gr",
+      "version": "1.14_1"
+    },
+    "libmng": {
+      "filename": "libmng-1.0.10_2.txz",
+      "role": "dependency",
+      "sha256": "da1ebb769f6fc8d59102d7612daa23d3435fdc559b6509da0d7e6db514fcfba2",
+      "size": 211456,
+      "source": "pcbsd-92-gr",
+      "version": "1.0.10_2"
+    },
+    "libpciaccess": {
+      "filename": "libpciaccess-0.13.2.txz",
+      "role": "dependency",
+      "sha256": "35ddd30f23cd387b4981eef40aefb6908f11ff7ccb06f935b2bf9100ff5f1131",
+      "size": 22432,
+      "source": "pcbsd-92-gr",
+      "version": "0.13.2"
+    },
+    "libpthread-stubs": {
+      "filename": "libpthread-stubs-0.3_4.txz",
+      "role": "dependency",
+      "sha256": "60354a541d044ba84e734b048ec1c37d332b61c2a71394a37fa86fe933b74a6f",
+      "size": 4644,
+      "source": "pcbsd-92-gr",
+      "version": "0.3_4"
+    },
+    "libxcb": {
+      "filename": "libxcb-1.9.3.txz",
+      "role": "dependency",
+      "sha256": "ff5dd4d5fd4c671aa88f708ac30349c7068c6c969e872d51fc863595008994dd",
+      "size": 1046124,
+      "source": "pcbsd-92-gr",
+      "version": "1.9.3"
+    },
+    "libxml2": {
+      "filename": "libxml2-2.8.0_3.txz",
+      "role": "dependency",
+      "sha256": "5a8d85241df0206d08e428435c575682177ad878c7341c8dd118c4f4ab1b6bf2",
+      "size": 776652,
+      "source": "pcbsd-92-gr",
+      "version": "2.8.0_3"
+    },
+    "makedepend": {
+      "filename": "makedepend-1.0.5,1.txz",
+      "role": "root",
+      "sha256": "71341f3ad24dc6adbfb7b52486dbf9f04b8d2cef0849444d99a6f66e08fa958f",
+      "size": 19936,
+      "source": "pcbsd-92-gr",
+      "version": "1.0.5,1"
+    },
+    "mpc": {
+      "filename": "mpc-1.0.1.txz",
+      "role": "dependency",
+      "sha256": "0f1a6695ea18b40693d37e32c89448f6cff64d932cdfcef169b5fe0f05e2bad9",
+      "size": 87828,
+      "source": "pcbsd-92-gr",
+      "version": "1.0.1"
+    },
+    "mpfr": {
+      "filename": "mpfr-3.1.2.txz",
+      "role": "dependency",
+      "sha256": "93d228569594a6aebba042dd67e7038744b52f1537f95cb07cc0d2adf0771b3d",
+      "size": 354880,
+      "source": "pcbsd-92-gr",
+      "version": "3.1.2"
+    },
+    "mysql55-client": {
+      "filename": "mysql55-client-5.5.35.txz",
+      "role": "root",
+      "sha256": "dac4996472476a2b906ff6cab916d8a3f11227a16d41c686630ad113e2bc3a61",
+      "size": 1559816,
+      "source": "pcbsd-92-gr",
+      "version": "5.5.35"
+    },
+    "mysql55-server": {
+      "filename": "mysql55-server-5.5.35.txz",
+      "role": "root",
+      "sha256": "8b752143637fb91b855cdbd8e38198126d1a90750bb6e62b8863db0f871d0d1a",
+      "size": 6391252,
+      "source": "pcbsd-92-gr",
+      "version": "5.5.35"
+    },
+    "mysql56-client": {
+      "filename": "mysql56-client-5.6.15.txz",
+      "role": "root",
+      "sha256": "70b3913721b52cd75adb90eb5895c7b6d455138f292535374ebcdcea32de5936",
+      "size": 1969588,
+      "source": "pcbsd-92-gr",
+      "version": "5.6.15"
+    },
+    "mysql56-server": {
+      "filename": "mysql56-server-5.6.15.txz",
+      "role": "root",
+      "sha256": "f280eb5dbd3ac645a00bddc4f224c544f5e957283ded5fe1fe0fb149aae5fc1a",
+      "size": 8574272,
+      "source": "pcbsd-92-gr",
+      "version": "5.6.15"
+    },
+    "nano": {
+      "filename": "nano-2.2.6.txz",
+      "role": "root",
+      "sha256": "7532cdb40303b3df561b9c4101d3252c3e19d68b6621717c507fde302c736799",
+      "size": 317596,
+      "source": "pcbsd-92-gr",
+      "version": "2.2.6"
+    },
+    "neon29": {
+      "filename": "neon29-0.29.6_4.txz",
+      "role": "dependency",
+      "sha256": "83097fe76b963088be47d3866935426609bfff7c49bf9a4587bfd2a6643d4ea0",
+      "size": 227484,
+      "source": "pcbsd-92-gr",
+      "version": "0.29.6_4"
+    },
+    "nvidia-texture-tools": {
+      "filename": "nvidia-texture-tools-2.0.8.1_4.txz",
+      "role": "dependency",
+      "sha256": "cec1548b97af7fd81c4a1bff540a897e369fc103e19c55d1ca80c482c525e86e",
+      "size": 133460,
+      "source": "pcbsd-92-gr",
+      "version": "2.0.8.1_4"
+    },
+    "pciids": {
+      "filename": "pciids-20131225.txz",
+      "role": "dependency",
+      "sha256": "31ea87a68b6c01ecc0412824db03902dada31a3cb8e7d19a18790225ff2ddafe",
+      "size": 181132,
+      "source": "pcbsd-92-gr",
+      "version": "20131225"
+    },
+    "perl5": {
+      "filename": "perl5-5.16.3_6.txz",
+      "role": "dependency",
+      "sha256": "f462aab7c81619ac0636939a343dae88069eb12a8a37c4ad5064a8e50f4d8dc0",
+      "size": 13391660,
+      "source": "pcbsd-92-gr",
+      "version": "5.16.3_6"
+    },
+    "png": {
+      "filename": "png-1.5.17.txz",
+      "role": "dependency",
+      "sha256": "86350e2589d9698b46b733d97ecd984d0f975d0934c8873e08c3d4cd35fd21f7",
+      "size": 233740,
+      "source": "pcbsd-92-gr",
+      "version": "1.5.17"
+    },
+    "python": {
+      "filename": "python-2.7_1,2.txz",
+      "role": "root",
+      "sha256": "a61fb2bbf942a4f1fa2f9413149ded6c6aaba98225233edb4a9d2b1abf4b3d21",
+      "size": 2288,
+      "source": "pcbsd-92-gr",
+      "version": "2.7_1,2"
+    },
+    "python2": {
+      "filename": "python2-2_2.txz",
+      "role": "dependency",
+      "sha256": "c34f93492a4d3023148e9922676711746b21457621c6bcef6d44e7beda359b59",
+      "size": 2340,
+      "source": "pcbsd-92-gr",
+      "version": "2_2"
+    },
+    "python27": {
+      "filename": "python27-2.7.6_1.txz",
+      "role": "dependency",
+      "sha256": "0acc6dea73fa23279107950605be51e68eb067349a73e84b7261a614525dce0f",
+      "size": 9962508,
+      "source": "pcbsd-92-gr",
+      "version": "2.7.6_1"
+    },
+    "randrproto": {
+      "filename": "randrproto-1.4.0.txz",
+      "role": "dependency",
+      "sha256": "a74c386eb0500229c191086ff121d9ccb12d2d9c62bfcee4d32cad676153b2e6",
+      "size": 27620,
+      "source": "pcbsd-92-gr",
+      "version": "1.4.0"
+    },
+    "readline": {
+      "filename": "readline-6.2.5.txz",
+      "role": "dependency",
+      "sha256": "af9c8f8121755143aa7c87a576db9a320260dbb2718ee686ceedb2e43fa2f81c",
+      "size": 288072,
+      "source": "pcbsd-92-gr",
+      "version": "6.2.5"
+    },
+    "renderproto": {
+      "filename": "renderproto-0.11.1.txz",
+      "role": "dependency",
+      "sha256": "299ad7bcccb564b3bf75abc4f8ac25e2cde2fd14ff9c245ee5f72c3fda6b5f01",
+      "size": 16860,
+      "source": "pcbsd-92-gr",
+      "version": "0.11.1"
+    },
+    "screen": {
+      "filename": "screen-4.0.3_14.txz",
+      "role": "root",
+      "sha256": "7d39e53ad1c5fd62aab2f9bbc8907b819f7c13c1ddf15d569bdbf1701b269365",
+      "size": 442480,
+      "source": "pcbsd-92-gr",
+      "version": "4.0.3_14"
+    },
+    "sdl": {
+      "filename": "sdl-1.2.15_2,2.txz",
+      "role": "dependency",
+      "sha256": "a849e496de949836e772e55fde2f2952bf2270a68f51bbc85e3ef074b4a5d3d6",
+      "size": 691072,
+      "source": "pcbsd-92-gr",
+      "version": "1.2.15_2,2"
+    },
+    "sqlite3": {
+      "filename": "sqlite3-3.8.1.txz",
+      "role": "dependency",
+      "sha256": "5b0b52fecbec53f0cfaf93f724b685b3a9d2b002fee25cbda8cdeb376b8e1c0a",
+      "size": 550360,
+      "source": "pcbsd-92-gr",
+      "version": "3.8.1"
+    },
+    "subversion": {
+      "filename": "subversion-1.6.23_2.txz",
+      "role": "root",
+      "sha256": "5292f31c0bf7aa0fe498ee703c6f09221f4be2ae4463b04e04a244161128f270",
+      "size": 1895908,
+      "source": "pcbsd-92-gr",
+      "version": "1.6.23_2"
+    },
+    "tiff": {
+      "filename": "tiff-4.0.3.txz",
+      "role": "dependency",
+      "sha256": "e426e886dff0c0ebeb0582efb297afb03b0a89183121282f2cada8d0997b5fc7",
+      "size": 821992,
+      "source": "pcbsd-92-gr",
+      "version": "4.0.3"
+    },
+    "xextproto": {
+      "filename": "xextproto-7.2.1.txz",
+      "role": "dependency",
+      "sha256": "41d85af9d4222791ad84afd56c3e5f59aadcd8f21d41bedc1823b7cc88f99df6",
+      "size": 23240,
+      "source": "pcbsd-92-gr",
+      "version": "7.2.1"
+    },
+    "xf86vidmodeproto": {
+      "filename": "xf86vidmodeproto-2.3.1.txz",
+      "role": "dependency",
+      "sha256": "577be22c2a3c39c320f77b5922289e0424b1f20dc3e57e1ad4da139d08445d1c",
+      "size": 5004,
+      "source": "pcbsd-92-gr",
+      "version": "2.3.1"
+    },
+    "xproto": {
+      "filename": "xproto-7.0.25.txz",
+      "role": "dependency",
+      "sha256": "02a862bd14bbf69beee0f405325265f4530b50e8306e39be2def7e870524c079",
+      "size": 60936,
+      "source": "pcbsd-92-gr",
+      "version": "7.0.25"
+    }
+  },
+  "root_count": 24,
+  "roots": [
+    {
+      "name": "boost-all",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "1.52.0"
+    },
+    {
+      "attempts": [],
+      "name": "compat11x-amd64",
+      "status": "unresolved"
+    },
+    {
+      "attempts": [],
+      "name": "compat11x-i386",
+      "status": "unresolved"
+    },
+    {
+      "attempts": [],
+      "name": "compat12x-amd64",
+      "status": "unresolved"
+    },
+    {
+      "attempts": [],
+      "name": "compat12x-i386",
+      "status": "unresolved"
+    },
+    {
+      "name": "compat7x-amd64",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "7.4.704000.201310.1"
+    },
+    {
+      "attempts": [],
+      "name": "compat7x-i386",
+      "status": "unresolved"
+    },
+    {
+      "name": "compat8x-amd64",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "8.4.804000.201310_2"
+    },
+    {
+      "attempts": [],
+      "name": "compat8x-i386",
+      "status": "unresolved"
+    },
+    {
+      "name": "compat9x-amd64",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "9.2.902000.201310"
+    },
+    {
+      "attempts": [],
+      "name": "compat9x-i386",
+      "status": "unresolved"
+    },
+    {
+      "name": "cryptopp",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "5.6.2"
+    },
+    {
+      "name": "devil",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "1.7.8_14,1"
+    },
+    {
+      "attempts": [],
+      "name": "freecolor",
+      "status": "unresolved"
+    },
+    {
+      "name": "gcc",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "4.6.4"
+    },
+    {
+      "name": "gcc34",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "3.4.6_3,1"
+    },
+    {
+      "name": "gcc44",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "4.4.7,1"
+    },
+    {
+      "name": "gcc46",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "4.6.4_1,1"
+    },
+    {
+      "name": "gcc47",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "4.7.4.20131214"
+    },
+    {
+      "name": "gcc48",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "4.8.3.s20131212"
+    },
+    {
+      "name": "gcc49",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "4.9.0.20131215"
+    },
+    {
+      "name": "gdb",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "7.6.1_1"
+    },
+    {
+      "name": "gmake",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "3.82_1"
+    },
+    {
+      "name": "makedepend",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "1.0.5,1"
+    },
+    {
+      "name": "mysql55-client",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "5.5.35"
+    },
+    {
+      "name": "mysql55-server",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "5.5.35"
+    },
+    {
+      "name": "mysql56-client",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "5.6.15"
+    },
+    {
+      "name": "mysql56-server",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "5.6.15"
+    },
+    {
+      "name": "nano",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "2.2.6"
+    },
+    {
+      "name": "python",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "2.7_1,2"
+    },
+    {
+      "name": "screen",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "4.0.3_14"
+    },
+    {
+      "name": "subversion",
+      "source": "pcbsd-92-gr",
+      "status": "selected",
+      "version": "1.6.23_2"
+    }
+  ],
+  "status": "ok",
+  "target": "FreeBSD:9:amd64"
+}
