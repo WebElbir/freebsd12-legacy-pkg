@@ -2,9 +2,10 @@
 
 Durum: **partial**
 
-## Ortak / varsayılan `latest`
+## Canonical repository
 
-Bu yol en geniş tek ve kendi içinde uyumlu cohort olan `sggs-12i386-latest` deposunu gösterir.
+Bu ABI için kullanıcıya verilecek tek varsayılan repository biçimi aşağıdaki `raw.githubusercontent.com/.../${ABI}/latest` yapısıdır.
+GitHub Release URL'leri pkg repository adresi olarak kullanılmaz.
 
 ```sh
 mkdir -p /usr/local/etc/pkg/repos
@@ -19,11 +20,14 @@ EOF
 pkg update -f
 ```
 
-## Paket → cohort haritası
+Aktif `latest` cohort: `sggs-12i386-latest`.
 
-Tarihsel MySQL/MariaDB/GCC sürümü `latest` içinde görünmüyorsa aşağıdaki cohort'u kullanın.
+## Paket → kaynak cohort haritası
 
-| Root paket | Cohort |
+Bu tablo provenance/uyumluluk bilgisidir. Kullanıcı tarafında repository URL'si yine yukarıdaki canonical `latest` adresidir.
+Aynı package adı için tarihsel sürümleri tek pkg kataloğunda zorla birleştirmiyoruz; pkg repository veritabanı package adını tekil ele alır ve eski snapshot bağımlılıkları yeni snapshotlarla ABI/SONAME çakışması yaratabilir.
+
+| Root paket | Kaynak cohort |
 |---|---|
 | `compat11x-i386` | `sggs-12i386-latest` |
 | `compat12x-i386` | `sggs-12i386-latest` |
@@ -57,20 +61,3 @@ Tarihsel MySQL/MariaDB/GCC sürümü `latest` içinde görünmüyorsa aşağıda
 | `mysql81-server` | `sggs-12i386-latest` |
 | `nano` | `sggs-12i386-latest` |
 | `screen` | `sggs-12i386-latest` |
-
-## Cohort: `sggs-12i386-latest`
-
-Root paketler: `compat11x-i386`, `compat12x-i386`, `compat7x-i386`, `compat8x-i386`, `compat9x-i386`, `cryptopp`, `devil`, `freecolor`, `gcc10`, `gcc11`, `gcc12`, `gcc13`, `gcc48`, `gcc8`, `gcc9`, `gdb`, `gmake`, `makedepend`, `mariadb1011-client`, `mariadb1011-server`, `mariadb105-client`, `mariadb105-server`, `mariadb106-client`, `mariadb106-server`, `mysql57-client`, `mysql57-server`, `mysql80-client`, `mysql80-server`, `mysql81-client`, `mysql81-server`, `nano`, `screen`
-
-```sh
-mkdir -p /usr/local/etc/pkg/repos
-cat > /usr/local/etc/pkg/repos/FreeBSD.conf <<'EOF'
-FreeBSD: {
-  url: "https://raw.githubusercontent.com/WebElbir/freebsd12-legacy-pkg/main/FreeBSD:12:i386/repos/sggs-12i386-latest",
-  mirror_type: "none",
-  signature_type: "none",
-  enabled: yes
-}
-EOF
-pkg update -f
-```

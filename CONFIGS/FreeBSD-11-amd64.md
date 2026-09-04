@@ -2,9 +2,10 @@
 
 Durum: **ok**
 
-## Ortak / varsayılan `latest`
+## Canonical repository
 
-Bu yol en geniş tek ve kendi içinde uyumlu cohort olan `nepustil-112` deposunu gösterir.
+Bu ABI için kullanıcıya verilecek tek varsayılan repository biçimi aşağıdaki `raw.githubusercontent.com/.../${ABI}/latest` yapısıdır.
+GitHub Release URL'leri pkg repository adresi olarak kullanılmaz.
 
 ```sh
 mkdir -p /usr/local/etc/pkg/repos
@@ -19,11 +20,14 @@ EOF
 pkg update -f
 ```
 
-## Paket → cohort haritası
+Aktif `latest` cohort: `nepustil-112`.
 
-Tarihsel MySQL/MariaDB/GCC sürümü `latest` içinde görünmüyorsa aşağıdaki cohort'u kullanın.
+## Paket → kaynak cohort haritası
 
-| Root paket | Cohort |
+Bu tablo provenance/uyumluluk bilgisidir. Kullanıcı tarafında repository URL'si yine yukarıdaki canonical `latest` adresidir.
+Aynı package adı için tarihsel sürümleri tek pkg kataloğunda zorla birleştirmiyoruz; pkg repository veritabanı package adını tekil ele alır ve eski snapshot bağımlılıkları yeni snapshotlarla ABI/SONAME çakışması yaratabilir.
+
+| Root paket | Kaynak cohort |
 |---|---|
 | `boost-all` | `sggs-11-latest` |
 | `compat11x-amd64` | `sggs-11-latest` |
@@ -61,71 +65,3 @@ Tarihsel MySQL/MariaDB/GCC sürümü `latest` içinde görünmüyorsa aşağıda
 | `python` | `nepustil-112` |
 | `screen` | `nepustil-112` |
 | `subversion` | `nepustil-112` |
-
-## Cohort: `nepustil-112`
-
-Root paketler: `compat9x-amd64`, `gcc`, `gcc7`, `gdb`, `gmake`, `makedepend`, `mariadb104-client`, `mariadb104-server`, `mysql56-client`, `mysql56-server`, `mysql57-client`, `mysql57-server`, `nano`, `python`, `screen`, `subversion`
-
-```sh
-mkdir -p /usr/local/etc/pkg/repos
-cat > /usr/local/etc/pkg/repos/FreeBSD.conf <<'EOF'
-FreeBSD: {
-  url: "https://raw.githubusercontent.com/WebElbir/freebsd12-legacy-pkg/main/FreeBSD:11:amd64/repos/nepustil-112",
-  mirror_type: "none",
-  signature_type: "none",
-  enabled: yes
-}
-EOF
-pkg update -f
-```
-
-## Cohort: `nepustil-113`
-
-Root paketler: `gcc8`, `gcc9`, `mariadb105-client`, `mariadb105-server`
-
-```sh
-mkdir -p /usr/local/etc/pkg/repos
-cat > /usr/local/etc/pkg/repos/FreeBSD.conf <<'EOF'
-FreeBSD: {
-  url: "https://raw.githubusercontent.com/WebElbir/freebsd12-legacy-pkg/main/FreeBSD:11:amd64/repos/nepustil-113",
-  mirror_type: "none",
-  signature_type: "none",
-  enabled: yes
-}
-EOF
-pkg update -f
-```
-
-## Cohort: `nepustil-114`
-
-Root paketler: `gcc10`
-
-```sh
-mkdir -p /usr/local/etc/pkg/repos
-cat > /usr/local/etc/pkg/repos/FreeBSD.conf <<'EOF'
-FreeBSD: {
-  url: "https://raw.githubusercontent.com/WebElbir/freebsd12-legacy-pkg/main/FreeBSD:11:amd64/repos/nepustil-114",
-  mirror_type: "none",
-  signature_type: "none",
-  enabled: yes
-}
-EOF
-pkg update -f
-```
-
-## Cohort: `sggs-11-latest`
-
-Root paketler: `boost-all`, `compat11x-amd64`, `compat7x-amd64`, `compat8x-amd64`, `cryptopp`, `devil`, `freecolor`, `gcc11`, `gcc48`, `mariadb103-client`, `mariadb103-server`, `mysql55-client`, `mysql55-server`, `mysql80-client`, `mysql80-server`
-
-```sh
-mkdir -p /usr/local/etc/pkg/repos
-cat > /usr/local/etc/pkg/repos/FreeBSD.conf <<'EOF'
-FreeBSD: {
-  url: "https://raw.githubusercontent.com/WebElbir/freebsd12-legacy-pkg/main/FreeBSD:11:amd64/repos/sggs-11-latest",
-  mirror_type: "none",
-  signature_type: "none",
-  enabled: yes
-}
-EOF
-pkg update -f
-```

@@ -2,9 +2,10 @@
 
 Durum: **ok**
 
-## Ortak / varsayılan `latest`
+## Canonical repository
 
-Bu yol en geniş tek ve kendi içinde uyumlu cohort olan `nepustil-130` deposunu gösterir.
+Bu ABI için kullanıcıya verilecek tek varsayılan repository biçimi aşağıdaki `raw.githubusercontent.com/.../${ABI}/latest` yapısıdır.
+GitHub Release URL'leri pkg repository adresi olarak kullanılmaz.
 
 ```sh
 mkdir -p /usr/local/etc/pkg/repos
@@ -19,11 +20,14 @@ EOF
 pkg update -f
 ```
 
-## Paket → cohort haritası
+Aktif `latest` cohort: `nepustil-130`.
 
-Tarihsel MySQL/MariaDB/GCC sürümü `latest` içinde görünmüyorsa aşağıdaki cohort'u kullanın.
+## Paket → kaynak cohort haritası
 
-| Root paket | Cohort |
+Bu tablo provenance/uyumluluk bilgisidir. Kullanıcı tarafında repository URL'si yine yukarıdaki canonical `latest` adresidir.
+Aynı package adı için tarihsel sürümleri tek pkg kataloğunda zorla birleştirmiyoruz; pkg repository veritabanı package adını tekil ele alır ve eski snapshot bağımlılıkları yeni snapshotlarla ABI/SONAME çakışması yaratabilir.
+
+| Root paket | Kaynak cohort |
 |---|---|
 | `boost-all` | `freebsd-13-latest` |
 | `compat11x-amd64` | `freebsd-13-latest` |
@@ -68,88 +72,3 @@ Tarihsel MySQL/MariaDB/GCC sürümü `latest` içinde görünmüyorsa aşağıda
 | `python` | `freebsd-13-latest` |
 | `screen` | `nepustil-130` |
 | `subversion` | `nepustil-130` |
-
-## Cohort: `nepustil-130`
-
-Root paketler: `compat12x-amd64`, `compat9x-amd64`, `cryptopp`, `gcc`, `gcc11`, `gdb`, `gmake`, `makedepend`, `mariadb104-client`, `mariadb104-server`, `mariadb105-client`, `mariadb105-server`, `mysql57-client`, `mysql57-server`, `nano`, `screen`, `subversion`
-
-```sh
-mkdir -p /usr/local/etc/pkg/repos
-cat > /usr/local/etc/pkg/repos/FreeBSD.conf <<'EOF'
-FreeBSD: {
-  url: "https://raw.githubusercontent.com/WebElbir/freebsd12-legacy-pkg/main/FreeBSD:13:amd64/repos/nepustil-130",
-  mirror_type: "none",
-  signature_type: "none",
-  enabled: yes
-}
-EOF
-pkg update -f
-```
-
-## Cohort: `nepustil-131`
-
-Root paketler: `gcc10`, `gcc12`, `mariadb106-client`, `mariadb106-server`
-
-```sh
-mkdir -p /usr/local/etc/pkg/repos
-cat > /usr/local/etc/pkg/repos/FreeBSD.conf <<'EOF'
-FreeBSD: {
-  url: "https://raw.githubusercontent.com/WebElbir/freebsd12-legacy-pkg/main/FreeBSD:13:amd64/repos/nepustil-131",
-  mirror_type: "none",
-  signature_type: "none",
-  enabled: yes
-}
-EOF
-pkg update -f
-```
-
-## Cohort: `nepustil-132`
-
-Root paketler: `gcc13`
-
-```sh
-mkdir -p /usr/local/etc/pkg/repos
-cat > /usr/local/etc/pkg/repos/FreeBSD.conf <<'EOF'
-FreeBSD: {
-  url: "https://raw.githubusercontent.com/WebElbir/freebsd12-legacy-pkg/main/FreeBSD:13:amd64/repos/nepustil-132",
-  mirror_type: "none",
-  signature_type: "none",
-  enabled: yes
-}
-EOF
-pkg update -f
-```
-
-## Cohort: `freebsd-13-latest`
-
-Root paketler: `boost-all`, `compat11x-amd64`, `compat7x-amd64`, `compat8x-amd64`, `devil`, `freecolor`, `gcc14`, `gcc15`, `mariadb1011-client`, `mariadb1011-server`, `mariadb114-client`, `mariadb114-server`, `mariadb118-client`, `mariadb118-server`, `python`
-
-```sh
-mkdir -p /usr/local/etc/pkg/repos
-cat > /usr/local/etc/pkg/repos/FreeBSD.conf <<'EOF'
-FreeBSD: {
-  url: "https://raw.githubusercontent.com/WebElbir/freebsd12-legacy-pkg/main/FreeBSD:13:amd64/repos/freebsd-13-latest",
-  mirror_type: "none",
-  signature_type: "none",
-  enabled: yes
-}
-EOF
-pkg update -f
-```
-
-## Cohort: `freebsd-13-quarterly`
-
-Root paketler: `mysql80-client`, `mysql80-server`, `mysql84-client`, `mysql84-server`, `mysql96-client`, `mysql96-server`
-
-```sh
-mkdir -p /usr/local/etc/pkg/repos
-cat > /usr/local/etc/pkg/repos/FreeBSD.conf <<'EOF'
-FreeBSD: {
-  url: "https://raw.githubusercontent.com/WebElbir/freebsd12-legacy-pkg/main/FreeBSD:13:amd64/repos/freebsd-13-quarterly",
-  mirror_type: "none",
-  signature_type: "none",
-  enabled: yes
-}
-EOF
-pkg update -f
-```
