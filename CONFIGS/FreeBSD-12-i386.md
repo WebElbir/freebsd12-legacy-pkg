@@ -1,6 +1,6 @@
 # FreeBSD:12:i386 pkg conf rehberi
 
-Durum: **partial**
+Durum: **ok**
 
 ## Canonical repository
 
@@ -29,6 +29,7 @@ Aynı package adı için tarihsel sürümleri tek pkg kataloğunda zorla birleş
 
 | Root paket | Kaynak cohort |
 |---|---|
+| `boost-all` | `sggs-12i386-latest` |
 | `compat11x-i386` | `sggs-12i386-latest` |
 | `compat12x-i386` | `sggs-12i386-latest` |
 | `compat7x-i386` | `sggs-12i386-latest` |
@@ -37,6 +38,7 @@ Aynı package adı için tarihsel sürümleri tek pkg kataloğunda zorla birleş
 | `cryptopp` | `sggs-12i386-latest` |
 | `devil` | `sggs-12i386-latest` |
 | `freecolor` | `sggs-12i386-latest` |
+| `gcc` | `sggs-12i386-latest` |
 | `gcc10` | `sggs-12i386-latest` |
 | `gcc11` | `sggs-12i386-latest` |
 | `gcc12` | `sggs-12i386-latest` |
@@ -60,4 +62,6 @@ Aynı package adı için tarihsel sürümleri tek pkg kataloğunda zorla birleş
 | `mysql81-client` | `sggs-12i386-latest` |
 | `mysql81-server` | `sggs-12i386-latest` |
 | `nano` | `sggs-12i386-latest` |
+| `python` | `sggs-12i386-latest` |
 | `screen` | `sggs-12i386-latest` |
+| `subversion` | `sggs-12i386-latest` |

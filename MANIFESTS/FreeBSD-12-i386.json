@@ -1,14 +1,16 @@
 {
+  "canonical_repo": "FreeBSD:12:i386/latest",
   "cohort_count": 1,
   "cohorts": [
     {
       "dependency_version_notes": [],
       "id": "sggs-12i386-latest",
-      "package_count": 86,
+      "package_count": 112,
       "path": "FreeBSD:12:i386/repos/sggs-12i386-latest",
       "priority": 0,
-      "root_count": 32,
+      "root_count": 36,
       "roots": [
+        "boost-all",
         "compat11x-i386",
         "compat12x-i386",
         "compat7x-i386",
@@ -17,6 +19,7 @@
         "cryptopp",
         "devil",
         "freecolor",
+        "gcc",
         "gcc10",
         "gcc11",
         "gcc12",
@@ -40,13 +43,16 @@
         "mysql81-client",
         "mysql81-server",
         "nano",
-        "screen"
+        "python",
+        "screen",
+        "subversion"
       ],
       "source_id": "sggs-12i386-latest",
       "source_url": "https://mirror.sg.gs/freebsd-pkg/FreeBSD:12:i386/latest/"
     }
   ],
   "coverage": {
+    "boost-all": "sggs-12i386-latest",
     "compat11x-i386": "sggs-12i386-latest",
     "compat12x-i386": "sggs-12i386-latest",
     "compat7x-i386": "sggs-12i386-latest",
@@ -55,6 +61,7 @@
     "cryptopp": "sggs-12i386-latest",
     "devil": "sggs-12i386-latest",
     "freecolor": "sggs-12i386-latest",
+    "gcc": "sggs-12i386-latest",
     "gcc10": "sggs-12i386-latest",
     "gcc11": "sggs-12i386-latest",
     "gcc12": "sggs-12i386-latest",
@@ -78,38 +85,22 @@
     "mysql81-client": "sggs-12i386-latest",
     "mysql81-server": "sggs-12i386-latest",
     "nano": "sggs-12i386-latest",
-    "screen": "sggs-12i386-latest"
+    "python": "sggs-12i386-latest",
+    "screen": "sggs-12i386-latest",
+    "subversion": "sggs-12i386-latest"
   },
-  "covered_root_count": 32,
-  "discovered_root_count": 33,
+  "covered_root_count": 36,
+  "discovered_root_count": 36,
   "exact_names_not_seen_in_any_source": [
-    "boost-all",
     "compat11x-amd64",
     "compat12x-amd64",
     "compat7x-amd64",
     "compat8x-amd64",
-    "compat9x-amd64",
-    "python"
+    "compat9x-amd64"
   ],
   "latest_cohort": "sggs-12i386-latest",
-  "status": "partial",
+  "status": "ok",
   "target": "FreeBSD:12:i386",
-  "unresolved": {
-    "subversion": [
-      {
-        "attempts": [
-          {
-            "issues": [],
-            "source": "sggs-12i386-latest",
-            "version": "1.14.2_4"
-          }
-        ],
-        "reason": "incomplete runtime closure in this source",
-        "source": "sggs-12i386-latest"
-      }
-    ]
-  },
-  "unresolved_root_names": [
-    "subversion"
-  ]
+  "unresolved": {},
+  "unresolved_root_names": []
 }
