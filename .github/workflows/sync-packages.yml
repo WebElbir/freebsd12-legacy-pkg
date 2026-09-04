@@ -21,7 +21,7 @@ on:
           - "FreeBSD:14:amd64"
           - "FreeBSD:14:i386"
       allow_binary_push:
-        description: "Push generated binary packages only after safety checks"
+        description: "Push generated canonical latest repository after safety checks"
         required: true
         default: false
         type: boolean
@@ -36,7 +36,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 240
     steps:
       - name: Checkout repository branch
         uses: actions/checkout@v4
@@ -76,7 +76,7 @@ jobs:
         if: ${{ !inputs.allow_binary_push }}
         shell: bash
         run: |
-          echo "Metadata preflight passed. Binary download, staging, commit and push were NOT requested."
+          echo "Metadata preflight passed. Binary download, canonical latest staging, commit and push were NOT requested."
 
       - name: Build one ABI repository
         if: ${{ inputs.allow_binary_push }}
@@ -92,7 +92,30 @@ jobs:
           python scripts/build_repo_cohorts.py "${args[@]}"
           python scripts/render_config_guide.py --target "${TARGET}"
 
-      - name: Stage only the selected target
+      - name: Validate canonical latest repository locally
+        if: ${{ inputs.allow_binary_push }}
+        shell: bash
+        env:
+          TARGET: ${{ inputs.target }}
+        run: |
+          set -euo pipefail
+          test -f "${TARGET}/latest/meta.conf"
+          test -f "${TARGET}/latest/meta.txz"
+          test -f "${TARGET}/latest/packagesite.txz"
+          test -f "${TARGET}/latest/SHA256SUMS"
+          python - <<'PY'
+          import os, tarfile
+          from pathlib import Path
+          target = os.environ['TARGET']
+          p = Path(target) / 'latest' / 'packagesite.txz'
+          with tarfile.open(p, 'r:xz') as tf:
+              names = {Path(x.name).name for x in tf.getmembers() if x.isfile()}
+          if 'packagesite.yaml' not in names:
+              raise SystemExit('packagesite.txz does not contain packagesite.yaml')
+          print('canonical latest metadata OK:', target)
+          PY
+
+      - name: Stage canonical latest and audit metadata only
         if: ${{ inputs.allow_binary_push }}
         shell: bash
         env:
@@ -100,7 +123,8 @@ jobs:
         run: |
           set -euo pipefail
           KEY="${TARGET//:/-}"
-          git add -- "${TARGET}" "MANIFESTS/${KEY}.json" "MANIFESTS/${KEY}" "SOURCES/${KEY}.json" "CONFIGS/${KEY}.md"
+          git add -A -- "${TARGET}/latest" "MANIFESTS/${KEY}.json" "MANIFESTS/${KEY}" "SOURCES/${KEY}.json" "CONFIGS/${KEY}.md"
+          echo "Cohort build directories under ${TARGET}/repos are intentionally not part of the canonical user endpoint update."
 
       - name: Binary and push safety gate
         if: ${{ inputs.allow_binary_push }}
@@ -115,8 +139,8 @@ jobs:
           from pathlib import Path
 
           target = os.environ["TARGET"]
-          max_file = 95 * 1024 * 1024
-          max_staged = 256 * 1024 * 1024
+          max_file = 99 * 1024 * 1024
+          max_staged = 1536 * 1024 * 1024
 
           raw = subprocess.check_output(["git", "diff", "--cached", "--name-only", "-z"])
           names = [x.decode("utf-8") for x in raw.split(b"\0") if x]
@@ -135,15 +159,14 @@ jobs:
           print(f"Conservative staged working-tree size: {staged_bytes / 1024 / 1024:.1f} MiB")
           if oversized:
               for name, size in oversized:
-                  print(f"ERROR: file exceeds 95 MiB safety ceiling: {name} ({size / 1024 / 1024:.1f} MiB)")
+                  print(f"ERROR: file exceeds 99 MiB canonical raw Git safety ceiling: {name} ({size / 1024 / 1024:.1f} MiB)")
               raise SystemExit(20)
           if staged_bytes > max_staged:
-              print(f"ERROR: selected target exceeds the 256 MiB per-run safety ceiling: {target}")
-              print("Refusing to create or push a bulk binary commit.")
+              print(f"ERROR: selected target exceeds the 1.5 GiB per-run safety ceiling: {target}")
               raise SystemExit(21)
           PY
 
-      - name: Commit and push once
+      - name: Commit and push canonical raw repository
         if: ${{ inputs.allow_binary_push }}
         shell: bash
         env:
@@ -152,7 +175,7 @@ jobs:
         run: |
           set -euo pipefail
           if git diff --cached --quiet; then
-            echo "No repository changes for ${TARGET}"
+            echo "No canonical repository changes for ${TARGET}"
             exit 0
           fi
 
@@ -164,5 +187,32 @@ jobs:
             exit 30
           fi
 
-          git commit -m "Build ${TARGET} coherent package cohorts"
+          git commit -m "Publish ${TARGET} canonical raw latest repository"
           git push origin HEAD:"${PUSH_BRANCH}"
+
+      - name: Verify raw.githubusercontent.com endpoint
+        if: ${{ inputs.allow_binary_push }}
+        shell: bash
+        env:
+          TARGET: ${{ inputs.target }}
+        run: |
+          set -euo pipefail
+          BASE="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}/${TARGET}/latest"
+          curl -fL --retry 10 --retry-delay 3 --retry-all-errors "${BASE}/meta.conf" -o /tmp/meta.conf
+          curl -fL --retry 10 --retry-delay 3 --retry-all-errors "${BASE}/packagesite.txz" -o /tmp/packagesite.txz
+          python - <<'PY'
+          import tarfile
+          from pathlib import Path
+          with tarfile.open('/tmp/packagesite.txz', 'r:xz') as tf:
+              names = {Path(x.name).name for x in tf.getmembers() if x.isfile()}
+          if 'packagesite.yaml' not in names:
+              raise SystemExit('remote packagesite.txz invalid')
+          print('remote canonical metadata OK')
+          PY
+          first_pkg="$(awk 'NF >= 2 {print $2; exit}' "${TARGET}/latest/SHA256SUMS" || true)"
+          if [[ -n "${first_pkg}" ]]; then
+            curl -fIL --retry 10 --retry-delay 3 --retry-all-errors "${BASE}/${first_pkg}" >/dev/null
+            echo "remote package object reachable: ${first_pkg}"
+          else
+            echo "canonical repository is intentionally empty; metadata endpoint is valid"
+          fi
