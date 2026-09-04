@@ -1,0 +1,35 @@
+{
+  "sources": [
+    {
+      "id": "nepustil-130",
+      "records": 3990,
+      "url": "https://repo.nepustil.net/130/FreeBSD:13:amd64/"
+    },
+    {
+      "id": "nepustil-131",
+      "records": 3989,
+      "url": "https://repo.nepustil.net/131/FreeBSD:13:amd64/"
+    },
+    {
+      "id": "nepustil-132",
+      "records": 4842,
+      "url": "https://repo.nepustil.net/132/FreeBSD:13:amd64/"
+    },
+    {
+      "id": "nepustil-13",
+      "records": 4842,
+      "url": "https://repo.nepustil.net/FreeBSD:13:amd64/"
+    },
+    {
+      "id": "freebsd-13-latest",
+      "records": 36191,
+      "url": "https://pkg.freebsd.org/FreeBSD:13:amd64/latest/"
+    },
+    {
+      "id": "freebsd-13-quarterly",
+      "records": 36852,
+      "url": "https://pkg.freebsd.org/FreeBSD:13:amd64/quarterly/"
+    }
+  ],
+  "target": "FreeBSD:13:amd64"
+}

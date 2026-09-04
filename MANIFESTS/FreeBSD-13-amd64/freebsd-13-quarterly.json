@@ -1,0 +1,268 @@
+{
+  "dependency_version_notes": [],
+  "id": "freebsd-13-quarterly",
+  "package_count": 31,
+  "packages": {
+    "brotli": {
+      "filename": "brotli-1.2.0,1~c161c0273a.pkg",
+      "role": "dependency",
+      "sha256": "c161c0273aa28ebe3adac8cf4b4ffbf56c48021817d15d9bf793452fc7fc8a40",
+      "size": 349332,
+      "source": "freebsd-13-quarterly",
+      "version": "1.2.0,1"
+    },
+    "curl": {
+      "filename": "curl-8.19.0_2~3b16eaea1a.pkg",
+      "role": "dependency",
+      "sha256": "3b16eaea1a9a62dc4f6714e16257dcc238ea4b24dd49f67fc776d7a7d8c08a00",
+      "size": 1707848,
+      "source": "freebsd-13-quarterly",
+      "version": "8.19.0_2"
+    },
+    "cyrus-sasl": {
+      "filename": "cyrus-sasl-2.1.28_5~1bb3dc9618.pkg",
+      "role": "dependency",
+      "sha256": "1bb3dc961815ce089d465d234266a7bf33f2822fd93ff90efb7e186add5df3b5",
+      "size": 989656,
+      "source": "freebsd-13-quarterly",
+      "version": "2.1.28_5"
+    },
+    "groff": {
+      "filename": "groff-1.24.1_1~71662eb16e.pkg",
+      "role": "dependency",
+      "sha256": "71662eb16e93ac4a57ab03388e524198e32fb07812a23c9c1fe39c29c782efbc",
+      "size": 5637428,
+      "source": "freebsd-13-quarterly",
+      "version": "1.24.1_1"
+    },
+    "hidapi": {
+      "filename": "hidapi-0.15.0~a277e75036.pkg",
+      "role": "dependency",
+      "sha256": "a277e75036cbc0f64719c6d731e3c05557d58857bb6c10c3ac01cd918d6a26ea",
+      "size": 36480,
+      "source": "freebsd-13-quarterly",
+      "version": "0.15.0"
+    },
+    "icu": {
+      "filename": "icu-76.1,1~e448d6518a.pkg",
+      "role": "dependency",
+      "sha256": "e448d6518a05c51f02e5e2c0700bf534998a6d78fcc652d8494fdf5e9c7fa077",
+      "size": 12018436,
+      "source": "freebsd-13-quarterly",
+      "version": "76.1,1"
+    },
+    "indexinfo": {
+      "filename": "indexinfo-0.3.1_1~7ffe6cae10.pkg",
+      "role": "dependency",
+      "sha256": "7ffe6cae10caa4a06aa68a27fa4e397a7e09a4fa70e502b799ba3ecb27f9d4f8",
+      "size": 5872,
+      "source": "freebsd-13-quarterly",
+      "version": "0.3.1_1"
+    },
+    "libcbor": {
+      "filename": "libcbor-0.13.0~cee3a1532c.pkg",
+      "role": "dependency",
+      "sha256": "cee3a1532cfa0178b9d35acfa2b5398a96454ffb5b2e3f51f4d80a6e90be0c1e",
+      "size": 48992,
+      "source": "freebsd-13-quarterly",
+      "version": "0.13.0"
+    },
+    "libedit": {
+      "filename": "libedit-3.1.20251016_1,1~d974937ee2.pkg",
+      "role": "dependency",
+      "sha256": "d974937ee21012ec1b33c9e63a1af3fdbdbaf0702965b2eed9fe8cba59b8231c",
+      "size": 143860,
+      "source": "freebsd-13-quarterly",
+      "version": "3.1.20251016_1,1"
+    },
+    "libevent": {
+      "filename": "libevent-2.1.12~49886cc47a.pkg",
+      "role": "dependency",
+      "sha256": "49886cc47a21f1ba5a844110cbd39f9352d5c834dea6f8a421a82c90953a9d28",
+      "size": 328272,
+      "source": "freebsd-13-quarterly",
+      "version": "2.1.12"
+    },
+    "libfido2": {
+      "filename": "libfido2-1.16.0~b8aa241446.pkg",
+      "role": "dependency",
+      "sha256": "b8aa241446f350e078345587b053fc79cc4ac896bfe74951a5a84dac8765528f",
+      "size": 247604,
+      "source": "freebsd-13-quarterly",
+      "version": "1.16.0"
+    },
+    "libiconv": {
+      "filename": "libiconv-1.18_1~a13b15edd8.pkg",
+      "role": "dependency",
+      "sha256": "a13b15edd8b37288367f9b507303c058ed1a67f45bb91ba4bc5ae6b91decb5f8",
+      "size": 629740,
+      "source": "freebsd-13-quarterly",
+      "version": "1.18_1"
+    },
+    "libidn2": {
+      "filename": "libidn2-2.3.8~0a7ae2ef77.pkg",
+      "role": "dependency",
+      "sha256": "0a7ae2ef77397fa9a83ad91e9f036ebe93deccb9e6c10d33c7cd67dee2375e01",
+      "size": 141064,
+      "source": "freebsd-13-quarterly",
+      "version": "2.3.8"
+    },
+    "liblz4": {
+      "filename": "liblz4-1.10.0_2,1~1895b660cd.pkg",
+      "role": "dependency",
+      "sha256": "1895b660cd7039ee826e14c015e6393b5235618b1e790941218e1968d3cbc2cb",
+      "size": 170284,
+      "source": "freebsd-13-quarterly",
+      "version": "1.10.0_2,1"
+    },
+    "libnghttp2": {
+      "filename": "libnghttp2-1.68.1~7bf33dd85a.pkg",
+      "role": "dependency",
+      "sha256": "7bf33dd85ae97ec36078ac3b7605ad1a82aadcd44115a21aff57d4e72d6f171b",
+      "size": 129060,
+      "source": "freebsd-13-quarterly",
+      "version": "1.68.1"
+    },
+    "libpaper": {
+      "filename": "libpaper-1.1.28_1~512b5167bb.pkg",
+      "role": "dependency",
+      "sha256": "512b5167bb5ae952a235ccf35fd970d60dd34e46f4dd11cd4e8b2df6159fe61e",
+      "size": 24780,
+      "source": "freebsd-13-quarterly",
+      "version": "1.1.28_1"
+    },
+    "libpsl": {
+      "filename": "libpsl-0.21.5_2~1ac8ff30bc.pkg",
+      "role": "dependency",
+      "sha256": "1ac8ff30bcba1c1a88e527a1f8a250179f7c68dcbaee71a4cd5544ab83120f1b",
+      "size": 63516,
+      "source": "freebsd-13-quarterly",
+      "version": "0.21.5_2"
+    },
+    "libunistring": {
+      "filename": "libunistring-1.4.2~0a8be664f2.pkg",
+      "role": "dependency",
+      "sha256": "0a8be664f2ea0ab09a4bb92d0004cc970139a9d7211fed975bc47faeaa8dd438",
+      "size": 617796,
+      "source": "freebsd-13-quarterly",
+      "version": "1.4.2"
+    },
+    "libunwind": {
+      "filename": "libunwind-20250904~cf78041fb1.pkg",
+      "role": "dependency",
+      "sha256": "cf78041fb1389715396cc781d84720ed24dac67c3deef52fff8acbe69109b275",
+      "size": 201828,
+      "source": "freebsd-13-quarterly",
+      "version": "20250904"
+    },
+    "mysql80-client": {
+      "filename": "mysql80-client-8.0.45_1~f17ed9d4b5.pkg",
+      "role": "root",
+      "sha256": "f17ed9d4b50c9da42f157042793de4a76979976dc21755d35898e162375c1a9e",
+      "size": 4923336,
+      "source": "freebsd-13-quarterly",
+      "version": "8.0.45_1"
+    },
+    "mysql80-server": {
+      "filename": "mysql80-server-8.0.45~184dfc16aa.pkg",
+      "role": "root",
+      "sha256": "184dfc16aaf892d641608b00d07e87e1a7af8604e174db3d13f783a2f7b5210a",
+      "size": 23429740,
+      "source": "freebsd-13-quarterly",
+      "version": "8.0.45"
+    },
+    "mysql84-client": {
+      "filename": "mysql84-client-8.4.8~9d13de72f9.pkg",
+      "role": "root",
+      "sha256": "9d13de72f9c5532944faf0d4644ecd6310c89a7ed8f09280a22e7476f1c97ac7",
+      "size": 4635248,
+      "source": "freebsd-13-quarterly",
+      "version": "8.4.8"
+    },
+    "mysql84-server": {
+      "filename": "mysql84-server-8.4.8~98a2a4435e.pkg",
+      "role": "root",
+      "sha256": "98a2a4435ee8e5524721f85d30be356f8b00a7320c8a9f86dbb6abf9b8d29391",
+      "size": 24306256,
+      "source": "freebsd-13-quarterly",
+      "version": "8.4.8"
+    },
+    "mysql96-client": {
+      "filename": "mysql96-client-9.6.0~e0445aac9e.pkg",
+      "role": "root",
+      "sha256": "e0445aac9e6a25f428d35cdd41cba86e3a894f1bb277ea917e76ab6ff28b1eac",
+      "size": 5204816,
+      "source": "freebsd-13-quarterly",
+      "version": "9.6.0"
+    },
+    "mysql96-server": {
+      "filename": "mysql96-server-9.6.0~1d430f2854.pkg",
+      "role": "root",
+      "sha256": "1d430f2854dec485a0af68656b465b46c2a6162fc4d908761d51af978df7d7c2",
+      "size": 25237060,
+      "source": "freebsd-13-quarterly",
+      "version": "9.6.0"
+    },
+    "openldap26-client": {
+      "filename": "openldap26-client-2.6.13~f414c9bbaf.pkg",
+      "role": "dependency",
+      "sha256": "f414c9bbaf9f93b14559876ba23b5198e1337a5e88802708d96fd67a74775be4",
+      "size": 1063320,
+      "source": "freebsd-13-quarterly",
+      "version": "2.6.13"
+    },
+    "perl5": {
+      "filename": "perl5-5.42.2~69570dcdc7.pkg",
+      "role": "dependency",
+      "sha256": "69570dcdc7a6edf928dd2b5cda7a99dcfdb30d5603f89280596515a650af89a9",
+      "size": 15902392,
+      "source": "freebsd-13-quarterly",
+      "version": "5.42.2"
+    },
+    "psutils": {
+      "filename": "psutils-1.17_6~2815519f51.pkg",
+      "role": "dependency",
+      "sha256": "2815519f51960f9e28ee9500a17c3d461b60fc5178501c8c6f914b646d0a7ac0",
+      "size": 61712,
+      "source": "freebsd-13-quarterly",
+      "version": "1.17_6"
+    },
+    "uchardet": {
+      "filename": "uchardet-0.0.8_1~fcf27438ff.pkg",
+      "role": "dependency",
+      "sha256": "fcf27438ff440ac5ffe838c2b7a48a79698b482bd905001b569941a2e2ebc44c",
+      "size": 114536,
+      "source": "freebsd-13-quarterly",
+      "version": "0.0.8_1"
+    },
+    "wolfssl": {
+      "filename": "wolfssl-5.9.0_1~b62ffea2b3.pkg",
+      "role": "dependency",
+      "sha256": "b62ffea2b3c6feb5867b8cd29041303ee686844bba6af2e61bca4dacbecfe632",
+      "size": 1483360,
+      "source": "freebsd-13-quarterly",
+      "version": "5.9.0_1"
+    },
+    "zstd": {
+      "filename": "zstd-1.5.7_1~6f7c9907cd.pkg",
+      "role": "dependency",
+      "sha256": "6f7c9907cd8a32d57f2d62317c408cdeb45b61a0aedf7af6c6ee65e28f4f26f2",
+      "size": 482084,
+      "source": "freebsd-13-quarterly",
+      "version": "1.5.7_1"
+    }
+  },
+  "path": "FreeBSD:13:amd64/repos/freebsd-13-quarterly",
+  "priority": 5,
+  "root_count": 6,
+  "roots": [
+    "mysql80-client",
+    "mysql80-server",
+    "mysql84-client",
+    "mysql84-server",
+    "mysql96-client",
+    "mysql96-server"
+  ],
+  "source_id": "freebsd-13-quarterly",
+  "source_url": "https://pkg.freebsd.org/FreeBSD:13:amd64/quarterly/"
+}

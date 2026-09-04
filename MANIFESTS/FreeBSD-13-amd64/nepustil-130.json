@@ -1,0 +1,679 @@
+{
+  "dependency_version_notes": [],
+  "id": "nepustil-130",
+  "package_count": 81,
+  "packages": {
+    "apr": {
+      "filename": "apr-1.7.0.1.6.1_2.pkg",
+      "role": "dependency",
+      "sha256": "724da0fd799b7c90dec6e2f62d9c57434ffb0784248eb0c4e4226e6fbf09612c",
+      "size": 477316,
+      "source": "nepustil-130",
+      "version": "1.7.0.1.6.1_2"
+    },
+    "bash": {
+      "filename": "bash-5.1.16.pkg",
+      "role": "dependency",
+      "sha256": "395d989cc4d625b0ffb87be1b3c80629bcd385568eff52a494220dc274429def",
+      "size": 1515692,
+      "source": "nepustil-130",
+      "version": "5.1.16"
+    },
+    "binutils": {
+      "filename": "binutils-2.37_2,1.pkg",
+      "role": "dependency",
+      "sha256": "4e9973cb272b5a873cab0e46ea41230d8ba15ee2de652886ff53786a9f268688",
+      "size": 18310096,
+      "source": "nepustil-130",
+      "version": "2.37_2,1"
+    },
+    "boost-libs": {
+      "filename": "boost-libs-1.79.0_1.pkg",
+      "role": "dependency",
+      "sha256": "da1df8644ba51dc1b0af7a3d223ace1f3ee6c383a72ee4b6748f615be1260b7b",
+      "size": 13443008,
+      "source": "nepustil-130",
+      "version": "1.79.0_1"
+    },
+    "brotli": {
+      "filename": "brotli-1.0.9,1.pkg",
+      "role": "dependency",
+      "sha256": "2d16e26afe73867ee2dbb48b696ea50e9dc336058586d069cf3a0cea5a802071",
+      "size": 364452,
+      "source": "nepustil-130",
+      "version": "1.0.9,1"
+    },
+    "ca_root_nss": {
+      "filename": "ca_root_nss-3.78.pkg",
+      "role": "dependency",
+      "sha256": "cbcc4ef11abb843380668b08024c60caa5cd68f81561e813dbcf93ad94c7113f",
+      "size": 264396,
+      "source": "nepustil-130",
+      "version": "3.78"
+    },
+    "compat10x-amd64": {
+      "filename": "compat10x-amd64-10.4.1004000.20181014.pkg",
+      "role": "dependency",
+      "sha256": "b92499fed0618534381e417bf81f3d13d9b6b092309bb18c5d70873c1977adeb",
+      "size": 2431060,
+      "source": "nepustil-130",
+      "version": "10.4.1004000.20181014"
+    },
+    "compat12x-amd64": {
+      "filename": "compat12x-amd64-12.2.1202000.20210406.pkg",
+      "role": "root",
+      "sha256": "d8542135643db63a91d8528e76d06d571df1c7cff1ebc14b3275f690f22fbc1e",
+      "size": 1073484,
+      "source": "nepustil-130",
+      "version": "12.2.1202000.20210406"
+    },
+    "compat9x-amd64": {
+      "filename": "compat9x-amd64-9.3.903000.20170608.pkg",
+      "role": "root",
+      "sha256": "1c99ef1d9e0d49b7099f4e13e24387fedc535667f9c84f799b91394436f3e720",
+      "size": 2914304,
+      "source": "nepustil-130",
+      "version": "9.3.903000.20170608"
+    },
+    "cryptopp": {
+      "filename": "cryptopp-8.6.0.pkg",
+      "role": "root",
+      "sha256": "9f096e3c89fb38ff770d70a4ba92e50787d5d15136bc7982ab91a535d2a9ec77",
+      "size": 3974392,
+      "source": "nepustil-130",
+      "version": "8.6.0"
+    },
+    "curl": {
+      "filename": "curl-7.83.1.pkg",
+      "role": "dependency",
+      "sha256": "492e51edb779f9cdf956dd58fd5e80685df3111de7f6d9faa189667460684d94",
+      "size": 1427700,
+      "source": "nepustil-130",
+      "version": "7.83.1"
+    },
+    "cyrus-sasl": {
+      "filename": "cyrus-sasl-2.1.28.pkg",
+      "role": "dependency",
+      "sha256": "103cc48565f2998c2dc6ba631c04bbd38cf988bf536a32d6b26e551add1d5f39",
+      "size": 988204,
+      "source": "nepustil-130",
+      "version": "2.1.28"
+    },
+    "db5": {
+      "filename": "db5-5.3.28_8.pkg",
+      "role": "dependency",
+      "sha256": "db3d1a7d006d0c5fb6d1c707930019056039d642cc9d52084908118bbfb6bf5e",
+      "size": 12912472,
+      "source": "nepustil-130",
+      "version": "5.3.28_8"
+    },
+    "expat": {
+      "filename": "expat-2.4.8.pkg",
+      "role": "dependency",
+      "sha256": "fe8e93de0530e79ffbda57a4101fba88d96eca2c008edfb93ee1f06ba68f1d16",
+      "size": 107716,
+      "source": "nepustil-130",
+      "version": "2.4.8"
+    },
+    "galera26": {
+      "filename": "galera26-26.4.12.pkg",
+      "role": "dependency",
+      "sha256": "feb2e239199c9263a3f6f4dde32522db1d10a94f1a83f177167aa7edb5283bd2",
+      "size": 855444,
+      "source": "nepustil-130",
+      "version": "26.4.12"
+    },
+    "gcc": {
+      "filename": "gcc-11_4.pkg",
+      "role": "root",
+      "sha256": "141dcc7b75507a4b7a64f0e0edaf2536c405e8153d9bd1e1cec45132f344a960",
+      "size": 832,
+      "source": "nepustil-130",
+      "version": "11_4"
+    },
+    "gcc11": {
+      "filename": "gcc11-11.3.0.pkg",
+      "role": "root",
+      "sha256": "9c133171bca8728f6b8a6500f6fcae7b31cf5228e89c76e644de3ec26bb6d6ec",
+      "size": 76055776,
+      "source": "nepustil-130",
+      "version": "11.3.0"
+    },
+    "gdb": {
+      "filename": "gdb-12.1.pkg",
+      "role": "root",
+      "sha256": "ca83fa1b56be9834c7f0e8ddd99a8ddba1a7fcd1c64f8fa3584051e22415d6ed",
+      "size": 11501804,
+      "source": "nepustil-130",
+      "version": "12.1"
+    },
+    "gdbm": {
+      "filename": "gdbm-1.23.pkg",
+      "role": "dependency",
+      "sha256": "6cc22241c72f3c5a5ef909c7ef007e8cf4aebb1aa634bac1ac78fd10565e28c7",
+      "size": 212608,
+      "source": "nepustil-130",
+      "version": "1.23"
+    },
+    "gettext-runtime": {
+      "filename": "gettext-runtime-0.21.pkg",
+      "role": "dependency",
+      "sha256": "c04ec507e18ab2d1d15a7cefaaeba2c5b3eafed72ce18b2c452f3d4dedb864f1",
+      "size": 160796,
+      "source": "nepustil-130",
+      "version": "0.21"
+    },
+    "glib": {
+      "filename": "glib-2.72.2,2.pkg",
+      "role": "dependency",
+      "sha256": "c35efa8c1a790704a0f1e4fdd0d2f0314714068a7def5438eaaa2c7a7094d057",
+      "size": 4937896,
+      "source": "nepustil-130",
+      "version": "2.72.2,2"
+    },
+    "gmake": {
+      "filename": "gmake-4.3_2.pkg",
+      "role": "root",
+      "sha256": "564db108899f3113ea9389052c36a51456e51fe5238e17a30508c8b9c7155987",
+      "size": 416100,
+      "source": "nepustil-130",
+      "version": "4.3_2"
+    },
+    "gmp": {
+      "filename": "gmp-6.2.1.pkg",
+      "role": "dependency",
+      "sha256": "3aedea03ac516775db0067d64191adcb38399ce7be245927ef99a41c1c908ecf",
+      "size": 488452,
+      "source": "nepustil-130",
+      "version": "6.2.1"
+    },
+    "gnupg": {
+      "filename": "gnupg-2.3.3_3.pkg",
+      "role": "dependency",
+      "sha256": "5624bc63df733a0817436dc73b7b8387824548ac355a34734103c16054ab0beb",
+      "size": 2240192,
+      "source": "nepustil-130",
+      "version": "2.3.3_3"
+    },
+    "gnutls": {
+      "filename": "gnutls-3.7.6.pkg",
+      "role": "dependency",
+      "sha256": "84c071b69503e8446fde17270269dfeaa51092c6220a63e8b15f8218123fd831",
+      "size": 2605352,
+      "source": "nepustil-130",
+      "version": "3.7.6"
+    },
+    "groff": {
+      "filename": "groff-1.22.4_4.pkg",
+      "role": "dependency",
+      "sha256": "367477508982971414567ee59d229746bef412830fd0cd8aad45d2b9138c2a4b",
+      "size": 2893104,
+      "source": "nepustil-130",
+      "version": "1.22.4_4"
+    },
+    "icu": {
+      "filename": "icu-71.1,1.pkg",
+      "role": "dependency",
+      "sha256": "68b802894b5298c8fa91636bc75f38c834808d0b22acb22bfe625ef8b37f367f",
+      "size": 11284888,
+      "source": "nepustil-130",
+      "version": "71.1,1"
+    },
+    "indexinfo": {
+      "filename": "indexinfo-0.3.1.pkg",
+      "role": "dependency",
+      "sha256": "52eb871b3895fc2defc979bed7e1ccb4bb11ab2a01610e6a7b43a56d903d44fa",
+      "size": 4596,
+      "source": "nepustil-130",
+      "version": "0.3.1"
+    },
+    "libassuan": {
+      "filename": "libassuan-2.5.5.pkg",
+      "role": "dependency",
+      "sha256": "4cbad94296035a40b7a1881e7b52a36449b2a1421deea366bb8a859c00cbfa89",
+      "size": 76976,
+      "source": "nepustil-130",
+      "version": "2.5.5"
+    },
+    "libedit": {
+      "filename": "libedit-3.1.20210910,1.pkg",
+      "role": "dependency",
+      "sha256": "818150d933603ff0e42bf6d2dece709ef113ecd2d27b02d2ab229ce447fbe7dc",
+      "size": 138784,
+      "source": "nepustil-130",
+      "version": "3.1.20210910,1"
+    },
+    "libevent": {
+      "filename": "libevent-2.1.12.pkg",
+      "role": "dependency",
+      "sha256": "280437deb26b057a5471463ae3dbae18f2da1d4b9ba4c7f8808dcee30884834d",
+      "size": 327720,
+      "source": "nepustil-130",
+      "version": "2.1.12"
+    },
+    "libffi": {
+      "filename": "libffi-3.4.2.pkg",
+      "role": "dependency",
+      "sha256": "b658fe4169f894a86a72eee6f9157ac09ab8c4d9523625f110f9587ce4d75439",
+      "size": 41260,
+      "source": "nepustil-130",
+      "version": "3.4.2"
+    },
+    "libgcrypt": {
+      "filename": "libgcrypt-1.9.4_1.pkg",
+      "role": "dependency",
+      "sha256": "d252b54138bf49d24a4787e40d6575eb5d05f6338028ddba735441286878f3ac",
+      "size": 858744,
+      "source": "nepustil-130",
+      "version": "1.9.4_1"
+    },
+    "libgpg-error": {
+      "filename": "libgpg-error-1.45.pkg",
+      "role": "dependency",
+      "sha256": "d61c38310219fe0199d54690d998df8e9040e14d8272f4090dd2b1c39da95d7c",
+      "size": 314960,
+      "source": "nepustil-130",
+      "version": "1.45"
+    },
+    "libiconv": {
+      "filename": "libiconv-1.16.pkg",
+      "role": "dependency",
+      "sha256": "0f6400d9be31593d8898f417cc10ab6b6643d03af4ac3f68d10bc0b47b5ca22a",
+      "size": 609700,
+      "source": "nepustil-130",
+      "version": "1.16"
+    },
+    "libidn2": {
+      "filename": "libidn2-2.3.2.pkg",
+      "role": "dependency",
+      "sha256": "1dbff8c97340b76ed56fa3b901f488b0dd308e3f288dcfe7fa12c33cf2a20bed",
+      "size": 114692,
+      "source": "nepustil-130",
+      "version": "2.3.2"
+    },
+    "libksba": {
+      "filename": "libksba-1.6.0.pkg",
+      "role": "dependency",
+      "sha256": "06a98487b979078f1408cb0e03d177ddc396349a9a3cd32b0e4384365b0dc617",
+      "size": 173880,
+      "source": "nepustil-130",
+      "version": "1.6.0"
+    },
+    "liblz4": {
+      "filename": "liblz4-1.9.3,1.pkg",
+      "role": "dependency",
+      "sha256": "abffdb44fc586c16bf3b5fe52c8ceba9cc542316d4cd0f3e7b6e4984faf8cf0a",
+      "size": 128316,
+      "source": "nepustil-130",
+      "version": "1.9.3,1"
+    },
+    "libnghttp2": {
+      "filename": "libnghttp2-1.47.0.pkg",
+      "role": "dependency",
+      "sha256": "4d8837241de778a8cd21aae2a444c9c534179482428f4fa413fefe96174ef747",
+      "size": 121408,
+      "source": "nepustil-130",
+      "version": "1.47.0"
+    },
+    "libpaper": {
+      "filename": "libpaper-1.1.28.pkg",
+      "role": "dependency",
+      "sha256": "59da1ff7053cc79c72790ce4c0125b393f41354841ea528a6671e611d0921686",
+      "size": 17868,
+      "source": "nepustil-130",
+      "version": "1.1.28"
+    },
+    "librtmp": {
+      "filename": "librtmp-2.4.20190330.pkg",
+      "role": "dependency",
+      "sha256": "826566163debb2339273ac1abb15d3f41bfd2cc494576c74d301b9d23bb6da03",
+      "size": 79368,
+      "source": "nepustil-130",
+      "version": "2.4.20190330"
+    },
+    "libssh2": {
+      "filename": "libssh2-1.10.0,3.pkg",
+      "role": "dependency",
+      "sha256": "b2cad2f2f8cfdcdf0b18ca8247f26f31016899d604fccd67b38003e45f4e5254",
+      "size": 253296,
+      "source": "nepustil-130",
+      "version": "1.10.0,3"
+    },
+    "libtasn1": {
+      "filename": "libtasn1-4.18.0.pkg",
+      "role": "dependency",
+      "sha256": "e6a68c926383a492fd70d801e772108592a19785292159477a0a35406e83fbe2",
+      "size": 149756,
+      "source": "nepustil-130",
+      "version": "4.18.0"
+    },
+    "libunistring": {
+      "filename": "libunistring-1.0.pkg",
+      "role": "dependency",
+      "sha256": "7a847c29f298bc11536a06e3b50086b0053649540f42e819518b563fc20f76b5",
+      "size": 559072,
+      "source": "nepustil-130",
+      "version": "1.0"
+    },
+    "libxml2": {
+      "filename": "libxml2-2.9.13_2.pkg",
+      "role": "dependency",
+      "sha256": "6c0b7a80e7ccc6df98ad84cc2e5bd674b1b9b2b8e0d80963b3a2d8ea98963f2f",
+      "size": 1419648,
+      "source": "nepustil-130",
+      "version": "2.9.13_2"
+    },
+    "makedepend": {
+      "filename": "makedepend-1.0.6,1.pkg",
+      "role": "root",
+      "sha256": "47aa9127eed554d7e0c28dafe98458f1ae664d940297d446e0c2ebdd1c92367b",
+      "size": 20316,
+      "source": "nepustil-130",
+      "version": "1.0.6,1"
+    },
+    "mariadb104-client": {
+      "filename": "mariadb104-client-10.4.25.pkg",
+      "role": "root",
+      "sha256": "832702935dbb8beac2bdc3ff8f51a40eafb1c18bff102a357ab1aff1ce3f9847",
+      "size": 1442944,
+      "source": "nepustil-130",
+      "version": "10.4.25"
+    },
+    "mariadb104-server": {
+      "filename": "mariadb104-server-10.4.25.pkg",
+      "role": "root",
+      "sha256": "40e19f5a758387b31dabdc738126c8f667d825e8bf88d7be91ed3e9e83956110",
+      "size": 33656984,
+      "source": "nepustil-130",
+      "version": "10.4.25"
+    },
+    "mariadb105-client": {
+      "filename": "mariadb105-client-10.5.16.pkg",
+      "role": "root",
+      "sha256": "9e397930cfe2217d9dee0de89c3115839c43b96dd0e7e7f218b90a8fd26bab9a",
+      "size": 1788972,
+      "source": "nepustil-130",
+      "version": "10.5.16"
+    },
+    "mariadb105-server": {
+      "filename": "mariadb105-server-10.5.16.pkg",
+      "role": "root",
+      "sha256": "9910fecc83b920a7d536e0f3f029a0819b3d70c066eeb76a1ea5fdc66818f022",
+      "size": 29372572,
+      "source": "nepustil-130",
+      "version": "10.5.16"
+    },
+    "mpc": {
+      "filename": "mpc-1.2.1.pkg",
+      "role": "dependency",
+      "sha256": "32c7071ec0e5fc520cb290058b5f24a6d9ddc8407fd8b3d40db4bcb29079a710",
+      "size": 87256,
+      "source": "nepustil-130",
+      "version": "1.2.1"
+    },
+    "mpdecimal": {
+      "filename": "mpdecimal-2.5.1.pkg",
+      "role": "dependency",
+      "sha256": "bbc441545a5a071549144fa9c9d692702bd00eb5980cdcca9706d493b14a9e21",
+      "size": 329000,
+      "source": "nepustil-130",
+      "version": "2.5.1"
+    },
+    "mpfr": {
+      "filename": "mpfr-4.1.0_1.pkg",
+      "role": "dependency",
+      "sha256": "5077d051c120516b2ae26f1ea8b67373c8c7b66c36c25881a300d3cb5263b407",
+      "size": 459192,
+      "source": "nepustil-130",
+      "version": "4.1.0_1"
+    },
+    "mysql57-client": {
+      "filename": "mysql57-client-5.7.38.pkg",
+      "role": "root",
+      "sha256": "e21b3dfac1d267c4fae88d4d081eafb43fa97bfdbe4d2b18f6c2936fd25d4c95",
+      "size": 1917916,
+      "source": "nepustil-130",
+      "version": "5.7.38"
+    },
+    "mysql57-server": {
+      "filename": "mysql57-server-5.7.38.pkg",
+      "role": "root",
+      "sha256": "2cfe2a06b3d378178019f89d6fa5eee1c7be3c9f40578ff2f9ceebc5e757d903",
+      "size": 14439284,
+      "source": "nepustil-130",
+      "version": "5.7.38"
+    },
+    "nano": {
+      "filename": "nano-6.2.pkg",
+      "role": "root",
+      "sha256": "f4081b518ac2f258c76d3f22453c3f841153d3b7cf95fd374299cbf1d4958b11",
+      "size": 572456,
+      "source": "nepustil-130",
+      "version": "6.2"
+    },
+    "nettle": {
+      "filename": "nettle-3.8.pkg",
+      "role": "dependency",
+      "sha256": "2cee8ff93cfece05b64bf36a9a2894c14fb898c19337bea1122a6cfd8be6ae51",
+      "size": 1448676,
+      "source": "nepustil-130",
+      "version": "3.8"
+    },
+    "npth": {
+      "filename": "npth-1.6.pkg",
+      "role": "dependency",
+      "sha256": "d11ea3a2f2430363a6ea9b891572631b6109b5c8ce27aae1dcd1b2aee920d98f",
+      "size": 12500,
+      "source": "nepustil-130",
+      "version": "1.6"
+    },
+    "openldap24-client": {
+      "filename": "openldap24-client-2.4.59_4.pkg",
+      "role": "dependency",
+      "sha256": "8d0430d33890cd04e416d8fc76f980a72625b4df9e27b9459ace00163a482a58",
+      "size": 1034520,
+      "source": "nepustil-130",
+      "version": "2.4.59_4"
+    },
+    "p11-kit": {
+      "filename": "p11-kit-0.24.1_1.pkg",
+      "role": "dependency",
+      "sha256": "191b816e13073634e18f87cd6e5a254019cdd61e5c971fd0dac41a9a3cf556a6",
+      "size": 460004,
+      "source": "nepustil-130",
+      "version": "0.24.1_1"
+    },
+    "pcre": {
+      "filename": "pcre-8.45_1.pkg",
+      "role": "dependency",
+      "sha256": "fdccf0b57df2ee618e1a5ca821bac5afa6833a5d95923f5d00f4a038071501af",
+      "size": 1251376,
+      "source": "nepustil-130",
+      "version": "8.45_1"
+    },
+    "pcre2": {
+      "filename": "pcre2-10.40.pkg",
+      "role": "dependency",
+      "sha256": "7dcea0b712a344f3b71acdd4a85dd35cc3bed75733778baa4bcd8e228d8a79f7",
+      "size": 1348516,
+      "source": "nepustil-130",
+      "version": "10.40"
+    },
+    "perl5": {
+      "filename": "perl5-5.34.1.pkg",
+      "role": "dependency",
+      "sha256": "1b29c71612d49174c4438a531ba5bc49dab630092e9b767b94c5cce685f21f61",
+      "size": 15209652,
+      "source": "nepustil-130",
+      "version": "5.34.1"
+    },
+    "pinentry": {
+      "filename": "pinentry-1.2.0_1.pkg",
+      "role": "dependency",
+      "sha256": "5235b9fd0266fba43f505e6a1d3ccefe8f1b7d6322f99880da98e28aed77d62e",
+      "size": 15976,
+      "source": "nepustil-130",
+      "version": "1.2.0_1"
+    },
+    "pinentry-tty": {
+      "filename": "pinentry-tty-1.2.0.pkg",
+      "role": "dependency",
+      "sha256": "4fcb8171ff59ccd981e8d896e717186eae085a742782a97ea959956a1ac1c376",
+      "size": 24280,
+      "source": "nepustil-130",
+      "version": "1.2.0"
+    },
+    "popt": {
+      "filename": "popt-1.18_1.pkg",
+      "role": "dependency",
+      "sha256": "2a06ae0a3713a308c3748174cea2c82b26dd46ab4b397a3fcce7ee3fe01cfda0",
+      "size": 63316,
+      "source": "nepustil-130",
+      "version": "1.18_1"
+    },
+    "protobuf": {
+      "filename": "protobuf-3.20.1,1.pkg",
+      "role": "dependency",
+      "sha256": "06c27fffdefc30e62e8b1e8cc6ac6958df04e22cab406345a1a6de003d73621e",
+      "size": 3047700,
+      "source": "nepustil-130",
+      "version": "3.20.1,1"
+    },
+    "psutils": {
+      "filename": "psutils-1.17_5.pkg",
+      "role": "dependency",
+      "sha256": "aaf148b93cd9ef19e2b3767c465b33e1a3e1bd3c6ce495514a01f29189d8c5f1",
+      "size": 59720,
+      "source": "nepustil-130",
+      "version": "1.17_5"
+    },
+    "python38": {
+      "filename": "python38-3.8.13_2.pkg",
+      "role": "dependency",
+      "sha256": "329c844288c2727fbe7a7f37b7d9d885ef2b04f857a130c197db0f10c916f9f8",
+      "size": 18442300,
+      "source": "nepustil-130",
+      "version": "3.8.13_2"
+    },
+    "readline": {
+      "filename": "readline-8.1.2.pkg",
+      "role": "dependency",
+      "sha256": "68f574cd4e06e019df94608f187dfb5b422fcd5eee96111d966ef5ba33873ff0",
+      "size": 359588,
+      "source": "nepustil-130",
+      "version": "8.1.2"
+    },
+    "rsync": {
+      "filename": "rsync-3.2.4_1.pkg",
+      "role": "dependency",
+      "sha256": "16027cb588f729cf8ba9e36d9c0a2717d823b703f8b6dcfc3e61eae2219d3713",
+      "size": 385772,
+      "source": "nepustil-130",
+      "version": "3.2.4_1"
+    },
+    "screen": {
+      "filename": "screen-4.9.0_6.pkg",
+      "role": "root",
+      "sha256": "19ad2234a5b3900e02382d271da0940daed3ea04fd5de9343dca5964ff99cf1e",
+      "size": 489480,
+      "source": "nepustil-130",
+      "version": "4.9.0_6"
+    },
+    "serf": {
+      "filename": "serf-1.3.9_6.pkg",
+      "role": "dependency",
+      "sha256": "71e80d09db073463e5d569b881df9beca91050de9e6b0e57d7e00b0cc5e03bd1",
+      "size": 79992,
+      "source": "nepustil-130",
+      "version": "1.3.9_6"
+    },
+    "source-highlight": {
+      "filename": "source-highlight-3.1.9_2.pkg",
+      "role": "dependency",
+      "sha256": "ba80de5f14a13b60d72f811a11e3f6741dc2eca0755e8c9bcfc4fd991a743474",
+      "size": 977388,
+      "source": "nepustil-130",
+      "version": "3.1.9_2"
+    },
+    "sqlite3": {
+      "filename": "sqlite3-3.38.5,1.pkg",
+      "role": "dependency",
+      "sha256": "757f3e5a14bfcbd1bc7f8e1ebad82143321ad667343b77dd6644c7572c77b204",
+      "size": 1408180,
+      "source": "nepustil-130",
+      "version": "3.38.5,1"
+    },
+    "subversion": {
+      "filename": "subversion-1.14.2_1.pkg",
+      "role": "root",
+      "sha256": "a4a3d40c1662d348afd23dadbb32c866c3ed660e11d004393d231991c4c911d0",
+      "size": 3320124,
+      "source": "nepustil-130",
+      "version": "1.14.2_1"
+    },
+    "uchardet": {
+      "filename": "uchardet-0.0.7.pkg",
+      "role": "dependency",
+      "sha256": "6c9096b6ccfec8091d64bdef47737b614139967013cc04078080d8832ff02bcd",
+      "size": 93560,
+      "source": "nepustil-130",
+      "version": "0.0.7"
+    },
+    "unixODBC": {
+      "filename": "unixODBC-2.3.11.pkg",
+      "role": "dependency",
+      "sha256": "29e48086f77cd8ec384df1f3c24680a4d8d4fd2b151c40bb49c4b8923b80a5b2",
+      "size": 516620,
+      "source": "nepustil-130",
+      "version": "2.3.11"
+    },
+    "utf8proc": {
+      "filename": "utf8proc-2.7.0.pkg",
+      "role": "dependency",
+      "sha256": "e01be841194cc5a9f00843d1dd8b77859dee73bf9f5d037b5c490fd24be30db4",
+      "size": 63952,
+      "source": "nepustil-130",
+      "version": "2.7.0"
+    },
+    "xxhash": {
+      "filename": "xxhash-0.8.1.pkg",
+      "role": "dependency",
+      "sha256": "8d8454de7ff42dc358e1cc143b961553f4e6f4e28d8fe84f65f96d48b9e1e5ff",
+      "size": 81816,
+      "source": "nepustil-130",
+      "version": "0.8.1"
+    },
+    "zstd": {
+      "filename": "zstd-1.5.2.pkg",
+      "role": "dependency",
+      "sha256": "4091aa1769bc148516001e4e7cce42c6588a9c8ee4ffcf85bcd7e02d2ddabb14",
+      "size": 475592,
+      "source": "nepustil-130",
+      "version": "1.5.2"
+    }
+  },
+  "path": "FreeBSD:13:amd64/repos/nepustil-130",
+  "priority": 0,
+  "root_count": 17,
+  "roots": [
+    "compat12x-amd64",
+    "compat9x-amd64",
+    "cryptopp",
+    "gcc",
+    "gcc11",
+    "gdb",
+    "gmake",
+    "makedepend",
+    "mariadb104-client",
+    "mariadb104-server",
+    "mariadb105-client",
+    "mariadb105-server",
+    "mysql57-client",
+    "mysql57-server",
+    "nano",
+    "screen",
+    "subversion"
+  ],
+  "source_id": "nepustil-130",
+  "source_url": "https://repo.nepustil.net/130/FreeBSD:13:amd64/"
+}

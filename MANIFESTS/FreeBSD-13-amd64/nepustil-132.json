@@ -1,0 +1,87 @@
+{
+  "dependency_version_notes": [],
+  "id": "nepustil-132",
+  "package_count": 9,
+  "packages": {
+    "binutils": {
+      "filename": "binutils-2.40_5,1.pkg",
+      "role": "dependency",
+      "sha256": "27615e829c5376750067292507f510a3e2e4c265ad2bca171b27663487cb728a",
+      "size": 11727720,
+      "source": "nepustil-132",
+      "version": "2.40_5,1"
+    },
+    "gcc13": {
+      "filename": "gcc13-13.2.0_4.pkg",
+      "role": "root",
+      "sha256": "0ac047e29c0a4ae34e5299e424b8e6f4fb8272e47188dece0c4db21f85438e6e",
+      "size": 83115544,
+      "source": "nepustil-132",
+      "version": "13.2.0_4"
+    },
+    "gettext-runtime": {
+      "filename": "gettext-runtime-0.22.5.pkg",
+      "role": "dependency",
+      "sha256": "c69eda3a85605e0ea32f8b855bdfa4188aa14dcbbb72d2c2193300250e7d74d4",
+      "size": 212428,
+      "source": "nepustil-132",
+      "version": "0.22.5"
+    },
+    "gmp": {
+      "filename": "gmp-6.3.0.pkg",
+      "role": "dependency",
+      "sha256": "1d68e3b5911d3804540d659e04ae2da7b77603f1d15aab976cfeddea60a008e3",
+      "size": 486996,
+      "source": "nepustil-132",
+      "version": "6.3.0"
+    },
+    "indexinfo": {
+      "filename": "indexinfo-0.3.1.pkg",
+      "role": "dependency",
+      "sha256": "7fb3b3216713775c5585f75e2123a94dd6586b150c63af15f0141fd58c4159cc",
+      "size": 5668,
+      "source": "nepustil-132",
+      "version": "0.3.1"
+    },
+    "liblz4": {
+      "filename": "liblz4-1.9.4_1,1.pkg",
+      "role": "dependency",
+      "sha256": "dbda9629274026901994b9227ba93b34164baf9c0722f8c3c449aed5924a4b91",
+      "size": 142728,
+      "source": "nepustil-132",
+      "version": "1.9.4_1,1"
+    },
+    "mpc": {
+      "filename": "mpc-1.3.1_1.pkg",
+      "role": "dependency",
+      "sha256": "68fdda452fa56916ec01e1287ef5e1cde959e5bb675022675accd8e0d27ad0b4",
+      "size": 106392,
+      "source": "nepustil-132",
+      "version": "1.3.1_1"
+    },
+    "mpfr": {
+      "filename": "mpfr-4.2.1,1.pkg",
+      "role": "dependency",
+      "sha256": "322078f869a8f55d926fc8d71639106fe31c07279fde24ed27b1714adb53461f",
+      "size": 483252,
+      "source": "nepustil-132",
+      "version": "4.2.1,1"
+    },
+    "zstd": {
+      "filename": "zstd-1.5.6.pkg",
+      "role": "dependency",
+      "sha256": "ee0a155791db152900fbff84617430cb6ab815bd8dd91a800657e77d33cc5703",
+      "size": 498360,
+      "source": "nepustil-132",
+      "version": "1.5.6"
+    }
+  },
+  "path": "FreeBSD:13:amd64/repos/nepustil-132",
+  "priority": 2,
+  "root_count": 1,
+  "roots": [
+    "gcc13"
+  ],
+  "source_id": "nepustil-132",
+  "source_url": "https://repo.nepustil.net/132/FreeBSD:13:amd64/"
+}
