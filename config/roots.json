@@ -1,0 +1,51 @@
+{
+  "description": "Only these requested root package families plus their transitive runtime dependencies are mirrored.",
+  "exact": [
+    "gmake",
+    "boost-all",
+    "subversion",
+    "makedepend",
+    "devil",
+    "python",
+    "cryptopp",
+    "nano",
+    "screen",
+    "freecolor",
+    "gdb",
+    "compat7x-amd64",
+    "compat8x-amd64",
+    "compat9x-amd64",
+    "compat11x-amd64",
+    "compat12x-amd64",
+    "compat7x-i386",
+    "compat8x-i386",
+    "compat9x-i386",
+    "compat11x-i386",
+    "compat12x-i386"
+  ],
+  "families": {
+    "mysql": {
+      "regex": "^mysql([0-9]+)-(client|server)$",
+      "minimum_series": 55,
+      "note": "All binary MySQL client/server series from 5.5 upward that actually exist for the target ABI."
+    },
+    "mariadb": {
+      "regex": "^mariadb([0-9]+)-(client|server)$",
+      "minimum_series": 103,
+      "note": "All binary MariaDB client/server series from 10.3 upward that actually exist for the target ABI."
+    },
+    "gcc": {
+      "regex": "^gcc(48|49|[5-9]|[1-9][0-9])$",
+      "include_generic": true,
+      "generic_name": "gcc",
+      "note": "All stable numbered GCC package names from gcc48 upward plus the generic gcc package. *-devel and cross-toolchain packages are not roots unless pulled as dependencies."
+    }
+  },
+  "dependency_policy": {
+    "recursive_runtime_dependencies": true,
+    "build_only_dependencies": false,
+    "prefer_same_source_snapshot": true,
+    "require_exact_dependency_version_when_catalog_provides_one": true,
+    "never_cross_abi": true
+  }
+}
