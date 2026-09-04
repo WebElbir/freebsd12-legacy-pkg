@@ -123,7 +123,8 @@ jobs:
         run: |
           set -euo pipefail
           KEY="${TARGET//:/-}"
-          git add -A -- "${TARGET}/latest" "MANIFESTS/${KEY}.json" "MANIFESTS/${KEY}" "SOURCES/${KEY}.json" "CONFIGS/${KEY}.md"
+          git add -A -- "${TARGET}/latest" "MANIFESTS/${KEY}.json" "SOURCES/${KEY}.json" "CONFIGS/${KEY}.md"
+          git add -A -- "MANIFESTS/${KEY}" 2>/dev/null || true
           echo "Cohort build directories under ${TARGET}/repos are intentionally not part of the canonical user endpoint update."
 
       - name: Binary and push safety gate
