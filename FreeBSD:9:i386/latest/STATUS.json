@@ -1,0 +1,6 @@
+{
+  "note": "No requested package cohort could be resolved. The canonical repository endpoint is valid but empty.",
+  "package_count": 0,
+  "status": "no-requested-packages-resolved",
+  "target": "FreeBSD:9:i386"
+}

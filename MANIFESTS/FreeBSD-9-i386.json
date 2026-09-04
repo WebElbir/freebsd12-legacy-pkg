@@ -1,4 +1,5 @@
 {
+  "canonical_repo": "FreeBSD:9:i386/latest",
   "cohorts": [],
   "coverage": {},
   "discovered_roots": [],
