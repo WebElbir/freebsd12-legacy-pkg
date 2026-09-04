@@ -1,0 +1,734 @@
+{
+  "dependency_version_notes": [],
+  "id": "sggs-12i386-latest",
+  "package_count": 86,
+  "packages": {
+    "binutils": {
+      "filename": "binutils-2.40_4,1.pkg",
+      "role": "dependency",
+      "sha256": "68ffd60f61e30948209ca9c6eb3a51d828dc9d0f9521e8fa45626cd9c0731077",
+      "size": 9665860,
+      "source": "sggs-12i386-latest",
+      "version": "2.40_4,1"
+    },
+    "boost-libs": {
+      "filename": "boost-libs-1.83.0_1.pkg",
+      "role": "dependency",
+      "sha256": "f26a1810eea883fe6758eb0dc1ca86586f2545f7091e0b628835584828bcaeb9",
+      "size": 14457828,
+      "source": "sggs-12i386-latest",
+      "version": "1.83.0_1"
+    },
+    "compat10x-i386": {
+      "filename": "compat10x-i386-10.4.1004000.20181014.pkg",
+      "role": "dependency",
+      "sha256": "86f7a6e2fd35c81de6e925dcaaa130e0693cc5547b9def89f849de15caf62784",
+      "size": 1261400,
+      "source": "sggs-12i386-latest",
+      "version": "10.4.1004000.20181014"
+    },
+    "compat11x-i386": {
+      "filename": "compat11x-i386-11.2.1102000.20181014.pkg",
+      "role": "root",
+      "sha256": "b3fbce7459c7df2ba4dfe14060b46aae0cda6164e2b19da7fadeb2618e5477bb",
+      "size": 1124248,
+      "source": "sggs-12i386-latest",
+      "version": "11.2.1102000.20181014"
+    },
+    "compat12x-i386": {
+      "filename": "compat12x-i386-12.2.1202000.20210406.pkg",
+      "role": "root",
+      "sha256": "76ef4b1fea4e68f9d7850701d35a69aee98df10254cc8250b5a9fe16f2bb745f",
+      "size": 559964,
+      "source": "sggs-12i386-latest",
+      "version": "12.2.1202000.20210406"
+    },
+    "compat7x-i386": {
+      "filename": "compat7x-i386-7.4.704000.201310.1.pkg",
+      "role": "root",
+      "sha256": "11fbe30ff0b89e468bf9ee75302b962e227e463315392dc803e98d2e6bf90a2e",
+      "size": 2606488,
+      "source": "sggs-12i386-latest",
+      "version": "7.4.704000.201310.1"
+    },
+    "compat8x-i386": {
+      "filename": "compat8x-i386-8.4.804000.20151116.pkg",
+      "role": "root",
+      "sha256": "150a1c763620fd131d58cf3b21f858df4b444910b305025166a176aa5af75cf2",
+      "size": 235608,
+      "source": "sggs-12i386-latest",
+      "version": "8.4.804000.20151116"
+    },
+    "compat9x-i386": {
+      "filename": "compat9x-i386-9.3.903000.20170608.pkg",
+      "role": "root",
+      "sha256": "4b7cb454a2796442ee84080cc04e409d20dc8dfb6bec02f289a9fe3bbb03c6e4",
+      "size": 1524996,
+      "source": "sggs-12i386-latest",
+      "version": "9.3.903000.20170608"
+    },
+    "cryptopp": {
+      "filename": "cryptopp-8.9.0.pkg",
+      "role": "root",
+      "sha256": "abdbd7b57f696883b685d179673654ddae7219c4f1cf710c780448d7a17365c5",
+      "size": 9715908,
+      "source": "sggs-12i386-latest",
+      "version": "8.9.0"
+    },
+    "curl": {
+      "filename": "curl-8.5.0.pkg",
+      "role": "dependency",
+      "sha256": "7a187c21eaa72e1c0708fcb49083097d68254fdd99562791b1cd1c303fbdb21c",
+      "size": 1664136,
+      "source": "sggs-12i386-latest",
+      "version": "8.5.0"
+    },
+    "cyrus-sasl": {
+      "filename": "cyrus-sasl-2.1.28_1.pkg",
+      "role": "dependency",
+      "sha256": "ed89910799f3d94b6a0fcc70f32f4fdca95d8dde7d7f4191bbe0567fa96efe7c",
+      "size": 1012876,
+      "source": "sggs-12i386-latest",
+      "version": "2.1.28_1"
+    },
+    "devil": {
+      "filename": "devil-1.8.0_4,1.pkg",
+      "role": "root",
+      "sha256": "d210c30c8e4b39dc9d267a5ba8be45ec6396fbe088445734ea051ea3b5a57421",
+      "size": 1544188,
+      "source": "sggs-12i386-latest",
+      "version": "1.8.0_4,1"
+    },
+    "expat": {
+      "filename": "expat-2.5.0.pkg",
+      "role": "dependency",
+      "sha256": "61b97f945730189fbf02b4c5ac7d9d71d05a82fe49678bdd459542a7df5f73de",
+      "size": 109976,
+      "source": "sggs-12i386-latest",
+      "version": "2.5.0"
+    },
+    "freecolor": {
+      "filename": "freecolor-0.9.3.pkg",
+      "role": "root",
+      "sha256": "5fa46760a7822b8d3f2e2eaa852fc3a01d96cfbb9b4d2f6ceb062d00f219606d",
+      "size": 7036,
+      "source": "sggs-12i386-latest",
+      "version": "0.9.3"
+    },
+    "gcc10": {
+      "filename": "gcc10-10.5.0.pkg",
+      "role": "root",
+      "sha256": "317c25bba056b45324d66f690d5ff95257531c9aa65fa17a9d666a7ab9f5e84d",
+      "size": 51777072,
+      "source": "sggs-12i386-latest",
+      "version": "10.5.0"
+    },
+    "gcc11": {
+      "filename": "gcc11-11.4.0.pkg",
+      "role": "root",
+      "sha256": "cd2759ae9959bb5b3b04597fdc6b1de24299c7cd1f4495ee18abf5939edc3bae",
+      "size": 81506508,
+      "source": "sggs-12i386-latest",
+      "version": "11.4.0"
+    },
+    "gcc12": {
+      "filename": "gcc12-12.2.0_7.pkg",
+      "role": "root",
+      "sha256": "0cf1e437afb2a5727ec375903d46212d511154bb2d56a5deaa258eb39e69c22a",
+      "size": 78134092,
+      "source": "sggs-12i386-latest",
+      "version": "12.2.0_7"
+    },
+    "gcc13": {
+      "filename": "gcc13-13.2.0_1.pkg",
+      "role": "root",
+      "sha256": "07779ea018cd013cabea95f116d42b109d7e3dbdaffa2629395d2e740ae641cb",
+      "size": 80796008,
+      "source": "sggs-12i386-latest",
+      "version": "13.2.0_1"
+    },
+    "gcc48": {
+      "filename": "gcc48-4.8.5_15.pkg",
+      "role": "root",
+      "sha256": "c7f4aa9cf4977d452d8dcb5ba70efe849f8c6bd44dea971f48fb6d9f6f72bdd5",
+      "size": 15159380,
+      "source": "sggs-12i386-latest",
+      "version": "4.8.5_15"
+    },
+    "gcc8": {
+      "filename": "gcc8-8.5.0_2.pkg",
+      "role": "root",
+      "sha256": "43e8cc9d439890e87c7fc7478154d5e20fe440a53257cfecb7c49908a402dc5d",
+      "size": 43112184,
+      "source": "sggs-12i386-latest",
+      "version": "8.5.0_2"
+    },
+    "gcc9": {
+      "filename": "gcc9-9.5.0_1.pkg",
+      "role": "root",
+      "sha256": "14b6b1a1c7bb8ad6cfccb08172af9bedef97d4b29b7cc507a88b2be2402a7a77",
+      "size": 44786980,
+      "source": "sggs-12i386-latest",
+      "version": "9.5.0_1"
+    },
+    "gdb": {
+      "filename": "gdb-13.2_1.pkg",
+      "role": "root",
+      "sha256": "b439deb2889c8b56868a6e532cc420da50927dfe40d9c5d4011d820da36672c9",
+      "size": 12182212,
+      "source": "sggs-12i386-latest",
+      "version": "13.2_1"
+    },
+    "gettext-runtime": {
+      "filename": "gettext-runtime-0.22.3.pkg",
+      "role": "dependency",
+      "sha256": "89ba06ca9dfd0e8b9c63b37d46eef4c00a11def19ab76af5b0a71e1a38c948f5",
+      "size": 212776,
+      "source": "sggs-12i386-latest",
+      "version": "0.22.3"
+    },
+    "gmake": {
+      "filename": "gmake-4.3_2.pkg",
+      "role": "root",
+      "sha256": "a20ab038584ef3a701bdf1d75867e0787ed0cc5bf2e70f9610f83331e3c91fc7",
+      "size": 420496,
+      "source": "sggs-12i386-latest",
+      "version": "4.3_2"
+    },
+    "gmp": {
+      "filename": "gmp-6.3.0.pkg",
+      "role": "dependency",
+      "sha256": "a42284c32b6a63a52a392c04c982c46e4db2fc91e6600a3679e42f5d67cbeece",
+      "size": 507132,
+      "source": "sggs-12i386-latest",
+      "version": "6.3.0"
+    },
+    "groff": {
+      "filename": "groff-1.23.0_2.pkg",
+      "role": "dependency",
+      "sha256": "87d5c34d16a48a630c6efaeaf574f6d27de399e0aeac881d45f6219a980f873e",
+      "size": 3032840,
+      "source": "sggs-12i386-latest",
+      "version": "1.23.0_2"
+    },
+    "hidapi": {
+      "filename": "hidapi-0.14.0.pkg",
+      "role": "dependency",
+      "sha256": "83e4d9af55e14cb5377aae7aa7a0fe7a20306e13bbb88536f312fbc4037a661b",
+      "size": 35788,
+      "source": "sggs-12i386-latest",
+      "version": "0.14.0"
+    },
+    "icu": {
+      "filename": "icu-74.2,1.pkg",
+      "role": "dependency",
+      "sha256": "bcf7625c854ab73e7bbdc940284c494c65e8ed8c0e5c8c4b8bcc5e4b19c2d89c",
+      "size": 11899628,
+      "source": "sggs-12i386-latest",
+      "version": "74.2,1"
+    },
+    "indexinfo": {
+      "filename": "indexinfo-0.3.1.pkg",
+      "role": "dependency",
+      "sha256": "79f9917b7f30940f50022e4b3b6c69198b050da0bfc428e5fc5a7299348536c8",
+      "size": 6092,
+      "source": "sggs-12i386-latest",
+      "version": "0.3.1"
+    },
+    "jasper": {
+      "filename": "jasper-4.1.1.pkg",
+      "role": "dependency",
+      "sha256": "6833789b7aebd3a88fc5ae3be83729495f70bd1e257d9f64d20791c980be5854",
+      "size": 428736,
+      "source": "sggs-12i386-latest",
+      "version": "4.1.1"
+    },
+    "jbigkit": {
+      "filename": "jbigkit-2.1_1.pkg",
+      "role": "dependency",
+      "sha256": "d82e08d4e0aa232340f1c1db1419fb374f3f9230e4f0aec4aadd6091a1244f59",
+      "size": 83420,
+      "source": "sggs-12i386-latest",
+      "version": "2.1_1"
+    },
+    "jpeg-turbo": {
+      "filename": "jpeg-turbo-3.0.1.pkg",
+      "role": "dependency",
+      "sha256": "03c2d25cc820098047c0748f4b20b1f95c3c6d80fbc78edb47533b2813970a2b",
+      "size": 477252,
+      "source": "sggs-12i386-latest",
+      "version": "3.0.1"
+    },
+    "lcms": {
+      "filename": "lcms-1.19_7,1.pkg",
+      "role": "dependency",
+      "sha256": "2e79b33336dfc9f89e52abb01f2d5280254cdb89fa16b3d2ea5b5bfc9894dd3f",
+      "size": 244080,
+      "source": "sggs-12i386-latest",
+      "version": "1.19_7,1"
+    },
+    "lcms2": {
+      "filename": "lcms2-2.16.pkg",
+      "role": "dependency",
+      "sha256": "6d36a59060810be4360727f6a014d3bf446bf008ddc48b633363560546bef644",
+      "size": 2260680,
+      "source": "sggs-12i386-latest",
+      "version": "2.16"
+    },
+    "libcbor": {
+      "filename": "libcbor-0.10.2.pkg",
+      "role": "dependency",
+      "sha256": "6def22d21633cd0cb23cfe2dfb7cdeca31c95ea130729432fcf3cbc588a9f2b9",
+      "size": 32792,
+      "source": "sggs-12i386-latest",
+      "version": "0.10.2"
+    },
+    "libcjson": {
+      "filename": "libcjson-1.7.16.pkg",
+      "role": "dependency",
+      "sha256": "8441f5bd72b4abb4afe6997d85de963df92db53f99b2288d938203930edbc89b",
+      "size": 38440,
+      "source": "sggs-12i386-latest",
+      "version": "1.7.16"
+    },
+    "libdeflate": {
+      "filename": "libdeflate-1.19.pkg",
+      "role": "dependency",
+      "sha256": "7861cf46a35049e32af70e23f7e576d2064320458e310f4ef0aeca9cab650c1b",
+      "size": 84140,
+      "source": "sggs-12i386-latest",
+      "version": "1.19"
+    },
+    "libedit": {
+      "filename": "libedit-3.1.20230828,1.pkg",
+      "role": "dependency",
+      "sha256": "779926a4dd6ad5218b115fd3de56c2e972c421537229f3dbee36a1fefa32af64",
+      "size": 145520,
+      "source": "sggs-12i386-latest",
+      "version": "3.1.20230828,1"
+    },
+    "libevent": {
+      "filename": "libevent-2.1.12.pkg",
+      "role": "dependency",
+      "sha256": "12bd050334c66c61eb5e70a82459673318f42b2a04c0556156e2141cf0d9b576",
+      "size": 334368,
+      "source": "sggs-12i386-latest",
+      "version": "2.1.12"
+    },
+    "libffi": {
+      "filename": "libffi-3.4.4.pkg",
+      "role": "dependency",
+      "sha256": "158dcef93025f13896b04e3627f5981d423d262e64db86eac873905f1233f51a",
+      "size": 40228,
+      "source": "sggs-12i386-latest",
+      "version": "3.4.4"
+    },
+    "libfido2": {
+      "filename": "libfido2-1.14.0.pkg",
+      "role": "dependency",
+      "sha256": "dc9abe5d2527fa9ba5ddf2b73c8d8944b75d1554cab4155944a04efcd1124fdc",
+      "size": 241520,
+      "source": "sggs-12i386-latest",
+      "version": "1.14.0"
+    },
+    "libfmt": {
+      "filename": "libfmt-10.1.1.pkg",
+      "role": "dependency",
+      "sha256": "7fbdd46f40652037e22c2e4f2a9dab59f4bac3ab6e4d38d7556dbdfb69c4cc7a",
+      "size": 173208,
+      "source": "sggs-12i386-latest",
+      "version": "10.1.1"
+    },
+    "libiconv": {
+      "filename": "libiconv-1.17.pkg",
+      "role": "dependency",
+      "sha256": "cbfcf554d31bb225959a4ab2eaed825670b97b98b298cb00c5bd6111a7fef4ba",
+      "size": 640512,
+      "source": "sggs-12i386-latest",
+      "version": "1.17"
+    },
+    "libidn2": {
+      "filename": "libidn2-2.3.4.pkg",
+      "role": "dependency",
+      "sha256": "cebb42ecb06c722b235255cd5acd62db1eb40fb94ba3c23040cacc2dea88cc1f",
+      "size": 137680,
+      "source": "sggs-12i386-latest",
+      "version": "2.3.4"
+    },
+    "liblz4": {
+      "filename": "liblz4-1.9.4,1.pkg",
+      "role": "dependency",
+      "sha256": "e81a84b8329422ccef39ba524c896b527a9361c9dab673c88edf5615f661a91b",
+      "size": 139040,
+      "source": "sggs-12i386-latest",
+      "version": "1.9.4,1"
+    },
+    "libmng": {
+      "filename": "libmng-1.0.10_4.pkg",
+      "role": "dependency",
+      "sha256": "287deb6d541159ae528af7d5e45455156566c4fbc05512006d89d7663494b307",
+      "size": 228536,
+      "source": "sggs-12i386-latest",
+      "version": "1.0.10_4"
+    },
+    "libnghttp2": {
+      "filename": "libnghttp2-1.58.0.pkg",
+      "role": "dependency",
+      "sha256": "e7d7e711b573afe35582e9058c8cc9787ad53c75f71410fb47d2a8596cfeedc3",
+      "size": 144200,
+      "source": "sggs-12i386-latest",
+      "version": "1.58.0"
+    },
+    "libpaper": {
+      "filename": "libpaper-1.1.28.pkg",
+      "role": "dependency",
+      "sha256": "051b3512bab06f1b7f4c83c19e2d5d68261f6794f8110514530c34a96a711af0",
+      "size": 24820,
+      "source": "sggs-12i386-latest",
+      "version": "1.1.28"
+    },
+    "libpsl": {
+      "filename": "libpsl-0.21.2_4.pkg",
+      "role": "dependency",
+      "sha256": "0ccee191535749a8cc9a5eaa631bc3f7e2ff55f8d56388c5835bac0448182524",
+      "size": 61824,
+      "source": "sggs-12i386-latest",
+      "version": "0.21.2_4"
+    },
+    "libssh2": {
+      "filename": "libssh2-1.11.0,3.pkg",
+      "role": "dependency",
+      "sha256": "673f0bdfb738ea3d484e49220262931b585580ab26fe42b5594449790838f1ca",
+      "size": 281644,
+      "source": "sggs-12i386-latest",
+      "version": "1.11.0,3"
+    },
+    "libstatgrab": {
+      "filename": "libstatgrab-0.92.1.pkg",
+      "role": "dependency",
+      "sha256": "55aa29cbb77e23811bf3929e80604eb23c359a4d14da9daf014e838f4950301a",
+      "size": 123504,
+      "source": "sggs-12i386-latest",
+      "version": "0.92.1"
+    },
+    "libunistring": {
+      "filename": "libunistring-1.1.pkg",
+      "role": "dependency",
+      "sha256": "9d79263f1eb139e21fe745fd7b64fae5badae2ef18c6e06a82b7aed4389ca8fa",
+      "size": 552032,
+      "source": "sggs-12i386-latest",
+      "version": "1.1"
+    },
+    "libunwind": {
+      "filename": "libunwind-20230730.pkg",
+      "role": "dependency",
+      "sha256": "e0adb1df86b5b5bfaaa865c7e21ae7fcd0b6f75dd3a96faa22dba523e41d1999",
+      "size": 129156,
+      "source": "sggs-12i386-latest",
+      "version": "20230730"
+    },
+    "libxml2": {
+      "filename": "libxml2-2.10.4_2.pkg",
+      "role": "dependency",
+      "sha256": "de14efa59ea8b896e122a4850dacb6ff5781c443ce9b2a781d7af3531bb0cb02",
+      "size": 1230992,
+      "source": "sggs-12i386-latest",
+      "version": "2.10.4_2"
+    },
+    "makedepend": {
+      "filename": "makedepend-1.0.6,1.pkg",
+      "role": "root",
+      "sha256": "cf0dc805cfbc5f5acd4b2c662539fba92b9115199fbdb7a10a4ce8c0a58c348d",
+      "size": 19936,
+      "source": "sggs-12i386-latest",
+      "version": "1.0.6,1"
+    },
+    "mariadb1011-client": {
+      "filename": "mariadb1011-client-10.11.6_1.pkg",
+      "role": "root",
+      "sha256": "2f440c879a99e2381e5a1ea4ab16965ae6b4d3c294d5643995a035417fe17992",
+      "size": 2131680,
+      "source": "sggs-12i386-latest",
+      "version": "10.11.6_1"
+    },
+    "mariadb1011-server": {
+      "filename": "mariadb1011-server-10.11.6_1.pkg",
+      "role": "root",
+      "sha256": "cc8c210d25df25a59dd4cdcf5ab788eacfc76c25cb147c2c8501ab552dd72087",
+      "size": 45529244,
+      "source": "sggs-12i386-latest",
+      "version": "10.11.6_1"
+    },
+    "mariadb105-client": {
+      "filename": "mariadb105-client-10.5.23.pkg",
+      "role": "root",
+      "sha256": "50ef160e09d97dc1a4bb6df9e66cd974b5e1e34fb433c8265ac4d38ec6c68468",
+      "size": 1833784,
+      "source": "sggs-12i386-latest",
+      "version": "10.5.23"
+    },
+    "mariadb105-server": {
+      "filename": "mariadb105-server-10.5.23.pkg",
+      "role": "root",
+      "sha256": "4daab407bd61d048e0a825b5c9443ef4fa483b6617ca31dbc64596440e37a9de",
+      "size": 31519676,
+      "source": "sggs-12i386-latest",
+      "version": "10.5.23"
+    },
+    "mariadb106-client": {
+      "filename": "mariadb106-client-10.6.16.pkg",
+      "role": "root",
+      "sha256": "c4fa8b7f1065e187f46227a26c87fabee37d84ebf2f16ee50b5361d3b21ad76f",
+      "size": 1914420,
+      "source": "sggs-12i386-latest",
+      "version": "10.6.16"
+    },
+    "mariadb106-server": {
+      "filename": "mariadb106-server-10.6.16.pkg",
+      "role": "root",
+      "sha256": "dc071a1dcac46e73c69dea2dd72f709d2345967487784444fca21665d944d979",
+      "size": 43485832,
+      "source": "sggs-12i386-latest",
+      "version": "10.6.16"
+    },
+    "mpc": {
+      "filename": "mpc-1.3.1_1.pkg",
+      "role": "dependency",
+      "sha256": "f004e601d937394bc018507195b74dad0e5416b68c2b95d83c98ebcb5fbe9130",
+      "size": 114804,
+      "source": "sggs-12i386-latest",
+      "version": "1.3.1_1"
+    },
+    "mpdecimal": {
+      "filename": "mpdecimal-2.5.1.pkg",
+      "role": "dependency",
+      "sha256": "0650e2495ef783f1d7fe74f663b2a7600a08281e8abeece90879ef8fa6ef78f5",
+      "size": 337328,
+      "source": "sggs-12i386-latest",
+      "version": "2.5.1"
+    },
+    "mpfr": {
+      "filename": "mpfr-4.2.1,1.pkg",
+      "role": "dependency",
+      "sha256": "b96dddbdcc089aee1c7dbb4cfea40ce0032dd75afae6e496b13b2e65075c1f26",
+      "size": 469000,
+      "source": "sggs-12i386-latest",
+      "version": "4.2.1,1"
+    },
+    "mysql57-client": {
+      "filename": "mysql57-client-5.7.44_2.pkg",
+      "role": "root",
+      "sha256": "dd4cf0d5c46f0aad4ae928f97b55585b56f5327db040b40269bccda40c25ea4c",
+      "size": 2034084,
+      "source": "sggs-12i386-latest",
+      "version": "5.7.44_2"
+    },
+    "mysql57-server": {
+      "filename": "mysql57-server-5.7.44_2.pkg",
+      "role": "root",
+      "sha256": "d37fc39381c751e49ee671e9e8ad99e1f196ebd2dd9e8d2419b77c49d0366d06",
+      "size": 15134228,
+      "source": "sggs-12i386-latest",
+      "version": "5.7.44_2"
+    },
+    "mysql80-client": {
+      "filename": "mysql80-client-8.0.35.pkg",
+      "role": "root",
+      "sha256": "f339d13c52a1a914ba9ba942b91a2d3e05978aebdbe59aab1b09b4fc7c332187",
+      "size": 4533660,
+      "source": "sggs-12i386-latest",
+      "version": "8.0.35"
+    },
+    "mysql80-server": {
+      "filename": "mysql80-server-8.0.35.pkg",
+      "role": "root",
+      "sha256": "5962b0a3d3db498952480fe649aec2b3ca7cf902611f6f321030a5bd92d379c9",
+      "size": 21477920,
+      "source": "sggs-12i386-latest",
+      "version": "8.0.35"
+    },
+    "mysql81-client": {
+      "filename": "mysql81-client-8.1.0.pkg",
+      "role": "root",
+      "sha256": "7a1796d53ab05b5b02777ab24dae9799e76bf42203aca3f8d745b40da7f2effb",
+      "size": 4414760,
+      "source": "sggs-12i386-latest",
+      "version": "8.1.0"
+    },
+    "mysql81-server": {
+      "filename": "mysql81-server-8.1.0.pkg",
+      "role": "root",
+      "sha256": "fbc300e72987aa78e7222652749523aceccf30f6454941c902b735da36f644e4",
+      "size": 21596268,
+      "source": "sggs-12i386-latest",
+      "version": "8.1.0"
+    },
+    "nano": {
+      "filename": "nano-7.2.pkg",
+      "role": "root",
+      "sha256": "f7ba93970bd1f5d92629bbd6d8d9a881aa0d7d58ff7a008fcc17f29ff6aa3250",
+      "size": 592784,
+      "source": "sggs-12i386-latest",
+      "version": "7.2"
+    },
+    "openldap26-client": {
+      "filename": "openldap26-client-2.6.6.pkg",
+      "role": "dependency",
+      "sha256": "d60fcf0392c053e6066cc2edffe5a340a1aa1a5074db3fcae6236a841eeddf79",
+      "size": 1064088,
+      "source": "sggs-12i386-latest",
+      "version": "2.6.6"
+    },
+    "pcre2": {
+      "filename": "pcre2-10.42.pkg",
+      "role": "dependency",
+      "sha256": "2f46ce926c1d2f8b296f7d049c274cafd138f7887169ef948229d96a72ec2d1c",
+      "size": 1397960,
+      "source": "sggs-12i386-latest",
+      "version": "10.42"
+    },
+    "perl5": {
+      "filename": "perl5-5.36.3_1.pkg",
+      "role": "dependency",
+      "sha256": "d0d4f2a654b83559e13c71742176db27141ec3fb60a44b0423d0e8a97a9af984",
+      "size": 15170216,
+      "source": "sggs-12i386-latest",
+      "version": "5.36.3_1"
+    },
+    "png": {
+      "filename": "png-1.6.40.pkg",
+      "role": "dependency",
+      "sha256": "dc20fca87cbb3164650f6f3f4c945848503e89af3f498cc06d0262f0dd6502d6",
+      "size": 306432,
+      "source": "sggs-12i386-latest",
+      "version": "1.6.40"
+    },
+    "psutils": {
+      "filename": "psutils-1.17_5.pkg",
+      "role": "dependency",
+      "sha256": "b268cd156762931f3a7a2309ac39494de8b32b8c7e7dfc0456eaff8b0f262f8d",
+      "size": 61032,
+      "source": "sggs-12i386-latest",
+      "version": "1.17_5"
+    },
+    "python39": {
+      "filename": "python39-3.9.18.pkg",
+      "role": "dependency",
+      "sha256": "e2e14524f9c9bdcb5acb961fb0abdec9bae94ca27a484437f641122c45bbd0f5",
+      "size": 18233248,
+      "source": "sggs-12i386-latest",
+      "version": "3.9.18"
+    },
+    "readline": {
+      "filename": "readline-8.2.7.pkg",
+      "role": "dependency",
+      "sha256": "7f0775e46e3ff2894b50977d4635bc6be68c46c40bc00b89e834d676e6314673",
+      "size": 370820,
+      "source": "sggs-12i386-latest",
+      "version": "8.2.7"
+    },
+    "screen": {
+      "filename": "screen-4.9.1.pkg",
+      "role": "root",
+      "sha256": "26a0ab4fb640c0f357ecb8bb37079981b97fe05e6ff13fe100179ff496258910",
+      "size": 484348,
+      "source": "sggs-12i386-latest",
+      "version": "4.9.1"
+    },
+    "source-highlight": {
+      "filename": "source-highlight-3.1.9_7.pkg",
+      "role": "dependency",
+      "sha256": "c2e29f48975395d9b6b7c120f4571a1d5a0c83e84c949656a0814d7a787eda0a",
+      "size": 1063432,
+      "source": "sggs-12i386-latest",
+      "version": "3.1.9_7"
+    },
+    "squish": {
+      "filename": "squish-1.15_1.pkg",
+      "role": "dependency",
+      "sha256": "ce581fbd601c82a38b63d37eed38e9e19dc34e8c564fd80400972864f2a02194",
+      "size": 21708,
+      "source": "sggs-12i386-latest",
+      "version": "1.15_1"
+    },
+    "tiff": {
+      "filename": "tiff-4.4.0_2.pkg",
+      "role": "dependency",
+      "sha256": "2f3982a9d5d8bb30bb5ef55ee8c82bd643f78a14f177adea471f9f43db733701",
+      "size": 896760,
+      "source": "sggs-12i386-latest",
+      "version": "4.4.0_2"
+    },
+    "uchardet": {
+      "filename": "uchardet-0.0.8.pkg",
+      "role": "dependency",
+      "sha256": "0b6d9abeae531b6f03a1e06f61152215c1058df8fd9456e58352e24ff8430cee",
+      "size": 114572,
+      "source": "sggs-12i386-latest",
+      "version": "0.0.8"
+    },
+    "unixODBC": {
+      "filename": "unixODBC-2.3.11.pkg",
+      "role": "dependency",
+      "sha256": "2eaf7ae506e1a6f6d63c851ee516f3a456956442cc0b0405576d8ff9585bc2a8",
+      "size": 517440,
+      "source": "sggs-12i386-latest",
+      "version": "2.3.11"
+    },
+    "xxhash": {
+      "filename": "xxhash-0.8.2.pkg",
+      "role": "dependency",
+      "sha256": "be3aff0a4784446ae5875daa9aceb748c81213cc50610bb8d44efb3ce721702e",
+      "size": 111964,
+      "source": "sggs-12i386-latest",
+      "version": "0.8.2"
+    },
+    "zstd": {
+      "filename": "zstd-1.5.5.pkg",
+      "role": "dependency",
+      "sha256": "1ed54e7cba7f70fe346278b6eda8861a01b9da69a5b1e702470bfe8a338f3058",
+      "size": 512032,
+      "source": "sggs-12i386-latest",
+      "version": "1.5.5"
+    }
+  },
+  "path": "FreeBSD:12:i386/repos/sggs-12i386-latest",
+  "priority": 0,
+  "root_count": 32,
+  "roots": [
+    "compat11x-i386",
+    "compat12x-i386",
+    "compat7x-i386",
+    "compat8x-i386",
+    "compat9x-i386",
+    "cryptopp",
+    "devil",
+    "freecolor",
+    "gcc10",
+    "gcc11",
+    "gcc12",
+    "gcc13",
+    "gcc48",
+    "gcc8",
+    "gcc9",
+    "gdb",
+    "gmake",
+    "makedepend",
+    "mariadb1011-client",
+    "mariadb1011-server",
+    "mariadb105-client",
+    "mariadb105-server",
+    "mariadb106-client",
+    "mariadb106-server",
+    "mysql57-client",
+    "mysql57-server",
+    "mysql80-client",
+    "mysql80-server",
+    "mysql81-client",
+    "mysql81-server",
+    "nano",
+    "screen"
+  ],
+  "source_id": "sggs-12i386-latest",
+  "source_url": "https://mirror.sg.gs/freebsd-pkg/FreeBSD:12:i386/latest/"
+}

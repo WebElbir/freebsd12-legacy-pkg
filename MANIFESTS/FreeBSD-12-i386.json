@@ -1,0 +1,115 @@
+{
+  "cohort_count": 1,
+  "cohorts": [
+    {
+      "dependency_version_notes": [],
+      "id": "sggs-12i386-latest",
+      "package_count": 86,
+      "path": "FreeBSD:12:i386/repos/sggs-12i386-latest",
+      "priority": 0,
+      "root_count": 32,
+      "roots": [
+        "compat11x-i386",
+        "compat12x-i386",
+        "compat7x-i386",
+        "compat8x-i386",
+        "compat9x-i386",
+        "cryptopp",
+        "devil",
+        "freecolor",
+        "gcc10",
+        "gcc11",
+        "gcc12",
+        "gcc13",
+        "gcc48",
+        "gcc8",
+        "gcc9",
+        "gdb",
+        "gmake",
+        "makedepend",
+        "mariadb1011-client",
+        "mariadb1011-server",
+        "mariadb105-client",
+        "mariadb105-server",
+        "mariadb106-client",
+        "mariadb106-server",
+        "mysql57-client",
+        "mysql57-server",
+        "mysql80-client",
+        "mysql80-server",
+        "mysql81-client",
+        "mysql81-server",
+        "nano",
+        "screen"
+      ],
+      "source_id": "sggs-12i386-latest",
+      "source_url": "https://mirror.sg.gs/freebsd-pkg/FreeBSD:12:i386/latest/"
+    }
+  ],
+  "coverage": {
+    "compat11x-i386": "sggs-12i386-latest",
+    "compat12x-i386": "sggs-12i386-latest",
+    "compat7x-i386": "sggs-12i386-latest",
+    "compat8x-i386": "sggs-12i386-latest",
+    "compat9x-i386": "sggs-12i386-latest",
+    "cryptopp": "sggs-12i386-latest",
+    "devil": "sggs-12i386-latest",
+    "freecolor": "sggs-12i386-latest",
+    "gcc10": "sggs-12i386-latest",
+    "gcc11": "sggs-12i386-latest",
+    "gcc12": "sggs-12i386-latest",
+    "gcc13": "sggs-12i386-latest",
+    "gcc48": "sggs-12i386-latest",
+    "gcc8": "sggs-12i386-latest",
+    "gcc9": "sggs-12i386-latest",
+    "gdb": "sggs-12i386-latest",
+    "gmake": "sggs-12i386-latest",
+    "makedepend": "sggs-12i386-latest",
+    "mariadb1011-client": "sggs-12i386-latest",
+    "mariadb1011-server": "sggs-12i386-latest",
+    "mariadb105-client": "sggs-12i386-latest",
+    "mariadb105-server": "sggs-12i386-latest",
+    "mariadb106-client": "sggs-12i386-latest",
+    "mariadb106-server": "sggs-12i386-latest",
+    "mysql57-client": "sggs-12i386-latest",
+    "mysql57-server": "sggs-12i386-latest",
+    "mysql80-client": "sggs-12i386-latest",
+    "mysql80-server": "sggs-12i386-latest",
+    "mysql81-client": "sggs-12i386-latest",
+    "mysql81-server": "sggs-12i386-latest",
+    "nano": "sggs-12i386-latest",
+    "screen": "sggs-12i386-latest"
+  },
+  "covered_root_count": 32,
+  "discovered_root_count": 33,
+  "exact_names_not_seen_in_any_source": [
+    "boost-all",
+    "compat11x-amd64",
+    "compat12x-amd64",
+    "compat7x-amd64",
+    "compat8x-amd64",
+    "compat9x-amd64",
+    "python"
+  ],
+  "latest_cohort": "sggs-12i386-latest",
+  "status": "partial",
+  "target": "FreeBSD:12:i386",
+  "unresolved": {
+    "subversion": [
+      {
+        "attempts": [
+          {
+            "issues": [],
+            "source": "sggs-12i386-latest",
+            "version": "1.14.2_4"
+          }
+        ],
+        "reason": "incomplete runtime closure in this source",
+        "source": "sggs-12i386-latest"
+      }
+    ]
+  },
+  "unresolved_root_names": [
+    "subversion"
+  ]
+}

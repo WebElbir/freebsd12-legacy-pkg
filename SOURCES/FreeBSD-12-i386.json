@@ -1,0 +1,10 @@
+{
+  "sources": [
+    {
+      "id": "sggs-12i386-latest",
+      "records": 20174,
+      "url": "https://mirror.sg.gs/freebsd-pkg/FreeBSD:12:i386/latest/"
+    }
+  ],
+  "target": "FreeBSD:12:i386"
+}
