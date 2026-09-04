@@ -1,0 +1,121 @@
+name: Sync selected FreeBSD packages
+
+on:
+  workflow_dispatch:
+    inputs:
+      targets:
+        description: "all or comma-separated canonical targets (example: FreeBSD:12:amd64,FreeBSD:14:amd64)"
+        required: false
+        default: "all"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "config/**"
+      - ".github/workflows/sync-packages.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: freebsd-selected-pkg-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install importer dependencies
+        run: python -m pip install --disable-pip-version-check requests zstandard
+
+      - name: Validate importer
+        run: |
+          python -m py_compile scripts/build_repo.py
+          python -m json.tool config/roots.json >/dev/null
+          python -m json.tool config/sources.json >/dev/null
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Build and commit ABI repositories
+        shell: bash
+        env:
+          REQUESTED_TARGETS: ${{ github.event.inputs.targets || 'all' }}
+        run: |
+          set -u
+
+          ALL_TARGETS=(
+            "FreeBSD:12:amd64"
+            "FreeBSD:9:amd64"
+            "FreeBSD:9:i386"
+            "FreeBSD:10:amd64"
+            "FreeBSD:10:i386"
+            "FreeBSD:11:amd64"
+            "FreeBSD:11:i386"
+            "FreeBSD:12:i386"
+            "FreeBSD:13:amd64"
+            "FreeBSD:13:i386"
+            "FreeBSD:14:amd64"
+            "FreeBSD:14:i386"
+          )
+
+          if [[ -n "${REQUESTED_TARGETS}" && "${REQUESTED_TARGETS}" != "all" ]]; then
+            IFS=',' read -r -a TARGETS <<< "${REQUESTED_TARGETS}"
+          else
+            TARGETS=("${ALL_TARGETS[@]}")
+          fi
+
+          failures=()
+
+          for target in "${TARGETS[@]}"; do
+            echo "============================================================"
+            echo "Building ${target}"
+            echo "============================================================"
+
+            args=(--target "${target}")
+            if [[ "${target}" == "FreeBSD:12:amd64" ]]; then
+              args+=(--migrate-existing-12)
+            fi
+
+            set +e
+            python scripts/build_repo.py "${args[@]}"
+            rc=$?
+            set -e
+
+            if [[ ${rc} -ne 0 ]]; then
+              echo "::error::${target} importer failed; reverting partial repository files"
+              git restore --staged --worktree -- "${target}" 2>/dev/null || true
+              git clean -fd -- "${target}" || true
+              failures+=("${target}")
+            fi
+
+            git add -A
+            if ! git diff --cached --quiet; then
+              if [[ ${rc} -eq 0 ]]; then
+                git commit -m "Build ${target} selected package repository"
+              else
+                git commit -m "Record ${target} package sync failure"
+              fi
+              git push origin HEAD:main
+            else
+              echo "No repository changes for ${target}"
+            fi
+          done
+
+          if [[ ${#failures[@]} -gt 0 ]]; then
+            printf 'Failed targets: %s\n' "${failures[*]}"
+            exit 1
+          fi
