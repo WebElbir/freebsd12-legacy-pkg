@@ -1,0 +1,79 @@
+name: X32 FreeBSD 11 source probe
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/x32-11-source-probe.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: x32-freebsd11-source-probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            scripts
+            config
+          sparse-checkout-cone-mode: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: python -m pip install --disable-pip-version-check requests zstandard
+
+      - name: Probe known historical mirror patterns for FreeBSD 11 i386
+        shell: bash
+        run: |
+          set -euo pipefail
+          PYTHONPATH=scripts python - <<'PY'
+          import json
+          import build_repo as core
+          import build_repo_cohorts as cohorts
+
+          target = 'FreeBSD:11:i386'
+          # These are candidate i386 counterparts on hosts already verified for
+          # FreeBSD 11 amd64 or other i386 EOL trees. A URL becomes trusted only
+          # if it returns a valid catalog whose package ABI matches this target.
+          candidates = [
+              ('nepustil-112-i386-candidate','https://repo.nepustil.net/112/FreeBSD:11:i386/'),
+              ('nepustil-113-i386-candidate','https://repo.nepustil.net/113/FreeBSD:11:i386/'),
+              ('nepustil-114-i386-candidate','https://repo.nepustil.net/114/FreeBSD:11:i386/'),
+              ('nepustil-11-i386-candidate','https://repo.nepustil.net/FreeBSD:11:i386/'),
+              ('sggs-11i386-latest-candidate','https://mirror.sg.gs/freebsd-pkg/FreeBSD:11:i386/latest/'),
+              ('sggs-11i386-quarterly-candidate','https://mirror.sg.gs/freebsd-pkg/FreeBSD:11:i386/quarterly/'),
+              ('official-11i386-latest-candidate','https://pkg.freebsd.org/FreeBSD:11:i386/latest/'),
+              ('official-11i386-quarterly-candidate','https://pkg.freebsd.org/FreeBSD:11:i386/quarterly/'),
+          ]
+
+          cfg = core.jload(core.ROOT / 'config/roots.json')
+          s = core.session()
+          out = []
+          for prio, (sid, url) in enumerate(candidates):
+              rows = core.remote_catalog(s, {'id':sid,'url':url}, target, prio)
+              for c in rows:
+                  c['target'] = target
+              byname, roots = cohorts.root_candidates(rows, cfg) if rows else ({}, [])
+              item = {
+                  'source': sid,
+                  'url': url,
+                  'records': len(rows),
+                  'root_count_seen': len(roots),
+                  'sample_roots': sorted(roots)[:30],
+              }
+              print(json.dumps(item, sort_keys=True))
+              out.append(item)
+          print('=== X32_11_SOURCE_PROBE_JSON ===')
+          print(json.dumps(out, indent=2, sort_keys=True))
+          PY
