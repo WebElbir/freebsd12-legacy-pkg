@@ -1,8 +1,16 @@
 {
   "dependency_version_notes": [],
   "id": "neonet-10i386-quarterly",
-  "package_count": 51,
+  "package_count": 101,
   "packages": {
+    "aalib": {
+      "filename": "aalib-1.4.r5_12.txz",
+      "role": "dependency",
+      "sha256": "7ff7364b9b23cd8daaec28765e6f8fc257e01c62c1b91cd715776289d9bcc8b6",
+      "size": 137396,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.4.r5_12"
+    },
     "apr": {
       "filename": "apr-1.6.3.1.6.1_1.txz",
       "role": "dependency",
@@ -18,6 +26,46 @@
       "size": 11183840,
       "source": "neonet-10i386-quarterly",
       "version": "2.30_5,1"
+    },
+    "boost-all": {
+      "filename": "boost-all-1.68.0.txz",
+      "role": "root",
+      "sha256": "82bac575ab1eb6259d3d6e19f93a9e70d05974da7fd99f8c8143724da6cd2217",
+      "size": 928,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.68.0"
+    },
+    "boost-docs": {
+      "filename": "boost-docs-1.68.0.txz",
+      "role": "dependency",
+      "sha256": "141a0223173e2f0fe75af7ddd4fcb850cbad8596dda5aabec70561fc914aa7bd",
+      "size": 37686460,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.68.0"
+    },
+    "boost-jam": {
+      "filename": "boost-jam-1.68.0.txz",
+      "role": "dependency",
+      "sha256": "ebc9225a778e2a57145be0dbc2c320f78c310922cc3d45107a5302a7cf38aab2",
+      "size": 75836,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.68.0"
+    },
+    "boost-libs": {
+      "filename": "boost-libs-1.68.0_1.txz",
+      "role": "dependency",
+      "sha256": "8d86d14221bad2cfdc7d54e9ad285fc972ef5c4f0ab8caba8bf2dd2842764c36",
+      "size": 12490352,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.68.0_1"
+    },
+    "ca_root_nss": {
+      "filename": "ca_root_nss-3.40.txz",
+      "role": "dependency",
+      "sha256": "79066220318bf0e25e6dc7da13a63fa6ec347e301bfca820848ed48bb37c43f2",
+      "size": 294232,
+      "source": "neonet-10i386-quarterly",
+      "version": "3.40"
     },
     "compat7x-i386": {
       "filename": "compat7x-i386-7.4.704000.201310.1.txz",
@@ -51,6 +99,22 @@
       "source": "neonet-10i386-quarterly",
       "version": "7.0.0"
     },
+    "curl": {
+      "filename": "curl-7.61.1.txz",
+      "role": "dependency",
+      "sha256": "9a201304c515cd9faa97351ee87fb87ae28d8784891d435a76a8e5f00b82e789",
+      "size": 1297152,
+      "source": "neonet-10i386-quarterly",
+      "version": "7.61.1"
+    },
+    "cyrus-sasl": {
+      "filename": "cyrus-sasl-2.1.26_13.txz",
+      "role": "dependency",
+      "sha256": "6c7ec01776c32e143d98acd7a6fd500496feb1140b5ddb622de73cf90c900a92",
+      "size": 494652,
+      "source": "neonet-10i386-quarterly",
+      "version": "2.1.26_13"
+    },
     "db5": {
       "filename": "db5-5.3.28_7.txz",
       "role": "dependency",
@@ -58,6 +122,14 @@
       "size": 12895952,
       "source": "neonet-10i386-quarterly",
       "version": "5.3.28_7"
+    },
+    "devil": {
+      "filename": "devil-1.7.8_23,1.txz",
+      "role": "root",
+      "sha256": "79e933309d5753829780fc1f34af514bcfcbd46d9b2ac66ffff4c27c2ffdc0ec",
+      "size": 383880,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.7.8_23,1"
     },
     "expat": {
       "filename": "expat-2.2.6_1.txz",
@@ -74,6 +146,30 @@
       "size": 5336,
       "source": "neonet-10i386-quarterly",
       "version": "0.9.2_1"
+    },
+    "freeglut": {
+      "filename": "freeglut-3.0.0_1.txz",
+      "role": "dependency",
+      "sha256": "fdcd85795bda087feb511945488616befcb3aa93d485011aa1eb6a19ab6b4072",
+      "size": 199144,
+      "source": "neonet-10i386-quarterly",
+      "version": "3.0.0_1"
+    },
+    "gcc": {
+      "filename": "gcc-7_1.txz",
+      "role": "root",
+      "sha256": "d7b7066cf9a11ae58270abe2f4429f825656b4edc2bf65316e7b58db7c736084",
+      "size": 800,
+      "source": "neonet-10i386-quarterly",
+      "version": "7_1"
+    },
+    "gcc-ecj": {
+      "filename": "gcc-ecj-4.5.txz",
+      "role": "dependency",
+      "sha256": "ad1f31bae42936713e6289c0e93286ae57f9d44540492a90b75bd7529528dad2",
+      "size": 1404780,
+      "source": "neonet-10i386-quarterly",
+      "version": "4.5"
     },
     "gcc48": {
       "filename": "gcc48-4.8.5_9.txz",
@@ -98,6 +194,14 @@
       "size": 34526792,
       "source": "neonet-10i386-quarterly",
       "version": "5.5.0_5"
+    },
+    "gcc6": {
+      "filename": "gcc6-6.4.0_8.txz",
+      "role": "root",
+      "sha256": "79f68e7f488775773b3ab94c26a30e5e8ac1e566817c9a4962b00f784738c07c",
+      "size": 64403576,
+      "source": "neonet-10i386-quarterly",
+      "version": "6.4.0_8"
     },
     "gcc7": {
       "filename": "gcc7-7.3.0_5.txz",
@@ -163,6 +267,14 @@
       "source": "neonet-10i386-quarterly",
       "version": "62.1_2,1"
     },
+    "ilmbase": {
+      "filename": "ilmbase-2.3.0.txz",
+      "role": "dependency",
+      "sha256": "735db9374a651923d9c8a2e7c47b5ec26881fa2eb409f536f89984b4908bc7c8",
+      "size": 130736,
+      "source": "neonet-10i386-quarterly",
+      "version": "2.3.0"
+    },
     "indexinfo": {
       "filename": "indexinfo-0.3.1.txz",
       "role": "dependency",
@@ -170,6 +282,142 @@
       "size": 5496,
       "source": "neonet-10i386-quarterly",
       "version": "0.3.1"
+    },
+    "jasper": {
+      "filename": "jasper-1.900.1_17.txz",
+      "role": "dependency",
+      "sha256": "13b95fbc609c7a4ce423f7030165bc060da6f146975a7c8bc37b4a0e396ba658",
+      "size": 543324,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.900.1_17"
+    },
+    "jbigkit": {
+      "filename": "jbigkit-2.1_1.txz",
+      "role": "dependency",
+      "sha256": "0dd37a7ff9021844cde22c9f5a88ad530bb60b828ed607e384b453208d6d9656",
+      "size": 78624,
+      "source": "neonet-10i386-quarterly",
+      "version": "2.1_1"
+    },
+    "jpeg-turbo": {
+      "filename": "jpeg-turbo-2.0.0.txz",
+      "role": "dependency",
+      "sha256": "a1e16882744835bbc54c35bf95e11f8795e0a228748c3c65deeb71b18fbae975",
+      "size": 334172,
+      "source": "neonet-10i386-quarterly",
+      "version": "2.0.0"
+    },
+    "lcms": {
+      "filename": "lcms-1.19_6,1.txz",
+      "role": "dependency",
+      "sha256": "184c5236800778c39777bfdef15ef3074226e335c7bec7397e54ae7ba08f87a0",
+      "size": 219632,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.19_6,1"
+    },
+    "libGLU": {
+      "filename": "libGLU-9.0.0_3.txz",
+      "role": "dependency",
+      "sha256": "7ad18ef5321ac0fd614e5b9475201803d7ccf2d1babc7ecdedbdba30ac6a8cbe",
+      "size": 183272,
+      "source": "neonet-10i386-quarterly",
+      "version": "9.0.0_3"
+    },
+    "libICE": {
+      "filename": "libICE-1.0.9_3,1.txz",
+      "role": "dependency",
+      "sha256": "9dba63d642f45414e77d62da64b42794d6a83b0e515fd7ecee16f4198dc14909",
+      "size": 89636,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.0.9_3,1"
+    },
+    "libX11": {
+      "filename": "libX11-1.6.6_1,1.txz",
+      "role": "dependency",
+      "sha256": "79ebe26542e53e1a128a4b1e680577f84f313bb52404a305ca822b5084e7d5af",
+      "size": 1638456,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.6.6_1,1"
+    },
+    "libXau": {
+      "filename": "libXau-1.0.8_5.txz",
+      "role": "dependency",
+      "sha256": "dda0806cad2dd10ffbd162a3cd2504fb5f17c28f2e34397045de93910ddf6d9b",
+      "size": 11504,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.0.8_5"
+    },
+    "libXdamage": {
+      "filename": "libXdamage-1.1.4_5.txz",
+      "role": "dependency",
+      "sha256": "6582a0b87df2f2b529209d321c518c713d61b886dd1ab5faf537158369b0eaac",
+      "size": 6620,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.1.4_5"
+    },
+    "libXdmcp": {
+      "filename": "libXdmcp-1.1.2_2.txz",
+      "role": "dependency",
+      "sha256": "99b20945367cc7b54458ad85b7799f71acf65676f95709bdafb09863ec426187",
+      "size": 13836,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.1.2_2"
+    },
+    "libXext": {
+      "filename": "libXext-1.3.3_3,1.txz",
+      "role": "dependency",
+      "sha256": "3972d8de5b2a9b45b73b68270fc8583e364fa77b4b2a657b5a0967f089045db3",
+      "size": 89060,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.3.3_3,1"
+    },
+    "libXfixes": {
+      "filename": "libXfixes-5.0.3_2.txz",
+      "role": "dependency",
+      "sha256": "d7a749736e3473404b05d75aecf58d160c9a1708fa940c32d44bef26513efe5a",
+      "size": 13472,
+      "source": "neonet-10i386-quarterly",
+      "version": "5.0.3_2"
+    },
+    "libXi": {
+      "filename": "libXi-1.7.9_2,1.txz",
+      "role": "dependency",
+      "sha256": "24c66b14c584a92531e800ea4f802f61f57cdf75dee126217327a1ecbe461c2a",
+      "size": 122052,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.7.9_2,1"
+    },
+    "libXrandr": {
+      "filename": "libXrandr-1.5.1_2.txz",
+      "role": "dependency",
+      "sha256": "5902ede9de455ce93c0be957ac74d58fea4dfc089e6cb5664455a9c07662179e",
+      "size": 29696,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.5.1_2"
+    },
+    "libXrender": {
+      "filename": "libXrender-0.9.10_2.txz",
+      "role": "dependency",
+      "sha256": "0fd891d406324f2e7348425bccbdbbd438da3a009a4e12cde5aef8d916fbd22d",
+      "size": 28376,
+      "source": "neonet-10i386-quarterly",
+      "version": "0.9.10_2"
+    },
+    "libXxf86vm": {
+      "filename": "libXxf86vm-1.1.4_3.txz",
+      "role": "dependency",
+      "sha256": "ef8f43edf7e9dd8e47bd6197fb256b21d2be05163482951bbf119c5e8bba741d",
+      "size": 16272,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.1.4_3"
+    },
+    "libdrm": {
+      "filename": "libdrm-2.4.93,1.txz",
+      "role": "dependency",
+      "sha256": "62082bbdd5c8f90403f694844f08bf7564ba6279ac8d4de730e388b119ca2830",
+      "size": 221960,
+      "source": "neonet-10i386-quarterly",
+      "version": "2.4.93,1"
     },
     "libedit": {
       "filename": "libedit-3.1.20170329_2,1.txz",
@@ -211,6 +459,38 @@
       "source": "neonet-10i386-quarterly",
       "version": "1.8.3,1"
     },
+    "libmng": {
+      "filename": "libmng-1.0.10_3.txz",
+      "role": "dependency",
+      "sha256": "1fdac6d26f44fc7417d5a1d7aefc8bc38a70c22254b45b83897a4548f61d5496",
+      "size": 211552,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.0.10_3"
+    },
+    "libnghttp2": {
+      "filename": "libnghttp2-1.33.0.txz",
+      "role": "dependency",
+      "sha256": "6c845dcce24b792e7c5cc280c711e1697502d4320580dbbc01b6e819c52ebda3",
+      "size": 114280,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.33.0"
+    },
+    "libpciaccess": {
+      "filename": "libpciaccess-0.13.5.txz",
+      "role": "dependency",
+      "sha256": "592e9517c550ef78daa30a17a93e8548d36a2e5d264beb0803ee006c3c3f5b1e",
+      "size": 20628,
+      "source": "neonet-10i386-quarterly",
+      "version": "0.13.5"
+    },
+    "libpthread-stubs": {
+      "filename": "libpthread-stubs-0.4.txz",
+      "role": "dependency",
+      "sha256": "89de3197c5d0a65e34c37156b78d827fba7457b2fad55df6fa0ec182924e0f0d",
+      "size": 2028,
+      "source": "neonet-10i386-quarterly",
+      "version": "0.4"
+    },
     "libstatgrab": {
       "filename": "libstatgrab-0.91.txz",
       "role": "dependency",
@@ -219,6 +499,22 @@
       "source": "neonet-10i386-quarterly",
       "version": "0.91"
     },
+    "libunwind": {
+      "filename": "libunwind-20170615.txz",
+      "role": "dependency",
+      "sha256": "b191b8dc238b89dbc783c9a150d91158e19f4800323b9a0af8b726482667ddb4",
+      "size": 114072,
+      "source": "neonet-10i386-quarterly",
+      "version": "20170615"
+    },
+    "libxcb": {
+      "filename": "libxcb-1.13.1.txz",
+      "role": "dependency",
+      "sha256": "0ec1070787b1f78b5afaacfc6fcbcc04ebe387758c60d54ba459d73fe7f77add",
+      "size": 986516,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.13.1"
+    },
     "libxml2": {
       "filename": "libxml2-2.9.7.txz",
       "role": "dependency",
@@ -226,6 +522,14 @@
       "size": 787956,
       "source": "neonet-10i386-quarterly",
       "version": "2.9.7"
+    },
+    "libxshmfence": {
+      "filename": "libxshmfence-1.2_4.txz",
+      "role": "dependency",
+      "sha256": "0794c5888978b5a22c57fad53232078d1878e8e9ad355b4131f4b2d688afca43",
+      "size": 4564,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.2_4"
     },
     "makedepend": {
       "filename": "makedepend-1.0.5_2,1.txz",
@@ -250,6 +554,14 @@
       "size": 28348408,
       "source": "neonet-10i386-quarterly",
       "version": "10.3.10_1"
+    },
+    "mesa-libs": {
+      "filename": "mesa-libs-18.1.9.txz",
+      "role": "dependency",
+      "sha256": "d350782f9c33a3e7387d7ef086f231a93120d4847601f4d3f2b744c4656265fb",
+      "size": 326868,
+      "source": "neonet-10i386-quarterly",
+      "version": "18.1.9"
     },
     "mpc": {
       "filename": "mpc-1.1.0_1.txz",
@@ -299,6 +611,22 @@
       "source": "neonet-10i386-quarterly",
       "version": "5.6.41_2"
     },
+    "mysql57-client": {
+      "filename": "mysql57-client-5.7.23.txz",
+      "role": "root",
+      "sha256": "4073c09270ed68e16ae65e6e5182799568e4648963e9a0b7f0808c1989fb1c1b",
+      "size": 1792240,
+      "source": "neonet-10i386-quarterly",
+      "version": "5.7.23"
+    },
+    "mysql57-server": {
+      "filename": "mysql57-server-5.7.23_1.txz",
+      "role": "root",
+      "sha256": "4c7364945881ebf33fc0dfef4bc6a847f70e6a19db4d85907261f68c06dffb4b",
+      "size": 13792260,
+      "source": "neonet-10i386-quarterly",
+      "version": "5.7.23_1"
+    },
     "mysql80-client": {
       "filename": "mysql80-client-8.0.12.txz",
       "role": "root",
@@ -323,6 +651,30 @@
       "source": "neonet-10i386-quarterly",
       "version": "3.1"
     },
+    "nvidia-texture-tools": {
+      "filename": "nvidia-texture-tools-2.0.8.1_10.txz",
+      "role": "dependency",
+      "sha256": "87d6375616c87148c2c659ea5ca99d98bbe0b13e016bf1518ac6183270639248",
+      "size": 117420,
+      "source": "neonet-10i386-quarterly",
+      "version": "2.0.8.1_10"
+    },
+    "openexr": {
+      "filename": "openexr-2.3.0.txz",
+      "role": "dependency",
+      "sha256": "36869113f9dbd02bcf5ac7c7889c8099a1968d47f04a572d25decf40f34c5849",
+      "size": 3384132,
+      "source": "neonet-10i386-quarterly",
+      "version": "2.3.0"
+    },
+    "pciids": {
+      "filename": "pciids-20180921.txz",
+      "role": "dependency",
+      "sha256": "516305e0ae2545b2177c2270ebf4edc5e530124ba67a565f313dc67e5d3e806f",
+      "size": 202372,
+      "source": "neonet-10i386-quarterly",
+      "version": "20180921"
+    },
     "perl5": {
       "filename": "perl5-5.26.2.txz",
       "role": "dependency",
@@ -331,6 +683,14 @@
       "source": "neonet-10i386-quarterly",
       "version": "5.26.2"
     },
+    "png": {
+      "filename": "png-1.6.35.txz",
+      "role": "dependency",
+      "sha256": "a5d2f6ee37b1989ebe62dcb0483dbcc8199f139f8398cf98ca174137a8da2508",
+      "size": 286520,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.6.35"
+    },
     "protobuf": {
       "filename": "protobuf-3.5.2_1,1.txz",
       "role": "dependency",
@@ -338,6 +698,22 @@
       "size": 2560980,
       "source": "neonet-10i386-quarterly",
       "version": "3.5.2_1,1"
+    },
+    "python": {
+      "filename": "python-2.7_3,2.txz",
+      "role": "root",
+      "sha256": "1e5df46ff4ae28e0db381ca17c5df0fe543b86318415acfd9912118658b0f872",
+      "size": 984,
+      "source": "neonet-10i386-quarterly",
+      "version": "2.7_3,2"
+    },
+    "python2": {
+      "filename": "python2-2_3.txz",
+      "role": "dependency",
+      "sha256": "3f70b5d7a86d3d2134d826088883337f443e08427ab17eabb3171545941aae6a",
+      "size": 1080,
+      "source": "neonet-10i386-quarterly",
+      "version": "2_3"
     },
     "python27": {
       "filename": "python27-2.7.15.txz",
@@ -371,6 +747,14 @@
       "source": "neonet-10i386-quarterly",
       "version": "4.6.2"
     },
+    "sdl": {
+      "filename": "sdl-1.2.15_12,2.txz",
+      "role": "dependency",
+      "sha256": "c5e1e632e0eb079dc1b9229ca363e3f150574cf31804e5d88cfcb99af09431b0",
+      "size": 689148,
+      "source": "neonet-10i386-quarterly",
+      "version": "1.2.15_12,2"
+    },
     "serf": {
       "filename": "serf-1.3.9_3.txz",
       "role": "dependency",
@@ -395,6 +779,14 @@
       "source": "neonet-10i386-quarterly",
       "version": "1.10.2_1"
     },
+    "tiff": {
+      "filename": "tiff-4.0.9_1.txz",
+      "role": "dependency",
+      "sha256": "4b7345c9ea51e9c469d6c03e0dd4474b989090e23155cca465a5a96e0b145654",
+      "size": 823716,
+      "source": "neonet-10i386-quarterly",
+      "version": "4.0.9_1"
+    },
     "unixODBC": {
       "filename": "unixODBC-2.3.7.txz",
       "role": "dependency",
@@ -410,20 +802,32 @@
       "size": 58272,
       "source": "neonet-10i386-quarterly",
       "version": "2.1.0"
+    },
+    "xorgproto": {
+      "filename": "xorgproto-2018.4.txz",
+      "role": "dependency",
+      "sha256": "8fe9a026f5fb17b0a254d6da91b0a108349cae989ed7071cf00a8e552690540a",
+      "size": 257780,
+      "source": "neonet-10i386-quarterly",
+      "version": "2018.4"
     }
   },
   "path": "FreeBSD:10:i386/repos/neonet-10i386-quarterly",
   "priority": 0,
-  "root_count": 24,
+  "root_count": 31,
   "roots": [
+    "boost-all",
     "compat7x-i386",
     "compat8x-i386",
     "compat9x-i386",
     "cryptopp",
+    "devil",
     "freecolor",
+    "gcc",
     "gcc48",
     "gcc49",
     "gcc5",
+    "gcc6",
     "gcc7",
     "gcc8",
     "gdb",
@@ -435,9 +839,12 @@
     "mysql55-server",
     "mysql56-client",
     "mysql56-server",
+    "mysql57-client",
+    "mysql57-server",
     "mysql80-client",
     "mysql80-server",
     "nano",
+    "python",
     "screen",
     "subversion"
   ],

@@ -1,22 +1,27 @@
 {
+  "canonical_repo": "FreeBSD:10:i386/latest",
   "cohort_count": 1,
   "cohorts": [
     {
       "dependency_version_notes": [],
       "id": "neonet-10i386-quarterly",
-      "package_count": 51,
+      "package_count": 101,
       "path": "FreeBSD:10:i386/repos/neonet-10i386-quarterly",
       "priority": 0,
-      "root_count": 24,
+      "root_count": 31,
       "roots": [
+        "boost-all",
         "compat7x-i386",
         "compat8x-i386",
         "compat9x-i386",
         "cryptopp",
+        "devil",
         "freecolor",
+        "gcc",
         "gcc48",
         "gcc49",
         "gcc5",
+        "gcc6",
         "gcc7",
         "gcc8",
         "gdb",
@@ -28,9 +33,12 @@
         "mysql55-server",
         "mysql56-client",
         "mysql56-server",
+        "mysql57-client",
+        "mysql57-server",
         "mysql80-client",
         "mysql80-server",
         "nano",
+        "python",
         "screen",
         "subversion"
       ],
@@ -39,14 +47,18 @@
     }
   ],
   "coverage": {
+    "boost-all": "neonet-10i386-quarterly",
     "compat7x-i386": "neonet-10i386-quarterly",
     "compat8x-i386": "neonet-10i386-quarterly",
     "compat9x-i386": "neonet-10i386-quarterly",
     "cryptopp": "neonet-10i386-quarterly",
+    "devil": "neonet-10i386-quarterly",
     "freecolor": "neonet-10i386-quarterly",
+    "gcc": "neonet-10i386-quarterly",
     "gcc48": "neonet-10i386-quarterly",
     "gcc49": "neonet-10i386-quarterly",
     "gcc5": "neonet-10i386-quarterly",
+    "gcc6": "neonet-10i386-quarterly",
     "gcc7": "neonet-10i386-quarterly",
     "gcc8": "neonet-10i386-quarterly",
     "gdb": "neonet-10i386-quarterly",
@@ -58,130 +70,29 @@
     "mysql55-server": "neonet-10i386-quarterly",
     "mysql56-client": "neonet-10i386-quarterly",
     "mysql56-server": "neonet-10i386-quarterly",
+    "mysql57-client": "neonet-10i386-quarterly",
+    "mysql57-server": "neonet-10i386-quarterly",
     "mysql80-client": "neonet-10i386-quarterly",
     "mysql80-server": "neonet-10i386-quarterly",
     "nano": "neonet-10i386-quarterly",
+    "python": "neonet-10i386-quarterly",
     "screen": "neonet-10i386-quarterly",
     "subversion": "neonet-10i386-quarterly"
   },
-  "covered_root_count": 24,
-  "discovered_root_count": 28,
+  "covered_root_count": 31,
+  "discovered_root_count": 31,
   "exact_names_not_seen_in_any_source": [
-    "boost-all",
     "compat11x-amd64",
     "compat11x-i386",
     "compat12x-amd64",
     "compat12x-i386",
     "compat7x-amd64",
     "compat8x-amd64",
-    "compat9x-amd64",
-    "python"
+    "compat9x-amd64"
   ],
   "latest_cohort": "neonet-10i386-quarterly",
-  "status": "partial",
+  "status": "ok",
   "target": "FreeBSD:10:i386",
-  "unresolved": {
-    "devil": [
-      {
-        "attempts": [
-          {
-            "issues": [],
-            "source": "neonet-10i386-quarterly",
-            "version": "1.7.8_23,1"
-          }
-        ],
-        "reason": "incomplete runtime closure in this source",
-        "source": "neonet-10i386-quarterly"
-      },
-      {
-        "attempts": [
-          {
-            "issues": [],
-            "source": "neonet-10i386-latest",
-            "version": "1.7.8_23,1"
-          }
-        ],
-        "reason": "incomplete runtime closure in this source",
-        "source": "neonet-10i386-latest"
-      }
-    ],
-    "gcc6": [
-      {
-        "attempts": [
-          {
-            "issues": [],
-            "source": "neonet-10i386-quarterly",
-            "version": "6.4.0_8"
-          }
-        ],
-        "reason": "incomplete runtime closure in this source",
-        "source": "neonet-10i386-quarterly"
-      },
-      {
-        "attempts": [
-          {
-            "issues": [],
-            "source": "neonet-10i386-latest",
-            "version": "6.5.0"
-          }
-        ],
-        "reason": "incomplete runtime closure in this source",
-        "source": "neonet-10i386-latest"
-      }
-    ],
-    "mysql57-client": [
-      {
-        "attempts": [
-          {
-            "issues": [],
-            "source": "neonet-10i386-quarterly",
-            "version": "5.7.23"
-          }
-        ],
-        "reason": "incomplete runtime closure in this source",
-        "source": "neonet-10i386-quarterly"
-      },
-      {
-        "attempts": [
-          {
-            "issues": [],
-            "source": "neonet-10i386-latest",
-            "version": "5.7.24"
-          }
-        ],
-        "reason": "incomplete runtime closure in this source",
-        "source": "neonet-10i386-latest"
-      }
-    ],
-    "mysql57-server": [
-      {
-        "attempts": [
-          {
-            "issues": [],
-            "source": "neonet-10i386-quarterly",
-            "version": "5.7.23_1"
-          }
-        ],
-        "reason": "incomplete runtime closure in this source",
-        "source": "neonet-10i386-quarterly"
-      },
-      {
-        "attempts": [
-          {
-            "issues": [],
-            "source": "neonet-10i386-latest",
-            "version": "5.7.24"
-          }
-        ],
-        "reason": "incomplete runtime closure in this source",
-        "source": "neonet-10i386-latest"
-      }
-    ]
-  },
-  "unresolved_root_names": [
-    "devil",
-    "gcc6",
-    "mysql57-client",
-    "mysql57-server"
-  ]
+  "unresolved": {},
+  "unresolved_root_names": []
 }

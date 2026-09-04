@@ -2,12 +2,12 @@
   "sources": [
     {
       "id": "neonet-10i386-quarterly",
-      "records": 23541,
+      "records": 32488,
       "url": "https://ftp.neonet.bc.ca/freebsd-pkg/FreeBSD:10:i386/quarterly/"
     },
     {
       "id": "neonet-10i386-latest",
-      "records": 24048,
+      "records": 33263,
       "url": "https://ftp.neonet.bc.ca/freebsd-pkg/FreeBSD:10:i386/latest/"
     }
   ],

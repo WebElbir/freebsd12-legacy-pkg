@@ -1,6 +1,6 @@
 # FreeBSD:10:i386 pkg conf rehberi
 
-Durum: **partial**
+Durum: **ok**
 
 ## Canonical repository
 
@@ -29,14 +29,18 @@ Aynı package adı için tarihsel sürümleri tek pkg kataloğunda zorla birleş
 
 | Root paket | Kaynak cohort |
 |---|---|
+| `boost-all` | `neonet-10i386-quarterly` |
 | `compat7x-i386` | `neonet-10i386-quarterly` |
 | `compat8x-i386` | `neonet-10i386-quarterly` |
 | `compat9x-i386` | `neonet-10i386-quarterly` |
 | `cryptopp` | `neonet-10i386-quarterly` |
+| `devil` | `neonet-10i386-quarterly` |
 | `freecolor` | `neonet-10i386-quarterly` |
+| `gcc` | `neonet-10i386-quarterly` |
 | `gcc48` | `neonet-10i386-quarterly` |
 | `gcc49` | `neonet-10i386-quarterly` |
 | `gcc5` | `neonet-10i386-quarterly` |
+| `gcc6` | `neonet-10i386-quarterly` |
 | `gcc7` | `neonet-10i386-quarterly` |
 | `gcc8` | `neonet-10i386-quarterly` |
 | `gdb` | `neonet-10i386-quarterly` |
@@ -48,8 +52,11 @@ Aynı package adı için tarihsel sürümleri tek pkg kataloğunda zorla birleş
 | `mysql55-server` | `neonet-10i386-quarterly` |
 | `mysql56-client` | `neonet-10i386-quarterly` |
 | `mysql56-server` | `neonet-10i386-quarterly` |
+| `mysql57-client` | `neonet-10i386-quarterly` |
+| `mysql57-server` | `neonet-10i386-quarterly` |
 | `mysql80-client` | `neonet-10i386-quarterly` |
 | `mysql80-server` | `neonet-10i386-quarterly` |
 | `nano` | `neonet-10i386-quarterly` |
+| `python` | `neonet-10i386-quarterly` |
 | `screen` | `neonet-10i386-quarterly` |
 | `subversion` | `neonet-10i386-quarterly` |
