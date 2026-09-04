@@ -1,0 +1,80 @@
+{
+  "dependency_version_notes": [],
+  "id": "nepustil-123",
+  "package_count": 8,
+  "packages": {
+    "binutils": {
+      "filename": "binutils-2.37_4,1.pkg",
+      "role": "dependency",
+      "sha256": "4e0787ba8fb4a96b51e869f550ae1ed76f7ef7bad510ed2b9c0e0c8981e71a88",
+      "size": 18397900,
+      "source": "nepustil-123",
+      "version": "2.37_4,1"
+    },
+    "cryptopp": {
+      "filename": "cryptopp-8.7.0.pkg",
+      "role": "root",
+      "sha256": "bb84f4b21971a50ec6466c9c1741a4e64d8b6bc1e02795daad92e9bd60b5f2a2",
+      "size": 10900528,
+      "source": "nepustil-123",
+      "version": "8.7.0"
+    },
+    "gcc11": {
+      "filename": "gcc11-11.3.0_1.pkg",
+      "role": "root",
+      "sha256": "c8feef2e9ea6d37e2f89be73e63c4032aaf651d3dc33711dc032f7cbcd0486aa",
+      "size": 76054068,
+      "source": "nepustil-123",
+      "version": "11.3.0_1"
+    },
+    "gettext-runtime": {
+      "filename": "gettext-runtime-0.21.pkg",
+      "role": "dependency",
+      "sha256": "bde2c6b1258e403fa759147e9004b211f4dcd3533864c052eaaada52f6c1d2ed",
+      "size": 159640,
+      "source": "nepustil-123",
+      "version": "0.21"
+    },
+    "gmp": {
+      "filename": "gmp-6.2.1.pkg",
+      "role": "dependency",
+      "sha256": "3622ff2d49587beb0842588e0a95a56d2a3bcd4c9300593e2d5254bc9245a1f3",
+      "size": 485676,
+      "source": "nepustil-123",
+      "version": "6.2.1"
+    },
+    "indexinfo": {
+      "filename": "indexinfo-0.3.1.pkg",
+      "role": "dependency",
+      "sha256": "708f093025f580846fbdf89206a91bcef0b071c98f22550e9648530930c6eb01",
+      "size": 4764,
+      "source": "nepustil-123",
+      "version": "0.3.1"
+    },
+    "mpc": {
+      "filename": "mpc-1.2.1.pkg",
+      "role": "dependency",
+      "sha256": "c5b62503e5829557a75d2fc531d8c3e284ce9d6c0cee80a4d393435d1871b5b9",
+      "size": 87716,
+      "source": "nepustil-123",
+      "version": "1.2.1"
+    },
+    "mpfr": {
+      "filename": "mpfr-4.1.0_1.pkg",
+      "role": "dependency",
+      "sha256": "cbecef3a8a382706fba61e14dd846084373353ab0a95336e17c0a39d82c58307",
+      "size": 458732,
+      "source": "nepustil-123",
+      "version": "4.1.0_1"
+    }
+  },
+  "path": "FreeBSD:12:amd64/repos/nepustil-123",
+  "priority": 1,
+  "root_count": 2,
+  "roots": [
+    "cryptopp",
+    "gcc11"
+  ],
+  "source_id": "nepustil-123",
+  "source_url": "https://repo.nepustil.net/123/FreeBSD:12:amd64/"
+}

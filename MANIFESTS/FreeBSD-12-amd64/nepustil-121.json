@@ -1,0 +1,789 @@
+{
+  "dependency_version_notes": [
+    {
+      "fallback": "2.33.1_4,1",
+      "package": "binutils",
+      "reason": "exact version unavailable",
+      "required": "2.33.1_3,1",
+      "required_by": "gcc9"
+    },
+    {
+      "fallback": "6.2.1",
+      "package": "gmp",
+      "reason": "exact version unavailable",
+      "required": "6.2.0",
+      "required_by": "gcc9"
+    },
+    {
+      "fallback": "8.0.4_1",
+      "package": "readline",
+      "reason": "exact version unavailable",
+      "required": "8.0.4",
+      "required_by": "gdb"
+    },
+    {
+      "fallback": "8.0.4_1",
+      "package": "readline",
+      "reason": "exact version unavailable",
+      "required": "8.0.4",
+      "required_by": "mariadb104-client"
+    },
+    {
+      "fallback": "8.0.4_1",
+      "package": "readline",
+      "reason": "exact version unavailable",
+      "required": "8.0.4",
+      "required_by": "bash"
+    },
+    {
+      "fallback": "8.0.4_1",
+      "package": "readline",
+      "reason": "exact version unavailable",
+      "required": "8.0.4",
+      "required_by": "mariadb104-client"
+    },
+    {
+      "fallback": "8.0.4_1",
+      "package": "readline",
+      "reason": "exact version unavailable",
+      "required": "8.0.4",
+      "required_by": "mariadb105-client"
+    },
+    {
+      "fallback": "8.0.4_1",
+      "package": "readline",
+      "reason": "exact version unavailable",
+      "required": "8.0.4",
+      "required_by": "bash"
+    },
+    {
+      "fallback": "8.0.4_1",
+      "package": "readline",
+      "reason": "exact version unavailable",
+      "required": "8.0.4",
+      "required_by": "mariadb105-client"
+    },
+    {
+      "fallback": "8.0.4_1",
+      "package": "readline",
+      "reason": "exact version unavailable",
+      "required": "8.0.4",
+      "required_by": "gdbm"
+    },
+    {
+      "fallback": "8.0.4_1",
+      "package": "readline",
+      "reason": "exact version unavailable",
+      "required": "8.0.4",
+      "required_by": "bash"
+    },
+    {
+      "fallback": "8.0.4_1",
+      "package": "readline",
+      "reason": "exact version unavailable",
+      "required": "8.0.4",
+      "required_by": "gnupg"
+    }
+  ],
+  "id": "nepustil-121",
+  "package_count": 84,
+  "packages": {
+    "apr": {
+      "filename": "apr-1.7.0.1.6.1_1.txz",
+      "role": "dependency",
+      "sha256": "30f082cab0e39f31372da45b2deff8724282969b309af9dd684104826e0bbdf5",
+      "size": 479652,
+      "source": "nepustil-121",
+      "version": "1.7.0.1.6.1_1"
+    },
+    "bash": {
+      "filename": "bash-5.1.4.txz",
+      "role": "dependency",
+      "sha256": "523f0bfd8b5987e0557f6fe0976730fa514173ec29024f0079c95a71a7c0d4ed",
+      "size": 1520664,
+      "source": "nepustil-121",
+      "version": "5.1.4"
+    },
+    "bash-completion": {
+      "filename": "bash-completion-2.11,2.txz",
+      "role": "dependency",
+      "sha256": "a634b5deb5da33096312f38f83c1baf3243841bc9528e3179e9ffc13a3db249c",
+      "size": 233332,
+      "source": "nepustil-121",
+      "version": "2.11,2"
+    },
+    "binutils": {
+      "filename": "binutils-2.33.1_4,1.txz",
+      "role": "dependency",
+      "sha256": "2f3708be7cc64b37b17d8649d96c3cd4060d6c23a23249c20f52c22818be2746",
+      "size": 19230864,
+      "source": "nepustil-121",
+      "version": "2.33.1_4,1"
+    },
+    "boost-libs": {
+      "filename": "boost-libs-1.72.0_3.txz",
+      "role": "dependency",
+      "sha256": "e541b1ad4740d50cbae80a77f236c413f49164c8a53d7ba6e9b96eb389134706",
+      "size": 13165088,
+      "source": "nepustil-121",
+      "version": "1.72.0_3"
+    },
+    "brotli": {
+      "filename": "brotli-1.0.9,1.txz",
+      "role": "dependency",
+      "sha256": "7504aa8d2cf9ed7a2cbf09f83a40406b93e8251cdaf80335b9720ffcea51be41",
+      "size": 364308,
+      "source": "nepustil-121",
+      "version": "1.0.9,1"
+    },
+    "ca_root_nss": {
+      "filename": "ca_root_nss-3.58.txz",
+      "role": "dependency",
+      "sha256": "6e212f827f310b98f41fd575783603f01e8710a7a61ada48be6991de7ceb569f",
+      "size": 290248,
+      "source": "nepustil-121",
+      "version": "3.58"
+    },
+    "compat10x-amd64": {
+      "filename": "compat10x-amd64-10.4.1004000.20181014.txz",
+      "role": "dependency",
+      "sha256": "bb649cfeec788a5e1058fd866bf1c4f63ab87ff6444ac016c5d54759fa1a16d1",
+      "size": 2433724,
+      "source": "nepustil-121",
+      "version": "10.4.1004000.20181014"
+    },
+    "compat9x-amd64": {
+      "filename": "compat9x-amd64-9.3.903000.20170608.txz",
+      "role": "root",
+      "sha256": "6215cac13e04ee4def05cbc2c989eccfb4da8961fea64165f9d8b192c14e268d",
+      "size": 2913820,
+      "source": "nepustil-121",
+      "version": "9.3.903000.20170608"
+    },
+    "curl": {
+      "filename": "curl-7.74.0.txz",
+      "role": "dependency",
+      "sha256": "f8e335128ba13c147042934604ccbc7f0b8653aaeeb07b8a9e55840e6c601819",
+      "size": 1366380,
+      "source": "nepustil-121",
+      "version": "7.74.0"
+    },
+    "db5": {
+      "filename": "db5-5.3.28_7.txz",
+      "role": "dependency",
+      "sha256": "6a488ec4535d82f7e289135e6040148708e463d9911d66d325e83e3bd269cb72",
+      "size": 12915604,
+      "source": "nepustil-121",
+      "version": "5.3.28_7"
+    },
+    "expat": {
+      "filename": "expat-2.2.10.txz",
+      "role": "dependency",
+      "sha256": "9c258e2bee458f305dbc0aeb552402af0b7d529b26652ae58ae037a061fd517d",
+      "size": 128064,
+      "source": "nepustil-121",
+      "version": "2.2.10"
+    },
+    "galera26": {
+      "filename": "galera26-26.4.6.txz",
+      "role": "dependency",
+      "sha256": "a8aff1325e9b5d85e6b7ef19f4dd4ad94304acfce187c811d10ec86c6a2479b8",
+      "size": 906620,
+      "source": "nepustil-121",
+      "version": "26.4.6"
+    },
+    "gcc": {
+      "filename": "gcc-10_4.txz",
+      "role": "root",
+      "sha256": "31f23cf950565bc1b23314489d8ecb9092e5f007021cd312904ce97e4e739300",
+      "size": 796,
+      "source": "nepustil-121",
+      "version": "10_4"
+    },
+    "gcc10": {
+      "filename": "gcc10-10.2.0.txz",
+      "role": "root",
+      "sha256": "4837dee088aae751fe89c043017e60401802f08cdd9f5d87ab7ec8aa80eb211d",
+      "size": 56403892,
+      "source": "nepustil-121",
+      "version": "10.2.0"
+    },
+    "gcc8": {
+      "filename": "gcc8-8.4.0.txz",
+      "role": "root",
+      "sha256": "a12c3575982d6bce0e4892d679a2faf253d08a46d480f6c809ee63e053064327",
+      "size": 44534372,
+      "source": "nepustil-121",
+      "version": "8.4.0"
+    },
+    "gcc9": {
+      "filename": "gcc9-9.3.0_1.txz",
+      "role": "root",
+      "sha256": "c762936d696aead70a7d075f9cff17a4397bbeaefdcc421609435136d661c881",
+      "size": 46369464,
+      "source": "nepustil-121",
+      "version": "9.3.0_1"
+    },
+    "gdb": {
+      "filename": "gdb-10.1.txz",
+      "role": "root",
+      "sha256": "7e2837ee4a55a29a8a09e5fcd31f3b8f6c6fc5f498cbe19912e473f55fd01a22",
+      "size": 10818572,
+      "source": "nepustil-121",
+      "version": "10.1"
+    },
+    "gdbm": {
+      "filename": "gdbm-1.18.1_1.txz",
+      "role": "dependency",
+      "sha256": "b73c8e72d1fabde38b82406a8cfa42920fb575549981622cf75568f2a6628114",
+      "size": 166564,
+      "source": "nepustil-121",
+      "version": "1.18.1_1"
+    },
+    "gettext-runtime": {
+      "filename": "gettext-runtime-0.21.txz",
+      "role": "dependency",
+      "sha256": "8bece59d587270ef49ee4c0ed73a80f9a1db6a2c0d655367c74ef94a669776d9",
+      "size": 168848,
+      "source": "nepustil-121",
+      "version": "0.21"
+    },
+    "glib": {
+      "filename": "glib-2.66.4_1,1.txz",
+      "role": "dependency",
+      "sha256": "32d7f619f2c9d6c871175b11539e926b62c4dfd5afb3527a898fc99bbee79633",
+      "size": 3327872,
+      "source": "nepustil-121",
+      "version": "2.66.4_1,1"
+    },
+    "gmake": {
+      "filename": "gmake-4.3_2.txz",
+      "role": "root",
+      "sha256": "9571090ee86a24399a71a63d8f665170ff73d492dcb329cd088a49f52e2c5f4d",
+      "size": 425912,
+      "source": "nepustil-121",
+      "version": "4.3_2"
+    },
+    "gmp": {
+      "filename": "gmp-6.2.1.txz",
+      "role": "dependency",
+      "sha256": "408b89cc778eeff14cbaf57266723369943ec7fc7f1c92d6990180b2e42ec71a",
+      "size": 489748,
+      "source": "nepustil-121",
+      "version": "6.2.1"
+    },
+    "gnupg": {
+      "filename": "gnupg-2.2.26.txz",
+      "role": "dependency",
+      "sha256": "f3e252ad661844c6121317835d101bbe2a51460dce5813ed4f10fff0bd88f255",
+      "size": 2053924,
+      "source": "nepustil-121",
+      "version": "2.2.26"
+    },
+    "gnutls": {
+      "filename": "gnutls-3.6.15.txz",
+      "role": "dependency",
+      "sha256": "af6c431d6500bc8b4b5932f5b2428d4246302108924da0ff5296595c52a7b382",
+      "size": 2547168,
+      "source": "nepustil-121",
+      "version": "3.6.15"
+    },
+    "groff": {
+      "filename": "groff-1.22.4_3.txz",
+      "role": "dependency",
+      "sha256": "dcf80fca61db247f4ccc0619a00c431d011b35730f9f3542edf929f9ee49b5ab",
+      "size": 2902944,
+      "source": "nepustil-121",
+      "version": "1.22.4_3"
+    },
+    "icu": {
+      "filename": "icu-68.2,1.txz",
+      "role": "dependency",
+      "sha256": "c1b9973fe6bb8a9053b4d6d469208ceed713aa2b9e645b94d24935e2440d5e6a",
+      "size": 10775104,
+      "source": "nepustil-121",
+      "version": "68.2,1"
+    },
+    "indexinfo": {
+      "filename": "indexinfo-0.3.1.txz",
+      "role": "dependency",
+      "sha256": "961181a1cc071cd71e22b6aff78786712ea0bfc9f6f6b9df07d854eff073b7d6",
+      "size": 5820,
+      "source": "nepustil-121",
+      "version": "0.3.1"
+    },
+    "libassuan": {
+      "filename": "libassuan-2.5.4.txz",
+      "role": "dependency",
+      "sha256": "08b4dc70db731fe0d49a60d480d83c4aa08919afd55d566af4251ee7d764bc43",
+      "size": 79616,
+      "source": "nepustil-121",
+      "version": "2.5.4"
+    },
+    "libedit": {
+      "filename": "libedit-3.1.20191231,1.txz",
+      "role": "dependency",
+      "sha256": "b2dcc3334e6922fc7335aed289c309f18f318d0dee74bc1c6444c2887d0e6c1b",
+      "size": 138348,
+      "source": "nepustil-121",
+      "version": "3.1.20191231,1"
+    },
+    "libevent": {
+      "filename": "libevent-2.1.12.txz",
+      "role": "dependency",
+      "sha256": "72042dde2262ca0ef79ca9b2edfcb84efe9b780b3e5b26ff6145f7b062799b43",
+      "size": 327312,
+      "source": "nepustil-121",
+      "version": "2.1.12"
+    },
+    "libffi": {
+      "filename": "libffi-3.3_1.txz",
+      "role": "dependency",
+      "sha256": "7b0c6f8902702390eea27fd1e86fd7661af1c9ef3c992c5a7b70a9e4b937d325",
+      "size": 40516,
+      "source": "nepustil-121",
+      "version": "3.3_1"
+    },
+    "libgcrypt": {
+      "filename": "libgcrypt-1.8.7.txz",
+      "role": "dependency",
+      "sha256": "4ae0b74058f1310bfc8087db292c181cd8b7c77c7935f77e20345bb2c23511ed",
+      "size": 760248,
+      "source": "nepustil-121",
+      "version": "1.8.7"
+    },
+    "libgpg-error": {
+      "filename": "libgpg-error-1.39.txz",
+      "role": "dependency",
+      "sha256": "60125994cfd879cddea7437b1f193cee5a11663ca6bb77f453669e5a82f70268",
+      "size": 297216,
+      "source": "nepustil-121",
+      "version": "1.39"
+    },
+    "libiconv": {
+      "filename": "libiconv-1.16.txz",
+      "role": "dependency",
+      "sha256": "67a142c07a73d6db25734e64c899583d4e151cfbcde80e1b6b0e2b3286a07c97",
+      "size": 623928,
+      "source": "nepustil-121",
+      "version": "1.16"
+    },
+    "libidn2": {
+      "filename": "libidn2-2.3.0_1.txz",
+      "role": "dependency",
+      "sha256": "e20801e14bedc34e0dd663c416387671eddb0adfe802c40b63674c83da4de37a",
+      "size": 112252,
+      "source": "nepustil-121",
+      "version": "2.3.0_1"
+    },
+    "libksba": {
+      "filename": "libksba-1.5.0.txz",
+      "role": "dependency",
+      "sha256": "e583a205a1f36d598bbe207b0e83a34dbe908666ec16daafef5e8273b06c9a49",
+      "size": 178484,
+      "source": "nepustil-121",
+      "version": "1.5.0"
+    },
+    "liblz4": {
+      "filename": "liblz4-1.9.3,1.txz",
+      "role": "dependency",
+      "sha256": "c10517c7a16222fbf8f67a736f6b516b7cc8bd21a2557c7fb985453d3e584d59",
+      "size": 140212,
+      "source": "nepustil-121",
+      "version": "1.9.3,1"
+    },
+    "libnghttp2": {
+      "filename": "libnghttp2-1.42.0.txz",
+      "role": "dependency",
+      "sha256": "3015571ab23ec3742a3d54b8abe7e5b4a433ba12787b3d5cabaa74c062ad997f",
+      "size": 125268,
+      "source": "nepustil-121",
+      "version": "1.42.0"
+    },
+    "libpaper": {
+      "filename": "libpaper-1.1.24.4.txz",
+      "role": "dependency",
+      "sha256": "83b45bca81605c4cd4d78edbee5e970a4834a88bd088554cdd173e7c2acb5d52",
+      "size": 24448,
+      "source": "nepustil-121",
+      "version": "1.1.24.4"
+    },
+    "librtmp": {
+      "filename": "librtmp-2.4.20190330.txz",
+      "role": "dependency",
+      "sha256": "a14a11ac3d881c3f06194f6c4f0d75485113a59643b4ab385c6d1c64136bc89c",
+      "size": 88024,
+      "source": "nepustil-121",
+      "version": "2.4.20190330"
+    },
+    "libssh2": {
+      "filename": "libssh2-1.9.0_3,3.txz",
+      "role": "dependency",
+      "sha256": "0d7e42d2d2ec96e650c8c14ba4381eb7d8970ee18d971374ebd9b516644ec5fe",
+      "size": 251076,
+      "source": "nepustil-121",
+      "version": "1.9.0_3,3"
+    },
+    "libtasn1": {
+      "filename": "libtasn1-4.16.0.txz",
+      "role": "dependency",
+      "sha256": "f0a2bc1649719cf7477a5f8a5fd4a95a46bf6f15bf906bb8c34186b1878265bd",
+      "size": 614024,
+      "source": "nepustil-121",
+      "version": "4.16.0"
+    },
+    "libunistring": {
+      "filename": "libunistring-0.9.10_1.txz",
+      "role": "dependency",
+      "sha256": "10bed042b31eb8d88d9ccdbec84fcdec29f1f49d407b381e218903fb22121320",
+      "size": 532140,
+      "source": "nepustil-121",
+      "version": "0.9.10_1"
+    },
+    "libxml2": {
+      "filename": "libxml2-2.9.10_2.txz",
+      "role": "dependency",
+      "sha256": "13217580aa156c15aab8f633f697696edfee3bbd15056fd7fb96247db0ae5e5d",
+      "size": 847584,
+      "source": "nepustil-121",
+      "version": "2.9.10_2"
+    },
+    "makedepend": {
+      "filename": "makedepend-1.0.6,1.txz",
+      "role": "root",
+      "sha256": "61b18548e81ff46aea0da8214fdabc0bed265d2e9907b12d73cc69699f277e49",
+      "size": 20708,
+      "source": "nepustil-121",
+      "version": "1.0.6,1"
+    },
+    "mariadb104-client": {
+      "filename": "mariadb104-client-10.4.17.txz",
+      "role": "root",
+      "sha256": "3f5e638f91b402628fcb5634fef9228f040beb7287756296d8fb37e718bd5f48",
+      "size": 1429784,
+      "source": "nepustil-121",
+      "version": "10.4.17"
+    },
+    "mariadb104-server": {
+      "filename": "mariadb104-server-10.4.17.txz",
+      "role": "root",
+      "sha256": "470f142bfd60693ab64c61e334a74c38786dbf03f2980488271bed00124f481b",
+      "size": 33192508,
+      "source": "nepustil-121",
+      "version": "10.4.17"
+    },
+    "mariadb105-client": {
+      "filename": "mariadb105-client-10.5.8.txz",
+      "role": "root",
+      "sha256": "806c4c9d5747ad9010636494c782ee6a64af8a346ec90f0858492687f23b9b5d",
+      "size": 1716952,
+      "source": "nepustil-121",
+      "version": "10.5.8"
+    },
+    "mariadb105-server": {
+      "filename": "mariadb105-server-10.5.8.txz",
+      "role": "root",
+      "sha256": "92fb4c293123cb4e6cdc4bc4a39e675fb888ca0b0941c3236fb95ab95b224e1c",
+      "size": 28818756,
+      "source": "nepustil-121",
+      "version": "10.5.8"
+    },
+    "mpc": {
+      "filename": "mpc-1.1.0_2.txz",
+      "role": "dependency",
+      "sha256": "e08ab1a855fff50bf0c4ff8fa08f561e025a47be590dae674027f6df1b3c1d3e",
+      "size": 86976,
+      "source": "nepustil-121",
+      "version": "1.1.0_2"
+    },
+    "mpfr": {
+      "filename": "mpfr-4.1.0.txz",
+      "role": "dependency",
+      "sha256": "c8feb5a1283e6195c5f12b014837e8578e7466f8d80c81f127cebff46523da4f",
+      "size": 455164,
+      "source": "nepustil-121",
+      "version": "4.1.0"
+    },
+    "mysql57-client": {
+      "filename": "mysql57-client-5.7.32.txz",
+      "role": "root",
+      "sha256": "84437116afd53815e5f9a3a77265d2c0298cf988b2835fe3ed3c24e88a59be20",
+      "size": 1895760,
+      "source": "nepustil-121",
+      "version": "5.7.32"
+    },
+    "mysql57-server": {
+      "filename": "mysql57-server-5.7.32.txz",
+      "role": "root",
+      "sha256": "b55e4de53b72ebdb735341b5f8993c14492275e2adf8dfee9d6eb13f52e3f2ce",
+      "size": 14419968,
+      "source": "nepustil-121",
+      "version": "5.7.32"
+    },
+    "nano": {
+      "filename": "nano-5.4.txz",
+      "role": "root",
+      "sha256": "f0cde5e7031560b22b4e1146fc538f52b1fe8974c39542b4c8ac091c9f8b9446",
+      "size": 548504,
+      "source": "nepustil-121",
+      "version": "5.4"
+    },
+    "nettle": {
+      "filename": "nettle-3.6.txz",
+      "role": "dependency",
+      "sha256": "1d4b4c660132395fe846e9e10a23176f7854408296d8c1410f1f48177541179e",
+      "size": 1334432,
+      "source": "nepustil-121",
+      "version": "3.6"
+    },
+    "npth": {
+      "filename": "npth-1.6.txz",
+      "role": "dependency",
+      "sha256": "43a7af8588e2c8e878ef8a4f7266256990ee73df2bce57307d72627108dc6e94",
+      "size": 20984,
+      "source": "nepustil-121",
+      "version": "1.6"
+    },
+    "openldap-client": {
+      "filename": "openldap-client-2.4.56.txz",
+      "role": "dependency",
+      "sha256": "51535e545b0554adc875d3cab7dafb0d4eff4aa4a8dd5c039711cc9654084cd4",
+      "size": 1076492,
+      "source": "nepustil-121",
+      "version": "2.4.56"
+    },
+    "p11-kit": {
+      "filename": "p11-kit-0.23.22.txz",
+      "role": "dependency",
+      "sha256": "a958399ef02b4b5dcd410235ba37228c85a0aae897e54f78a6c8a59009c185f2",
+      "size": 460656,
+      "source": "nepustil-121",
+      "version": "0.23.22"
+    },
+    "pcre": {
+      "filename": "pcre-8.44.txz",
+      "role": "dependency",
+      "sha256": "b243c0f67493b638a16ef513e23791e9e60673b986c95be4bb903b12d4d143e8",
+      "size": 1253312,
+      "source": "nepustil-121",
+      "version": "8.44"
+    },
+    "pcre2": {
+      "filename": "pcre2-10.36.txz",
+      "role": "dependency",
+      "sha256": "05f4e0bc7afc74e019788a7b72bf41a865686be9ec1186a19f6025e7e83a6cdb",
+      "size": 1340192,
+      "source": "nepustil-121",
+      "version": "10.36"
+    },
+    "perl5": {
+      "filename": "perl5-5.32.0_1.txz",
+      "role": "dependency",
+      "sha256": "2836b136cf8011fa85169cc7cb0ea572ef04106e80412269fa215413e9617f44",
+      "size": 14854816,
+      "source": "nepustil-121",
+      "version": "5.32.0_1"
+    },
+    "pinentry": {
+      "filename": "pinentry-1.1.0_7.txz",
+      "role": "dependency",
+      "sha256": "da3c4b03fe602aa222ffa323b02bac36805516a65ef94aa0467cb0db579d586a",
+      "size": 16572,
+      "source": "nepustil-121",
+      "version": "1.1.0_7"
+    },
+    "pinentry-tty": {
+      "filename": "pinentry-tty-1.1.0.txz",
+      "role": "dependency",
+      "sha256": "67e9f83829275cdc715882fed44ce3a0843bbbc789e8119c7184709ab9651d92",
+      "size": 29108,
+      "source": "nepustil-121",
+      "version": "1.1.0"
+    },
+    "popt": {
+      "filename": "popt-1.18_1.txz",
+      "role": "dependency",
+      "sha256": "995280b99b0f9997a1100d2119da39b40b0f3be6a8d13be6b3aa6567c5acc21a",
+      "size": 63704,
+      "source": "nepustil-121",
+      "version": "1.18_1"
+    },
+    "protobuf": {
+      "filename": "protobuf-3.13.0,1.txz",
+      "role": "dependency",
+      "sha256": "0158feeabc38dfc4929d873a1e597ac5ab0a664158500c425912374d70219ac0",
+      "size": 2898088,
+      "source": "nepustil-121",
+      "version": "3.13.0,1"
+    },
+    "psutils": {
+      "filename": "psutils-1.17_5.txz",
+      "role": "dependency",
+      "sha256": "1e107689098e7e4eabf81da56587488f2c4a60ed43823effa17fa9994dff43f5",
+      "size": 58044,
+      "source": "nepustil-121",
+      "version": "1.17_5"
+    },
+    "python": {
+      "filename": "python-3.7_3,2.txz",
+      "role": "root",
+      "sha256": "bcaf7b8be8a097bf27a77ac32a6a09ef3d76d498790b2535516b6d55d6604e07",
+      "size": 1004,
+      "source": "nepustil-121",
+      "version": "3.7_3,2"
+    },
+    "python3": {
+      "filename": "python3-3_3.txz",
+      "role": "dependency",
+      "sha256": "6af7d612e013aee30cb88dbe17c003dcc50f9e785437170c5f2f412c4093ec16",
+      "size": 1064,
+      "source": "nepustil-121",
+      "version": "3_3"
+    },
+    "python37": {
+      "filename": "python37-3.7.9_1.txz",
+      "role": "dependency",
+      "sha256": "117ab87bcdd2113ae76cad1c0e23508f0f8e1b929e3d4bd3fe8cfb355396dc30",
+      "size": 16789500,
+      "source": "nepustil-121",
+      "version": "3.7.9_1"
+    },
+    "readline": {
+      "filename": "readline-8.0.4_1.txz",
+      "role": "dependency",
+      "sha256": "dff067b05a03c78a4044ead5107893920a5b754dc5740c5f5c4b0a1a5d5cdf6f",
+      "size": 362032,
+      "source": "nepustil-121",
+      "version": "8.0.4_1"
+    },
+    "rsync": {
+      "filename": "rsync-3.2.3.txz",
+      "role": "dependency",
+      "sha256": "94bf77621f996a0e889e1f143ade1fb23dfcc0de7a404de44188aceb859e2499",
+      "size": 384532,
+      "source": "nepustil-121",
+      "version": "3.2.3"
+    },
+    "screen": {
+      "filename": "screen-4.8.0.txz",
+      "role": "root",
+      "sha256": "07e7f7071183ecbd7d84ee69c67fe63790b7e4f3cef8f3c54155eb083cea91f5",
+      "size": 499328,
+      "source": "nepustil-121",
+      "version": "4.8.0"
+    },
+    "serf": {
+      "filename": "serf-1.3.9_5.txz",
+      "role": "dependency",
+      "sha256": "19c9e74157ed94a8924b92a679bdced3865b7a7cdfd8a4f09ec5ae4d8c69daf9",
+      "size": 83992,
+      "source": "nepustil-121",
+      "version": "1.3.9_5"
+    },
+    "source-highlight": {
+      "filename": "source-highlight-3.1.9_1.txz",
+      "role": "dependency",
+      "sha256": "7108f1ef492021f348730042a60596120dc3269509f3e9bb51029b8d7f497977",
+      "size": 1020148,
+      "source": "nepustil-121",
+      "version": "3.1.9_1"
+    },
+    "sqlite3": {
+      "filename": "sqlite3-3.34.0,1.txz",
+      "role": "dependency",
+      "sha256": "1f62585b17cbbd34e092b508e8f66f0f1bc580ffd22ead13f4abac7a6dc652b0",
+      "size": 1474668,
+      "source": "nepustil-121",
+      "version": "3.34.0,1"
+    },
+    "subversion": {
+      "filename": "subversion-1.14.0.txz",
+      "role": "root",
+      "sha256": "cce5f731aa4b5e3162c1ff1a73787435133984edeb702799375158ab4c73008c",
+      "size": 3327240,
+      "source": "nepustil-121",
+      "version": "1.14.0"
+    },
+    "tpm-emulator": {
+      "filename": "tpm-emulator-0.7.4_2.txz",
+      "role": "dependency",
+      "sha256": "018434eae29f9dd14a748de6ffeedcaf2229ff7a47a3b8db302e2653697e4c14",
+      "size": 116492,
+      "source": "nepustil-121",
+      "version": "0.7.4_2"
+    },
+    "trousers": {
+      "filename": "trousers-0.3.14_3.txz",
+      "role": "dependency",
+      "sha256": "18967c75f5ef0f8cbd04b2f5843c8860006cac20a0d8ffc1b57ca05cfdeee1b4",
+      "size": 486448,
+      "source": "nepustil-121",
+      "version": "0.3.14_3"
+    },
+    "uchardet": {
+      "filename": "uchardet-0.0.7.txz",
+      "role": "dependency",
+      "sha256": "fae0305b211fec2a927cbf25673812e0ec03f59f464106ea4b8436e42c8b0e94",
+      "size": 111152,
+      "source": "nepustil-121",
+      "version": "0.0.7"
+    },
+    "unixODBC": {
+      "filename": "unixODBC-2.3.9.txz",
+      "role": "dependency",
+      "sha256": "12efd18c001811763e031075ad158094d35bfa422e950de14a3397ee93f9d73f",
+      "size": 479816,
+      "source": "nepustil-121",
+      "version": "2.3.9"
+    },
+    "utf8proc": {
+      "filename": "utf8proc-2.5.0.txz",
+      "role": "dependency",
+      "sha256": "697ca18a2906829193bd351682fc64ad6f3937ad21f35036ef63c8cae2fa7870",
+      "size": 60560,
+      "source": "nepustil-121",
+      "version": "2.5.0"
+    },
+    "xxhash": {
+      "filename": "xxhash-0.8.0.txz",
+      "role": "dependency",
+      "sha256": "c1a1fa49f15701aff324fcebab71e4ebb7cc67a99081fa9c49ff1db6db92eea6",
+      "size": 74720,
+      "source": "nepustil-121",
+      "version": "0.8.0"
+    },
+    "zstd": {
+      "filename": "zstd-1.4.5_1.txz",
+      "role": "dependency",
+      "sha256": "f4e12484b6e93891d0157f0ecbf7d16f14e0c5d45ac030a19898103e890434a1",
+      "size": 481936,
+      "source": "nepustil-121",
+      "version": "1.4.5_1"
+    }
+  },
+  "path": "FreeBSD:12:amd64/repos/nepustil-121",
+  "priority": 0,
+  "root_count": 18,
+  "roots": [
+    "compat9x-amd64",
+    "gcc",
+    "gcc10",
+    "gcc8",
+    "gcc9",
+    "gdb",
+    "gmake",
+    "makedepend",
+    "mariadb104-client",
+    "mariadb104-server",
+    "mariadb105-client",
+    "mariadb105-server",
+    "mysql57-client",
+    "mysql57-server",
+    "nano",
+    "python",
+    "screen",
+    "subversion"
+  ],
+  "source_id": "nepustil-121",
+  "source_url": "https://repo.nepustil.net/121/FreeBSD:12:amd64/"
+}
