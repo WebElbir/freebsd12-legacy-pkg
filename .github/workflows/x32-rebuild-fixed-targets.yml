@@ -1,0 +1,139 @@
+name: Rebuild fixed i386 package repositories
+
+on:
+  push:
+    paths:
+      - '.github/workflows/x32-rebuild-fixed-targets.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: freebsd-selected-pkg-sync-main
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps:
+      - name: Checkout only required i386 trees and tooling
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            scripts
+            config
+            MANIFESTS
+            SOURCES
+            CONFIGS
+            FreeBSD:10:i386
+            FreeBSD:12:i386
+            FreeBSD:13:i386
+            FreeBSD:14:i386
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check requests zstandard
+      - name: Validate importer and wildcard ABI fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/build_repo.py scripts/build_repo_cohorts.py scripts/render_config_guide.py
+          PYTHONPATH=scripts python - <<'PY'
+          import build_repo as b
+          for major in (10,12,13,14):
+              assert b.abi_ok(f'FreeBSD:{major}:i386',f'FreeBSD:{major}:*',f'freebsd:{major}:*')
+          assert not b.abi_ok('FreeBSD:13:i386','FreeBSD:14:*')
+          print('ABI wildcard fix present and cross-major guard intact')
+          PY
+      - name: Configure Git
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Rebuild and publish selected i386 targets
+        shell: bash
+        run: |
+          set -euo pipefail
+          targets=("FreeBSD:12:i386" "FreeBSD:13:i386" "FreeBSD:14:i386" "FreeBSD:10:i386")
+          for target in "${targets[@]}"; do
+            echo "===== BUILD ${target} ====="
+            key="${target//:/-}"
+            python scripts/build_repo_cohorts.py --target "${target}"
+            python scripts/render_config_guide.py --target "${target}"
+
+            TARGET="${target}" KEY="${key}" python - <<'PY'
+          import json, os, tarfile
+          from pathlib import Path
+          target=os.environ['TARGET']; key=os.environ['KEY']
+          m=json.loads(Path(f'MANIFESTS/{key}.json').read_text())
+          coverage=m.get('coverage',{})
+          required='devil' if target=='FreeBSD:10:i386' else 'subversion'
+          if required not in coverage:
+              raise SystemExit(f'{target}: required root still unresolved: {required}')
+          if target!='FreeBSD:10:i386' and m.get('unresolved_root_names'):
+              raise SystemExit(f"{target}: unresolved roots remain: {m['unresolved_root_names']}")
+          repo=Path(target)/'latest'
+          for f in ('meta.conf','meta.txz','packagesite.txz','SHA256SUMS'):
+              if not (repo/f).is_file(): raise SystemExit(f'{target}: missing {f}')
+          with tarfile.open(repo/'packagesite.txz','r:xz') as tf:
+              member=next(x for x in tf.getmembers() if x.isfile() and Path(x.name).name=='packagesite.yaml')
+              names=set()
+              for line in tf.extractfile(member).read().decode('utf-8','replace').splitlines():
+                  if line.startswith('{'):
+                      try: names.add(json.loads(line).get('name'))
+                      except Exception: pass
+          if required not in names:
+              raise SystemExit(f'{target}: {required} missing from canonical packagesite')
+          print(target,'manifest/package validation OK',required,'present')
+          PY
+
+            rm -rf "${target}/repos"
+            git add -A -- "${target}/latest" "MANIFESTS/${key}.json" "MANIFESTS/${key}" "SOURCES/${key}.json" "CONFIGS/${key}.md"
+
+            TARGET="${target}" python - <<'PY'
+          import os, subprocess
+          from pathlib import Path
+          target=os.environ['TARGET']
+          raw=subprocess.check_output(['git','diff','--cached','--name-only','-z'])
+          names=[x.decode() for x in raw.split(b'\0') if x]
+          total=0
+          for name in names:
+              p=Path(name)
+              if p.is_file():
+                  size=p.stat().st_size; total += size
+                  if size > 95*1024*1024:
+                      raise SystemExit(f'{target}: staged file exceeds 95 MiB safety ceiling: {name} {size}')
+          if total > 256*1024*1024:
+              raise SystemExit(f'{target}: staged working-tree delta exceeds 256 MiB safety ceiling: {total}')
+          print(target,f'staged safety check OK: {total/1024/1024:.1f} MiB across {len(names)} paths')
+          PY
+
+            if ! git diff --cached --quiet; then
+              git commit -m "Complete ${target} requested package coverage"
+              git push origin HEAD:main
+            else
+              echo "${target}: no repository changes after rebuild"
+            fi
+
+            base="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/${target}/latest"
+            curl -fL --retry 10 --retry-delay 3 --retry-all-errors "${base}/meta.conf" -o /dev/null
+            curl -fL --retry 10 --retry-delay 3 --retry-all-errors "${base}/packagesite.txz" -o /tmp/${key}-packagesite.txz
+            TARGET="${target}" REQUIRED="$( [ "${target}" = 'FreeBSD:10:i386' ] && echo devil || echo subversion )" FILE="/tmp/${key}-packagesite.txz" python - <<'PY'
+          import json, os, tarfile
+          from pathlib import Path
+          names=set()
+          with tarfile.open(os.environ['FILE'],'r:xz') as tf:
+              member=next(x for x in tf.getmembers() if x.isfile() and Path(x.name).name=='packagesite.yaml')
+              for line in tf.extractfile(member).read().decode('utf-8','replace').splitlines():
+                  if line.startswith('{'):
+                      try:names.add(json.loads(line).get('name'))
+                      except Exception:pass
+          if os.environ['REQUIRED'] not in names:
+              raise SystemExit(f"remote {os.environ['TARGET']} missing {os.environ['REQUIRED']}")
+          print(os.environ['TARGET'],'remote canonical validation OK')
+          PY
+          done
