@@ -44,7 +44,7 @@ def abi_ok(target, *vals):
         return False
     if arch == "amd64":
         return "amd64" in s or "x86:64" in s or not any(x in s for x in ("i386", "x86:32"))
-    return "i386" in s or "x86:32" in s
+    return "i386" in s or "x86:32" in s or "*" in s
 
 
 def normsum(v):
