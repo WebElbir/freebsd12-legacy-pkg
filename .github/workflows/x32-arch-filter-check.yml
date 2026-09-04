@@ -1,0 +1,59 @@
+name: X32 architecture filter check
+
+on:
+  push:
+    paths:
+      - '.github/workflows/x32-arch-filter-check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check requests zstandard
+      - name: Inspect raw package records bypassing importer ABI filter
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import io,json,tarfile,requests,zstandard as zstd
+          sources={
+            'FreeBSD:10:i386':'https://ftp.neonet.bc.ca/freebsd-pkg/FreeBSD:10:i386/latest/',
+            'FreeBSD:12:i386':'https://mirror.sg.gs/freebsd-pkg/FreeBSD:12:i386/latest/',
+            'FreeBSD:13:i386':'https://pkg.freebsd.org/FreeBSD:13:i386/release_5/',
+            'FreeBSD:14:i386':'https://pkg.freebsd.org/FreeBSD:14:i386/release_5/',
+          }
+          wanted={'pinentry','libpthread-stubs','pciids','gcc-ecj','ca_root_nss','subversion','devil'}
+          for target,base in sources.items():
+            blob=None; arc=None
+            for name in ('packagesite.txz','packagesite.pkg','packagesite.tzst'):
+              r=requests.get(base+name,timeout=(20,180))
+              if r.status_code==200:
+                blob=r.content; arc=name; break
+            if blob is None:
+              print(json.dumps({'target':target,'error':'no catalog'})); continue
+            bio=io.BytesIO(blob)
+            if arc.endswith(('.pkg','.tzst')):
+              with zstd.ZstdDecompressor().stream_reader(bio) as zr: raw=zr.read()
+              tf=tarfile.open(fileobj=io.BytesIO(raw),mode='r:')
+            else:
+              tf=tarfile.open(fileobj=bio,mode='r:*')
+            member=next(m for m in tf.getmembers() if m.isfile() and m.name.endswith('packagesite.yaml'))
+            lines=tf.extractfile(member).read().decode('utf-8','replace').splitlines()
+            found=[]
+            for line in lines:
+              if not line.startswith('{'): continue
+              try:r=json.loads(line)
+              except:continue
+              if r.get('name') in wanted:
+                found.append({k:r.get(k) for k in ('name','version','arch','abi','path','repopath','sum','deps')})
+            print('===',target,'===')
+            print(json.dumps(found,indent=2,sort_keys=True))
+          PY
