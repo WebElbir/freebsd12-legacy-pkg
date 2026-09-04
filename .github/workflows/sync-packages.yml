@@ -49,7 +49,7 @@ jobs:
 
       - name: Validate importer
         run: |
-          python -m py_compile scripts/build_repo.py scripts/build_repo_v2.py scripts/build_repo_cohorts.py
+          python -m py_compile scripts/build_repo.py scripts/build_repo_v2.py scripts/build_repo_cohorts.py scripts/render_config_guide.py
           python -m json.tool config/roots.json >/dev/null
           python -m json.tool config/sources.json >/dev/null
 
@@ -97,6 +97,9 @@ jobs:
             python scripts/build_repo_cohorts.py "${args[@]}"
             rc=$?
             set -e
+
+            python scripts/render_config_guide.py --target "${target}" || true
+
             if [[ ${rc} -ne 0 ]]; then
               echo "::error::${target} cohort importer failed"
               failures+=("${target}")
