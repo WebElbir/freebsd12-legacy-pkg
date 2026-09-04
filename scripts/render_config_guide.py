@@ -35,34 +35,54 @@ def render(target: str):
     outdir.mkdir(exist_ok=True)
     out = outdir / f"{key}.md"
 
-    lines = [f"# {target} pkg conf rehberi", ""]
     status = data.get("status", "unknown")
-    lines += [f"Durum: **{status}**", ""]
-    if status == "no-verified-source":
-        lines += ["Bu ABI için doğrulanmış binary kaynak yoktur; sahte repository URL'si üretilmez.", ""]
-        out.write_text("\n".join(lines), encoding="utf-8")
-        return
-
     latest = data.get("latest_cohort")
+    canonical = f"{BASE}/{target}/latest"
+
+    lines = [
+        f"# {target} pkg conf rehberi",
+        "",
+        f"Durum: **{status}**",
+        "",
+        "## Canonical repository",
+        "",
+        "Bu ABI için kullanıcıya verilecek tek varsayılan repository biçimi aşağıdaki `raw.githubusercontent.com/.../${ABI}/latest` yapısıdır.",
+        "GitHub Release URL'leri pkg repository adresi olarak kullanılmaz.",
+        "",
+        conf(canonical),
+    ]
+
     if latest:
-        lines += ["## Ortak / varsayılan `latest`", "",
-                  f"Bu yol en geniş tek ve kendi içinde uyumlu cohort olan `{latest}` deposunu gösterir.", "",
-                  conf(f"{BASE}/{target}/latest")]
+        lines += [
+            f"Aktif `latest` cohort: `{latest}`.",
+            "",
+        ]
+    elif status in {"no-verified-source", "no-requested-packages-resolved"}:
+        lines += [
+            "Bu ABI için doğrulanmış paket kaynağı bulunmadığından endpoint geçerli fakat bilinçli olarak boş bir pkg repository'dir.",
+            "Başka FreeBSD major/mimariden paket kopyalanmaz.",
+            "",
+        ]
+    elif status == "sync-failed-preserved-latest":
+        lines += [
+            "Son senkron sırasında kaynak cohort yeniden üretilemedi; daha önce doğrulanmış `latest` repository korunmuştur.",
+            "",
+        ]
 
     coverage = data.get("coverage", {})
     if coverage:
-        lines += ["## Paket → cohort haritası", "",
-                  "Tarihsel MySQL/MariaDB/GCC sürümü `latest` içinde görünmüyorsa aşağıdaki cohort'u kullanın.", "",
-                  "| Root paket | Cohort |", "|---|---|"]
+        lines += [
+            "## Paket → kaynak cohort haritası",
+            "",
+            "Bu tablo provenance/uyumluluk bilgisidir. Kullanıcı tarafında repository URL'si yine yukarıdaki canonical `latest` adresidir.",
+            "Aynı package adı için tarihsel sürümleri tek pkg kataloğunda zorla birleştirmiyoruz; pkg repository veritabanı package adını tekil ele alır ve eski snapshot bağımlılıkları yeni snapshotlarla ABI/SONAME çakışması yaratabilir.",
+            "",
+            "| Root paket | Kaynak cohort |",
+            "|---|---|",
+        ]
         for pkg, cohort in sorted(coverage.items()):
             lines.append(f"| `{pkg}` | `{cohort}` |")
         lines.append("")
-
-    for cohort in data.get("cohorts", []):
-        cid = cohort["id"]
-        roots = ", ".join(f"`{x}`" for x in cohort.get("roots", [])) or "-"
-        lines += [f"## Cohort: `{cid}`", "", f"Root paketler: {roots}", "",
-                  conf(f"{BASE}/{target}/repos/{cid}")]
 
     out.write_text("\n".join(lines), encoding="utf-8")
 
