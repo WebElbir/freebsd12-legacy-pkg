@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "status": "running",
+  "canonical_url": "https://raw.githubusercontent.com/WebElbir/freebsd12-legacy-pkg/main/${ABI}/latest",
+  "order": [
+    "FreeBSD:12:i386",
+    "FreeBSD:13:i386",
+    "FreeBSD:14:i386",
+    "FreeBSD:10:i386",
+    "FreeBSD:11:i386",
+    "FreeBSD:9:i386"
+  ],
+  "targets": {
+    "FreeBSD:12:i386": {"status": "partial", "unresolved": ["subversion"]},
+    "FreeBSD:13:i386": {"status": "partial", "unresolved": ["subversion"]},
+    "FreeBSD:14:i386": {"status": "partial", "unresolved": ["subversion"]},
+    "FreeBSD:10:i386": {"status": "partial", "unresolved": ["devil", "gcc6", "mysql57-client", "mysql57-server"]},
+    "FreeBSD:11:i386": {"status": "no-verified-source", "unresolved": []},
+    "FreeBSD:9:i386": {"status": "no-requested-packages-resolved", "unresolved": []}
+  },
+  "package_failures": {},
+  "skip_after_failures": 3,
+  "rules": [
+    "Never mix FreeBSD major versions or ABIs.",
+    "Never invent an upstream source.",
+    "Do not rewrite Git history or force-push.",
+    "Keep the canonical pkg endpoint under ${ABI}/latest.",
+    "After the same package payload fails three times, record it as skipped and continue with the remaining packages.",
+    "Prefer small, single-target, reversible commits and avoid unnecessary bulk pushes."
+  ]
+}
