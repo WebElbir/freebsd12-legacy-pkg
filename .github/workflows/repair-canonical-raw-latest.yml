@@ -59,8 +59,7 @@ jobs:
             echo "===== ${target} ====="
             key="${target//:/-}"
 
-            args=(--target "${target}")
-            python scripts/build_repo_cohorts.py "${args[@]}"
+            python scripts/build_repo_cohorts.py --target "${target}"
             python scripts/render_config_guide.py --target "${target}"
 
             test -f "${target}/latest/meta.conf"
@@ -83,8 +82,8 @@ jobs:
           print(target, 'local canonical latest validation OK')
           PY
 
-            # Cohort build directories are internal build products. The public
-            # user endpoint is always <ABI>/latest.
+            # Cohort directories are build-time/provenance material. The stable
+            # end-user endpoint is always <ABI>/latest.
             rm -rf "${target}/repos"
 
             git add -A -- \
@@ -139,6 +138,27 @@ jobs:
             echo "${target}: raw canonical endpoint OK"
           done
 
+      - name: Normalize all generated config guides
+        shell: bash
+        run: |
+          set -euo pipefail
+          targets=(
+            "FreeBSD:9:amd64" "FreeBSD:9:i386"
+            "FreeBSD:10:amd64" "FreeBSD:10:i386"
+            "FreeBSD:11:amd64" "FreeBSD:11:i386"
+            "FreeBSD:12:amd64" "FreeBSD:12:i386"
+            "FreeBSD:13:amd64" "FreeBSD:13:i386"
+            "FreeBSD:14:amd64" "FreeBSD:14:i386"
+          )
+          for target in "${targets[@]}"; do
+            python scripts/render_config_guide.py --target "${target}"
+          done
+          git add -A -- CONFIGS
+          if ! git diff --cached --quiet; then
+            git commit -m "Normalize all pkg configs to canonical raw latest URLs"
+            git push origin HEAD:main
+          fi
+
       - name: Verify all twelve canonical URL shapes exist
         shell: bash
         run: |
@@ -155,5 +175,10 @@ jobs:
             base="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/${target}/latest"
             curl -fL --retry 12 --retry-delay 3 --retry-all-errors "${base}/meta.conf" -o /dev/null
             curl -fL --retry 12 --retry-delay 3 --retry-all-errors "${base}/packagesite.txz" -o /dev/null
+            sums="$(curl -fL --retry 12 --retry-delay 3 --retry-all-errors "${base}/SHA256SUMS")"
+            first_pkg="$(printf '%s\n' "${sums}" | awk 'NF >= 2 {print $2; exit}')"
+            if [[ -n "${first_pkg}" ]]; then
+              curl -fIL --retry 12 --retry-delay 3 --retry-all-errors "${base}/${first_pkg}" >/dev/null
+            fi
             echo "OK ${base}"
           done
