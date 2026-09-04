@@ -1,0 +1,240 @@
+{
+  "dependency_version_notes": [],
+  "id": "nepustil-141",
+  "package_count": 28,
+  "packages": {
+    "bash": {
+      "filename": "bash-5.2.37.pkg",
+      "role": "dependency",
+      "sha256": "dc4bf38a0f6a55f5c039593909e4e822a1a4d5a35d12fb21a20b2c95bd6c0bce",
+      "size": 1746744,
+      "source": "nepustil-141",
+      "version": "5.2.37"
+    },
+    "boost-libs": {
+      "filename": "boost-libs-1.86.0_1.pkg",
+      "role": "dependency",
+      "sha256": "a3e77ec47730b7f2e7e3a0d7523040b0a60947ace830a83ce863f573c3210757",
+      "size": 15254567,
+      "source": "nepustil-141",
+      "version": "1.86.0_1"
+    },
+    "brotli": {
+      "filename": "brotli-1.1.0,1.pkg",
+      "role": "dependency",
+      "sha256": "542e65f05d13f6b2754718089f561ee8a2771e38464cef072322ad77ff952bbc",
+      "size": 381162,
+      "source": "nepustil-141",
+      "version": "1.1.0,1"
+    },
+    "curl": {
+      "filename": "curl-8.11.1_1.pkg",
+      "role": "dependency",
+      "sha256": "bbcdd45dbf502a96c76b449054fbc941621710d7814e53e367828b96cc02a9c6",
+      "size": 1661262,
+      "source": "nepustil-141",
+      "version": "8.11.1_1"
+    },
+    "cyrus-sasl": {
+      "filename": "cyrus-sasl-2.1.28_5.pkg",
+      "role": "dependency",
+      "sha256": "68ef83a1992185f8d24cf04da8074f0ff05cc0f3263eea4b118aa25804f3fcbb",
+      "size": 1057715,
+      "source": "nepustil-141",
+      "version": "2.1.28_5"
+    },
+    "galera26": {
+      "filename": "galera26-26.4.16_4.pkg",
+      "role": "dependency",
+      "sha256": "ac3404a6d094987ec12fe9f173985ea5e039994a7ce3cfc4eb0822b40dc2c9cd",
+      "size": 921870,
+      "source": "nepustil-141",
+      "version": "26.4.16_4"
+    },
+    "gettext-runtime": {
+      "filename": "gettext-runtime-0.23.1.pkg",
+      "role": "dependency",
+      "sha256": "58bba8f5aa34e8adfe712175ee2a26863f3e988a277ced6390ea458de7a51d4b",
+      "size": 226149,
+      "source": "nepustil-141",
+      "version": "0.23.1"
+    },
+    "icu": {
+      "filename": "icu-74.2_1,1.pkg",
+      "role": "dependency",
+      "sha256": "b58a572f4544fc1385e31b07546cfb05af3e5e5cd8a665ba1a5df69cdad24e47",
+      "size": 13203899,
+      "source": "nepustil-141",
+      "version": "74.2_1,1"
+    },
+    "indexinfo": {
+      "filename": "indexinfo-0.3.1.pkg",
+      "role": "dependency",
+      "sha256": "33935eb9d9bfe7b0a8a741cd157cf67e445a2c811896a15263e23a4d26a4be8c",
+      "size": 5830,
+      "source": "nepustil-141",
+      "version": "0.3.1"
+    },
+    "libedit": {
+      "filename": "libedit-3.1.20240808,1.pkg",
+      "role": "dependency",
+      "sha256": "8d94ba967faf8064b11a9a6790c62302327667cdf952fc7b5f14e2f9988ad5f4",
+      "size": 153527,
+      "source": "nepustil-141",
+      "version": "3.1.20240808,1"
+    },
+    "libfmt": {
+      "filename": "libfmt-10.2.1.pkg",
+      "role": "dependency",
+      "sha256": "7d230021bb022246ddfa4329e80e1fdd73c5c5f4c24a200b096a22ba02730b28",
+      "size": 181679,
+      "source": "nepustil-141",
+      "version": "10.2.1"
+    },
+    "libiconv": {
+      "filename": "libiconv-1.17_1.pkg",
+      "role": "dependency",
+      "sha256": "38fba43c28eaa693a5c958b6dc46d162620278dc29d59f3e9b88a99a6061decc",
+      "size": 751039,
+      "source": "nepustil-141",
+      "version": "1.17_1"
+    },
+    "libidn2": {
+      "filename": "libidn2-2.3.7.pkg",
+      "role": "dependency",
+      "sha256": "9e4ef2b7b0d17e1c17422e2c3a30aad0a69cf5a1444d64d4b65c4b45f59c8c51",
+      "size": 158573,
+      "source": "nepustil-141",
+      "version": "2.3.7"
+    },
+    "liblz4": {
+      "filename": "liblz4-1.10.0,1.pkg",
+      "role": "dependency",
+      "sha256": "799a717e3a0df737664678faa4b771794c03a653166a61dc265770f97607e368",
+      "size": 161936,
+      "source": "nepustil-141",
+      "version": "1.10.0,1"
+    },
+    "libnghttp2": {
+      "filename": "libnghttp2-1.64.0.pkg",
+      "role": "dependency",
+      "sha256": "e86da26fed474e5ca8ea5365c3c0d53d6edaf13903e4fdacf628d9ea5b4f1905",
+      "size": 145404,
+      "source": "nepustil-141",
+      "version": "1.64.0"
+    },
+    "libssh2": {
+      "filename": "libssh2-1.11.1,3.pkg",
+      "role": "dependency",
+      "sha256": "bba413cbb49dd7812962e6bceff99b8fdb0aa569dd6f81c57d2815d6915a710a",
+      "size": 249123,
+      "source": "nepustil-141",
+      "version": "1.11.1,3"
+    },
+    "libunistring": {
+      "filename": "libunistring-1.3.pkg",
+      "role": "dependency",
+      "sha256": "2c20b802527dd0eb8f92692e89df00499a248210c19ba4869068fdfaf93ab8a8",
+      "size": 745756,
+      "source": "nepustil-141",
+      "version": "1.3"
+    },
+    "libxml2": {
+      "filename": "libxml2-2.11.9.pkg",
+      "role": "dependency",
+      "sha256": "2695ead10f64b08816cad921877aa66b7f1109c8e8fb2085f9688e5bec926e87",
+      "size": 893717,
+      "source": "nepustil-141",
+      "version": "2.11.9"
+    },
+    "mariadb114-client": {
+      "filename": "mariadb114-client-11.4.4.pkg",
+      "role": "root",
+      "sha256": "080abb020d6e94d70689375a2e0daafc499f643fd8803695f2962dbabd9d11b7",
+      "size": 2772099,
+      "source": "nepustil-141",
+      "version": "11.4.4"
+    },
+    "mariadb114-server": {
+      "filename": "mariadb114-server-11.4.4.pkg",
+      "role": "root",
+      "sha256": "5c7f51e80e9f0f524fcbd14612b47b87896fa7be29162f0f1080cef11680bb19",
+      "size": 51483742,
+      "source": "nepustil-141",
+      "version": "11.4.4"
+    },
+    "openldap26-client": {
+      "filename": "openldap26-client-2.6.9.pkg",
+      "role": "dependency",
+      "sha256": "66c31fd61dd667cdb99b20ef89d182857fe629ce92fd0197158b8b137f3b9dfb",
+      "size": 1108048,
+      "source": "nepustil-141",
+      "version": "2.6.9"
+    },
+    "pcre2": {
+      "filename": "pcre2-10.43.pkg",
+      "role": "dependency",
+      "sha256": "e15a4dee06bda1f62c150ce0db89cf1233a06be0527a7db40e36bd36ee999a53",
+      "size": 1450721,
+      "source": "nepustil-141",
+      "version": "10.43"
+    },
+    "popt": {
+      "filename": "popt-1.19_1.pkg",
+      "role": "dependency",
+      "sha256": "8f1a7302e57951a2e7a442303bcd7199c8e49318a531650fa1edecc6e1db37d7",
+      "size": 72292,
+      "source": "nepustil-141",
+      "version": "1.19_1"
+    },
+    "readline": {
+      "filename": "readline-8.2.13_2.pkg",
+      "role": "dependency",
+      "sha256": "9ab009ff08adcb5af468cc72668296ebbd4f3a6d64e933dfd7c5fa4963f08f8e",
+      "size": 395796,
+      "source": "nepustil-141",
+      "version": "8.2.13_2"
+    },
+    "rsync": {
+      "filename": "rsync-3.4.1.pkg",
+      "role": "dependency",
+      "sha256": "bcb5b1360b01192d070ebfacb1f2a1e6194eb60bb54db02f03b7458d323af691",
+      "size": 416502,
+      "source": "nepustil-141",
+      "version": "3.4.1"
+    },
+    "unixODBC": {
+      "filename": "unixODBC-2.3.12_1.pkg",
+      "role": "dependency",
+      "sha256": "53ade6a50f604e7407db1a239a9030608a4128570c41df5c6dcb3770753ceea2",
+      "size": 549102,
+      "source": "nepustil-141",
+      "version": "2.3.12_1"
+    },
+    "xxhash": {
+      "filename": "xxhash-0.8.2_1.pkg",
+      "role": "dependency",
+      "sha256": "2239c0bdb348a311e07f6f5ee33f4c01b8f6ad52559227b6c2c09d960ebcb154",
+      "size": 93270,
+      "source": "nepustil-141",
+      "version": "0.8.2_1"
+    },
+    "zstd": {
+      "filename": "zstd-1.5.6.pkg",
+      "role": "dependency",
+      "sha256": "e1989c3e80509dff1bec0480077d8da7be8e052631223b59768dbc6146d99d7e",
+      "size": 508850,
+      "source": "nepustil-141",
+      "version": "1.5.6"
+    }
+  },
+  "path": "FreeBSD:14:amd64/repos/nepustil-141",
+  "priority": 1,
+  "root_count": 2,
+  "roots": [
+    "mariadb114-client",
+    "mariadb114-server"
+  ],
+  "source_id": "nepustil-141",
+  "source_url": "https://repo.nepustil.net/141/FreeBSD:14:amd64/"
+}

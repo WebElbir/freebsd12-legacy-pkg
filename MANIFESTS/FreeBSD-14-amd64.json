@@ -1,0 +1,299 @@
+{
+  "canonical_repo": "FreeBSD:14:amd64/latest",
+  "cohort_count": 4,
+  "cohorts": [
+    {
+      "dependency_version_notes": [
+        {
+          "fallback": "8.8.0",
+          "package": "curl",
+          "reason": "exact version unavailable",
+          "required": "8.6.0",
+          "required_by": "mysql80-client"
+        },
+        {
+          "fallback": "74.2_1,1",
+          "package": "icu",
+          "reason": "exact version unavailable",
+          "required": "74.2,1",
+          "required_by": "mysql80-client"
+        },
+        {
+          "fallback": "3.1.20240517,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20230828_1,1",
+          "required_by": "mysql80-client"
+        },
+        {
+          "fallback": "2.6.8",
+          "package": "openldap26-client",
+          "reason": "exact version unavailable",
+          "required": "2.6.7",
+          "required_by": "mysql80-client"
+        },
+        {
+          "fallback": "8.8.0",
+          "package": "curl",
+          "reason": "exact version unavailable",
+          "required": "8.6.0",
+          "required_by": "mysql80-server"
+        },
+        {
+          "fallback": "74.2_1,1",
+          "package": "icu",
+          "reason": "exact version unavailable",
+          "required": "74.2,1",
+          "required_by": "mysql80-server"
+        },
+        {
+          "fallback": "3.1.20240517,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20230828_1,1",
+          "required_by": "mysql80-server"
+        },
+        {
+          "fallback": "8.8.0",
+          "package": "curl",
+          "reason": "exact version unavailable",
+          "required": "8.6.0",
+          "required_by": "mysql80-client"
+        },
+        {
+          "fallback": "74.2_1,1",
+          "package": "icu",
+          "reason": "exact version unavailable",
+          "required": "74.2,1",
+          "required_by": "mysql80-client"
+        },
+        {
+          "fallback": "3.1.20240517,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20230828_1,1",
+          "required_by": "mysql80-client"
+        },
+        {
+          "fallback": "2.6.8",
+          "package": "openldap26-client",
+          "reason": "exact version unavailable",
+          "required": "2.6.7",
+          "required_by": "mysql80-client"
+        }
+      ],
+      "id": "nepustil-140",
+      "package_count": 85,
+      "path": "FreeBSD:14:amd64/repos/nepustil-140",
+      "priority": 0,
+      "root_count": 20,
+      "roots": [
+        "compat12x-amd64",
+        "compat9x-amd64",
+        "cryptopp",
+        "gcc",
+        "gcc12",
+        "gcc13",
+        "gdb",
+        "gmake",
+        "makedepend",
+        "mariadb1011-client",
+        "mariadb1011-server",
+        "mariadb105-client",
+        "mariadb105-server",
+        "mariadb106-client",
+        "mariadb106-server",
+        "mysql80-client",
+        "mysql80-server",
+        "nano",
+        "screen",
+        "subversion"
+      ],
+      "source_id": "nepustil-140",
+      "source_url": "https://repo.nepustil.net/140/FreeBSD:14:amd64/"
+    },
+    {
+      "dependency_version_notes": [],
+      "id": "nepustil-141",
+      "package_count": 28,
+      "path": "FreeBSD:14:amd64/repos/nepustil-141",
+      "priority": 1,
+      "root_count": 2,
+      "roots": [
+        "mariadb114-client",
+        "mariadb114-server"
+      ],
+      "source_id": "nepustil-141",
+      "source_url": "https://repo.nepustil.net/141/FreeBSD:14:amd64/"
+    },
+    {
+      "dependency_version_notes": [
+        {
+          "fallback": "3.1.20260512,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20251016_1,1",
+          "required_by": "mariadb118-client"
+        },
+        {
+          "fallback": "1.5.7_2",
+          "package": "zstd",
+          "reason": "exact version unavailable",
+          "required": "1.5.7_1",
+          "required_by": "mariadb118-client"
+        },
+        {
+          "fallback": "5.3.15",
+          "package": "bash",
+          "reason": "exact version unavailable",
+          "required": "5.3.9",
+          "required_by": "mariadb118-server"
+        },
+        {
+          "fallback": "8.20.0",
+          "package": "curl",
+          "reason": "exact version unavailable",
+          "required": "8.17.0",
+          "required_by": "mariadb118-server"
+        },
+        {
+          "fallback": "3.1.20260512,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20251016_1,1",
+          "required_by": "mariadb118-server"
+        },
+        {
+          "fallback": "2.15.3",
+          "package": "libxml2",
+          "reason": "exact version unavailable",
+          "required": "2.15.2",
+          "required_by": "mariadb118-server"
+        },
+        {
+          "fallback": "3.1.20260512,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20251016_1,1",
+          "required_by": "mariadb118-client"
+        },
+        {
+          "fallback": "1.5.7_2",
+          "package": "zstd",
+          "reason": "exact version unavailable",
+          "required": "1.5.7_1",
+          "required_by": "mariadb118-client"
+        },
+        {
+          "fallback": "3.4.4",
+          "package": "rsync",
+          "reason": "exact version unavailable",
+          "required": "3.4.1_6",
+          "required_by": "mariadb118-server"
+        },
+        {
+          "fallback": "1.5.7_2",
+          "package": "zstd",
+          "reason": "exact version unavailable",
+          "required": "1.5.7_1",
+          "required_by": "mariadb118-server"
+        }
+      ],
+      "id": "nepustil-143",
+      "package_count": 36,
+      "path": "FreeBSD:14:amd64/repos/nepustil-143",
+      "priority": 3,
+      "root_count": 4,
+      "roots": [
+        "compat11x-amd64",
+        "gcc14",
+        "mariadb118-client",
+        "mariadb118-server"
+      ],
+      "source_id": "nepustil-143",
+      "source_url": "https://repo.nepustil.net/143/FreeBSD:14:amd64/"
+    },
+    {
+      "dependency_version_notes": [],
+      "id": "freebsd-14-latest",
+      "package_count": 75,
+      "path": "FreeBSD:14:amd64/repos/freebsd-14-latest",
+      "priority": 6,
+      "root_count": 14,
+      "roots": [
+        "boost-all",
+        "compat7x-amd64",
+        "compat8x-amd64",
+        "devil",
+        "freecolor",
+        "gcc15",
+        "gcc16",
+        "mariadb123-client",
+        "mariadb123-server",
+        "mysql84-client",
+        "mysql84-server",
+        "mysql97-client",
+        "mysql97-server",
+        "python"
+      ],
+      "source_id": "freebsd-14-latest",
+      "source_url": "https://pkg.freebsd.org/FreeBSD:14:amd64/latest/"
+    }
+  ],
+  "coverage": {
+    "boost-all": "freebsd-14-latest",
+    "compat11x-amd64": "nepustil-143",
+    "compat12x-amd64": "nepustil-140",
+    "compat7x-amd64": "freebsd-14-latest",
+    "compat8x-amd64": "freebsd-14-latest",
+    "compat9x-amd64": "nepustil-140",
+    "cryptopp": "nepustil-140",
+    "devil": "freebsd-14-latest",
+    "freecolor": "freebsd-14-latest",
+    "gcc": "nepustil-140",
+    "gcc12": "nepustil-140",
+    "gcc13": "nepustil-140",
+    "gcc14": "nepustil-143",
+    "gcc15": "freebsd-14-latest",
+    "gcc16": "freebsd-14-latest",
+    "gdb": "nepustil-140",
+    "gmake": "nepustil-140",
+    "makedepend": "nepustil-140",
+    "mariadb1011-client": "nepustil-140",
+    "mariadb1011-server": "nepustil-140",
+    "mariadb105-client": "nepustil-140",
+    "mariadb105-server": "nepustil-140",
+    "mariadb106-client": "nepustil-140",
+    "mariadb106-server": "nepustil-140",
+    "mariadb114-client": "nepustil-141",
+    "mariadb114-server": "nepustil-141",
+    "mariadb118-client": "nepustil-143",
+    "mariadb118-server": "nepustil-143",
+    "mariadb123-client": "freebsd-14-latest",
+    "mariadb123-server": "freebsd-14-latest",
+    "mysql80-client": "nepustil-140",
+    "mysql80-server": "nepustil-140",
+    "mysql84-client": "freebsd-14-latest",
+    "mysql84-server": "freebsd-14-latest",
+    "mysql97-client": "freebsd-14-latest",
+    "mysql97-server": "freebsd-14-latest",
+    "nano": "nepustil-140",
+    "python": "freebsd-14-latest",
+    "screen": "nepustil-140",
+    "subversion": "nepustil-140"
+  },
+  "covered_root_count": 40,
+  "discovered_root_count": 40,
+  "exact_names_not_seen_in_any_source": [
+    "compat11x-i386",
+    "compat12x-i386",
+    "compat7x-i386",
+    "compat8x-i386",
+    "compat9x-i386"
+  ],
+  "latest_cohort": "nepustil-140",
+  "status": "ok",
+  "target": "FreeBSD:14:amd64",
+  "unresolved": {},
+  "unresolved_root_names": []
+}
