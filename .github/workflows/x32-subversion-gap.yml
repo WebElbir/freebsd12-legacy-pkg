@@ -1,0 +1,87 @@
+name: X32 subversion dependency gap
+
+on:
+  push:
+    paths:
+      - '.github/workflows/x32-subversion-gap.yml'
+      - 'STATE/x32-gap-trigger.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            scripts
+            config
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check requests zstandard
+      - name: Diagnose subversion closure gaps
+        shell: bash
+        run: |
+          set -euo pipefail
+          PYTHONPATH=scripts python - <<'PY'
+          import json
+          import build_repo as core
+
+          candidates = {
+              'FreeBSD:12:i386': [
+                  ('sggs-12i386-latest','https://mirror.sg.gs/freebsd-pkg/FreeBSD:12:i386/latest/'),
+              ],
+              'FreeBSD:13:i386': [
+                  ('freebsd-13i386-latest','https://pkg.freebsd.org/FreeBSD:13:i386/latest/'),
+                  ('freebsd-13i386-quarterly','https://pkg.freebsd.org/FreeBSD:13:i386/quarterly/'),
+                  ('freebsd-13i386-release5','https://pkg.freebsd.org/FreeBSD:13:i386/release_5/'),
+              ],
+              'FreeBSD:14:i386': [
+                  ('freebsd-14i386-latest','https://pkg.freebsd.org/FreeBSD:14:i386/latest/'),
+                  ('freebsd-14i386-quarterly','https://pkg.freebsd.org/FreeBSD:14:i386/quarterly/'),
+                  ('freebsd-14i386-release5','https://pkg.freebsd.org/FreeBSD:14:i386/release_5/'),
+              ],
+          }
+
+          def walk(candidate, byname, seen, missing):
+              key=(candidate['name'], candidate['version'])
+              if key in seen:
+                  return
+              seen.add(key)
+              for dep, required in core.deps(candidate):
+                  opts=byname.get(dep, [])
+                  if not opts:
+                      missing.append({'required_by':candidate['name'],'dependency':dep,'required_version':required,'reason':'dependency name absent'})
+                      continue
+                  samever=[x for x in opts if not required or x['version']==required]
+                  choice=(samever or opts)[0]
+                  walk(choice, byname, seen, missing)
+
+          s=core.session()
+          out={}
+          for target, sources in candidates.items():
+              out[target]=[]
+              for prio,(sid,url) in enumerate(sources):
+                  src={'id':sid,'url':url}
+                  rows=core.remote_catalog(s,src,target,prio)
+                  for c in rows: c['target']=target
+                  byname={}
+                  for c in rows: byname.setdefault(c['name'],[]).append(c)
+                  roots=core.ordered(byname.get('subversion',[]))
+                  entry={'source':sid,'records':len(rows),'subversion_versions':[x['version'] for x in roots]}
+                  if roots:
+                      missing=[]; seen=set(); walk(roots[0],byname,seen,missing)
+                      entry['missing_dependencies']=missing[:100]
+                      entry['closure_package_count_if_names_present']=len(seen)
+                  out[target].append(entry)
+                  print(json.dumps({'target':target,**entry},sort_keys=True))
+          print('=== X32_SUBVERSION_GAP_JSON ===')
+          print(json.dumps(out,indent=2,sort_keys=True))
+          PY
