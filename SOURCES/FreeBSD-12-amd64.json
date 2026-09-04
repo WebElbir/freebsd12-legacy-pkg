@@ -1,0 +1,35 @@
+{
+  "target": "FreeBSD:12:amd64",
+  "sources": [
+    {
+      "id": "local-existing-12",
+      "url": null,
+      "records": 231
+    },
+    {
+      "id": "nepustil-121",
+      "url": "https://repo.nepustil.net/121/FreeBSD:12:amd64/",
+      "records": 4527
+    },
+    {
+      "id": "nepustil-123",
+      "url": "https://repo.nepustil.net/123/FreeBSD:12:amd64/",
+      "records": 3328
+    },
+    {
+      "id": "nepustil-12",
+      "url": "https://repo.nepustil.net/FreeBSD:12:amd64/",
+      "records": 3879
+    },
+    {
+      "id": "sggs-12-latest",
+      "url": "https://mirror.sg.gs/freebsd-pkg/FreeBSD:12:amd64/latest/",
+      "records": 34280
+    },
+    {
+      "id": "sggs-12-quarterly",
+      "url": "https://mirror.sg.gs/freebsd-pkg/FreeBSD:12:amd64/quarterly/",
+      "records": 0
+    }
+  ]
+}
