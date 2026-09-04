@@ -3,41 +3,46 @@ name: Sync selected FreeBSD packages
 on:
   workflow_dispatch:
     inputs:
-      targets:
-        description: "all or comma-separated canonical targets (example: FreeBSD:12:amd64,FreeBSD:14:amd64)"
-        required: false
-        default: "all"
-  push:
-    branches: [main]
-    paths:
-      - "scripts/**"
-      - "config/**"
-      - ".github/workflows/sync-packages.yml"
-  pull_request:
-    branches: [main]
-    paths:
-      - "scripts/**"
-      - "config/**"
-      - ".github/workflows/sync-packages.yml"
-      - ".sync-trigger"
+      target:
+        description: "Build exactly one canonical target"
+        required: true
+        type: choice
+        options:
+          - "FreeBSD:9:amd64"
+          - "FreeBSD:9:i386"
+          - "FreeBSD:10:amd64"
+          - "FreeBSD:10:i386"
+          - "FreeBSD:11:amd64"
+          - "FreeBSD:11:i386"
+          - "FreeBSD:12:amd64"
+          - "FreeBSD:12:i386"
+          - "FreeBSD:13:amd64"
+          - "FreeBSD:13:i386"
+          - "FreeBSD:14:amd64"
+          - "FreeBSD:14:i386"
+      allow_binary_push:
+        description: "Push generated binary packages only after safety checks"
+        required: true
+        default: false
+        type: boolean
 
 permissions:
   contents: write
 
 concurrency:
-  group: freebsd-selected-pkg-sync-${{ github.head_ref || github.ref_name }}
-  cancel-in-progress: true
+  group: freebsd-selected-pkg-sync-${{ github.ref_name }}
+  cancel-in-progress: false
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 360
+    timeout-minutes: 180
     steps:
       - name: Checkout repository branch
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 1
+          ref: ${{ github.ref_name }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -58,89 +63,96 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Build and commit ABI repositories
+      - name: Build one ABI repository
+        id: build
         shell: bash
         env:
-          REQUESTED_TARGETS: ${{ github.event.inputs.targets || 'all' }}
-          PUSH_BRANCH: ${{ github.head_ref || github.ref_name }}
+          TARGET: ${{ inputs.target }}
         run: |
-          set -u
-          ALL_TARGETS=(
-            "FreeBSD:12:amd64"
-            "FreeBSD:9:amd64"
-            "FreeBSD:9:i386"
-            "FreeBSD:10:amd64"
-            "FreeBSD:10:i386"
-            "FreeBSD:11:amd64"
-            "FreeBSD:11:i386"
-            "FreeBSD:12:i386"
-            "FreeBSD:13:amd64"
-            "FreeBSD:13:i386"
-            "FreeBSD:14:amd64"
-            "FreeBSD:14:i386"
-          )
-          if [[ -n "${REQUESTED_TARGETS}" && "${REQUESTED_TARGETS}" != "all" ]]; then
-            IFS=',' read -r -a TARGETS <<< "${REQUESTED_TARGETS}"
-          else
-            TARGETS=("${ALL_TARGETS[@]}")
+          set -euo pipefail
+          args=(--target "${TARGET}")
+          if [[ "${TARGET}" == "FreeBSD:12:amd64" ]]; then
+            args+=(--migrate-existing-12)
           fi
-          failures=()
-          for target in "${TARGETS[@]}"; do
-            echo "============================================================"
-            echo "Building ${target}"
-            echo "============================================================"
-            args=(--target "${target}")
-            if [[ "${target}" == "FreeBSD:12:amd64" ]]; then
-              args+=(--migrate-existing-12)
-            fi
-            set +e
-            python scripts/build_repo_cohorts.py "${args[@]}"
-            rc=$?
-            set -e
+          python scripts/build_repo_cohorts.py "${args[@]}"
+          python scripts/render_config_guide.py --target "${TARGET}"
 
-            python scripts/render_config_guide.py --target "${target}" || true
+      - name: Stage only the selected target
+        shell: bash
+        env:
+          TARGET: ${{ inputs.target }}
+        run: |
+          set -euo pipefail
+          KEY="${TARGET//:/-}"
+          git add -- "${TARGET}" "MANIFESTS/${KEY}.json" "MANIFESTS/${KEY}" "SOURCES/${KEY}.json" "CONFIGS/${KEY}.md"
 
-            if [[ ${rc} -ne 0 ]]; then
-              echo "::error::${target} cohort importer failed"
-              failures+=("${target}")
-            fi
+      - name: Binary and push safety gate
+        shell: bash
+        env:
+          TARGET: ${{ inputs.target }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os
+          import subprocess
+          from pathlib import Path
 
-            find scripts -type d -name __pycache__ -prune -exec rm -rf {} + 2>/dev/null || true
-            git add -A
-            if ! git diff --cached --quiet; then
-              if [[ ${rc} -eq 0 ]]; then
-                git commit -m "Build ${target} coherent package cohorts"
-              else
-                git commit -m "Record ${target} cohort sync failure"
-              fi
-              git fetch origin "${PUSH_BRANCH}"
-              if ! git rebase "origin/${PUSH_BRANCH}"; then
-                git rebase --abort || true
-                echo "::error::Could not rebase generated ${target} commit onto origin/${PUSH_BRANCH}"
-                exit 1
-              fi
-              pushed=0
-              for attempt in 1 2 3; do
-                if git push origin HEAD:"${PUSH_BRANCH}"; then
-                  pushed=1
-                  break
-                fi
-                echo "Push race on attempt ${attempt}; refreshing branch before retry"
-                git fetch origin "${PUSH_BRANCH}"
-                if ! git rebase "origin/${PUSH_BRANCH}"; then
-                  git rebase --abort || true
-                  break
-                fi
-              done
-              if [[ ${pushed} -ne 1 ]]; then
-                echo "::error::Unable to push ${target} after three attempts"
-                exit 1
-              fi
-            else
-              echo "No repository changes for ${target}"
-            fi
-          done
-          if [[ ${#failures[@]} -gt 0 ]]; then
-            printf 'Failed targets: %s\n' "${failures[*]}"
-            exit 1
+          target = os.environ["TARGET"]
+          max_file = 95 * 1024 * 1024
+          max_staged = 256 * 1024 * 1024
+
+          raw = subprocess.check_output(["git", "diff", "--cached", "--name-only", "-z"])
+          names = [x.decode("utf-8") for x in raw.split(b"\0") if x]
+          oversized = []
+          staged_bytes = 0
+          for name in names:
+              p = Path(name)
+              if not p.is_file():
+                  continue
+              size = p.stat().st_size
+              staged_bytes += size
+              if size > max_file:
+                  oversized.append((name, size))
+
+          print(f"Staged paths: {len(names)}")
+          print(f"Conservative staged working-tree size: {staged_bytes / 1024 / 1024:.1f} MiB")
+          if oversized:
+              for name, size in oversized:
+                  print(f"ERROR: file exceeds 95 MiB safety ceiling: {name} ({size / 1024 / 1024:.1f} MiB)")
+              raise SystemExit(20)
+          if staged_bytes > max_staged:
+              print(f"ERROR: selected target exceeds the 256 MiB per-run safety ceiling: {target}")
+              print("Refusing to create or push a bulk binary commit.")
+              raise SystemExit(21)
+          PY
+
+      - name: Dry-run result
+        if: ${{ !inputs.allow_binary_push }}
+        shell: bash
+        run: |
+          echo "Safety checks passed. Binary push was NOT requested; repository was not modified."
+          git status --short
+
+      - name: Commit and push once
+        if: ${{ inputs.allow_binary_push }}
+        shell: bash
+        env:
+          TARGET: ${{ inputs.target }}
+          PUSH_BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          if git diff --cached --quiet; then
+            echo "No repository changes for ${TARGET}"
+            exit 0
           fi
+
+          git fetch --depth=1 origin "${PUSH_BRANCH}"
+          LOCAL_HEAD="$(git rev-parse HEAD)"
+          REMOTE_HEAD="$(git rev-parse FETCH_HEAD)"
+          if [[ "${LOCAL_HEAD}" != "${REMOTE_HEAD}" ]]; then
+            echo "::error::Branch changed during the run; refusing automatic rebase/retry. Run again from the new HEAD."
+            exit 30
+          fi
+
+          git commit -m "Build ${TARGET} coherent package cohorts"
+          git push origin HEAD:"${PUSH_BRANCH}"
