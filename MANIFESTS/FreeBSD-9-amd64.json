@@ -1,6 +1,6 @@
 {
   "dependency_version_conflicts": [],
-  "package_count": 89,
+  "package_count": 85,
   "packages": {
     "OpenEXR": {
       "filename": "OpenEXR-2.1.0_1.txz",
@@ -161,38 +161,6 @@
       "size": 26199380,
       "source": "pcbsd-92-gr",
       "version": "4.6.4"
-    },
-    "gcc34": {
-      "filename": "gcc34-3.4.6_3,1.txz",
-      "role": "root",
-      "sha256": "a775bb4c5b10409109c89d82fbc59a6d531cd674ed030d22dba0c2ca90f7ec32",
-      "size": 9959976,
-      "source": "pcbsd-92-gr",
-      "version": "3.4.6_3,1"
-    },
-    "gcc44": {
-      "filename": "gcc44-4.4.7,1.txz",
-      "role": "root",
-      "sha256": "90126166b15095fa2b4f3edddd3877d5c51f5ec942801299956ec49f7b81d31e",
-      "size": 15081976,
-      "source": "pcbsd-92-gr",
-      "version": "4.4.7,1"
-    },
-    "gcc46": {
-      "filename": "gcc46-4.6.4_1,1.txz",
-      "role": "root",
-      "sha256": "e78e4f9f68103544cd0462f8ea4a42f407ecb1fe0fb06b370e06bc89b78e7774",
-      "size": 26195244,
-      "source": "pcbsd-92-gr",
-      "version": "4.6.4_1,1"
-    },
-    "gcc47": {
-      "filename": "gcc47-4.7.4.20131214.txz",
-      "role": "root",
-      "sha256": "7bdfc6d1756dea522f5a8c09cbe5a169991a68b63777e3a0271990cdad68f1b0",
-      "size": 29783316,
-      "source": "pcbsd-92-gr",
-      "version": "4.7.4.20131214"
     },
     "gcc48": {
       "filename": "gcc48-4.8.3.s20131212.txz",
@@ -715,7 +683,7 @@
       "version": "7.0.25"
     }
   },
-  "root_count": 24,
+  "root_count": 20,
   "roots": [
     {
       "name": "boost-all",
@@ -798,30 +766,6 @@
       "source": "pcbsd-92-gr",
       "status": "selected",
       "version": "4.6.4"
-    },
-    {
-      "name": "gcc34",
-      "source": "pcbsd-92-gr",
-      "status": "selected",
-      "version": "3.4.6_3,1"
-    },
-    {
-      "name": "gcc44",
-      "source": "pcbsd-92-gr",
-      "status": "selected",
-      "version": "4.4.7,1"
-    },
-    {
-      "name": "gcc46",
-      "source": "pcbsd-92-gr",
-      "status": "selected",
-      "version": "4.6.4_1,1"
-    },
-    {
-      "name": "gcc47",
-      "source": "pcbsd-92-gr",
-      "status": "selected",
-      "version": "4.7.4.20131214"
     },
     {
       "name": "gcc48",
