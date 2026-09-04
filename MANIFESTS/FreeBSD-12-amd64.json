@@ -1,1905 +1,1024 @@
 {
-  "dependency_version_conflicts": [
-    {
-      "also_required": "2.40_4,1",
-      "package": "binutils",
-      "selected": "2.37_2,1"
-    },
-    {
-      "also_required": "6.3.0",
-      "package": "gmp",
-      "selected": "6.2.1"
-    },
-    {
-      "also_required": "1.3.1_1",
-      "package": "mpc",
-      "selected": "1.2.1"
-    },
-    {
-      "also_required": "4.2.1,1",
-      "package": "mpfr",
-      "selected": "4.1.0_1"
-    },
-    {
-      "also_required": "2.40_4,1",
-      "package": "binutils",
-      "selected": "2.37_2,1"
-    },
-    {
-      "also_required": "6.3.0",
-      "package": "gmp",
-      "selected": "6.2.1"
-    },
-    {
-      "also_required": "1.3.1_1",
-      "package": "mpc",
-      "selected": "1.2.1"
-    },
-    {
-      "also_required": "4.2.1,1",
-      "package": "mpfr",
-      "selected": "4.1.0_1"
-    },
-    {
-      "also_required": "1.17",
-      "package": "libiconv",
-      "selected": "1.16"
-    },
-    {
-      "also_required": "8.2.7",
-      "package": "readline",
-      "selected": "8.1.2"
-    },
-    {
-      "also_required": "0.22.3",
-      "package": "gettext-runtime",
-      "selected": "0.21"
-    },
-    {
-      "also_required": "8.2.7",
-      "package": "readline",
-      "selected": "8.1.2"
-    },
-    {
-      "also_required": "1.83.0_1",
-      "package": "boost-libs",
-      "selected": "1.72.0_6"
-    },
-    {
-      "also_required": "1.17",
-      "package": "libiconv",
-      "selected": "1.16"
-    },
-    {
-      "also_required": "8.2.7",
-      "package": "readline",
-      "selected": "8.1.2"
-    },
-    {
-      "also_required": "1.17",
-      "package": "libiconv",
-      "selected": "1.16"
-    },
-    {
-      "also_required": "3.1.20210910,1",
-      "package": "libedit",
-      "selected": "3.1.20230828,1"
-    },
-    {
-      "also_required": "5.1.16",
-      "package": "bash",
-      "selected": "5.2.21"
-    },
-    {
-      "also_required": "3.1.20210910,1",
-      "package": "libedit",
-      "selected": "3.1.20230828,1"
-    },
-    {
-      "also_required": "2.9.13_1",
-      "package": "libxml2",
-      "selected": "2.10.4_2"
-    },
-    {
-      "also_required": "3.2.3_1",
-      "package": "rsync",
-      "selected": "3.2.7"
-    },
-    {
-      "also_required": "2.3.9",
-      "package": "unixODBC",
-      "selected": "2.3.11"
-    },
-    {
-      "also_required": "3.1.20210910,1",
-      "package": "libedit",
-      "selected": "3.1.20230828,1"
-    },
-    {
-      "also_required": "5.1.16",
-      "package": "bash",
-      "selected": "5.2.21"
-    },
-    {
-      "also_required": "26.4.11",
-      "package": "galera26",
-      "selected": "26.4.16_1"
-    },
-    {
-      "also_required": "3.1.20210910,1",
-      "package": "libedit",
-      "selected": "3.1.20230828,1"
-    },
-    {
-      "also_required": "2.9.13_1",
-      "package": "libxml2",
-      "selected": "2.10.4_2"
-    },
-    {
-      "also_required": "3.2.3_1",
-      "package": "rsync",
-      "selected": "3.2.7"
-    },
-    {
-      "also_required": "2.3.9",
-      "package": "unixODBC",
-      "selected": "2.3.11"
-    },
-    {
-      "also_required": "3.1.20210910,1",
-      "package": "libedit",
-      "selected": "3.1.20230828,1"
-    },
-    {
-      "also_required": "10.39_1",
-      "package": "pcre2",
-      "selected": "10.42"
-    },
-    {
-      "also_required": "5.1.16",
-      "package": "bash",
-      "selected": "5.2.21"
-    },
-    {
-      "also_required": "26.4.11",
-      "package": "galera26",
-      "selected": "26.4.16_1"
-    },
-    {
-      "also_required": "3.1.20210910,1",
-      "package": "libedit",
-      "selected": "3.1.20230828,1"
-    },
-    {
-      "also_required": "2.9.13_1",
-      "package": "libxml2",
-      "selected": "2.10.4_2"
-    },
-    {
-      "also_required": "10.39_1",
-      "package": "pcre2",
-      "selected": "10.42"
-    },
-    {
-      "also_required": "3.2.3_1",
-      "package": "rsync",
-      "selected": "3.2.7"
-    },
-    {
-      "also_required": "2.3.9",
-      "package": "unixODBC",
-      "selected": "2.3.11"
-    },
-    {
-      "also_required": "3.1.20210910,1",
-      "package": "libedit",
-      "selected": "3.1.20230828,1"
-    },
-    {
-      "also_required": "10.39_1",
-      "package": "pcre2",
-      "selected": "10.42"
-    },
-    {
-      "also_required": "5.1.16",
-      "package": "bash",
-      "selected": "5.2.21"
-    },
-    {
-      "also_required": "26.4.11",
-      "package": "galera26",
-      "selected": "26.4.16_1"
-    },
-    {
-      "also_required": "3.1.20210910,1",
-      "package": "libedit",
-      "selected": "3.1.20230828,1"
-    },
-    {
-      "also_required": "2.9.13_1",
-      "package": "libxml2",
-      "selected": "2.10.4_2"
-    },
-    {
-      "also_required": "10.39_1",
-      "package": "pcre2",
-      "selected": "10.42"
-    },
-    {
-      "also_required": "3.2.3_1",
-      "package": "rsync",
-      "selected": "3.2.7"
-    },
-    {
-      "also_required": "2.3.9",
-      "package": "unixODBC",
-      "selected": "2.3.11"
-    },
-    {
-      "also_required": "3.1.20210910,1",
-      "package": "libedit",
-      "selected": "3.1.20230828,1"
-    },
-    {
-      "also_required": "1.9.3,1",
-      "package": "liblz4",
-      "selected": "1.9.4,1"
-    },
-    {
-      "also_required": "3.1.20210910,1",
-      "package": "libedit",
-      "selected": "3.1.20230828,1"
-    },
-    {
-      "also_required": "1.9.3,1",
-      "package": "liblz4",
-      "selected": "1.9.4,1"
-    },
-    {
-      "also_required": "7.83.1",
-      "package": "curl",
-      "selected": "8.5.0"
-    },
-    {
-      "also_required": "3.1.20210910,1",
-      "package": "libedit",
-      "selected": "3.1.20230828,1"
-    },
-    {
-      "also_required": "1.9.3,1",
-      "package": "liblz4",
-      "selected": "1.9.4,1"
-    },
-    {
-      "also_required": "7.83.1",
-      "package": "curl",
-      "selected": "8.5.0"
-    },
-    {
-      "also_required": "3.1.20210910,1",
-      "package": "libedit",
-      "selected": "3.1.20230828,1"
-    },
-    {
-      "also_required": "1.9.3,1",
-      "package": "liblz4",
-      "selected": "1.9.4,1"
-    },
-    {
-      "also_required": "7.83.1",
-      "package": "curl",
-      "selected": "8.5.0"
-    },
-    {
-      "also_required": "3.1.20210910,1",
-      "package": "libedit",
-      "selected": "3.1.20230828,1"
-    },
-    {
-      "also_required": "1.9.3,1",
-      "package": "liblz4",
-      "selected": "1.9.4,1"
-    },
-    {
-      "also_required": "1.5.2",
-      "package": "zstd",
-      "selected": "1.5.5"
-    },
-    {
-      "also_required": "7.83.1",
-      "package": "curl",
-      "selected": "8.5.0"
-    },
-    {
-      "also_required": "3.1.20210910,1",
-      "package": "libedit",
-      "selected": "3.1.20230828,1"
-    },
-    {
-      "also_required": "1.9.3,1",
-      "package": "liblz4",
-      "selected": "1.9.4,1"
-    },
-    {
-      "also_required": "1.5.2",
-      "package": "zstd",
-      "selected": "1.5.5"
-    },
-    {
-      "also_required": "2.1.28_1",
-      "package": "cyrus-sasl",
-      "selected": "2.1.28"
-    },
-    {
-      "also_required": "1.23.0_2",
-      "package": "groff",
-      "selected": "1.22.4_4"
-    },
-    {
-      "also_required": "0.14.0",
-      "package": "hidapi",
-      "selected": "0.11.2"
-    },
-    {
-      "also_required": "74.2,1",
-      "package": "icu",
-      "selected": "70.1_1,1"
-    },
-    {
-      "also_required": "1.14.0",
-      "package": "libfido2",
-      "selected": "1.10.0"
-    },
-    {
-      "also_required": "20230730",
-      "package": "libunwind",
-      "selected": "20211201_1"
-    },
-    {
-      "also_required": "2.1.28_1",
-      "package": "cyrus-sasl",
-      "selected": "2.1.28"
-    },
-    {
-      "also_required": "5.36.3_1",
-      "package": "perl5",
-      "selected": "5.32.1_1"
-    },
-    {
-      "also_required": "1.23.0_2",
-      "package": "groff",
-      "selected": "1.22.4_4"
-    },
-    {
-      "also_required": "0.14.0",
-      "package": "hidapi",
-      "selected": "0.11.2"
-    },
-    {
-      "also_required": "74.2,1",
-      "package": "icu",
-      "selected": "70.1_1,1"
-    },
-    {
-      "also_required": "1.14.0",
-      "package": "libfido2",
-      "selected": "1.10.0"
-    },
-    {
-      "also_required": "20230730",
-      "package": "libunwind",
-      "selected": "20211201_1"
-    },
-    {
-      "also_required": "5.36.3_1",
-      "package": "perl5",
-      "selected": "5.32.1_1"
-    },
-    {
-      "also_required": "2.3.2",
-      "package": "libidn2",
-      "selected": "2.3.4"
-    },
-    {
-      "also_required": "1.0",
-      "package": "libunistring",
-      "selected": "1.1"
-    },
-    {
-      "also_required": "2.9.13_1",
-      "package": "libxml2",
-      "selected": "2.10.4_2"
-    },
-    {
-      "also_required": "3.1.20210910,1",
-      "package": "libedit",
-      "selected": "3.1.20230828,1"
-    },
-    {
-      "also_required": "1.9.3,1",
-      "package": "liblz4",
-      "selected": "1.9.4,1"
+  "cohort_count": 1,
+  "cohorts": [
+    {
+      "dependency_version_notes": [
+        {
+          "fallback": "2.37_2,1",
+          "package": "binutils",
+          "reason": "exact version unavailable",
+          "required": "2.40_4,1",
+          "required_by": "gcc12"
+        },
+        {
+          "fallback": "6.2.1",
+          "package": "gmp",
+          "reason": "exact version unavailable",
+          "required": "6.3.0",
+          "required_by": "gcc12"
+        },
+        {
+          "fallback": "1.2.1",
+          "package": "mpc",
+          "reason": "exact version unavailable",
+          "required": "1.3.1_1",
+          "required_by": "gcc12"
+        },
+        {
+          "fallback": "4.1.0_1",
+          "package": "mpfr",
+          "reason": "exact version unavailable",
+          "required": "4.2.1,1",
+          "required_by": "gcc12"
+        },
+        {
+          "fallback": "2.37_2,1",
+          "package": "binutils",
+          "reason": "exact version unavailable",
+          "required": "2.40_4,1",
+          "required_by": "gcc13"
+        },
+        {
+          "fallback": "6.2.1",
+          "package": "gmp",
+          "reason": "exact version unavailable",
+          "required": "6.3.0",
+          "required_by": "gcc13"
+        },
+        {
+          "fallback": "1.2.1",
+          "package": "mpc",
+          "reason": "exact version unavailable",
+          "required": "1.3.1_1",
+          "required_by": "gcc13"
+        },
+        {
+          "fallback": "4.1.0_1",
+          "package": "mpfr",
+          "reason": "exact version unavailable",
+          "required": "4.2.1,1",
+          "required_by": "gcc13"
+        },
+        {
+          "fallback": "1.16",
+          "package": "libiconv",
+          "reason": "exact version unavailable",
+          "required": "1.17",
+          "required_by": "mariadb1011-client"
+        },
+        {
+          "fallback": "8.1.2",
+          "package": "readline",
+          "reason": "exact version unavailable",
+          "required": "8.2.7",
+          "required_by": "mariadb1011-client"
+        },
+        {
+          "fallback": "0.21",
+          "package": "gettext-runtime",
+          "reason": "exact version unavailable",
+          "required": "0.22.3",
+          "required_by": "bash"
+        },
+        {
+          "fallback": "8.1.2",
+          "package": "readline",
+          "reason": "exact version unavailable",
+          "required": "8.2.7",
+          "required_by": "bash"
+        },
+        {
+          "fallback": "1.72.0_6",
+          "package": "boost-libs",
+          "reason": "exact version unavailable",
+          "required": "1.83.0_1",
+          "required_by": "galera26"
+        },
+        {
+          "fallback": "1.16",
+          "package": "libiconv",
+          "reason": "exact version unavailable",
+          "required": "1.17",
+          "required_by": "mariadb1011-server"
+        },
+        {
+          "fallback": "8.1.2",
+          "package": "readline",
+          "reason": "exact version unavailable",
+          "required": "8.2.7",
+          "required_by": "libxml2"
+        },
+        {
+          "fallback": "1.16",
+          "package": "libiconv",
+          "reason": "exact version unavailable",
+          "required": "1.17",
+          "required_by": "mariadb1011-client"
+        },
+        {
+          "fallback": "8.1.2",
+          "package": "readline",
+          "reason": "exact version unavailable",
+          "required": "8.2.7",
+          "required_by": "mariadb1011-client"
+        },
+        {
+          "fallback": "1.16",
+          "package": "libiconv",
+          "reason": "exact version unavailable",
+          "required": "1.17",
+          "required_by": "rsync"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mariadb103-client"
+        },
+        {
+          "fallback": "5.2.21",
+          "package": "bash",
+          "reason": "exact version unavailable",
+          "required": "5.1.16",
+          "required_by": "mariadb103-server"
+        },
+        {
+          "fallback": "0.21",
+          "package": "gettext-runtime",
+          "reason": "exact version unavailable",
+          "required": "0.22.3",
+          "required_by": "bash"
+        },
+        {
+          "fallback": "8.1.2",
+          "package": "readline",
+          "reason": "exact version unavailable",
+          "required": "8.2.7",
+          "required_by": "bash"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mariadb103-server"
+        },
+        {
+          "fallback": "2.10.4_2",
+          "package": "libxml2",
+          "reason": "exact version unavailable",
+          "required": "2.9.13_1",
+          "required_by": "mariadb103-server"
+        },
+        {
+          "fallback": "8.1.2",
+          "package": "readline",
+          "reason": "exact version unavailable",
+          "required": "8.2.7",
+          "required_by": "libxml2"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mariadb103-client"
+        },
+        {
+          "fallback": "3.2.7",
+          "package": "rsync",
+          "reason": "exact version unavailable",
+          "required": "3.2.3_1",
+          "required_by": "mariadb103-server"
+        },
+        {
+          "fallback": "1.16",
+          "package": "libiconv",
+          "reason": "exact version unavailable",
+          "required": "1.17",
+          "required_by": "rsync"
+        },
+        {
+          "fallback": "2.3.11",
+          "package": "unixODBC",
+          "reason": "exact version unavailable",
+          "required": "2.3.9",
+          "required_by": "mariadb103-server"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mariadb104-client"
+        },
+        {
+          "fallback": "5.2.21",
+          "package": "bash",
+          "reason": "exact version unavailable",
+          "required": "5.1.16",
+          "required_by": "mariadb104-server"
+        },
+        {
+          "fallback": "0.21",
+          "package": "gettext-runtime",
+          "reason": "exact version unavailable",
+          "required": "0.22.3",
+          "required_by": "bash"
+        },
+        {
+          "fallback": "8.1.2",
+          "package": "readline",
+          "reason": "exact version unavailable",
+          "required": "8.2.7",
+          "required_by": "bash"
+        },
+        {
+          "fallback": "26.4.16_1",
+          "package": "galera26",
+          "reason": "exact version unavailable",
+          "required": "26.4.11",
+          "required_by": "mariadb104-server"
+        },
+        {
+          "fallback": "1.72.0_6",
+          "package": "boost-libs",
+          "reason": "exact version unavailable",
+          "required": "1.83.0_1",
+          "required_by": "galera26"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mariadb104-server"
+        },
+        {
+          "fallback": "2.10.4_2",
+          "package": "libxml2",
+          "reason": "exact version unavailable",
+          "required": "2.9.13_1",
+          "required_by": "mariadb104-server"
+        },
+        {
+          "fallback": "8.1.2",
+          "package": "readline",
+          "reason": "exact version unavailable",
+          "required": "8.2.7",
+          "required_by": "libxml2"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mariadb104-client"
+        },
+        {
+          "fallback": "3.2.7",
+          "package": "rsync",
+          "reason": "exact version unavailable",
+          "required": "3.2.3_1",
+          "required_by": "mariadb104-server"
+        },
+        {
+          "fallback": "1.16",
+          "package": "libiconv",
+          "reason": "exact version unavailable",
+          "required": "1.17",
+          "required_by": "rsync"
+        },
+        {
+          "fallback": "2.3.11",
+          "package": "unixODBC",
+          "reason": "exact version unavailable",
+          "required": "2.3.9",
+          "required_by": "mariadb104-server"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mariadb105-client"
+        },
+        {
+          "fallback": "10.42",
+          "package": "pcre2",
+          "reason": "exact version unavailable",
+          "required": "10.39_1",
+          "required_by": "mariadb105-client"
+        },
+        {
+          "fallback": "5.2.21",
+          "package": "bash",
+          "reason": "exact version unavailable",
+          "required": "5.1.16",
+          "required_by": "mariadb105-server"
+        },
+        {
+          "fallback": "0.21",
+          "package": "gettext-runtime",
+          "reason": "exact version unavailable",
+          "required": "0.22.3",
+          "required_by": "bash"
+        },
+        {
+          "fallback": "8.1.2",
+          "package": "readline",
+          "reason": "exact version unavailable",
+          "required": "8.2.7",
+          "required_by": "bash"
+        },
+        {
+          "fallback": "26.4.16_1",
+          "package": "galera26",
+          "reason": "exact version unavailable",
+          "required": "26.4.11",
+          "required_by": "mariadb105-server"
+        },
+        {
+          "fallback": "1.72.0_6",
+          "package": "boost-libs",
+          "reason": "exact version unavailable",
+          "required": "1.83.0_1",
+          "required_by": "galera26"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mariadb105-server"
+        },
+        {
+          "fallback": "2.10.4_2",
+          "package": "libxml2",
+          "reason": "exact version unavailable",
+          "required": "2.9.13_1",
+          "required_by": "mariadb105-server"
+        },
+        {
+          "fallback": "8.1.2",
+          "package": "readline",
+          "reason": "exact version unavailable",
+          "required": "8.2.7",
+          "required_by": "libxml2"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mariadb105-client"
+        },
+        {
+          "fallback": "10.42",
+          "package": "pcre2",
+          "reason": "exact version unavailable",
+          "required": "10.39_1",
+          "required_by": "mariadb105-client"
+        },
+        {
+          "fallback": "10.42",
+          "package": "pcre2",
+          "reason": "exact version unavailable",
+          "required": "10.39_1",
+          "required_by": "mariadb105-server"
+        },
+        {
+          "fallback": "3.2.7",
+          "package": "rsync",
+          "reason": "exact version unavailable",
+          "required": "3.2.3_1",
+          "required_by": "mariadb105-server"
+        },
+        {
+          "fallback": "1.16",
+          "package": "libiconv",
+          "reason": "exact version unavailable",
+          "required": "1.17",
+          "required_by": "rsync"
+        },
+        {
+          "fallback": "2.3.11",
+          "package": "unixODBC",
+          "reason": "exact version unavailable",
+          "required": "2.3.9",
+          "required_by": "mariadb105-server"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mariadb106-client"
+        },
+        {
+          "fallback": "10.42",
+          "package": "pcre2",
+          "reason": "exact version unavailable",
+          "required": "10.39_1",
+          "required_by": "mariadb106-client"
+        },
+        {
+          "fallback": "5.2.21",
+          "package": "bash",
+          "reason": "exact version unavailable",
+          "required": "5.1.16",
+          "required_by": "mariadb106-server"
+        },
+        {
+          "fallback": "0.21",
+          "package": "gettext-runtime",
+          "reason": "exact version unavailable",
+          "required": "0.22.3",
+          "required_by": "bash"
+        },
+        {
+          "fallback": "8.1.2",
+          "package": "readline",
+          "reason": "exact version unavailable",
+          "required": "8.2.7",
+          "required_by": "bash"
+        },
+        {
+          "fallback": "26.4.16_1",
+          "package": "galera26",
+          "reason": "exact version unavailable",
+          "required": "26.4.11",
+          "required_by": "mariadb106-server"
+        },
+        {
+          "fallback": "1.72.0_6",
+          "package": "boost-libs",
+          "reason": "exact version unavailable",
+          "required": "1.83.0_1",
+          "required_by": "galera26"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mariadb106-server"
+        },
+        {
+          "fallback": "2.10.4_2",
+          "package": "libxml2",
+          "reason": "exact version unavailable",
+          "required": "2.9.13_1",
+          "required_by": "mariadb106-server"
+        },
+        {
+          "fallback": "8.1.2",
+          "package": "readline",
+          "reason": "exact version unavailable",
+          "required": "8.2.7",
+          "required_by": "libxml2"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mariadb106-client"
+        },
+        {
+          "fallback": "10.42",
+          "package": "pcre2",
+          "reason": "exact version unavailable",
+          "required": "10.39_1",
+          "required_by": "mariadb106-client"
+        },
+        {
+          "fallback": "10.42",
+          "package": "pcre2",
+          "reason": "exact version unavailable",
+          "required": "10.39_1",
+          "required_by": "mariadb106-server"
+        },
+        {
+          "fallback": "3.2.7",
+          "package": "rsync",
+          "reason": "exact version unavailable",
+          "required": "3.2.3_1",
+          "required_by": "mariadb106-server"
+        },
+        {
+          "fallback": "1.16",
+          "package": "libiconv",
+          "reason": "exact version unavailable",
+          "required": "1.17",
+          "required_by": "rsync"
+        },
+        {
+          "fallback": "2.3.11",
+          "package": "unixODBC",
+          "reason": "exact version unavailable",
+          "required": "2.3.9",
+          "required_by": "mariadb106-server"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mysql56-client"
+        },
+        {
+          "fallback": "1.9.4,1",
+          "package": "liblz4",
+          "reason": "exact version unavailable",
+          "required": "1.9.3,1",
+          "required_by": "mysql56-client"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mysql56-server"
+        },
+        {
+          "fallback": "1.9.4,1",
+          "package": "liblz4",
+          "reason": "exact version unavailable",
+          "required": "1.9.3,1",
+          "required_by": "mysql56-server"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mysql56-client"
+        },
+        {
+          "fallback": "1.9.4,1",
+          "package": "liblz4",
+          "reason": "exact version unavailable",
+          "required": "1.9.3,1",
+          "required_by": "mysql56-client"
+        },
+        {
+          "fallback": "8.5.0",
+          "package": "curl",
+          "reason": "exact version unavailable",
+          "required": "7.83.1",
+          "required_by": "mysql57-client"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mysql57-client"
+        },
+        {
+          "fallback": "1.9.4,1",
+          "package": "liblz4",
+          "reason": "exact version unavailable",
+          "required": "1.9.3,1",
+          "required_by": "mysql57-client"
+        },
+        {
+          "fallback": "8.5.0",
+          "package": "curl",
+          "reason": "exact version unavailable",
+          "required": "7.83.1",
+          "required_by": "mysql57-server"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mysql57-server"
+        },
+        {
+          "fallback": "1.9.4,1",
+          "package": "liblz4",
+          "reason": "exact version unavailable",
+          "required": "1.9.3,1",
+          "required_by": "mysql57-server"
+        },
+        {
+          "fallback": "8.5.0",
+          "package": "curl",
+          "reason": "exact version unavailable",
+          "required": "7.83.1",
+          "required_by": "mysql57-client"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mysql57-client"
+        },
+        {
+          "fallback": "1.9.4,1",
+          "package": "liblz4",
+          "reason": "exact version unavailable",
+          "required": "1.9.3,1",
+          "required_by": "mysql57-client"
+        },
+        {
+          "fallback": "8.5.0",
+          "package": "curl",
+          "reason": "exact version unavailable",
+          "required": "7.83.1",
+          "required_by": "mysql80-client"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mysql80-client"
+        },
+        {
+          "fallback": "1.9.4,1",
+          "package": "liblz4",
+          "reason": "exact version unavailable",
+          "required": "1.9.3,1",
+          "required_by": "mysql80-client"
+        },
+        {
+          "fallback": "1.5.5",
+          "package": "zstd",
+          "reason": "exact version unavailable",
+          "required": "1.5.2",
+          "required_by": "mysql80-client"
+        },
+        {
+          "fallback": "8.5.0",
+          "package": "curl",
+          "reason": "exact version unavailable",
+          "required": "7.83.1",
+          "required_by": "mysql80-server"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mysql80-server"
+        },
+        {
+          "fallback": "1.9.4,1",
+          "package": "liblz4",
+          "reason": "exact version unavailable",
+          "required": "1.9.3,1",
+          "required_by": "mysql80-server"
+        },
+        {
+          "fallback": "8.5.0",
+          "package": "curl",
+          "reason": "exact version unavailable",
+          "required": "7.83.1",
+          "required_by": "mysql80-client"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "mysql80-client"
+        },
+        {
+          "fallback": "1.9.4,1",
+          "package": "liblz4",
+          "reason": "exact version unavailable",
+          "required": "1.9.3,1",
+          "required_by": "mysql80-client"
+        },
+        {
+          "fallback": "1.5.5",
+          "package": "zstd",
+          "reason": "exact version unavailable",
+          "required": "1.5.2",
+          "required_by": "mysql80-client"
+        },
+        {
+          "fallback": "1.5.5",
+          "package": "zstd",
+          "reason": "exact version unavailable",
+          "required": "1.5.2",
+          "required_by": "mysql80-server"
+        },
+        {
+          "fallback": "2.1.28",
+          "package": "cyrus-sasl",
+          "reason": "exact version unavailable",
+          "required": "2.1.28_1",
+          "required_by": "mysql81-client"
+        },
+        {
+          "fallback": "1.22.4_4",
+          "package": "groff",
+          "reason": "exact version unavailable",
+          "required": "1.23.0_2",
+          "required_by": "mysql81-client"
+        },
+        {
+          "fallback": "0.11.2",
+          "package": "hidapi",
+          "reason": "exact version unavailable",
+          "required": "0.14.0",
+          "required_by": "mysql81-client"
+        },
+        {
+          "fallback": "70.1_1,1",
+          "package": "icu",
+          "reason": "exact version unavailable",
+          "required": "74.2,1",
+          "required_by": "mysql81-client"
+        },
+        {
+          "fallback": "1.10.0",
+          "package": "libfido2",
+          "reason": "exact version unavailable",
+          "required": "1.14.0",
+          "required_by": "mysql81-client"
+        },
+        {
+          "fallback": "20211201_1",
+          "package": "libunwind",
+          "reason": "exact version unavailable",
+          "required": "20230730",
+          "required_by": "mysql81-client"
+        },
+        {
+          "fallback": "2.1.28",
+          "package": "cyrus-sasl",
+          "reason": "exact version unavailable",
+          "required": "2.1.28_1",
+          "required_by": "openldap26-client"
+        },
+        {
+          "fallback": "5.32.1_1",
+          "package": "perl5",
+          "reason": "exact version unavailable",
+          "required": "5.36.3_1",
+          "required_by": "mysql81-client"
+        },
+        {
+          "fallback": "1.22.4_4",
+          "package": "groff",
+          "reason": "exact version unavailable",
+          "required": "1.23.0_2",
+          "required_by": "mysql81-server"
+        },
+        {
+          "fallback": "0.11.2",
+          "package": "hidapi",
+          "reason": "exact version unavailable",
+          "required": "0.14.0",
+          "required_by": "mysql81-server"
+        },
+        {
+          "fallback": "70.1_1,1",
+          "package": "icu",
+          "reason": "exact version unavailable",
+          "required": "74.2,1",
+          "required_by": "mysql81-server"
+        },
+        {
+          "fallback": "1.10.0",
+          "package": "libfido2",
+          "reason": "exact version unavailable",
+          "required": "1.14.0",
+          "required_by": "mysql81-server"
+        },
+        {
+          "fallback": "20211201_1",
+          "package": "libunwind",
+          "reason": "exact version unavailable",
+          "required": "20230730",
+          "required_by": "mysql81-server"
+        },
+        {
+          "fallback": "2.1.28",
+          "package": "cyrus-sasl",
+          "reason": "exact version unavailable",
+          "required": "2.1.28_1",
+          "required_by": "mysql81-client"
+        },
+        {
+          "fallback": "1.22.4_4",
+          "package": "groff",
+          "reason": "exact version unavailable",
+          "required": "1.23.0_2",
+          "required_by": "mysql81-client"
+        },
+        {
+          "fallback": "0.11.2",
+          "package": "hidapi",
+          "reason": "exact version unavailable",
+          "required": "0.14.0",
+          "required_by": "mysql81-client"
+        },
+        {
+          "fallback": "70.1_1,1",
+          "package": "icu",
+          "reason": "exact version unavailable",
+          "required": "74.2,1",
+          "required_by": "mysql81-client"
+        },
+        {
+          "fallback": "1.10.0",
+          "package": "libfido2",
+          "reason": "exact version unavailable",
+          "required": "1.14.0",
+          "required_by": "mysql81-client"
+        },
+        {
+          "fallback": "20211201_1",
+          "package": "libunwind",
+          "reason": "exact version unavailable",
+          "required": "20230730",
+          "required_by": "mysql81-client"
+        },
+        {
+          "fallback": "2.1.28",
+          "package": "cyrus-sasl",
+          "reason": "exact version unavailable",
+          "required": "2.1.28_1",
+          "required_by": "openldap26-client"
+        },
+        {
+          "fallback": "5.32.1_1",
+          "package": "perl5",
+          "reason": "exact version unavailable",
+          "required": "5.36.3_1",
+          "required_by": "mysql81-client"
+        },
+        {
+          "fallback": "5.32.1_1",
+          "package": "perl5",
+          "reason": "exact version unavailable",
+          "required": "5.36.3_1",
+          "required_by": "mysql81-server"
+        },
+        {
+          "fallback": "2.3.4",
+          "package": "libidn2",
+          "reason": "exact version unavailable",
+          "required": "2.3.2",
+          "required_by": "gnutls"
+        },
+        {
+          "fallback": "1.1",
+          "package": "libunistring",
+          "reason": "exact version unavailable",
+          "required": "1.0",
+          "required_by": "gnutls"
+        },
+        {
+          "fallback": "2.10.4_2",
+          "package": "libxml2",
+          "reason": "exact version unavailable",
+          "required": "2.9.13_1",
+          "required_by": "glib"
+        },
+        {
+          "fallback": "8.1.2",
+          "package": "readline",
+          "reason": "exact version unavailable",
+          "required": "8.2.7",
+          "required_by": "libxml2"
+        },
+        {
+          "fallback": "3.1.20230828,1",
+          "package": "libedit",
+          "reason": "exact version unavailable",
+          "required": "3.1.20210910,1",
+          "required_by": "sqlite3"
+        },
+        {
+          "fallback": "1.9.4,1",
+          "package": "liblz4",
+          "reason": "exact version unavailable",
+          "required": "1.9.3,1",
+          "required_by": "subversion"
+        }
+      ],
+      "id": "local-existing-12",
+      "package_count": 148,
+      "path": "FreeBSD:12:amd64/repos/local-existing-12",
+      "priority": 0,
+      "root_count": 44,
+      "roots": [
+        "boost-all",
+        "compat11x-amd64",
+        "compat12x-amd64",
+        "compat7x-amd64",
+        "compat8x-amd64",
+        "compat9x-amd64",
+        "cryptopp",
+        "devil",
+        "freecolor",
+        "gcc",
+        "gcc10",
+        "gcc11",
+        "gcc12",
+        "gcc13",
+        "gcc48",
+        "gcc8",
+        "gcc9",
+        "gdb",
+        "gmake",
+        "makedepend",
+        "mariadb1011-client",
+        "mariadb1011-server",
+        "mariadb103-client",
+        "mariadb103-server",
+        "mariadb104-client",
+        "mariadb104-server",
+        "mariadb105-client",
+        "mariadb105-server",
+        "mariadb106-client",
+        "mariadb106-server",
+        "mysql55-client",
+        "mysql55-server",
+        "mysql56-client",
+        "mysql56-server",
+        "mysql57-client",
+        "mysql57-server",
+        "mysql80-client",
+        "mysql80-server",
+        "mysql81-client",
+        "mysql81-server",
+        "nano",
+        "python",
+        "screen",
+        "subversion"
+      ],
+      "source_id": "local-existing-12",
+      "source_url": null
     }
   ],
-  "package_count": 148,
-  "packages": {
-    "apr": {
-      "filename": "apr-1.7.0.1.6.1_2.pkg",
-      "role": "dependency",
-      "sha256": "45e8c14d379640ff952c153b88957f60f9e3396a90ddef81a9158b1ceab41afc",
-      "size": 478392,
-      "source": "local-existing-12",
-      "version": "1.7.0.1.6.1_2"
-    },
-    "bash": {
-      "filename": "bash-5.2.21.pkg",
-      "role": "dependency",
-      "sha256": "1128388ea824cbbf1b5cdd27a2dafbb78095514eac43e9cf556b2f32ebe29543",
-      "size": 1653720,
-      "source": "sggs-12-latest",
-      "version": "5.2.21"
-    },
-    "binutils": {
-      "filename": "binutils-2.37_2,1.pkg",
-      "role": "dependency",
-      "sha256": "3d28c7ea116446d6105abe6cd9fd349227c002cb2701035dfd023741ceb2a196",
-      "size": 18334484,
-      "source": "local-existing-12",
-      "version": "2.37_2,1"
-    },
-    "boost-all": {
-      "filename": "boost-all-1.72.0.pkg",
-      "role": "root",
-      "sha256": "f2bf944767d67287901844a33e79f2ba36fe978a55ce8883e309decbcaf07b67",
-      "size": 928,
-      "source": "local-existing-12",
-      "version": "1.72.0"
-    },
-    "boost-docs": {
-      "filename": "boost-docs-1.72.0.pkg",
-      "role": "dependency",
-      "sha256": "81b65c5924fad1c0309a84afe1a10c8be98f64551a5483ba019a0df31edc5c6f",
-      "size": 40963804,
-      "source": "local-existing-12",
-      "version": "1.72.0"
-    },
-    "boost-jam": {
-      "filename": "boost-jam-1.72.0.pkg",
-      "role": "dependency",
-      "sha256": "5e8b593bdbe2e912affff585851770f2a5188e7d6773faf8ea1cd7636c516bae",
-      "size": 96960,
-      "source": "local-existing-12",
-      "version": "1.72.0"
-    },
-    "boost-libs": {
-      "filename": "boost-libs-1.72.0_6.pkg",
-      "role": "dependency",
-      "sha256": "e242d2cb7d3d871dd1bf74627421d2981a9384bc6edd549e1fdc4ee90d037c8b",
-      "size": 13096796,
-      "source": "local-existing-12",
-      "version": "1.72.0_6"
-    },
-    "ca_root_nss": {
-      "filename": "ca_root_nss-3.76.pkg",
-      "role": "dependency",
-      "sha256": "92cf03adff129b6fc0949ad1acf11d18d6062912045a368b98c63e64cf97055c",
-      "size": 265304,
-      "source": "local-existing-12",
-      "version": "3.76"
-    },
-    "compat10x-amd64": {
-      "filename": "compat10x-amd64-10.4.1004000.20181014.pkg",
-      "role": "dependency",
-      "sha256": "98af8a17682ecab5b08bfebcddbb898bc67152a50cb161bfcbea05390da82c8f",
-      "size": 2433584,
-      "source": "local-existing-12",
-      "version": "10.4.1004000.20181014"
-    },
-    "compat11x-amd64": {
-      "filename": "compat11x-amd64-11.2.1102000.20181014.pkg",
-      "role": "root",
-      "sha256": "ca1beaa771caf942ceb11001bcf37539a8de1fa5bb5d335a6e17522220f114ee",
-      "size": 2392052,
-      "source": "local-existing-12",
-      "version": "11.2.1102000.20181014"
-    },
-    "compat12x-amd64": {
-      "filename": "compat12x-amd64-12.2.1202000.20210406.pkg",
-      "role": "root",
-      "sha256": "502c1aa0f8cc7e94360674a31cc1c437c58d137bcbe3bfb2fca95383e1c707fe",
-      "size": 1073928,
-      "source": "sggs-12-latest",
-      "version": "12.2.1202000.20210406"
-    },
-    "compat7x-amd64": {
-      "filename": "compat7x-amd64-7.4.704000.201310.1.pkg",
-      "role": "root",
-      "sha256": "7f975b33ffdbdb04f393d3103bb2ce6f81f00a7b0c322615c3de6b5073349d54",
-      "size": 5169280,
-      "source": "local-existing-12",
-      "version": "7.4.704000.201310.1"
-    },
-    "compat8x-amd64": {
-      "filename": "compat8x-amd64-8.4.804000.20151116.pkg",
-      "role": "root",
-      "sha256": "b6fd9db05d0fc3758a592e143afd5a96d8754a985c311a82ddce1edef70d6e0c",
-      "size": 428632,
-      "source": "local-existing-12",
-      "version": "8.4.804000.20151116"
-    },
-    "compat9x-amd64": {
-      "filename": "compat9x-amd64-9.3.903000.20170608.pkg",
-      "role": "root",
-      "sha256": "90d57751f028ed338d0242bf937bbc6fb455edb517ddd4fd0b0ba2e0928f4a3b",
-      "size": 2915148,
-      "source": "local-existing-12",
-      "version": "9.3.903000.20170608"
-    },
-    "cryptopp": {
-      "filename": "cryptopp-8.6.0.pkg",
-      "role": "root",
-      "sha256": "512c62eb3d8ef364e4577edec9c7c2c42960f18791fa9ef370238a435e65f766",
-      "size": 3973148,
-      "source": "local-existing-12",
-      "version": "8.6.0"
-    },
-    "curl": {
-      "filename": "curl-8.5.0.pkg",
-      "role": "dependency",
-      "sha256": "93b95728a48a864f83898ac282be077276422081bed3391d32c003d073330c44",
-      "size": 1566480,
-      "source": "sggs-12-latest",
-      "version": "8.5.0"
-    },
-    "cyrus-sasl": {
-      "filename": "cyrus-sasl-2.1.28.pkg",
-      "role": "dependency",
-      "sha256": "39bcc1c7b4d1ed17e29372a45207384695f70414c90c97ab4629aad707749bac",
-      "size": 989112,
-      "source": "local-existing-12",
-      "version": "2.1.28"
-    },
-    "db5": {
-      "filename": "db5-5.3.28_8.pkg",
-      "role": "dependency",
-      "sha256": "df04be00a3c1ada4aed47d30a5ac824e90c6087951960c3ff0e96e605327e596",
-      "size": 12914176,
-      "source": "local-existing-12",
-      "version": "5.3.28_8"
-    },
-    "devil": {
-      "filename": "devil-1.8.0,1.pkg",
-      "role": "root",
-      "sha256": "e21088e2376a1105d2d9388f54e5f865f133ab2741787f61092c3c8b09a4188f",
-      "size": 1552724,
-      "source": "local-existing-12",
-      "version": "1.8.0,1"
-    },
-    "expat": {
-      "filename": "expat-2.4.8.pkg",
-      "role": "dependency",
-      "sha256": "161932c6fa348ed7db9930f17d2f8b665dfe1e6f9409cc83d3761bcb7f9c3054",
-      "size": 108364,
-      "source": "local-existing-12",
-      "version": "2.4.8"
-    },
-    "freecolor": {
-      "filename": "freecolor-0.9.3.pkg",
-      "role": "root",
-      "sha256": "4e3eea56d1f459203ca7c244cb46886d8bfbb2427954bf07ca04222425b02ebb",
-      "size": 6632,
-      "source": "local-existing-12",
-      "version": "0.9.3"
-    },
-    "freeglut": {
-      "filename": "freeglut-3.2.1.pkg",
-      "role": "dependency",
-      "sha256": "234231420d99de4937ac6d9f22b2ede731b9a551b1864e0b933acabc80661cab",
-      "size": 243884,
-      "source": "local-existing-12",
-      "version": "3.2.1"
-    },
-    "galera": {
-      "filename": "galera-25.3.36.pkg",
-      "role": "dependency",
-      "sha256": "578b48d8597df1d9bf342b5fee331a522e9f3c488821814c8602850d2a10b8b5",
-      "size": 757644,
-      "source": "local-existing-12",
-      "version": "25.3.36"
-    },
-    "galera26": {
-      "filename": "galera26-26.4.16_1.pkg",
-      "role": "dependency",
-      "sha256": "c337271104f788b3cf09817733aa0c7527b5a118ccdf3ad936cc767d027c794d",
-      "size": 848708,
-      "source": "sggs-12-latest",
-      "version": "26.4.16_1"
-    },
-    "gcc": {
-      "filename": "gcc-10_4.pkg",
-      "role": "root",
-      "sha256": "1a991ddd35e53af1f6ad5f05e00c38927cd6916d8d45081dc20c9eed189775a1",
-      "size": 828,
-      "source": "local-existing-12",
-      "version": "10_4"
-    },
-    "gcc10": {
-      "filename": "gcc10-10.3.0.pkg",
-      "role": "root",
-      "sha256": "b285f5682ce09540f2407051063714273b347c7afe3bac1f7c78d8d54257c369",
-      "size": 56791788,
-      "source": "local-existing-12",
-      "version": "10.3.0"
-    },
-    "gcc11": {
-      "filename": "gcc11-11.2.0.pkg",
-      "role": "root",
-      "sha256": "3ef1608cb7441822094c475194e630a5a133447f6a0f331eb98e328a4010fdab",
-      "size": 71259688,
-      "source": "local-existing-12",
-      "version": "11.2.0"
-    },
-    "gcc12": {
-      "filename": "gcc12-12.2.0_7.pkg",
-      "role": "root",
-      "sha256": "d9ceb4db2387061aec281868c3a84565068ca7a363ba398d1f4fc1363befb35c",
-      "size": 85239360,
-      "source": "sggs-12-latest",
-      "version": "12.2.0_7"
-    },
-    "gcc13": {
-      "filename": "gcc13-13.2.0_1.pkg",
-      "role": "root",
-      "sha256": "2fa82963eb619891a50ab22a3662b334a24c40047409be7aa0582057e3b72b58",
-      "size": 88445792,
-      "source": "sggs-12-latest",
-      "version": "13.2.0_1"
-    },
-    "gcc48": {
-      "filename": "gcc48-4.8.5_14.pkg",
-      "role": "root",
-      "sha256": "0ce73b74e4898b62218755181da600a62246a6cf95880744717f5be8bba73038",
-      "size": 16656748,
-      "source": "local-existing-12",
-      "version": "4.8.5_14"
-    },
-    "gcc8": {
-      "filename": "gcc8-8.5.0_1.pkg",
-      "role": "root",
-      "sha256": "80afa3f0df29d5f397720890ffa9f867acf779a8817da50d372d327a5cfe9b7b",
-      "size": 44688936,
-      "source": "local-existing-12",
-      "version": "8.5.0_1"
-    },
-    "gcc9": {
-      "filename": "gcc9-9.4.0_1.pkg",
-      "role": "root",
-      "sha256": "f2dae375167521b0ac8cbd4136815865b55cc17490a987c6dfa0470b15855f7c",
-      "size": 46577812,
-      "source": "local-existing-12",
-      "version": "9.4.0_1"
-    },
-    "gdb": {
-      "filename": "gdb-11.2.pkg",
-      "role": "root",
-      "sha256": "c8ca061985afee6bbb93dd5250ac9a21f280eed80ad88b768bfe61c9db14b734",
-      "size": 11257088,
-      "source": "local-existing-12",
-      "version": "11.2"
-    },
-    "gdbm": {
-      "filename": "gdbm-1.23.pkg",
-      "role": "dependency",
-      "sha256": "b49b9e98f3ff8a6a2017ae449c2562532412a2b7ab50ad4c8dfa1d6e0d7427fa",
-      "size": 213004,
-      "source": "local-existing-12",
-      "version": "1.23"
-    },
-    "gettext-runtime": {
-      "filename": "gettext-runtime-0.21.pkg",
-      "role": "dependency",
-      "sha256": "c956db57ed32088e2e3cd4487e3e8ec00410810a0c71107632ba91857e55b670",
-      "size": 168808,
-      "source": "local-existing-12",
-      "version": "0.21"
-    },
-    "glib": {
-      "filename": "glib-2.70.4_3,2.pkg",
-      "role": "dependency",
-      "sha256": "8e66defd5449c8c66fe0136f58dd418180bccad539713b0845333e547df32463",
-      "size": 3400200,
-      "source": "local-existing-12",
-      "version": "2.70.4_3,2"
-    },
-    "gmake": {
-      "filename": "gmake-4.3_2.pkg",
-      "role": "root",
-      "sha256": "3deeb767a5ce32b1187fae5d0a856c8e432e80c80e358998f06a6de0c39c0b57",
-      "size": 425760,
-      "source": "local-existing-12",
-      "version": "4.3_2"
-    },
-    "gmp": {
-      "filename": "gmp-6.2.1.pkg",
-      "role": "dependency",
-      "sha256": "6bf99df12cd27576f74dc541320386842d8a17da923322c09ade4d8fdee4aecb",
-      "size": 488416,
-      "source": "local-existing-12",
-      "version": "6.2.1"
-    },
-    "gnupg": {
-      "filename": "gnupg-2.3.3_3.pkg",
-      "role": "dependency",
-      "sha256": "b7a4855c3c899148f3c7997cd79097bb794309d1eb664a3af27038d69b599219",
-      "size": 2408988,
-      "source": "local-existing-12",
-      "version": "2.3.3_3"
-    },
-    "gnutls": {
-      "filename": "gnutls-3.6.16.pkg",
-      "role": "dependency",
-      "sha256": "0cba361818beeedc53ca5439f325a954afee69da8015c01ab10411bd1a97ad15",
-      "size": 2523332,
-      "source": "local-existing-12",
-      "version": "3.6.16"
-    },
-    "groff": {
-      "filename": "groff-1.22.4_4.pkg",
-      "role": "dependency",
-      "sha256": "e029df305e7ccf42a7690624c0150e52665105d5e35288bd9823039f8b0c4010",
-      "size": 2903836,
-      "source": "local-existing-12",
-      "version": "1.22.4_4"
-    },
-    "hidapi": {
-      "filename": "hidapi-0.11.2.pkg",
-      "role": "dependency",
-      "sha256": "7113f84ba58d878c411b3b27f10d11940d43198d12c13884db3bbbe0441a834f",
-      "size": 32904,
-      "source": "local-existing-12",
-      "version": "0.11.2"
-    },
-    "icu": {
-      "filename": "icu-70.1_1,1.pkg",
-      "role": "dependency",
-      "sha256": "af4488688eed991656ada76cc167fdbdc380d881aae2c2aae43e91b2923ac1e0",
-      "size": 11124216,
-      "source": "local-existing-12",
-      "version": "70.1_1,1"
-    },
-    "indexinfo": {
-      "filename": "indexinfo-0.3.1.pkg",
-      "role": "dependency",
-      "sha256": "6ec54c2fe9bceabea3585326103666992e3527115067d450adbd515152561017",
-      "size": 5844,
-      "source": "local-existing-12",
-      "version": "0.3.1"
-    },
-    "jasper": {
-      "filename": "jasper-2.0.33.pkg",
-      "role": "dependency",
-      "sha256": "c7533f6bc8ec9bcce3f4cd5f0c26533ed425cff6881192ae7e015ec1b4a6a8cd",
-      "size": 532812,
-      "source": "local-existing-12",
-      "version": "2.0.33"
-    },
-    "jbigkit": {
-      "filename": "jbigkit-2.1_1.pkg",
-      "role": "dependency",
-      "sha256": "4120e060f831425d34bea27c373873557a3cff7d874148899c911a666eac1dd9",
-      "size": 74576,
-      "source": "local-existing-12",
-      "version": "2.1_1"
-    },
-    "jpeg-turbo": {
-      "filename": "jpeg-turbo-2.1.3.pkg",
-      "role": "dependency",
-      "sha256": "98fae2529c480e20e63282dd74e2352bf20a117765ea815a1617653aca9542ad",
-      "size": 374684,
-      "source": "local-existing-12",
-      "version": "2.1.3"
-    },
-    "lcms": {
-      "filename": "lcms-1.19_6,1.pkg",
-      "role": "dependency",
-      "sha256": "9c1de903711ec5ce0e26f2e46d573b77e17f4108801671fe24fb26de8b5969a1",
-      "size": 239772,
-      "source": "local-existing-12",
-      "version": "1.19_6,1"
-    },
-    "lcms2": {
-      "filename": "lcms2-2.12.pkg",
-      "role": "dependency",
-      "sha256": "a911caeb57ef82e0e23ec9207bd9875214ac4909216431544aeb3fd8d3425537",
-      "size": 2036820,
-      "source": "local-existing-12",
-      "version": "2.12"
-    },
-    "libGLU": {
-      "filename": "libGLU-9.0.2_1.pkg",
-      "role": "dependency",
-      "sha256": "41dd126fe038fb3eddb6161053d8561f6acb2f55364e975976dd219b7395ed5d",
-      "size": 210544,
-      "source": "local-existing-12",
-      "version": "9.0.2_1"
-    },
-    "libICE": {
-      "filename": "libICE-1.0.10,1.pkg",
-      "role": "dependency",
-      "sha256": "57af98dee4463e9fa082e18770b3ae110c2071cefd3fe3ab73aaef0d912768de",
-      "size": 94288,
-      "source": "local-existing-12",
-      "version": "1.0.10,1"
-    },
-    "libSM": {
-      "filename": "libSM-1.2.3,1.pkg",
-      "role": "dependency",
-      "sha256": "443bdba499f79f9cf8b9f9143ea234967b76dde5e04f0357a00ecb69140ef725",
-      "size": 23532,
-      "source": "local-existing-12",
-      "version": "1.2.3,1"
-    },
-    "libX11": {
-      "filename": "libX11-1.7.2,1.pkg",
-      "role": "dependency",
-      "sha256": "21308aa8b8d5d8516acd6bb952ea629fed908095c3feb0d6bd976d221f927188",
-      "size": 1673020,
-      "source": "local-existing-12",
-      "version": "1.7.2,1"
-    },
-    "libXau": {
-      "filename": "libXau-1.0.9.pkg",
-      "role": "dependency",
-      "sha256": "6095905ffbf95a92cdd6a1eec1c1e06532dd29e62070a79015df8dbe743e7ce3",
-      "size": 11336,
-      "source": "local-existing-12",
-      "version": "1.0.9"
-    },
-    "libXdmcp": {
-      "filename": "libXdmcp-1.1.3.pkg",
-      "role": "dependency",
-      "sha256": "a4bc655f256fda223a35b767bb169dfab1169d93e0a0ee7f951f727e85f86164",
-      "size": 14496,
-      "source": "local-existing-12",
-      "version": "1.1.3"
-    },
-    "libXext": {
-      "filename": "libXext-1.3.4,1.pkg",
-      "role": "dependency",
-      "sha256": "2424ab6c72e04571e1f6abe160b4e1738e1ec6b65e25d11373d0aa31b7dc9051",
-      "size": 97028,
-      "source": "local-existing-12",
-      "version": "1.3.4,1"
-    },
-    "libXfixes": {
-      "filename": "libXfixes-6.0.0.pkg",
-      "role": "dependency",
-      "sha256": "6bd790b18d38a94f313fcfb483d5d38ef2d0a04789b39261f8ac606e05ee3a1f",
-      "size": 14528,
-      "source": "local-existing-12",
-      "version": "6.0.0"
-    },
-    "libXi": {
-      "filename": "libXi-1.8,1.pkg",
-      "role": "dependency",
-      "sha256": "ef55dfe0c880478a30c7f4a98201a1a82302b698d32d31c8de097898c7919c0a",
-      "size": 127856,
-      "source": "local-existing-12",
-      "version": "1.8,1"
-    },
-    "libXmu": {
-      "filename": "libXmu-1.1.3,1.pkg",
-      "role": "dependency",
-      "sha256": "edb534c90cb8f5120567bf4fc9da1c3bd91d1a4fc720d6239792afdeee73fd01",
-      "size": 97480,
-      "source": "local-existing-12",
-      "version": "1.1.3,1"
-    },
-    "libXrandr": {
-      "filename": "libXrandr-1.5.2.pkg",
-      "role": "dependency",
-      "sha256": "20db81efd3158e6d74f80eb7bf6df78873e3423658eebb3e4c4ab87069907b15",
-      "size": 30920,
-      "source": "local-existing-12",
-      "version": "1.5.2"
-    },
-    "libXrender": {
-      "filename": "libXrender-0.9.10_2.pkg",
-      "role": "dependency",
-      "sha256": "237413b6522ca02e18020cc4e9eb82e68df42619c8f1ba14ba65abd2ae6f580c",
-      "size": 29780,
-      "source": "local-existing-12",
-      "version": "0.9.10_2"
-    },
-    "libXt": {
-      "filename": "libXt-1.2.1,1.pkg",
-      "role": "dependency",
-      "sha256": "58b7364704074fc1a10e053d5423144f3d1c33ff142a9bad42b59fde0f41b5fa",
-      "size": 459588,
-      "source": "local-existing-12",
-      "version": "1.2.1,1"
-    },
-    "libXxf86vm": {
-      "filename": "libXxf86vm-1.1.4_3.pkg",
-      "role": "dependency",
-      "sha256": "8a553f912dc3a231c475d0d2c0edf38d3c0ba012d12c334365b9e08212423a73",
-      "size": 17740,
-      "source": "local-existing-12",
-      "version": "1.1.4_3"
-    },
-    "libassuan": {
-      "filename": "libassuan-2.5.5.pkg",
-      "role": "dependency",
-      "sha256": "ba1c18d5583f293e754fee125fffbcc8f374869fd4d5a67fe75597f9a46eddc9",
-      "size": 79660,
-      "source": "local-existing-12",
-      "version": "2.5.5"
-    },
-    "libcbor": {
-      "filename": "libcbor-0.9.0.pkg",
-      "role": "dependency",
-      "sha256": "86a66b83ebb3e14f9f7d857b5dbbd81de4af3b05e36f689a798077da2380454c",
-      "size": 30356,
-      "source": "local-existing-12",
-      "version": "0.9.0"
-    },
-    "libcjson": {
-      "filename": "libcjson-1.7.15.pkg",
-      "role": "dependency",
-      "sha256": "a192dba029c67c3bd5b166f52c56e9ac3bf05a52610890c3da6e80046af27032",
-      "size": 34924,
-      "source": "local-existing-12",
-      "version": "1.7.15"
-    },
-    "libedit": {
-      "filename": "libedit-3.1.20230828,1.pkg",
-      "role": "dependency",
-      "sha256": "a1684fb1024085fee73f93f4fb82df9cdd6c9e8b9e9d2d64a78de008ac138665",
-      "size": 142788,
-      "source": "sggs-12-latest",
-      "version": "3.1.20230828,1"
-    },
-    "libevent": {
-      "filename": "libevent-2.1.12.pkg",
-      "role": "dependency",
-      "sha256": "65c1f1b273ce2d1189bd5a2355b46f57ddf67989cec477839064549faff6ed90",
-      "size": 327440,
-      "source": "local-existing-12",
-      "version": "2.1.12"
-    },
-    "libffi": {
-      "filename": "libffi-3.3_1.pkg",
-      "role": "dependency",
-      "sha256": "b4c4606b8edb624b267085c7d9221f073d7cb6a56324196a08ebf7dc983aa848",
-      "size": 40080,
-      "source": "local-existing-12",
-      "version": "3.3_1"
-    },
-    "libfido2": {
-      "filename": "libfido2-1.10.0.pkg",
-      "role": "dependency",
-      "sha256": "58c28c6492171e872e400ea74ed7196fe7ffc3b40832eb2f8e84cc13b69aed36",
-      "size": 207916,
-      "source": "local-existing-12",
-      "version": "1.10.0"
-    },
-    "libfmt": {
-      "filename": "libfmt-10.1.1.pkg",
-      "role": "dependency",
-      "sha256": "2866b76daade7e6816c0e71832e269cf8c79dddedc6f01005141a21c63ee09ed",
-      "size": 171020,
-      "source": "sggs-12-latest",
-      "version": "10.1.1"
-    },
-    "libgcrypt": {
-      "filename": "libgcrypt-1.9.4.pkg",
-      "role": "dependency",
-      "sha256": "56d4e84e7b87779dc9a89085b583505e706a9c772e7d1e3b49468ce23344a206",
-      "size": 861384,
-      "source": "local-existing-12",
-      "version": "1.9.4"
-    },
-    "libglvnd": {
-      "filename": "libglvnd-1.4.0_2.pkg",
-      "role": "dependency",
-      "sha256": "d3b70a3d8feee7792a18afe46567a7db4f998a6bdd85409f39a4933a9801bb96",
-      "size": 349840,
-      "source": "local-existing-12",
-      "version": "1.4.0_2"
-    },
-    "libgpg-error": {
-      "filename": "libgpg-error-1.44.pkg",
-      "role": "dependency",
-      "sha256": "b685409318b456c3abd642abc534f9748be9ded3f92c450b870b9fa03190053c",
-      "size": 317940,
-      "source": "local-existing-12",
-      "version": "1.44"
-    },
-    "libiconv": {
-      "filename": "libiconv-1.16.pkg",
-      "role": "dependency",
-      "sha256": "2b09c29d93a629a2bd9067c8e18177ea30e864b8a898f80ee491df5730e3da83",
-      "size": 620160,
-      "source": "local-existing-12",
-      "version": "1.16"
-    },
-    "libidn2": {
-      "filename": "libidn2-2.3.4.pkg",
-      "role": "dependency",
-      "sha256": "4a08dd6e46f81782a3372af77ad7d8952c20f071939451ef0d53a7a297cd140f",
-      "size": 137188,
-      "source": "sggs-12-latest",
-      "version": "2.3.4"
-    },
-    "libksba": {
-      "filename": "libksba-1.6.0.pkg",
-      "role": "dependency",
-      "sha256": "b434f0080e23075cb714bbd47bfa021d146ea19d7f054f551380555941d763e7",
-      "size": 182056,
-      "source": "local-existing-12",
-      "version": "1.6.0"
-    },
-    "liblz4": {
-      "filename": "liblz4-1.9.4,1.pkg",
-      "role": "dependency",
-      "sha256": "91b2c4f378bdb16603b8b9c03db281f3aed47f3cd208a6d8070827316c288450",
-      "size": 148348,
-      "source": "sggs-12-latest",
-      "version": "1.9.4,1"
-    },
-    "libmng": {
-      "filename": "libmng-1.0.10_3.pkg",
-      "role": "dependency",
-      "sha256": "89302bfb8fb240dd729ea00fbc3dd00d03c401716a14ee3a46bd3bfe9bb57d3f",
-      "size": 221240,
-      "source": "local-existing-12",
-      "version": "1.0.10_3"
-    },
-    "libnghttp2": {
-      "filename": "libnghttp2-1.58.0.pkg",
-      "role": "dependency",
-      "sha256": "41b98eb6daaf751a6480c834a71bdf43a2a81b0948e0645fc54d0c5a4cb468be",
-      "size": 133892,
-      "source": "sggs-12-latest",
-      "version": "1.58.0"
-    },
-    "libpaper": {
-      "filename": "libpaper-1.1.28.pkg",
-      "role": "dependency",
-      "sha256": "6049a42108630d872c85ef6013676f3c47fe664201ea3b087dbdb28b599945df",
-      "size": 24620,
-      "source": "local-existing-12",
-      "version": "1.1.28"
-    },
-    "libpsl": {
-      "filename": "libpsl-0.21.2_4.pkg",
-      "role": "dependency",
-      "sha256": "4f4b14ba8da5b616c7fce3b50ee8b6ea17f7e0a9c4b3d80a0560d657a64f6274",
-      "size": 61268,
-      "source": "sggs-12-latest",
-      "version": "0.21.2_4"
-    },
-    "libpthread-stubs": {
-      "filename": "libpthread-stubs-0.4.pkg",
-      "role": "dependency",
-      "sha256": "d83d5b7111fa823259bc023a58cdd735a964ce96881bf6d67b4f335b80f31164",
-      "size": 2028,
-      "source": "local-existing-12",
-      "version": "0.4"
-    },
-    "libssh2": {
-      "filename": "libssh2-1.11.0,3.pkg",
-      "role": "dependency",
-      "sha256": "a1cc368d2bd25396dc6adfd336b847ef90d90a0b8af26496909bd93470df08bc",
-      "size": 274920,
-      "source": "sggs-12-latest",
-      "version": "1.11.0,3"
-    },
-    "libstatgrab": {
-      "filename": "libstatgrab-0.92.1.pkg",
-      "role": "dependency",
-      "sha256": "2c294ba35566916320c6ba6ab969c933fa89195355f3685c484f06e03364f337",
-      "size": 120240,
-      "source": "local-existing-12",
-      "version": "0.92.1"
-    },
-    "libtasn1": {
-      "filename": "libtasn1-4.18.0.pkg",
-      "role": "dependency",
-      "sha256": "6b4e6823d4f2c9a558b825c729ec3772ea448f5f3accdb6f1ed54d847b923c15",
-      "size": 151380,
-      "source": "local-existing-12",
-      "version": "4.18.0"
-    },
-    "libunistring": {
-      "filename": "libunistring-1.1.pkg",
-      "role": "dependency",
-      "sha256": "23e72dbe38df5eeac068c044e1702803f0c005b5a8e2358543233a7bffba1344",
-      "size": 570868,
-      "source": "sggs-12-latest",
-      "version": "1.1"
-    },
-    "libunwind": {
-      "filename": "libunwind-20211201_1.pkg",
-      "role": "dependency",
-      "sha256": "e63f351ddcc4771cc4b0615f92490cc7568fe6b904ea63ae6f6ceb8f53ba2397",
-      "size": 130288,
-      "source": "local-existing-12",
-      "version": "20211201_1"
-    },
-    "libxcb": {
-      "filename": "libxcb-1.14_1.pkg",
-      "role": "dependency",
-      "sha256": "53a76bf5e6320eb2d802cd61163d698f82841a20af09ab1e4c79dd03f2b3d6c9",
-      "size": 1054828,
-      "source": "local-existing-12",
-      "version": "1.14_1"
-    },
-    "libxml2": {
-      "filename": "libxml2-2.10.4_2.pkg",
-      "role": "dependency",
-      "sha256": "e599e010dd53f7bf1ab48984b92b6598252c82e950021f13ebb7cb061cf078b2",
-      "size": 1204392,
-      "source": "sggs-12-latest",
-      "version": "2.10.4_2"
-    },
-    "makedepend": {
-      "filename": "makedepend-1.0.6,1.pkg",
-      "role": "root",
-      "sha256": "cbad3e8b822b4741f2505f244ee5a2c878130ac0b29f6a4b65b98a15e12a9df8",
-      "size": 20864,
-      "source": "local-existing-12",
-      "version": "1.0.6,1"
-    },
-    "mariadb1011-client": {
-      "filename": "mariadb1011-client-10.11.6_1.pkg",
-      "role": "root",
-      "sha256": "c72d404a46382ba080146d6cebbea26586a5069271689a43256c5c7c8103c24b",
-      "size": 2171180,
-      "source": "sggs-12-latest",
-      "version": "10.11.6_1"
-    },
-    "mariadb1011-server": {
-      "filename": "mariadb1011-server-10.11.6_1.pkg",
-      "role": "root",
-      "sha256": "67ec314800e24acd942a664fca93ebb18cd1c13948d6b52cebbd41255186d7bb",
-      "size": 45568056,
-      "source": "sggs-12-latest",
-      "version": "10.11.6_1"
-    },
-    "mariadb103-client": {
-      "filename": "mariadb103-client-10.3.35.pkg",
-      "role": "root",
-      "sha256": "989f315826492b2ec324352f00d588ade3e683f1dbfcee03bbd98964b8a07b26",
-      "size": 1740604,
-      "source": "local-existing-12",
-      "version": "10.3.35"
-    },
-    "mariadb103-server": {
-      "filename": "mariadb103-server-10.3.35.pkg",
-      "role": "root",
-      "sha256": "c07cf914830dc440450533bc0827cb8500d62f7e642929e86f1b890b31519fc0",
-      "size": 35388800,
-      "source": "local-existing-12",
-      "version": "10.3.35"
-    },
-    "mariadb104-client": {
-      "filename": "mariadb104-client-10.4.25.pkg",
-      "role": "root",
-      "sha256": "7f3961745c6d45c79206cd1be31811d4147fd7cf27bc452f730113e95602a3ff",
-      "size": 1449348,
-      "source": "local-existing-12",
-      "version": "10.4.25"
-    },
-    "mariadb104-server": {
-      "filename": "mariadb104-server-10.4.25.pkg",
-      "role": "root",
-      "sha256": "9869b4d460c7b13b7c9567f08178c5b78f46a54e024c6df5c745cc0761bb638d",
-      "size": 33555408,
-      "source": "local-existing-12",
-      "version": "10.4.25"
-    },
-    "mariadb105-client": {
-      "filename": "mariadb105-client-10.5.16.pkg",
-      "role": "root",
-      "sha256": "945ad3f737400291cad6b14b8789a514ace55a0379519d912e27bc59996d9422",
-      "size": 1792792,
-      "source": "local-existing-12",
-      "version": "10.5.16"
-    },
-    "mariadb105-server": {
-      "filename": "mariadb105-server-10.5.16.pkg",
-      "role": "root",
-      "sha256": "df8e518e8ea9b633281dfede01f4168ed3085c04a454d97713381be126c746bc",
-      "size": 29331332,
-      "source": "local-existing-12",
-      "version": "10.5.16"
-    },
-    "mariadb106-client": {
-      "filename": "mariadb106-client-10.6.8.pkg",
-      "role": "root",
-      "sha256": "39a5f60c0f6d3f7d6065e4d6f98784c87a633d6bfc1b7f104deed2717b32acb8",
-      "size": 1932928,
-      "source": "local-existing-12",
-      "version": "10.6.8"
-    },
-    "mariadb106-server": {
-      "filename": "mariadb106-server-10.6.8.pkg",
-      "role": "root",
-      "sha256": "d29d7290798054ba38891243e838b6d22d30bc9ea41f1cf506fbcad5a5dca2fa",
-      "size": 43732856,
-      "source": "local-existing-12",
-      "version": "10.6.8"
-    },
-    "mpc": {
-      "filename": "mpc-1.2.1.pkg",
-      "role": "dependency",
-      "sha256": "6ac3e3ce0f9c77bd4983fecac7eef09b757ef9637d1aec02250d0a1c52114b97",
-      "size": 89776,
-      "source": "local-existing-12",
-      "version": "1.2.1"
-    },
-    "mpdecimal": {
-      "filename": "mpdecimal-2.5.1.pkg",
-      "role": "dependency",
-      "sha256": "b46274ceeed5fb89954aa737535958d18c84c142436e5894bf76f4e279239a62",
-      "size": 328772,
-      "source": "local-existing-12",
-      "version": "2.5.1"
-    },
-    "mpfr": {
-      "filename": "mpfr-4.1.0_1.pkg",
-      "role": "dependency",
-      "sha256": "d3999c14ed71acb20ce6eb672864196c3118b09d82d6c586492eabee5594b507",
-      "size": 459568,
-      "source": "local-existing-12",
-      "version": "4.1.0_1"
-    },
-    "mysql55-client": {
-      "filename": "mysql55-client-5.5.62_3.pkg",
-      "role": "root",
-      "sha256": "c82af20bc6cdfae204b9e51a05dd601cc5003048f2fe2da78cc1273b78fcee6d",
-      "size": 1737860,
-      "source": "local-existing-12",
-      "version": "5.5.62_3"
-    },
-    "mysql55-server": {
-      "filename": "mysql55-server-5.5.62_3.pkg",
-      "role": "root",
-      "sha256": "8fa5ab60a032540d5ddbbd9ea8e95070b939102d517dd89a983ac3b6ab5d92e3",
-      "size": 7163628,
-      "source": "local-existing-12",
-      "version": "5.5.62_3"
-    },
-    "mysql56-client": {
-      "filename": "mysql56-client-5.6.51.pkg",
-      "role": "root",
-      "sha256": "6cd06878b9a6a14df165abf1f3d45f5de3e5b0786fb15c26293c55484c20af91",
-      "size": 1455252,
-      "source": "local-existing-12",
-      "version": "5.6.51"
-    },
-    "mysql56-server": {
-      "filename": "mysql56-server-5.6.51.pkg",
-      "role": "root",
-      "sha256": "80563f5c35169d014c89c053962ca69fe41a03cc5b881e3f86bca42357d95c62",
-      "size": 8320616,
-      "source": "local-existing-12",
-      "version": "5.6.51"
-    },
-    "mysql57-client": {
-      "filename": "mysql57-client-5.7.38.pkg",
-      "role": "root",
-      "sha256": "0b6439769ef3d240c60fc50c68757d0bfb7f0de8b6b4398ad99d8b49c145f126",
-      "size": 1929696,
-      "source": "local-existing-12",
-      "version": "5.7.38"
-    },
-    "mysql57-server": {
-      "filename": "mysql57-server-5.7.38.pkg",
-      "role": "root",
-      "sha256": "9fe2c08b0f72a54f67c14f8a576aab82b36c302a662fb1aeb13e1140f5b1aced",
-      "size": 14436220,
-      "source": "local-existing-12",
-      "version": "5.7.38"
-    },
-    "mysql80-client": {
-      "filename": "mysql80-client-8.0.29.pkg",
-      "role": "root",
-      "sha256": "99aa0eb09d94663a5c290152426b38dd07897d9e7327dc4c9c09a9ef1ec7b841",
-      "size": 4190600,
-      "source": "local-existing-12",
-      "version": "8.0.29"
-    },
-    "mysql80-server": {
-      "filename": "mysql80-server-8.0.29.pkg",
-      "role": "root",
-      "sha256": "086625cf6f23218bcb0dcd3a20069842114c482e1e0e0aea72fcc99502c0ba87",
-      "size": 18409332,
-      "source": "local-existing-12",
-      "version": "8.0.29"
-    },
-    "mysql81-client": {
-      "filename": "mysql81-client-8.1.0.pkg",
-      "role": "root",
-      "sha256": "76cd30cb6ad755f5dc1dd3c0dc125e91a84743c47ab1754426c9128873b465b1",
-      "size": 5166852,
-      "source": "sggs-12-latest",
-      "version": "8.1.0"
-    },
-    "mysql81-server": {
-      "filename": "mysql81-server-8.1.0.pkg",
-      "role": "root",
-      "sha256": "7e89015135ac56747b0c1de8e272b08c6380ade76fe002d16c3fd33170fe496d",
-      "size": 23364520,
-      "source": "sggs-12-latest",
-      "version": "8.1.0"
-    },
-    "nano": {
-      "filename": "nano-6.0.pkg",
-      "role": "root",
-      "sha256": "100fc0cd353d1aa361a99f42f670d404de8bc6e897912c5c279e7c423f8f28b9",
-      "size": 580208,
-      "source": "local-existing-12",
-      "version": "6.0"
-    },
-    "nettle": {
-      "filename": "nettle-3.7.3.pkg",
-      "role": "dependency",
-      "sha256": "fbdac72e34f856b533904d3373d83b78886c5756f42580c1c701e0634fb31419",
-      "size": 1448236,
-      "source": "local-existing-12",
-      "version": "3.7.3"
-    },
-    "npth": {
-      "filename": "npth-1.6.pkg",
-      "role": "dependency",
-      "sha256": "efbab734ae292dae4dabff34905a561a6f7a9d5e9c2c8a10f4c464fbfb3d87cf",
-      "size": 21008,
-      "source": "local-existing-12",
-      "version": "1.6"
-    },
-    "openldap24-client": {
-      "filename": "openldap24-client-2.4.59_4.pkg",
-      "role": "dependency",
-      "sha256": "4ff029c96caa06d7769b2bddf29c43442cc477a15fa5ae85729ffc31b887b2cb",
-      "size": 1034060,
-      "source": "local-existing-12",
-      "version": "2.4.59_4"
-    },
-    "openldap26-client": {
-      "filename": "openldap26-client-2.6.6.pkg",
-      "role": "dependency",
-      "sha256": "c56602f741d44e18aee2edfc99f250a9f0b5a16a6189bc6c78d6f31b0363ade0",
-      "size": 1062716,
-      "source": "sggs-12-latest",
-      "version": "2.6.6"
-    },
-    "p11-kit": {
-      "filename": "p11-kit-0.24.1.pkg",
-      "role": "dependency",
-      "sha256": "0a7d7ff0782a6b47ee61e3a5ab13543214df4824abc111d1e8ed8ad0b87d3ff7",
-      "size": 464336,
-      "source": "local-existing-12",
-      "version": "0.24.1"
-    },
-    "pcre": {
-      "filename": "pcre-8.45_1.pkg",
-      "role": "dependency",
-      "sha256": "ea60355b20f33ecca3ff77af8b866d62288b8b70d17bee69478c3e7978209421",
-      "size": 1250972,
-      "source": "local-existing-12",
-      "version": "8.45_1"
-    },
-    "pcre2": {
-      "filename": "pcre2-10.42.pkg",
-      "role": "dependency",
-      "sha256": "3851014e8b1c771385377486161ca160d5bc2a5a33e33e5f23233786a0765238",
-      "size": 1367032,
-      "source": "sggs-12-latest",
-      "version": "10.42"
-    },
-    "perl5": {
-      "filename": "perl5-5.32.1_1.pkg",
-      "role": "dependency",
-      "sha256": "51b3ac9053521efcfa97ea068215ff2050b1a1040933ca0e9312bddcd7372f13",
-      "size": 14877912,
-      "source": "local-existing-12",
-      "version": "5.32.1_1"
-    },
-    "pinentry": {
-      "filename": "pinentry-1.2.0.pkg",
-      "role": "dependency",
-      "sha256": "89f25eb8065e35c2fc1e41ff20e1ed2091912bf2ac9583a28609e77bab36232b",
-      "size": 17436,
-      "source": "local-existing-12",
-      "version": "1.2.0"
-    },
-    "pinentry-curses": {
-      "filename": "pinentry-curses-1.2.0.pkg",
-      "role": "dependency",
-      "sha256": "e3e47625884ecec415cea831397d5b3cd1398a4df787bf0a4a21e8775648d354",
-      "size": 32956,
-      "source": "local-existing-12",
-      "version": "1.2.0"
-    },
-    "png": {
-      "filename": "png-1.6.37_1.pkg",
-      "role": "dependency",
-      "sha256": "9513fc05e40c0cfbbcf6f0126a841da664e1e2203a61f740a8b99defe67819d9",
-      "size": 297524,
-      "source": "local-existing-12",
-      "version": "1.6.37_1"
-    },
-    "protobuf": {
-      "filename": "protobuf-3.19.4,1.pkg",
-      "role": "dependency",
-      "sha256": "342c699685708af643141e45fc14fcbae5dfedf8209aeb042974466061a13c03",
-      "size": 3048028,
-      "source": "local-existing-12",
-      "version": "3.19.4,1"
-    },
-    "psutils": {
-      "filename": "psutils-1.17_5.pkg",
-      "role": "dependency",
-      "sha256": "fdb1157080d8b8cd1b426508dbc1472bc25ff97ede3245fe309bb00ad03c7481",
-      "size": 59844,
-      "source": "local-existing-12",
-      "version": "1.17_5"
-    },
-    "python": {
-      "filename": "python-3.8_3,2.pkg",
-      "role": "root",
-      "sha256": "e949257de1b188ed92fb4f0b73dd1ff8cadbd4522fea9b5d73b6d363bc307e8e",
-      "size": 996,
-      "source": "local-existing-12",
-      "version": "3.8_3,2"
-    },
-    "python3": {
-      "filename": "python3-3_3.pkg",
-      "role": "dependency",
-      "sha256": "dc196dee0ad7c4de6888846245acdd832a537eb878980cc8af01e0dbf9ce9fa3",
-      "size": 1052,
-      "source": "local-existing-12",
-      "version": "3_3"
-    },
-    "python38": {
-      "filename": "python38-3.8.13.pkg",
-      "role": "dependency",
-      "sha256": "ad37b6f6ef038d822e72e595de19c1c9ad780cbecbc2eda8762605d5e706d3fa",
-      "size": 24588816,
-      "source": "local-existing-12",
-      "version": "3.8.13"
-    },
-    "readline": {
-      "filename": "readline-8.1.2.pkg",
-      "role": "dependency",
-      "sha256": "182c3a91fc82477f39d580d254c9d5e30f58e1963f079b7e3bd80724a1e70e26",
-      "size": 369796,
-      "source": "local-existing-12",
-      "version": "8.1.2"
-    },
-    "rsync": {
-      "filename": "rsync-3.2.7.pkg",
-      "role": "dependency",
-      "sha256": "af4224bb3aa3fceef3d95e264df632c191df1086c13b9747c0224cc40332f78a",
-      "size": 391296,
-      "source": "sggs-12-latest",
-      "version": "3.2.7"
-    },
-    "screen": {
-      "filename": "screen-4.9.0_4.pkg",
-      "role": "root",
-      "sha256": "9de10fb639b6741b41d6ce8eb573dbe435ef098894f34a0ad3ba9d88c02a9b01",
-      "size": 512036,
-      "source": "local-existing-12",
-      "version": "4.9.0_4"
-    },
-    "serf": {
-      "filename": "serf-1.3.9_6.pkg",
-      "role": "dependency",
-      "sha256": "408ce931f4fe358e30622acfb0e291f0c8385f978797a2f7bd3b41120291fa86",
-      "size": 83908,
-      "source": "local-existing-12",
-      "version": "1.3.9_6"
-    },
-    "source-highlight": {
-      "filename": "source-highlight-3.1.9_1.pkg",
-      "role": "dependency",
-      "sha256": "27e9995e03873550a53b940d7318604382640fb6afc625092f5d43b3757cbcbb",
-      "size": 1015300,
-      "source": "local-existing-12",
-      "version": "3.1.9_1"
-    },
-    "sqlite3": {
-      "filename": "sqlite3-3.37.2,1.pkg",
-      "role": "dependency",
-      "sha256": "43b4673e30c584d33598ece2ca5187d80a34ba7966daf1f3a2955346896a9b30",
-      "size": 1287848,
-      "source": "local-existing-12",
-      "version": "3.37.2,1"
-    },
-    "squish": {
-      "filename": "squish-1.10_2.pkg",
-      "role": "dependency",
-      "sha256": "f97de0b8b827f5ee47d8a39527d219a091f1f4af90d7de08b9cfb15f598fb3e7",
-      "size": 23752,
-      "source": "local-existing-12",
-      "version": "1.10_2"
-    },
-    "subversion": {
-      "filename": "subversion-1.14.2.pkg",
-      "role": "root",
-      "sha256": "6ac5d19a3ed9c38aa597ed35599b8614887911d25ac0e088ecb30b5d8ce9f5f1",
-      "size": 3322016,
-      "source": "local-existing-12",
-      "version": "1.14.2"
-    },
-    "tiff": {
-      "filename": "tiff-4.3.0.pkg",
-      "role": "dependency",
-      "sha256": "4e1b0a4bea557ac4319df6d669fde53ada6dea1cddb3b743a3a5bb7e8e30a8da",
-      "size": 864980,
-      "source": "local-existing-12",
-      "version": "4.3.0"
-    },
-    "tpm-emulator": {
-      "filename": "tpm-emulator-0.7.4_2.pkg",
-      "role": "dependency",
-      "sha256": "648655a7ee3974a98a52feb8034c4f382fc7c1c638acbe8010c05b2806885e3c",
-      "size": 116228,
-      "source": "local-existing-12",
-      "version": "0.7.4_2"
-    },
-    "trousers": {
-      "filename": "trousers-0.3.14_3.pkg",
-      "role": "dependency",
-      "sha256": "b5d6ccb4f6300858fc7166e35055a02f2441434d28009328969bf623336a25bc",
-      "size": 487828,
-      "source": "local-existing-12",
-      "version": "0.3.14_3"
-    },
-    "uchardet": {
-      "filename": "uchardet-0.0.7.pkg",
-      "role": "dependency",
-      "sha256": "6b198bc472486f2719fc87361212df45807aecd13aa7a33ccdce94f95264da8a",
-      "size": 110996,
-      "source": "local-existing-12",
-      "version": "0.0.7"
-    },
-    "unixODBC": {
-      "filename": "unixODBC-2.3.11.pkg",
-      "role": "dependency",
-      "sha256": "77ffe6d34cdd9a14861c40238deb68ce25cb2e07559e1f7e49bca41d76ad0cc7",
-      "size": 527592,
-      "source": "sggs-12-latest",
-      "version": "2.3.11"
-    },
-    "utf8proc": {
-      "filename": "utf8proc-2.7.0.pkg",
-      "role": "dependency",
-      "sha256": "a4581863cfbbd2f92ac3179951c2cc0d286d0915220b8798ed019c1fb057a0cc",
-      "size": 64612,
-      "source": "local-existing-12",
-      "version": "2.7.0"
-    },
-    "xorgproto": {
-      "filename": "xorgproto-2021.5.pkg",
-      "role": "dependency",
-      "sha256": "e0f281f766e7c06f5ef64a47965c24eebb0b2be3a895a866bf1b6ff3f03e4dd9",
-      "size": 226932,
-      "source": "local-existing-12",
-      "version": "2021.5"
-    },
-    "xxhash": {
-      "filename": "xxhash-0.8.2.pkg",
-      "role": "dependency",
-      "sha256": "f0daddb5458f7c6a5f794c0d2cae83efc324855b0d9904d0f107403d72c98df0",
-      "size": 88868,
-      "source": "sggs-12-latest",
-      "version": "0.8.2"
-    },
-    "zstd": {
-      "filename": "zstd-1.5.5.pkg",
-      "role": "dependency",
-      "sha256": "37383f4a0c6f0f55f66f1017fa6c476917a4859ba8f74c428dc3d9f88ac1baaa",
-      "size": 558272,
-      "source": "sggs-12-latest",
-      "version": "1.5.5"
-    }
+  "coverage": {
+    "boost-all": "local-existing-12",
+    "compat11x-amd64": "local-existing-12",
+    "compat12x-amd64": "local-existing-12",
+    "compat7x-amd64": "local-existing-12",
+    "compat8x-amd64": "local-existing-12",
+    "compat9x-amd64": "local-existing-12",
+    "cryptopp": "local-existing-12",
+    "devil": "local-existing-12",
+    "freecolor": "local-existing-12",
+    "gcc": "local-existing-12",
+    "gcc10": "local-existing-12",
+    "gcc11": "local-existing-12",
+    "gcc12": "local-existing-12",
+    "gcc13": "local-existing-12",
+    "gcc48": "local-existing-12",
+    "gcc8": "local-existing-12",
+    "gcc9": "local-existing-12",
+    "gdb": "local-existing-12",
+    "gmake": "local-existing-12",
+    "makedepend": "local-existing-12",
+    "mariadb1011-client": "local-existing-12",
+    "mariadb1011-server": "local-existing-12",
+    "mariadb103-client": "local-existing-12",
+    "mariadb103-server": "local-existing-12",
+    "mariadb104-client": "local-existing-12",
+    "mariadb104-server": "local-existing-12",
+    "mariadb105-client": "local-existing-12",
+    "mariadb105-server": "local-existing-12",
+    "mariadb106-client": "local-existing-12",
+    "mariadb106-server": "local-existing-12",
+    "mysql55-client": "local-existing-12",
+    "mysql55-server": "local-existing-12",
+    "mysql56-client": "local-existing-12",
+    "mysql56-server": "local-existing-12",
+    "mysql57-client": "local-existing-12",
+    "mysql57-server": "local-existing-12",
+    "mysql80-client": "local-existing-12",
+    "mysql80-server": "local-existing-12",
+    "mysql81-client": "local-existing-12",
+    "mysql81-server": "local-existing-12",
+    "nano": "local-existing-12",
+    "python": "local-existing-12",
+    "screen": "local-existing-12",
+    "subversion": "local-existing-12"
   },
-  "root_count": 44,
-  "roots": [
-    {
-      "name": "boost-all",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "1.72.0"
-    },
-    {
-      "name": "compat11x-amd64",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "11.2.1102000.20181014"
-    },
-    {
-      "attempts": [],
-      "name": "compat11x-i386",
-      "status": "unresolved"
-    },
-    {
-      "name": "compat12x-amd64",
-      "source": "sggs-12-latest",
-      "status": "selected",
-      "version": "12.2.1202000.20210406"
-    },
-    {
-      "attempts": [],
-      "name": "compat12x-i386",
-      "status": "unresolved"
-    },
-    {
-      "name": "compat7x-amd64",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "7.4.704000.201310.1"
-    },
-    {
-      "attempts": [],
-      "name": "compat7x-i386",
-      "status": "unresolved"
-    },
-    {
-      "name": "compat8x-amd64",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "8.4.804000.20151116"
-    },
-    {
-      "attempts": [],
-      "name": "compat8x-i386",
-      "status": "unresolved"
-    },
-    {
-      "name": "compat9x-amd64",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "9.3.903000.20170608"
-    },
-    {
-      "attempts": [],
-      "name": "compat9x-i386",
-      "status": "unresolved"
-    },
-    {
-      "name": "cryptopp",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "8.6.0"
-    },
-    {
-      "name": "devil",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "1.8.0,1"
-    },
-    {
-      "name": "freecolor",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "0.9.3"
-    },
-    {
-      "name": "gcc",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "10_4"
-    },
-    {
-      "name": "gcc10",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "10.3.0"
-    },
-    {
-      "name": "gcc11",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "11.2.0"
-    },
-    {
-      "name": "gcc12",
-      "source": "sggs-12-latest",
-      "status": "selected",
-      "version": "12.2.0_7"
-    },
-    {
-      "name": "gcc13",
-      "source": "sggs-12-latest",
-      "status": "selected",
-      "version": "13.2.0_1"
-    },
-    {
-      "name": "gcc48",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "4.8.5_14"
-    },
-    {
-      "name": "gcc8",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "8.5.0_1"
-    },
-    {
-      "name": "gcc9",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "9.4.0_1"
-    },
-    {
-      "name": "gdb",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "11.2"
-    },
-    {
-      "name": "gmake",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "4.3_2"
-    },
-    {
-      "name": "makedepend",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "1.0.6,1"
-    },
-    {
-      "name": "mariadb1011-client",
-      "source": "sggs-12-latest",
-      "status": "selected",
-      "version": "10.11.6_1"
-    },
-    {
-      "name": "mariadb1011-server",
-      "source": "sggs-12-latest",
-      "status": "selected",
-      "version": "10.11.6_1"
-    },
-    {
-      "name": "mariadb103-client",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "10.3.35"
-    },
-    {
-      "name": "mariadb103-server",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "10.3.35"
-    },
-    {
-      "name": "mariadb104-client",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "10.4.25"
-    },
-    {
-      "name": "mariadb104-server",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "10.4.25"
-    },
-    {
-      "name": "mariadb105-client",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "10.5.16"
-    },
-    {
-      "name": "mariadb105-server",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "10.5.16"
-    },
-    {
-      "name": "mariadb106-client",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "10.6.8"
-    },
-    {
-      "name": "mariadb106-server",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "10.6.8"
-    },
-    {
-      "name": "mysql55-client",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "5.5.62_3"
-    },
-    {
-      "name": "mysql55-server",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "5.5.62_3"
-    },
-    {
-      "name": "mysql56-client",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "5.6.51"
-    },
-    {
-      "name": "mysql56-server",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "5.6.51"
-    },
-    {
-      "name": "mysql57-client",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "5.7.38"
-    },
-    {
-      "name": "mysql57-server",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "5.7.38"
-    },
-    {
-      "name": "mysql80-client",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "8.0.29"
-    },
-    {
-      "name": "mysql80-server",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "8.0.29"
-    },
-    {
-      "name": "mysql81-client",
-      "source": "sggs-12-latest",
-      "status": "selected",
-      "version": "8.1.0"
-    },
-    {
-      "name": "mysql81-server",
-      "source": "sggs-12-latest",
-      "status": "selected",
-      "version": "8.1.0"
-    },
-    {
-      "name": "nano",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "6.0"
-    },
-    {
-      "name": "python",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "3.8_3,2"
-    },
-    {
-      "name": "screen",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "4.9.0_4"
-    },
-    {
-      "name": "subversion",
-      "source": "local-existing-12",
-      "status": "selected",
-      "version": "1.14.2"
-    }
+  "covered_root_count": 44,
+  "discovered_root_count": 44,
+  "exact_names_not_seen_in_any_source": [
+    "compat11x-i386",
+    "compat12x-i386",
+    "compat7x-i386",
+    "compat8x-i386",
+    "compat9x-i386"
   ],
+  "latest_cohort": "local-existing-12",
   "status": "ok",
-  "target": "FreeBSD:12:amd64"
+  "target": "FreeBSD:12:amd64",
+  "unresolved": {}
 }
