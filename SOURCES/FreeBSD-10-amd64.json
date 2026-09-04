@@ -1,0 +1,15 @@
+{
+  "target": "FreeBSD:10:amd64",
+  "sources": [
+    {
+      "id": "sggs-10-latest",
+      "url": "https://mirror.sg.gs/freebsd-pkg/FreeBSD:10:amd64/latest/",
+      "records": 33333
+    },
+    {
+      "id": "sggs-10-quarterly",
+      "url": "https://mirror.sg.gs/freebsd-pkg/FreeBSD:10:amd64/quarterly/",
+      "records": 32550
+    }
+  ]
+}
