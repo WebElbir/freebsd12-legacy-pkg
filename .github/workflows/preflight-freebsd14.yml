@@ -1,0 +1,71 @@
+name: Safe FreeBSD 14 metadata preflight
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".preflight-freebsd14-trigger"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: safe-freebsd14-preflight
+  cancel-in-progress: false
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install metadata parser dependencies
+        run: python -m pip install --disable-pip-version-check requests zstandard
+
+      - name: Validate preflight scripts
+        run: |
+          python -m py_compile scripts/build_repo.py scripts/build_repo_cohorts.py scripts/preflight_repo.py
+          python -m json.tool config/roots.json >/dev/null
+          python -m json.tool config/sources.json >/dev/null
+
+      - name: FreeBSD 14 amd64 metadata preflight
+        id: amd64
+        shell: bash
+        run: |
+          set +e
+          python scripts/preflight_repo.py --target "FreeBSD:14:amd64" | tee /tmp/freebsd14-amd64-preflight.json
+          rc=${PIPESTATUS[0]}
+          echo "rc=${rc}" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: FreeBSD 14 i386 metadata preflight
+        id: i386
+        shell: bash
+        run: |
+          set +e
+          python scripts/preflight_repo.py --target "FreeBSD:14:i386" | tee /tmp/freebsd14-i386-preflight.json
+          rc=${PIPESTATUS[0]}
+          echo "rc=${rc}" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Final preflight status
+        shell: bash
+        env:
+          AMD64_RC: ${{ steps.amd64.outputs.rc }}
+          I386_RC: ${{ steps.i386.outputs.rc }}
+        run: |
+          echo "FreeBSD 14 amd64 preflight rc=${AMD64_RC}"
+          echo "FreeBSD 14 i386 preflight rc=${I386_RC}"
+          if [[ "${AMD64_RC}" != "0" || "${I386_RC}" != "0" ]]; then
+            echo "::warning::At least one target is not safe for full build under current policy."
+          fi
